@@ -1,0 +1,716 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{10D1E15D-C1A6-44F9-AD5A-9B1E22AEFCD7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PosMiso</RootNamespace>
+    <AssemblyName>PosMiso</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v12.2.Core, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpf.Core.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\DevExpress\DXperience 12.2\Bin\Framework\DevExpress.Xpf.Core.v12.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Printing.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\DevExpress\DXperience 12.2\Bin\Framework\DevExpress.Xpf.Printing.v12.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\DevExpress\DXperience 12.2\Bin\Framework\DevExpress.XtraPrinting.v12.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\DevExpress\DXperience 12.2\Bin\Framework\DevExpress.XtraReports.v12.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>packages\Newtonsoft.Json.4.5.6\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Extensions">
+      <HintPath>packages\Microsoft.Net.Http.2.2.29\lib\net40\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives">
+      <HintPath>packages\Microsoft.Net.Http.2.2.29\lib\net40\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MisoMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MisoMain.Designer.cs">
+      <DependentUpon>MisoMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DM_ChucNang.cs" />
+    <Compile Include="Model\modMember.cs" />
+    <Compile Include="Model\MTGlobal.cs" />
+    <Compile Include="Model\MTReport.cs" />
+    <Compile Include="Model\MTSQLServer.cs" />
+    <Compile Include="Model\MTSynData.cs" />
+    <Compile Include="Model\Utils.cs" />
+    <Compile Include="Model\ValidateHelper.cs" />
+    <Compile Include="Person.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\rptBH_InBill.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptBH_InBill.designer.cs">
+      <DependentUpon>rptBH_InBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptBH_InBill_80mm.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptBH_InBill_80mm.designer.cs">
+      <DependentUpon>rptBH_InBill_80mm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptCN_CanthuCT.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptCN_CanthuCT.designer.cs">
+      <DependentUpon>rptCN_CanthuCT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptCN_CanthuCT_Sub.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptCN_CanthuCT_Sub.designer.cs">
+      <DependentUpon>rptCN_CanthuCT_Sub.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptCN_CanthuTH.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptCN_CanthuTH.designer.cs">
+      <DependentUpon>rptCN_CanthuTH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptCX_Phieuguichanh.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptCX_Phieuguichanh.designer.cs">
+      <DependentUpon>rptCX_Phieuguichanh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptCX_Thongkeguichanh.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptCX_Thongkeguichanh.designer.cs">
+      <DependentUpon>rptCX_Thongkeguichanh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptDM_SanPham.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptDM_SanPham.designer.cs">
+      <DependentUpon>rptDM_SanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptHH_Baocaonhapxuatton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptHH_Baocaonhapxuatton.designer.cs">
+      <DependentUpon>rptHH_Baocaonhapxuatton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptHH_Barcode_25_15.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptHH_Barcode_25_15.designer.cs">
+      <DependentUpon>rptHH_Barcode_25_15.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptHH_Barcode_35_22.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptHH_Barcode_35_22.designer.cs">
+      <DependentUpon>rptHH_Barcode_35_22.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptHH_QRCode_25_15.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptHH_QRCode_25_15.designer.cs">
+      <DependentUpon>rptHH_QRCode_25_15.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptHH_QRCode_30_30.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptHH_QRCode_30_30.designer.cs">
+      <DependentUpon>rptHH_QRCode_30_30.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptHH_QRCode_35_22.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptHH_QRCode_35_22.designer.cs">
+      <DependentUpon>rptHH_QRCode_35_22.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptHH_QRCode_3temImg_35_22.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptHH_QRCode_3temImg_35_22.designer.cs">
+      <DependentUpon>rptHH_QRCode_3temImg_35_22.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptHH_Thekho.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptHH_Thekho.designer.cs">
+      <DependentUpon>rptHH_Thekho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptHH_TheKho_bk.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptHH_TheKho_bk.designer.cs">
+      <DependentUpon>rptHH_TheKho_bk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptNX_Baocaobanhang.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptNX_Baocaobanhang.designer.cs">
+      <DependentUpon>rptNX_Baocaobanhang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptNX_Phieunhap.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptNX_Phieunhap.designer.cs">
+      <DependentUpon>rptNX_Phieunhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptNX_Phieuxuat.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptNX_Phieuxuat.designer.cs">
+      <DependentUpon>rptNX_Phieuxuat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptTC_Phieuchi.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptTC_Phieuchi.designer.cs">
+      <DependentUpon>rptTC_Phieuchi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptTC_Phieuthu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptTC_Phieuthu.designer.cs">
+      <DependentUpon>rptTC_Phieuthu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptTL_DiemTichLuy.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptTL_DiemTichLuy.designer.cs">
+      <DependentUpon>rptTL_DiemTichLuy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\HT_CreateConection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\HT_CreateConection.Designer.cs">
+      <DependentUpon>HT_CreateConection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\HT_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\HT_Login.Designer.cs">
+      <DependentUpon>HT_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\HT_Register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\HT_Register.Designer.cs">
+      <DependentUpon>HT_Register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\HT_StartingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\HT_StartingForm.Designer.cs">
+      <DependentUpon>HT_StartingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\PrintPreview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\PrintPreview.Designer.cs">
+      <DependentUpon>PrintPreview.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="MisoMain.resx">
+      <DependentUpon>MisoMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Report\rptBH_InBill.resx">
+      <DependentUpon>rptBH_InBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptBH_InBill_80mm.resx">
+      <DependentUpon>rptBH_InBill_80mm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptCN_CanthuCT.resx">
+      <DependentUpon>rptCN_CanthuCT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptCN_CanthuCT_Sub.resx">
+      <DependentUpon>rptCN_CanthuCT_Sub.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptCN_CanthuTH.resx">
+      <DependentUpon>rptCN_CanthuTH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptCX_Phieuguichanh.resx">
+      <DependentUpon>rptCX_Phieuguichanh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptCX_Thongkeguichanh.resx">
+      <DependentUpon>rptCX_Thongkeguichanh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptDM_SanPham.resx">
+      <DependentUpon>rptDM_SanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptHH_Baocaonhapxuatton.resx">
+      <DependentUpon>rptHH_Baocaonhapxuatton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptHH_Barcode_25_15.resx">
+      <DependentUpon>rptHH_Barcode_25_15.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptHH_Barcode_35_22.resx">
+      <DependentUpon>rptHH_Barcode_35_22.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptHH_QRCode_25_15.resx">
+      <DependentUpon>rptHH_QRCode_25_15.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptHH_QRCode_30_30.resx">
+      <DependentUpon>rptHH_QRCode_30_30.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptHH_QRCode_35_22.resx">
+      <DependentUpon>rptHH_QRCode_35_22.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptHH_QRCode_3temImg_35_22.resx">
+      <DependentUpon>rptHH_QRCode_3temImg_35_22.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptHH_Thekho.resx">
+      <DependentUpon>rptHH_Thekho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptHH_TheKho_bk.resx">
+      <DependentUpon>rptHH_TheKho_bk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptNX_Baocaobanhang.resx">
+      <DependentUpon>rptNX_Baocaobanhang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptNX_Phieunhap.resx">
+      <DependentUpon>rptNX_Phieunhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptNX_Phieuxuat.resx">
+      <DependentUpon>rptNX_Phieuxuat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptTC_Phieuchi.resx">
+      <DependentUpon>rptTC_Phieuchi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptTC_Phieuthu.resx">
+      <DependentUpon>rptTC_Phieuthu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptTL_DiemTichLuy.resx">
+      <DependentUpon>rptTL_DiemTichLuy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\HT_CreateConection.resx">
+      <DependentUpon>HT_CreateConection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\HT_Login.resx">
+      <DependentUpon>HT_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\HT_Register.resx">
+      <DependentUpon>HT_Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\HT_StartingForm.resx">
+      <DependentUpon>HT_StartingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PrintPreview.resx">
+      <DependentUpon>PrintPreview.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Medias\Icons\app_pos_2.ico" />
+    <Content Include="Medias\Icons\bluechecked.png" />
+    <Content Include="Medias\Icons\blueschecked.png" />
+    <Content Include="Medias\Icons\bluesunchecked.png" />
+    <Content Include="Medias\Icons\blueunchecked.png" />
+    <Content Include="Medias\Icons\checked.png" />
+    <Content Include="Medias\Icons\Group.png" />
+    <Content Include="Medias\Icons\ico-user-logon.png" />
+    <Content Include="Medias\Icons\icon_catalog.png" />
+    <Content Include="Medias\Icons\icon_chanh_xe.png" />
+    <Content Include="Medias\Icons\icon_gia.png" />
+    <Content Include="Medias\Icons\icon_kho.png" />
+    <Content Include="Medias\Icons\icon_nhomsp.png" />
+    <Content Include="Medias\Icons\icon_phieu_nhap.png" />
+    <Content Include="Medias\Icons\icon_sp.png" />
+    <Content Include="Medias\Icons\icon_ton_kho.png" />
+    <Content Include="Medias\Icons\Item.png" />
+    <Content Include="Medias\Icons\list.png" />
+    <Content Include="Medias\Icons\mnuBC.png" />
+    <Content Include="Medias\Icons\mnuBC_BANHANG.png" />
+    <Content Include="Medias\Icons\mnuBC_NHAPXUATTON.png" />
+    <Content Include="Medias\Icons\mnuBC_THEKHO.png" />
+    <Content Include="Medias\Icons\mnuBC_TKGUICHANH.png" />
+    <Content Include="Medias\Icons\mnuDM_BANGGIA.png" />
+    <Content Include="Medias\Icons\mnuDM_KHACHHANG.png" />
+    <Content Include="Medias\Icons\mnuDM_KHO.png" />
+    <Content Include="Medias\Icons\mnuDM_LYDO.png" />
+    <Content Include="Medias\Icons\mnuDM_NHOMSANPHAM.png" />
+    <Content Include="Medias\Icons\mnuDM_SANPHAM.png" />
+    <Content Include="Medias\Icons\mnuDM_TAIKHOAN.png" />
+    <Content Include="Medias\Icons\mnuDM_XE.png" />
+    <Content Include="Medias\Icons\mnuHH.png" />
+    <Content Include="Medias\Icons\mnuHH_CHANHXE.png" />
+    <Content Include="Medias\Icons\mnuHH_PHIEUNHAP.png" />
+    <Content Include="Medias\Icons\mnuHH_PHIEUXUAT.png" />
+    <Content Include="Medias\Icons\mnuHT_EXIT.png" />
+    <Content Include="Medias\Icons\mnuHT_KETCHUYENSODU.png" />
+    <Content Include="Medias\Icons\mnuHT_NGUOIDUNG.png" />
+    <Content Include="Medias\Icons\mnuHT_PHUCHOI.png" />
+    <Content Include="Medias\Icons\mnuHT_QUYENHAN.png" />
+    <Content Include="Medias\Icons\mnuHT_SAOLUU.png" />
+    <Content Include="Medias\Icons\mnuHT_THAMSO.png" />
+    <Content Include="Medias\Icons\mnuHT_THONGTIN.png" />
+    <Content Include="Medias\Icons\nmuHT.png" />
+    <Content Include="Medias\Icons\pinkchecked.png" />
+    <Content Include="Medias\Icons\pinkunchecked.png" />
+    <Content Include="Medias\Icons\pos_abort.png" />
+    <Content Include="Medias\Icons\pos_accept.png" />
+    <Content Include="Medias\Icons\pos_addnew.png" />
+    <Content Include="Medias\Icons\pos_bill_car.png" />
+    <Content Include="Medias\Icons\pos_bill_in.png" />
+    <Content Include="Medias\Icons\pos_bill_out.png" />
+    <Content Include="Medias\Icons\pos_del.png" />
+    <Content Include="Medias\Icons\pos_edit.png" />
+    <Content Include="Medias\Icons\pos_exit.png" />
+    <Content Include="Medias\Icons\pos_list_car.png" />
+    <Content Include="Medias\Icons\pos_list_customer.png" />
+    <Content Include="Medias\Icons\pos_list_download.png" />
+    <Content Include="Medias\Icons\pos_list_import.png" />
+    <Content Include="Medias\Icons\mnuDM_DONGIA.png" />
+    <Content Include="Medias\Icons\pos_list_product.png" />
+    <Content Include="Medias\Icons\pos_list_product_group.png" />
+    <Content Include="Medias\Icons\pos_list_reason.png" />
+    <Content Include="Medias\Icons\pos_list_stock.png" />
+    <Content Include="Medias\Icons\pos_list_white.png" />
+    <Content Include="Medias\Icons\pos_payment.png" />
+    <Content Include="Medias\Icons\pos_print.png" />
+    <Content Include="Medias\Icons\mnuBH.png" />
+    <Content Include="Medias\Icons\pos_report.png" />
+    <Content Include="Medias\Icons\mnuDM.png" />
+    <Content Include="Medias\Icons\pos_report_payment.png" />
+    <Content Include="Medias\Icons\pos_report_stockcard.png" />
+    <Content Include="Medias\Icons\pos_report_transport.png" />
+    <Content Include="Medias\Icons\pos_save.png" />
+    <Content Include="Medias\Icons\pos_sell_white.png" />
+    <Content Include="Medias\Icons\pos_setting_white.png" />
+    <Content Include="Medias\Icons\pos_stock.png" />
+    <Content Include="Medias\Icons\pos_system_backup.png" />
+    <Content Include="Medias\Icons\pos_system_exit.png" />
+    <Content Include="Medias\Icons\pos_system_info.png" />
+    <Content Include="Medias\Icons\pos_system_lock.png" />
+    <Content Include="Medias\Icons\pos_system_para.png" />
+    <Content Include="Medias\Icons\pos_system_permit.png" />
+    <Content Include="Medias\Icons\pos_system_restore.png" />
+    <Content Include="Medias\Icons\pos_system_user.png" />
+    <Content Include="Medias\Icons\pos_user_logon.png" />
+    <Content Include="Medias\Icons\pos_user_logon_white.png" />
+    <Content Include="Medias\Icons\Settings.png" />
+    <Content Include="Medias\Icons\slogan-login.png" />
+    <Content Include="Medias\Icons\unchecked.png" />
+    <Content Include="Medias\Icons\user.png" />
+    <Content Include="Medias\Pictures\app_logo.PNG" />
+    <Content Include="Medias\Pictures\login_bg.png" />
+    <Content Include="Medias\Pictures\logo_gtc.PNG" />
+    <Content Include="Medias\Pictures\mtpos_bg.png" />
+    <Content Include="Medias\SVG\2f Swipe Down.svg" />
+    <Content Include="Medias\SVG\2f Swipe Right.svg" />
+    <Content Include="Medias\SVG\Add Image.svg" />
+    <Content Include="Medias\SVG\Add User.svg" />
+    <Content Include="Medias\SVG\Administrator.svg" />
+    <Content Include="Medias\SVG\Airplane Takeoff.svg" />
+    <Content Include="Medias\SVG\Alarm Clock.svg" />
+    <Content Include="Medias\SVG\Align Center.svg" />
+    <Content Include="Medias\SVG\Align Justify.svg" />
+    <Content Include="Medias\SVG\Align Left.svg" />
+    <Content Include="Medias\SVG\Align Right.svg" />
+    <Content Include="Medias\SVG\Android OS.svg" />
+    <Content Include="Medias\SVG\Android.svg" />
+    <Content Include="Medias\SVG\App Shield.svg" />
+    <Content Include="Medias\SVG\Approval.svg" />
+    <Content Include="Medias\SVG\Archive2.svg" />
+    <Content Include="Medias\SVG\Ask Question.svg" />
+    <Content Include="Medias\SVG\Assistant.svg" />
+    <Content Include="Medias\SVG\Attach.svg" />
+    <Content Include="Medias\SVG\Audio Wave.svg" />
+    <Content Include="Medias\SVG\Autopilot.svg" />
+    <Content Include="Medias\SVG\Ball Point Pen.svg" />
+    <Content Include="Medias\SVG\Bank Cards.svg" />
+    <Content Include="Medias\SVG\Banknotes.svg" />
+    <Content Include="Medias\SVG\Bed.svg" />
+    <Content Include="Medias\SVG\Behance.svg" />
+    <Content Include="Medias\SVG\Bicycle.svg" />
+    <Content Include="Medias\SVG\Birthday.svg" />
+    <Content Include="Medias\SVG\Blackberry.svg" />
+    <Content Include="Medias\SVG\Bold.svg" />
+    <Content Include="Medias\SVG\Books.svg" />
+    <Content Include="Medias\SVG\Briefcase.svg" />
+    <Content Include="Medias\SVG\Bright Moon.svg" />
+    <Content Include="Medias\SVG\Bug.svg" />
+    <Content Include="Medias\SVG\Building.svg" />
+    <Content Include="Medias\SVG\Business Contact.svg" />
+    <Content Include="Medias\SVG\Calendar.svg" />
+    <Content Include="Medias\SVG\Call Transfer.svg" />
+    <Content Include="Medias\SVG\Camera.svg" />
+    <Content Include="Medias\SVG\Car Rental.svg" />
+    <Content Include="Medias\SVG\Charge Battery.svg" />
+    <Content Include="Medias\SVG\Chat.svg" />
+    <Content Include="Medias\SVG\Check Book.svg" />
+    <Content Include="Medias\SVG\Check File.svg" />
+    <Content Include="Medias\SVG\Checkmark.svg" />
+    <Content Include="Medias\SVG\Clapperboard.svg" />
+    <Content Include="Medias\SVG\Clipboard.svg" />
+    <Content Include="Medias\SVG\Cloakroom.svg" />
+    <Content Include="Medias\SVG\Close Up Mode.svg" />
+    <Content Include="Medias\SVG\Cloud.svg" />
+    <Content Include="Medias\SVG\Coins.svg" />
+    <Content Include="Medias\SVG\Collaborator.svg" />
+    <Content Include="Medias\SVG\Color Dropper.svg" />
+    <Content Include="Medias\SVG\Connected.svg" />
+    <Content Include="Medias\SVG\Controller.svg" />
+    <Content Include="Medias\SVG\Cornet.svg" />
+    <Content Include="Medias\SVG\Create New.svg" />
+    <Content Include="Medias\SVG\Cursor.svg" />
+    <Content Include="Medias\SVG\Cut Paper.svg" />
+    <Content Include="Medias\SVG\Cut.svg" />
+    <Content Include="Medias\SVG\Define Location.svg" />
+    <Content Include="Medias\SVG\Delete Shield.svg" />
+    <Content Include="Medias\SVG\Delete.svg" />
+    <Content Include="Medias\SVG\Desk Lamp.svg" />
+    <Content Include="Medias\SVG\Details.svg" />
+    <Content Include="Medias\SVG\Dining Room.svg" />
+    <Content Include="Medias\SVG\Diploma 1.svg" />
+    <Content Include="Medias\SVG\Disconnected.svg" />
+    <Content Include="Medias\SVG\Doctors Bag.svg" />
+    <Content Include="Medias\SVG\Edit File.svg" />
+    <Content Include="Medias\SVG\Edit Image.svg" />
+    <Content Include="Medias\SVG\Edit.svg" />
+    <Content Include="Medias\SVG\Eject.svg" />
+    <Content Include="Medias\SVG\Empty Battery.svg" />
+    <Content Include="Medias\SVG\Empty Flag.svg" />
+    <Content Include="Medias\SVG\End.svg" />
+    <Content Include="Medias\SVG\Facial Recognition Scan.svg" />
+    <Content Include="Medias\SVG\Factory.svg" />
+    <Content Include="Medias\SVG\Fan.svg" />
+    <Content Include="Medias\SVG\Faq.svg" />
+    <Content Include="Medias\SVG\Fast Forward.svg" />
+    <Content Include="Medias\SVG\Filled Flag.svg" />
+    <Content Include="Medias\SVG\Fingerprint Scan.svg" />
+    <Content Include="Medias\SVG\First.svg" />
+    <Content Include="Medias\SVG\Full Battery.svg" />
+    <Content Include="Medias\SVG\Full Trash.svg" />
+    <Content Include="Medias\SVG\Future.svg" />
+    <Content Include="Medias\SVG\Geo Fence.svg" />
+    <Content Include="Medias\SVG\Ghost.svg" />
+    <Content Include="Medias\SVG\Globe Earth.svg" />
+    <Content Include="Medias\SVG\GPS Receiving.svg" />
+    <Content Include="Medias\SVG\Group.svg" />
+    <Content Include="Medias\SVG\Guitar.svg" />
+    <Content Include="Medias\SVG\Happy.svg" />
+    <Content Include="Medias\SVG\Headset.svg" />
+    <Content Include="Medias\SVG\Helicopter.svg" />
+    <Content Include="Medias\SVG\Herald Trumpet.svg" />
+    <Content Include="Medias\SVG\Hexagon.svg" />
+    <Content Include="Medias\SVG\High Battery.svg" />
+    <Content Include="Medias\SVG\Image File.svg" />
+    <Content Include="Medias\SVG\In Transit.svg" />
+    <Content Include="Medias\SVG\Inbox.svg" />
+    <Content Include="Medias\SVG\Inspection.svg" />
+    <Content Include="Medias\SVG\Integrated Circuit.svg" />
+    <Content Include="Medias\SVG\Invisible.svg" />
+    <Content Include="Medias\SVG\iPhone.svg" />
+    <Content Include="Medias\SVG\Keep Dry.svg" />
+    <Content Include="Medias\SVG\Key Security.svg" />
+    <Content Include="Medias\SVG\Keyboard.svg" />
+    <Content Include="Medias\SVG\Last.svg" />
+    <Content Include="Medias\SVG\Like.svg" />
+    <Content Include="Medias\SVG\LOL.svg" />
+    <Content Include="Medias\SVG\Luggage Trolley.svg" />
+    <Content Include="Medias\SVG\Mac OS.svg" />
+    <Content Include="Medias\SVG\Maestro.svg" />
+    <Content Include="Medias\SVG\Maintenance.svg" />
+    <Content Include="Medias\SVG\Medical Doctor.svg" />
+    <Content Include="Medias\SVG\Message Outline.svg" />
+    <Content Include="Medias\SVG\Message.svg" />
+    <Content Include="Medias\SVG\Microphone.svg" />
+    <Content Include="Medias\SVG\Mouse.svg" />
+    <Content Include="Medias\SVG\Musical Notes.svg" />
+    <Content Include="Medias\SVG\Mute.svg" />
+    <Content Include="Medias\SVG\My Topic.svg" />
+    <Content Include="Medias\SVG\Name.svg" />
+    <Content Include="Medias\SVG\News.svg" />
+    <Content Include="Medias\SVG\Next.svg" />
+    <Content Include="Medias\SVG\NFC Checkpoint.svg" />
+    <Content Include="Medias\SVG\Note.svg" />
+    <Content Include="Medias\SVG\Online.svg" />
+    <Content Include="Medias\SVG\Packaging.svg" />
+    <Content Include="Medias\SVG\Paid.svg" />
+    <Content Include="Medias\SVG\Panorama.svg" />
+    <Content Include="Medias\SVG\Paper Clamp.svg" />
+    <Content Include="Medias\SVG\Paper Plane.svg" />
+    <Content Include="Medias\SVG\Partly Cloudy Day.svg" />
+    <Content Include="Medias\SVG\Partly Cloudy Night.svg" />
+    <Content Include="Medias\SVG\Password1.svg" />
+    <Content Include="Medias\SVG\Past.svg" />
+    <Content Include="Medias\SVG\Pause.svg" />
+    <Content Include="Medias\SVG\Phone Office.svg" />
+    <Content Include="Medias\SVG\Phone.svg" />
+    <Content Include="Medias\SVG\Play.svg" />
+    <Content Include="Medias\SVG\Polyline.svg" />
+    <Content Include="Medias\SVG\Previous.svg" />
+    <Content Include="Medias\SVG\Privacy.svg" />
+    <Content Include="Medias\SVG\QR Code.svg" />
+    <Content Include="Medias\SVG\Radio.svg" />
+    <Content Include="Medias\SVG\Rain.svg" />
+    <Content Include="Medias\SVG\Record.svg" />
+    <Content Include="Medias\SVG\Recurring Appointment.svg" />
+    <Content Include="Medias\SVG\Refresh Shield.svg" />
+    <Content Include="Medias\SVG\Remove Image.svg" />
+    <Content Include="Medias\SVG\Rename.svg" />
+    <Content Include="Medias\SVG\Renew Subscription.svg" />
+    <Content Include="Medias\SVG\Repeat.svg" />
+    <Content Include="Medias\SVG\Restriction Shield.svg" />
+    <Content Include="Medias\SVG\Retro TV.svg" />
+    <Content Include="Medias\SVG\Rewind.svg" />
+    <Content Include="Medias\SVG\RFID Tag.svg" />
+    <Content Include="Medias\SVG\Ruler.svg" />
+    <Content Include="Medias\SVG\Search.svg" />
+    <Content Include="Medias\SVG\Security Checked.svg" />
+    <Content Include="Medias\SVG\Sent.svg" />
+    <Content Include="Medias\SVG\Settings.svg" />
+    <Content Include="Medias\SVG\Shopping Bag.svg" />
+    <Content Include="Medias\SVG\Shopping Basket.svg" />
+    <Content Include="Medias\SVG\Shopping Cart.svg" />
+    <Content Include="Medias\SVG\Shuffle.svg" />
+    <Content Include="Medias\SVG\Shutdown.svg" />
+    <Content Include="Medias\SVG\Signature.svg" />
+    <Content Include="Medias\SVG\Sim Card Chip.svg" />
+    <Content Include="Medias\SVG\Skip To Start.svg" />
+    <Content Include="Medias\SVG\Snow.svg" />
+    <Content Include="Medias\SVG\Speaker.svg" />
+    <Content Include="Medias\SVG\Speech Bubble.svg" />
+    <Content Include="Medias\SVG\Stack of Photos.svg" />
+    <Content Include="Medias\SVG\Stack.svg" />
+    <Content Include="Medias\SVG\Stanley Knife.svg" />
+    <Content Include="Medias\SVG\Star.svg" />
+    <Content Include="Medias\SVG\Statistics.svg" />
+    <Content Include="Medias\SVG\Stop.svg" />
+    <Content Include="Medias\SVG\Sun.svg" />
+    <Content Include="Medias\SVG\Survey.svg" />
+    <Content Include="Medias\SVG\Swiss Army Knife.svg" />
+    <Content Include="Medias\SVG\Switch Camera.svg" />
+    <Content Include="Medias\SVG\Timer.svg" />
+    <Content Include="Medias\SVG\Today.svg" />
+    <Content Include="Medias\SVG\Todo List.svg" />
+    <Content Include="Medias\SVG\Unlock 2.svg" />
+    <Content Include="Medias\SVG\Unlock.svg" />
+    <Content Include="Medias\SVG\User Shield.svg" />
+    <Content Include="Medias\SVG\Video Call.svg" />
+    <Content Include="Medias\SVG\View File.svg" />
+    <Content Include="Medias\SVG\Voicemail.svg" />
+    <Content Include="Medias\SVG\Volume Down.svg" />
+    <Content Include="Medias\SVG\Volume Up.svg" />
+    <Content Include="Medias\SVG\Wedding Cake.svg" />
+    <Content Include="Medias\SVG\Wind Rose.svg" />
+    <Content Include="Medias\SVG\Worldwide Location.svg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
