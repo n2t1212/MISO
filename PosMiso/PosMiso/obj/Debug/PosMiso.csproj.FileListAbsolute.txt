@@ -83,3 +83,4 @@ D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.csproj.GenerateResource.Cache
 D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.exe.licenses
 D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.exe
 D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.pdb
+D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.csprojResolveAssemblyReference.cache

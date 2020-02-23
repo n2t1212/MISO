@@ -23,8 +23,9 @@ namespace PosMiso
         {
             InitializeComponent();
             InitMenuLeftComponent();
-            //InitMenuTopComponent();
+            InitMenuTopComponent();
             InitStatusBar();
+            splitContainerControl.Panel2.ContentImage = Image.FromFile(string.Format("../../Medias/Pictures/mtpos_bg.png"));
         }
 
         #region "MENU"
@@ -69,8 +70,6 @@ namespace PosMiso
                     navGrp.LargeImageIndex = 0;
                     navGrp.Name = grp.code;
                     navGrp.LargeImage = Image.FromFile(string.Format("../../Medias/Icons/{0}", grp.icon));
-
-                   
 
                     List<NavBarItemLink> itemLink = new List<NavBarItemLink>();
                     foreach (DM_ChucNang itm in items)
@@ -118,49 +117,84 @@ namespace PosMiso
 
         private void InitMenuTopComponent()
         {
-            MenuStrip MainMenu = new MenuStrip();
-            MainMenu.BackColor = Color.OrangeRed;
-            MainMenu.ForeColor = Color.Black;
-            MainMenu.Text = "File Menu";
-            MainMenu.Font = new Font("Georgia", 16);
-            this.MainMenuStrip = MainMenu;
-            Controls.Add(MainMenu);
+            List<ToolStripMenuItem> groupMenus = new List<ToolStripMenuItem>();
+            List<DM_ChucNang> groups = new List<DM_ChucNang>();
+            List<DM_ChucNang> items = new List<DM_ChucNang>();
+
+            try
+            {
+                string mSQL = string.Format("select cn.* from DM_CHUCNANG cn left join HT_NHOMQUYEN_CHUCNANG nqcn on nqcn.macn = cn.macn "
+                    + "left join HT_NHOMQUYEN nq on nq.soid = nqcn.manhom left join HT_QUYENHAN qh on qh.soid_nhomquyen = nq.soid "
+                    + "left join HT_NGUOIDUNG nd on nd.soid = qh.soid_nguoidung where nd.taikhoan ='{0}' and cn.muccon='top'", MTGlobal.MT_USER_LOGIN);
+                DataTable otblMenu = MTSQLServer.getMTSQLServer().wRead(mSQL, null, false);
+                if (otblMenu != null)
+                {
+                    foreach (DataRow MnuR in otblMenu.Rows)
+                    {
+                        String id = (MnuR["macn"].ToString());
+                        String code = (MnuR["kyhieu"].ToString());
+                        String name = (MnuR["chucnang"].ToString());
+                        String root = (MnuR["macnroot"].ToString());
+                        String icon = (MnuR["icon"].ToString());
+                        DM_ChucNang chucNang = new DM_ChucNang(id, code, name, root, icon);
+                        if (root == "")
+                        {
+                            groups.Add(chucNang);
+                        }
+                        else
+                        {
+                            items.Add(chucNang);
+                        }
+                    }
+                }
+
+                foreach (DM_ChucNang grp in groups)
+                {
+                    ToolStripMenuItem menuGrp = new ToolStripMenuItem();
+                    menuGrp.Name = grp.code;
+                    menuGrp.Size = new System.Drawing.Size(163, 22);
+                    menuGrp.Text = grp.name;
+                    menuGrp.Image = Image.FromFile(string.Format("../../Medias/Icons/{0}", grp.icon));
+
+                    List<ToolStripMenuItem> menuItems = new List<ToolStripMenuItem>();
+                    foreach (DM_ChucNang itm in items)
+                    {
+                        if (itm.root == grp.id)
+                        {
+                            ToolStripMenuItem menuItem = new ToolStripMenuItem();
+                            menuItem.Name = itm.code;
+                            menuItem.Size = new System.Drawing.Size(163, 22);
+                            menuItem.Text = itm.name;
+                            menuItem.Image = Image.FromFile(string.Format("../../Medias/Icons/{0}", itm.icon));
+                            menuItem.Click += menuItem_Click;
+                            menuItems.Add(menuItem);
+                        }
+                    }
+
+                    menuGrp.DropDownItems.AddRange(menuItems.ToArray());
+                    groupMenus.Add(menuGrp);
+                }
+
+                menuTop.Items.AddRange(groupMenus.ToArray());
+
+            }
+            catch (Exception ex)
+            {
+                Utils.showMessage("Không thể tải danh sách chức năng", "Lỗi");
+            }
+            
         }
         #endregion
 
         #region "ITEM-CLICKED"
         private void navItm_LinkClicked(object sender, NavBarLinkEventArgs e)
         {
-            // Ký hiệu của menu
-            string code = ((DevExpress.XtraNavBar.NavElement)(sender)).Name.ToString();
 
-            //gridView1.Columns.Clear();
+        }
 
-            //GridColumn col=new GridColumn();
-            //col.Caption = "Họ";
-            //col.FieldName = "FirstName";
-            //col.Visible = true;
-            //gridView1.Columns.Add(col);
-
-            //GridColumn col1 = new GridColumn();
-            //col1.Caption = "Tên";
-            //col1.FieldName = "SecondName";
-            //col1.Visible = true;
-            //gridView1.Columns.Add(col1);
-
-            //GridColumn col2 = new GridColumn();
-            //col2.Caption = "Comment";
-            //col2.FieldName = "Commments";
-            //col2.Visible = true;
-            //gridView1.Columns.Add(col2);
-
-            //BindingList<Person> gridDataList = new BindingList<Person>();
-            //gridDataList.Add(new Person("John", "Smith"));
-            //gridDataList.Add(new Person("Gabriel", "Smith"));
-            //gridDataList.Add(new Person("Ashley", "Smith", "some comment"));
-            //gridDataList.Add(new Person("Adrian", "Smith", "some comment"));
-            //gridDataList.Add(new Person("Gabriella", "Smith", "some comment"));
-            //gridControl.DataSource = gridDataList;
+        void menuItem_Click(object sender, EventArgs e)
+        {
+            // throw new NotImplementedException();
         }
         #endregion
 
