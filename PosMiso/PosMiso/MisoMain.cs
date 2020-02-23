@@ -134,33 +134,33 @@ namespace PosMiso
             // Ký hiệu của menu
             string code = ((DevExpress.XtraNavBar.NavElement)(sender)).Name.ToString();
 
-            gridView1.Columns.Clear();
+            //gridView1.Columns.Clear();
 
-            GridColumn col=new GridColumn();
-            col.Caption = "Họ";
-            col.FieldName = "FirstName";
-            col.Visible = true;
-            gridView1.Columns.Add(col);
+            //GridColumn col=new GridColumn();
+            //col.Caption = "Họ";
+            //col.FieldName = "FirstName";
+            //col.Visible = true;
+            //gridView1.Columns.Add(col);
 
-            GridColumn col1 = new GridColumn();
-            col1.Caption = "Tên";
-            col1.FieldName = "SecondName";
-            col1.Visible = true;
-            gridView1.Columns.Add(col1);
+            //GridColumn col1 = new GridColumn();
+            //col1.Caption = "Tên";
+            //col1.FieldName = "SecondName";
+            //col1.Visible = true;
+            //gridView1.Columns.Add(col1);
 
-            GridColumn col2 = new GridColumn();
-            col2.Caption = "Comment";
-            col2.FieldName = "Commments";
-            col2.Visible = true;
-            gridView1.Columns.Add(col2);
+            //GridColumn col2 = new GridColumn();
+            //col2.Caption = "Comment";
+            //col2.FieldName = "Commments";
+            //col2.Visible = true;
+            //gridView1.Columns.Add(col2);
 
-            BindingList<Person> gridDataList = new BindingList<Person>();
-            gridDataList.Add(new Person("John", "Smith"));
-            gridDataList.Add(new Person("Gabriel", "Smith"));
-            gridDataList.Add(new Person("Ashley", "Smith", "some comment"));
-            gridDataList.Add(new Person("Adrian", "Smith", "some comment"));
-            gridDataList.Add(new Person("Gabriella", "Smith", "some comment"));
-            gridControl.DataSource = gridDataList;
+            //BindingList<Person> gridDataList = new BindingList<Person>();
+            //gridDataList.Add(new Person("John", "Smith"));
+            //gridDataList.Add(new Person("Gabriel", "Smith"));
+            //gridDataList.Add(new Person("Ashley", "Smith", "some comment"));
+            //gridDataList.Add(new Person("Adrian", "Smith", "some comment"));
+            //gridDataList.Add(new Person("Gabriella", "Smith", "some comment"));
+            //gridControl.DataSource = gridDataList;
         }
         #endregion
 
