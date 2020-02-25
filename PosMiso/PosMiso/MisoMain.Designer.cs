@@ -75,6 +75,8 @@
             this.iRightTextAlign = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.menuTop = new System.Windows.Forms.MenuStrip();
+            this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
+            this.tabMDI = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl)).BeginInit();
             this.splitContainerControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl)).BeginInit();
@@ -85,6 +87,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.popupControlContainer1)).BeginInit();
             this.popupControlContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabMDI)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainerControl
@@ -467,6 +471,18 @@
             this.menuTop.TabIndex = 5;
             this.menuTop.Text = "menuStrip1";
             // 
+            // tabMDI
+            // 
+            this.tabMDI.AllowDragDrop = DevExpress.Utils.DefaultBoolean.False;
+            this.tabMDI.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.tabMDI.Appearance.Options.UseBackColor = true;
+            this.tabMDI.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
+            this.tabMDI.BorderStylePage = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
+            this.tabMDI.MdiParent = this;
+            this.tabMDI.UseDocumentSelector = DevExpress.Utils.DefaultBoolean.True;
+            this.tabMDI.PageAdded += new DevExpress.XtraTabbedMdi.MdiTabPageEventHandler(this.xtraTabbedMdiManager1_PageAdded);
+            this.tabMDI.PageRemoved += new DevExpress.XtraTabbedMdi.MdiTabPageEventHandler(this.xtraTabbedMdiManager1_PageRemoved);
+            // 
             // MisoMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -478,6 +494,7 @@
             this.Controls.Add(this.ribbonControl);
             this.Controls.Add(this.menuTop);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuTop;
             this.Name = "MisoMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -494,6 +511,8 @@
             this.popupControlContainer1.ResumeLayout(false);
             this.popupControlContainer1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabMDI)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -546,6 +565,8 @@
         private DevExpress.XtraBars.BarStaticItem lblActive;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
         private System.Windows.Forms.MenuStrip menuTop;
+        private DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView tabbedView1;
+        private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager tabMDI;
 
     }
 }
