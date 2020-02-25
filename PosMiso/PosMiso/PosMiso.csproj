@@ -250,6 +250,12 @@
     <Compile Include="Report\rptTL_DiemTichLuy.designer.cs">
       <DependentUpon>rptTL_DiemTichLuy.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\HT_CreateConection.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -279,6 +285,12 @@
     </Compile>
     <Compile Include="View\PrintPreview.Designer.cs">
       <DependentUpon>PrintPreview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Test.Designer.cs">
+      <DependentUpon>Test.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="MisoMain.resx">
       <DependentUpon>MisoMain.cs</DependentUpon>
@@ -363,6 +375,9 @@
     <EmbeddedResource Include="Report\rptTL_DiemTichLuy.resx">
       <DependentUpon>rptTL_DiemTichLuy.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\HT_CreateConection.resx">
       <DependentUpon>HT_CreateConection.cs</DependentUpon>
     </EmbeddedResource>
@@ -377,6 +392,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\PrintPreview.resx">
       <DependentUpon>PrintPreview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Test.resx">
+      <DependentUpon>Test.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -427,32 +445,6 @@
     <Content Include="Medias\Icons\icon_ton_kho.png" />
     <Content Include="Medias\Icons\Item.png" />
     <Content Include="Medias\Icons\list.png" />
-    <Content Include="Medias\Icons\mnuBC.png" />
-    <Content Include="Medias\Icons\mnuBC_BANHANG.png" />
-    <Content Include="Medias\Icons\mnuBC_NHAPXUATTON.png" />
-    <Content Include="Medias\Icons\mnuBC_THEKHO.png" />
-    <Content Include="Medias\Icons\mnuBC_TKGUICHANH.png" />
-    <Content Include="Medias\Icons\mnuDM_BANGGIA.png" />
-    <Content Include="Medias\Icons\mnuDM_KHACHHANG.png" />
-    <Content Include="Medias\Icons\mnuDM_KHO.png" />
-    <Content Include="Medias\Icons\mnuDM_LYDO.png" />
-    <Content Include="Medias\Icons\mnuDM_NHOMSANPHAM.png" />
-    <Content Include="Medias\Icons\mnuDM_SANPHAM.png" />
-    <Content Include="Medias\Icons\mnuDM_TAIKHOAN.png" />
-    <Content Include="Medias\Icons\mnuDM_XE.png" />
-    <Content Include="Medias\Icons\mnuHH.png" />
-    <Content Include="Medias\Icons\mnuHH_CHANHXE.png" />
-    <Content Include="Medias\Icons\mnuHH_PHIEUNHAP.png" />
-    <Content Include="Medias\Icons\mnuHH_PHIEUXUAT.png" />
-    <Content Include="Medias\Icons\mnuHT_EXIT.png" />
-    <Content Include="Medias\Icons\mnuHT_KETCHUYENSODU.png" />
-    <Content Include="Medias\Icons\mnuHT_NGUOIDUNG.png" />
-    <Content Include="Medias\Icons\mnuHT_PHUCHOI.png" />
-    <Content Include="Medias\Icons\mnuHT_QUYENHAN.png" />
-    <Content Include="Medias\Icons\mnuHT_SAOLUU.png" />
-    <Content Include="Medias\Icons\mnuHT_THAMSO.png" />
-    <Content Include="Medias\Icons\mnuHT_THONGTIN.png" />
-    <Content Include="Medias\Icons\nmuHT.png" />
     <Content Include="Medias\Icons\pinkchecked.png" />
     <Content Include="Medias\Icons\pinkunchecked.png" />
     <Content Include="Medias\Icons\pos_abort.png" />
@@ -468,7 +460,6 @@
     <Content Include="Medias\Icons\pos_list_customer.png" />
     <Content Include="Medias\Icons\pos_list_download.png" />
     <Content Include="Medias\Icons\pos_list_import.png" />
-    <Content Include="Medias\Icons\mnuDM_DONGIA.png" />
     <Content Include="Medias\Icons\pos_list_product.png" />
     <Content Include="Medias\Icons\pos_list_product_group.png" />
     <Content Include="Medias\Icons\pos_list_reason.png" />
@@ -476,9 +467,7 @@
     <Content Include="Medias\Icons\pos_list_white.png" />
     <Content Include="Medias\Icons\pos_payment.png" />
     <Content Include="Medias\Icons\pos_print.png" />
-    <Content Include="Medias\Icons\mnuBH.png" />
     <Content Include="Medias\Icons\pos_report.png" />
-    <Content Include="Medias\Icons\mnuDM.png" />
     <Content Include="Medias\Icons\pos_report_payment.png" />
     <Content Include="Medias\Icons\pos_report_stockcard.png" />
     <Content Include="Medias\Icons\pos_report_transport.png" />

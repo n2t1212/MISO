@@ -27,7 +27,7 @@ namespace PosMiso
             InitMenuLeftComponent();
             InitMenuTopComponent();
             InitStatusBar();
-            splitContainerControl.Panel2.ContentImage = Image.FromFile(string.Format("../../Medias/Pictures/mtpos_bg.png"));
+            picLayout.Image = Image.FromFile(string.Format("../../Medias/Pictures/mtpos_bg.png"));
         }
 
         #region "MENU"
@@ -94,18 +94,16 @@ namespace PosMiso
                 }
 
                 navBarControl.BeginInit();
-                splitContainerControl.Panel1.Controls.Add(navBarControl);
-                //navBarControl.ActiveGroup = a;
-                navBarControl.Dock = System.Windows.Forms.DockStyle.Fill;
+                this.Controls.Add(navBarControl);
+                navBarControl.Dock = System.Windows.Forms.DockStyle.Left;
                 navBarControl.Groups.AddRange(navGroups.ToArray());
                 navBarControl.Items.AddRange(navItems.ToArray());
-                navBarControl.LargeImages = navbarImageListLarge;
+  
                 navBarControl.Location = new System.Drawing.Point(0, 0);
                 navBarControl.Name = "navBarControl";
                 navBarControl.OptionsNavPane.ExpandedWidth = 165;
                 navBarControl.PaintStyleKind = DevExpress.XtraNavBar.NavBarViewKind.NavigationPane;
                 navBarControl.Size = new System.Drawing.Size(165, 520);
-                navBarControl.SmallImages = navbarImageList;
                 navBarControl.StoreDefaultPaintStyleName = true;
                 navBarControl.TabIndex = 1;
                 navBarControl.Text = "navBarControl1";
@@ -123,6 +121,7 @@ namespace PosMiso
             List<DM_ChucNang> groups = new List<DM_ChucNang>();
             List<DM_ChucNang> items = new List<DM_ChucNang>();
 
+            menuTop.Dock = System.Windows.Forms.DockStyle.Top;
             try
             {
                 string mSQL = string.Format("select cn.* from DM_CHUCNANG cn left join HT_NHOMQUYEN_CHUCNANG nqcn on nqcn.macn = cn.macn "
@@ -178,7 +177,6 @@ namespace PosMiso
                 }
 
                 menuTop.Items.AddRange(groupMenus.ToArray());
-
             }
             catch (Exception ex)
             {
@@ -192,10 +190,10 @@ namespace PosMiso
         System.Windows.Forms.Timer tmr = null;
         private void InitStatusBar()
         {
-            serverName.Caption = "Máy chủ: " + MTGlobal.MT_DBHost;
-            dbName.Caption = "Tên CSDL: " + MTGlobal.MT_DBNAME;
-            userName.Caption = "Tên người dùng: " + MTGlobal.MT_USER_LOGIN;
-            lblActive.Caption = MTGlobal.HT_POS_ACTIVE;
+            serverName.Text = "Máy chủ: " + MTGlobal.MT_DBHost;
+            dbName.Text = "Tên CSDL: " + MTGlobal.MT_DBNAME;
+            userName.Text = "Tên người dùng: " + MTGlobal.MT_USER_LOGIN;
+            lblActive.Text = MTGlobal.HT_POS_ACTIVE;
 
             tmr = new System.Windows.Forms.Timer();
             tmr.Interval = 1000;
@@ -205,7 +203,7 @@ namespace PosMiso
 
         void tmr_Tick(object sender, EventArgs e)
         {
-            systemTime.Caption = DateTime.Now.ToString();
+            systemTime.Text = DateTime.Now.ToString();
         }
         #endregion
 
@@ -215,25 +213,29 @@ namespace PosMiso
             var a = ((DevExpress.XtraNavBar.ComponentCollectionItem)(sender)).Name.ToString();
             if (a == "mnuDM_KHACHHANG")
             {
-                Test test = new Test();
+                if(!CheckFormOpening("Test")){
+                    Test test = new Test();
                 test.TopLevel = false;
                 test.Visible = true;
                 test.Dock = DockStyle.Fill;
                 test.FormBorderStyle = FormBorderStyle.None;
                 test.MdiParent = this;
-                this.splitContainerControl.Panel2.Controls.Add(test);
                 test.Show();
+                }
+                
             }
             else
             {
-                Form1 f1 = new Form1();
-                f1.TopLevel = false;
-                f1.Visible = true;
-                f1.Dock = DockStyle.Fill;
-                f1.FormBorderStyle = FormBorderStyle.None;
-                f1.MdiParent = this;
-                this.splitContainerControl.Panel2.Controls.Add(f1);
-                f1.Show();
+                if (!CheckFormOpening("Form1"))
+                {
+                    Form1 f1 = new Form1();
+                    f1.TopLevel = false;
+                    f1.Visible = true;
+                    f1.Dock = DockStyle.Fill;
+                    f1.FormBorderStyle = FormBorderStyle.None;
+                    f1.MdiParent = this;
+                    f1.Show();
+                }
             }
             
 
@@ -245,15 +247,27 @@ namespace PosMiso
         }
         #endregion
 
+        #region "PAGE_RENDER"
         private void xtraTabbedMdiManager1_PageAdded(object sender, MdiTabPageEventArgs e)
         {
-            
+            picLayout.SendToBack();
         }
 
         private void xtraTabbedMdiManager1_PageRemoved(object sender, MdiTabPageEventArgs e)
         {
-            
+            try
+            {
+                if (tabMDI.Pages.Count <= 0)
+                {
+                    picLayout.BringToFront();
+                }
+            }
+            catch
+            {
+                picLayout.SendToBack();
+            }
         }
+        #endregion
 
         private bool CheckFormOpening(string frmName = "")
         {

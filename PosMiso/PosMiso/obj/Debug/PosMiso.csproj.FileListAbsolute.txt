@@ -84,3 +84,5 @@ D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.exe.licenses
 D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.exe
 D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.pdb
 D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.csprojResolveAssemblyReference.cache
+D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.Test.resources
+D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.Form1.resources
