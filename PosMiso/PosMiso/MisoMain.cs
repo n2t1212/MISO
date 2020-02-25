@@ -13,6 +13,8 @@ using DevExpress.UserSkins;
 using DevExpress.XtraNavBar;
 using PosMiso.Model;
 using DevExpress.XtraGrid.Columns;
+using PosMiso.View;
+using DevExpress.XtraTabbedMdi;
 
 
 namespace PosMiso
@@ -186,18 +188,6 @@ namespace PosMiso
         }
         #endregion
 
-        #region "ITEM-CLICKED"
-        private void navItm_LinkClicked(object sender, NavBarLinkEventArgs e)
-        {
-
-        }
-
-        void menuItem_Click(object sender, EventArgs e)
-        {
-            // throw new NotImplementedException();
-        }
-        #endregion
-
         #region "STATUSBAR"
         System.Windows.Forms.Timer tmr = null;
         private void InitStatusBar()
@@ -210,7 +200,7 @@ namespace PosMiso
             tmr = new System.Windows.Forms.Timer();
             tmr.Interval = 1000;
             tmr.Tick += new EventHandler(tmr_Tick);
-            tmr.Enabled = true;    
+            tmr.Enabled = true;
         }
 
         void tmr_Tick(object sender, EventArgs e)
@@ -218,6 +208,71 @@ namespace PosMiso
             systemTime.Caption = DateTime.Now.ToString();
         }
         #endregion
+
+        #region "ITEM-CLICKED"
+        private void navItm_LinkClicked(object sender, NavBarLinkEventArgs e)
+        {
+            var a = ((DevExpress.XtraNavBar.ComponentCollectionItem)(sender)).Name.ToString();
+            if (a == "mnuDM_KHACHHANG")
+            {
+                Test test = new Test();
+                test.TopLevel = false;
+                test.Visible = true;
+                test.Dock = DockStyle.Fill;
+                test.FormBorderStyle = FormBorderStyle.None;
+                test.MdiParent = this;
+                this.splitContainerControl.Panel2.Controls.Add(test);
+                test.Show();
+            }
+            else
+            {
+                Form1 f1 = new Form1();
+                f1.TopLevel = false;
+                f1.Visible = true;
+                f1.Dock = DockStyle.Fill;
+                f1.FormBorderStyle = FormBorderStyle.None;
+                f1.MdiParent = this;
+                this.splitContainerControl.Panel2.Controls.Add(f1);
+                f1.Show();
+            }
+            
+
+        }
+
+        void menuItem_Click(object sender, EventArgs e)
+        {
+            // throw new NotImplementedException();
+        }
+        #endregion
+
+        private void xtraTabbedMdiManager1_PageAdded(object sender, MdiTabPageEventArgs e)
+        {
+            
+        }
+
+        private void xtraTabbedMdiManager1_PageRemoved(object sender, MdiTabPageEventArgs e)
+        {
+            
+        }
+
+        private bool CheckFormOpening(string frmName = "")
+        {
+            try
+            {
+                for (int i = 0; i <= this.tabMDI.Pages.Count; i++)
+                {
+                    if (this.tabMDI.Pages[i].MdiChild.Name == frmName)
+                    {
+                        this.tabMDI.Pages[i].MdiChild.Focus();
+                        return true;
+                    }
+                }
+                return false;
+            }
+            catch { return false; }
+
+        }
+        
 
     }
 }
