@@ -24,9 +24,9 @@ namespace PosMiso
         public MisoMain()
         {
             InitializeComponent();
-            InitMenuLeftComponent();
             InitMenuTopComponent();
             InitStatusBar();
+            InitMenuLeftComponent();
             picLayout.Image = Image.FromFile(string.Format("../../Medias/Pictures/mtpos_bg.png"));
         }
 

@@ -368,6 +368,7 @@
             // 
             // picLayout
             // 
+            this.picLayout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.picLayout.Dock = System.Windows.Forms.DockStyle.Fill;
             this.picLayout.Location = new System.Drawing.Point(0, 24);
             this.picLayout.Name = "picLayout";
@@ -385,6 +386,7 @@
             this.Controls.Add(this.menuTop);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
+            this.LookAndFeel.SkinName = "Office 2013";
             this.MainMenuStrip = this.menuTop;
             this.Name = "MisoMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

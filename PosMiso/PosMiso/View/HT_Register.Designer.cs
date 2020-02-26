@@ -96,7 +96,7 @@
             // labelControl6
             // 
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl6.Location = new System.Drawing.Point(168, 32);
+            this.labelControl6.Location = new System.Drawing.Point(200, 32);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(221, 25);
             this.labelControl6.TabIndex = 0;
@@ -201,6 +201,7 @@
             this.Controls.Add(this.labelControl6);
             this.Controls.Add(this.labelControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.LookAndFeel.SkinName = "Office 2013";
             this.MinimizeBox = false;
             this.Name = "HT_Register";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
