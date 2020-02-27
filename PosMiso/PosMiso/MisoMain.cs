@@ -15,6 +15,7 @@ using PosMiso.Model;
 using DevExpress.XtraGrid.Columns;
 using PosMiso.View;
 using DevExpress.XtraTabbedMdi;
+using System.Reflection;
 
 
 namespace PosMiso
@@ -242,11 +243,11 @@ namespace PosMiso
                 RefreshForm(true);
                 if (!CheckFormOpening(frmName))
                 {
-                    Type obj = Type.GetType(frmName);
+                    Type obj = Assembly.GetExecutingAssembly().GetType("PosMiso.View." + frmName);
                     Form frm;
                     if (obj != null)
                     {
-                        frm = (Form)Activator.CreateInstance(obj);
+                        frm = Activator.CreateInstance(obj) as Form;
                         frm.Name = frmName;
                         frm.Text = mCaption.Replace("&", " ");
                         frm.Tag = mPermit;
