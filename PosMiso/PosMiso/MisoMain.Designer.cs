@@ -68,6 +68,7 @@
             this.lblActive = new System.Windows.Forms.ToolStripStatusLabel();
             this.systemTime = new System.Windows.Forms.ToolStripStatusLabel();
             this.picLayout = new System.Windows.Forms.PictureBox();
+            this.panelMenuLeft = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).BeginInit();
@@ -287,7 +288,7 @@
             // 
             this.menuTop.Location = new System.Drawing.Point(0, 0);
             this.menuTop.Name = "menuTop";
-            this.menuTop.Size = new System.Drawing.Size(1236, 24);
+            this.menuTop.Size = new System.Drawing.Size(1374, 24);
             this.menuTop.TabIndex = 5;
             this.menuTop.Text = "menuStrip1";
             // 
@@ -313,9 +314,9 @@
             this.userName,
             this.lblActive,
             this.systemTime});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 677);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 667);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1236, 24);
+            this.statusStrip1.Size = new System.Drawing.Size(1374, 24);
             this.statusStrip1.TabIndex = 6;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -368,20 +369,31 @@
             // 
             // picLayout
             // 
-            this.picLayout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.picLayout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picLayout.Image = global::PosMiso.Properties.Resources.mtpos_bg;
             this.picLayout.Location = new System.Drawing.Point(0, 24);
             this.picLayout.Name = "picLayout";
-            this.picLayout.Size = new System.Drawing.Size(1236, 653);
-            this.picLayout.TabIndex = 7;
+            this.picLayout.Size = new System.Drawing.Size(1374, 643);
+            this.picLayout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.picLayout.TabIndex = 8;
             this.picLayout.TabStop = false;
+            // 
+            // panelMenuLeft
+            // 
+            this.panelMenuLeft.AutoSize = true;
+            this.panelMenuLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelMenuLeft.Location = new System.Drawing.Point(0, 24);
+            this.panelMenuLeft.Name = "panelMenuLeft";
+            this.panelMenuLeft.Size = new System.Drawing.Size(0, 643);
+            this.panelMenuLeft.TabIndex = 7;
             // 
             // MisoMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1236, 701);
+            this.ClientSize = new System.Drawing.Size(1374, 691);
             this.Controls.Add(this.picLayout);
+            this.Controls.Add(this.panelMenuLeft);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuTop);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -444,6 +456,7 @@
         private System.Windows.Forms.ToolStripStatusLabel lblActive;
         private System.Windows.Forms.ToolStripStatusLabel systemTime;
         private System.Windows.Forms.PictureBox picLayout;
+        private System.Windows.Forms.Panel panelMenuLeft;
 
     }
 }

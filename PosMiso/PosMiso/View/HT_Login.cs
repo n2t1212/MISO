@@ -186,14 +186,28 @@ namespace PosMiso.View
             {
                 txtUserName.Text = mUsername.Trim().ToUpper();
                 txtPassWord.Text = mPassword;
+                lblWelcome.Text = "Welcome " + mUsername.Trim().ToUpper();
+                lblWelcome.Visible = true;
+                lblUsername.Visible = false;
+                txtUserName.Visible = false;
 
             }
             else
             {
+                lblWelcome.Visible = false;
+                lblUsername.Visible = true;
+                txtUserName.Visible = true;
                 txtUserName.Text = "";
                 txtUserName.Focus();
             }
         }
         #endregion
+
+        private void lblWelcome_Click(object sender, EventArgs e)
+        {
+            lblWelcome.Visible = false;
+            lblUsername.Visible = true;
+            txtUserName.Visible = true;
+        }
     }
 }

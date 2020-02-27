@@ -27,7 +27,6 @@ namespace PosMiso
             InitMenuTopComponent();
             InitStatusBar();
             InitMenuLeftComponent();
-            picLayout.Image = Image.FromFile(string.Format("../../Medias/Pictures/mtpos_bg.png"));
         }
 
         #region "MENU"
@@ -53,7 +52,8 @@ namespace PosMiso
                         String name = (MnuR["chucnang"].ToString());
                         String root = (MnuR["macnroot"].ToString());
                         String icon = (MnuR["icon"].ToString());
-                        DM_ChucNang chucNang = new DM_ChucNang(id, code, name, root, icon);
+                        String formName = (MnuR["tenform"].ToString());
+                        DM_ChucNang chucNang = new DM_ChucNang(id, code, name, root, icon, formName);
                         if (root == "")
                         {
                             groups.Add(chucNang);
@@ -69,7 +69,6 @@ namespace PosMiso
                     NavBarGroup navGrp = new NavBarGroup();
                     navGrp.Caption = grp.name;
                     navGrp.Expanded = true;
-                    navGrp.LargeImageIndex = 0;
                     navGrp.Name = grp.code;
                     navGrp.LargeImage = Image.FromFile(string.Format("../../Medias/Icons/{0}", grp.icon));
 
@@ -81,8 +80,8 @@ namespace PosMiso
                             NavBarItem navItm = new NavBarItem();
                             navItm.Caption = itm.name;
                             navItm.Name = itm.code;
-                            navItm.SmallImage = Image.FromFile(string.Format("../../Medias/Icons/{0}", itm.icon));   
-                            navItm.LinkClicked+=navItm_LinkClicked;
+                            navItm.SmallImage = Image.FromFile(string.Format("../../Medias/Icons/{0}", itm.icon));
+                            navItm.LinkClicked += navItm_LinkClicked;
                             navItems.Add(navItm);
                             itemLink.Add(new NavBarItemLink(navItm));
                         }
@@ -94,7 +93,8 @@ namespace PosMiso
                 }
 
                 navBarControl.BeginInit();
-                this.Controls.Add(navBarControl);
+                panelMenuLeft.Controls.Add(navBarControl);
+                //this.Controls.Add(navBarControl);
                 navBarControl.Dock = System.Windows.Forms.DockStyle.Left;
                 navBarControl.Groups.AddRange(navGroups.ToArray());
                 navBarControl.Items.AddRange(navItems.ToArray());
@@ -103,7 +103,7 @@ namespace PosMiso
                 navBarControl.Name = "navBarControl";
                 navBarControl.OptionsNavPane.ExpandedWidth = 165;
                 navBarControl.PaintStyleKind = DevExpress.XtraNavBar.NavBarViewKind.NavigationPane;
-                navBarControl.Size = new System.Drawing.Size(165, 520);
+                navBarControl.Size = new System.Drawing.Size(200, 520);
                 navBarControl.StoreDefaultPaintStyleName = true;
                 navBarControl.TabIndex = 1;
                 navBarControl.Text = "navBarControl1";
@@ -113,6 +113,12 @@ namespace PosMiso
                 Utils.showMessage("Không thể tải danh sách chức năng", "Lỗi"); 
             }
 
+        }
+
+        void navItm_LinkClicked(object sender, NavBarLinkEventArgs e)
+        {
+            //OpenForm(e.Link.ItemName.ToString(), e.Link.Caption.ToString(), "");
+            OpenForm("Form1", "Test open " + e.Link.Caption.ToString());
         }
 
         private void InitMenuTopComponent()
@@ -137,7 +143,8 @@ namespace PosMiso
                         String name = (MnuR["chucnang"].ToString());
                         String root = (MnuR["macnroot"].ToString());
                         String icon = (MnuR["icon"].ToString());
-                        DM_ChucNang chucNang = new DM_ChucNang(id, code, name, root, icon);
+                        String formName = (MnuR["tenform"].ToString());
+                        DM_ChucNang chucNang = new DM_ChucNang(id, code, name, root, icon, formName);
                         if (root == "")
                         {
                             groups.Add(chucNang);
@@ -184,6 +191,11 @@ namespace PosMiso
             }
             
         }
+
+        void menuItem_Click(object sender, EventArgs e)
+        {
+            OpenForm("", "");
+        }
         #endregion
 
         #region "STATUSBAR"
@@ -208,42 +220,52 @@ namespace PosMiso
         #endregion
 
         #region "ITEM-CLICKED"
-        private void navItm_LinkClicked(object sender, NavBarLinkEventArgs e)
+        Cursor currentCursor;
+        private void RefreshForm(bool b)
         {
-            var a = ((DevExpress.XtraNavBar.ComponentCollectionItem)(sender)).Name.ToString();
-            if (a == "mnuDM_KHACHHANG")
+            if (b)
             {
-                if(!CheckFormOpening("Test")){
-                    Test test = new Test();
-                test.TopLevel = false;
-                test.Visible = true;
-                test.Dock = DockStyle.Fill;
-                test.FormBorderStyle = FormBorderStyle.None;
-                test.MdiParent = this;
-                test.Show();
-                }
-                
+                currentCursor = Cursor.Current;
+                Cursor.Current = Cursors.WaitCursor;
+                Refresh();
             }
             else
-            {
-                if (!CheckFormOpening("Form1"))
-                {
-                    Form1 f1 = new Form1();
-                    f1.TopLevel = false;
-                    f1.Visible = true;
-                    f1.Dock = DockStyle.Fill;
-                    f1.FormBorderStyle = FormBorderStyle.None;
-                    f1.MdiParent = this;
-                    f1.Show();
-                }
-            }
-            
-
+                Cursor.Current = currentCursor;
         }
 
-        void menuItem_Click(object sender, EventArgs e)
+        private void OpenForm(string frmName = "", string mCaption = "")
         {
-            // throw new NotImplementedException();
+            try
+            {
+                string mPermit = "", mOptTime = "", mOptEnable = "";            
+
+                RefreshForm(true);
+                if (!CheckFormOpening(frmName))
+                {
+                    Type obj = Type.GetType(frmName);
+                    Form frm;
+                    if (obj != null)
+                    {
+                        frm = (Form)Activator.CreateInstance(obj);
+                        frm.Name = frmName;
+                        frm.Text = mCaption.Replace("&", " ");
+                        frm.Tag = mPermit;
+
+                        //if (frmName.Substring(0, 3) != "dlg")
+                        //{
+                            frm.MdiParent = this;
+                            frm.Show();
+                        //}
+                        //else
+                        //    frm.ShowDialog();
+                    }
+                }
+                RefreshForm(false);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
         #endregion
 

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.lblUsername = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.chkRemember = new System.Windows.Forms.CheckBox();
             this.txtUserName = new DevExpress.XtraEditors.TextEdit();
@@ -39,6 +39,7 @@
             this.lblMsg = new DevExpress.XtraEditors.LabelControl();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblWelcome = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.txtUserName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPassWord.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -55,14 +56,14 @@
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "ĐĂNG NHẬP";
             // 
-            // labelControl2
+            // lblUsername
             // 
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl2.Location = new System.Drawing.Point(64, 112);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(82, 23);
-            this.labelControl2.TabIndex = 1;
-            this.labelControl2.Text = "Tài khoản";
+            this.lblUsername.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsername.Location = new System.Drawing.Point(64, 112);
+            this.lblUsername.Name = "lblUsername";
+            this.lblUsername.Size = new System.Drawing.Size(82, 23);
+            this.lblUsername.TabIndex = 1;
+            this.lblUsername.Text = "Tài khoản";
             // 
             // labelControl3
             // 
@@ -117,7 +118,7 @@
             this.btnLogin.ForeColor = System.Drawing.Color.White;
             this.btnLogin.Location = new System.Drawing.Point(352, 216);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(128, 32);
+            this.btnLogin.Size = new System.Drawing.Size(136, 32);
             this.btnLogin.TabIndex = 4;
             this.btnLogin.Text = "Đăng nhập";
             this.btnLogin.UseVisualStyleBackColor = false;
@@ -157,8 +158,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(222)))), ((int)(((byte)(255)))));
+            this.panel1.Controls.Add(this.lblWelcome);
             this.panel1.Controls.Add(this.txtUserName);
-            this.panel1.Controls.Add(this.labelControl2);
+            this.panel1.Controls.Add(this.lblUsername);
             this.panel1.Controls.Add(this.lblMsg);
             this.panel1.Controls.Add(this.labelControl3);
             this.panel1.Controls.Add(this.chkRemember);
@@ -168,6 +170,19 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(520, 384);
             this.panel1.TabIndex = 7;
+            // 
+            // lblWelcome
+            // 
+            this.lblWelcome.AutoSize = true;
+            this.lblWelcome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(222)))), ((int)(((byte)(255)))));
+            this.lblWelcome.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWelcome.Location = new System.Drawing.Point(64, 128);
+            this.lblWelcome.Name = "lblWelcome";
+            this.lblWelcome.Size = new System.Drawing.Size(67, 25);
+            this.lblWelcome.TabIndex = 6;
+            this.lblWelcome.Text = "label1";
+            this.lblWelcome.Visible = false;
+            this.lblWelcome.Click += new System.EventHandler(this.lblWelcome_Click);
             // 
             // HT_Login
             // 
@@ -200,7 +215,7 @@
         #endregion
 
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.LabelControl labelControl2;
+        private DevExpress.XtraEditors.LabelControl lblUsername;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private System.Windows.Forms.CheckBox chkRemember;
         private DevExpress.XtraEditors.TextEdit txtUserName;
@@ -210,5 +225,6 @@
         private DevExpress.XtraEditors.LabelControl lblMsg;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lblWelcome;
     }
 }

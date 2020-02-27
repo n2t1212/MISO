@@ -13,14 +13,16 @@ namespace PosMiso.Model
         public string name { get; set; }
         public string root { get; set; }
         public string icon { get; set; }
+        public string formName { get; set; }
 
-        public DM_ChucNang(string _id, string _code, string _name, string _root, string _icon)
+        public DM_ChucNang(string _id, string _code, string _name, string _root, string _icon, string _formName)
         {
             id = _id;
             code = _code;
             name = _name;
             root = _root;
             icon = _icon;
+            formName = _formName;
         }
     }
 }
