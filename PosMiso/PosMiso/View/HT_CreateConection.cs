@@ -42,14 +42,14 @@ namespace PosMiso.View
             txtDB.Text = DBNAME;
             txtUsername.Text = USERNAME;
             txtPassword.Text = PASSWORD;
-            if (txtDB.Text != "")
-            {
-                cmdSelectFile.Enabled = false;
-            }
-            else
-            {
-                cmdSelectFile.Enabled = true;
-            }
+            //if (txtDB.Text != "")
+            //{
+            //    cmdSelectFile.Enabled = false;
+            //}
+            //else
+            //{
+            //    cmdSelectFile.Enabled = true;
+            //}
 
             initServerCombobox();  
         }

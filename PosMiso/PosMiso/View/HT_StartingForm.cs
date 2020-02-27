@@ -54,6 +54,7 @@ namespace PosMiso.View
                         {
                             HT_Login login = new HT_Login();
                             login.Show();
+                            this.Close();
                         }
                         else {
                             this.Close();

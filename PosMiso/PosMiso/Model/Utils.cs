@@ -87,7 +87,7 @@ namespace PosMiso.Model
                     else {
                         return false;
                     }*/
-                    if (XtraMessageBox.Show(mMsg, mTitle, MessageBoxButtons.YesNo) != DialogResult.Yes)
+                    if (XtraMessageBox.Show(mMsg, mTitle, MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
                         return true;
                     }
