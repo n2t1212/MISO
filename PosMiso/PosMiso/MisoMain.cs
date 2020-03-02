@@ -26,8 +26,8 @@ namespace PosMiso
         {
             InitializeComponent();
             InitMenuTopComponent();
-            InitStatusBar();
             InitMenuLeftComponent();
+            InitStatusBar();
         }
 
         #region "MENU"
@@ -43,7 +43,7 @@ namespace PosMiso
                 string mSQL = string.Format("select cn.* from DM_CHUCNANG cn left join HT_NHOMQUYEN_CHUCNANG nqcn on nqcn.macn = cn.macn " 
                     + "left join HT_NHOMQUYEN nq on nq.soid = nqcn.manhom left join HT_QUYENHAN qh on qh.soid_nhomquyen = nq.soid " 
                     + "left join HT_NGUOIDUNG nd on nd.soid = qh.soid_nguoidung where nd.taikhoan ='{0}' "
-                   // + "and cn.muccon='left'"
+                    + "and cn.muccon='left'"
                     , MTGlobal.MT_USER_LOGIN);
                 DataTable otblMenu = MTSQLServer.getMTSQLServer().wRead(mSQL, null, false);
                 if (otblMenu != null)
@@ -72,8 +72,8 @@ namespace PosMiso
                     NavBarGroup navGrp = new NavBarGroup();
                     navGrp.Caption = grp.name;
                     navGrp.Expanded = true;
-                    navGrp.Name = grp.code;
-                    //navGrp.LargeImage = Image.FromFile(string.Format("../../Medias/Icons/{0}", grp.icon));
+                    navGrp.Name = grp.formName;
+                    navGrp.LargeImage = Image.FromFile(string.Format("../../Medias/Icons/{0}", grp.icon));
 
                     List<NavBarItemLink> itemLink = new List<NavBarItemLink>();
                     foreach (DM_ChucNang itm in items)
@@ -82,8 +82,8 @@ namespace PosMiso
                         {
                             NavBarItem navItm = new NavBarItem();
                             navItm.Caption = itm.name;
-                            navItm.Name = itm.code;
-                            //navItm.SmallImage = Image.FromFile(string.Format("../../Medias/Icons/{0}", itm.icon));
+                            navItm.Name = itm.formName;
+                            navItm.SmallImage = Image.FromFile(string.Format("../../Medias/Icons/{0}", itm.icon));
                             navItm.LinkClicked += navItm_LinkClicked;
                             navItems.Add(navItm);
                             itemLink.Add(new NavBarItemLink(navItm));
@@ -119,8 +119,7 @@ namespace PosMiso
 
         void navItm_LinkClicked(object sender, NavBarLinkEventArgs e)
         {
-            //OpenForm(e.Link.ItemName.ToString(), e.Link.Caption.ToString(), "");
-            OpenForm("Form1", "Test open " + e.Link.Caption.ToString());
+            OpenForm(e.Link.ItemName.ToString(), e.Link.Caption.ToString());
         }
 
         private void InitMenuTopComponent()
@@ -135,7 +134,7 @@ namespace PosMiso
                 string mSQL = string.Format("select cn.* from DM_CHUCNANG cn left join HT_NHOMQUYEN_CHUCNANG nqcn on nqcn.macn = cn.macn "
                     + "left join HT_NHOMQUYEN nq on nq.soid = nqcn.manhom left join HT_QUYENHAN qh on qh.soid_nhomquyen = nq.soid "
                     + "left join HT_NGUOIDUNG nd on nd.soid = qh.soid_nguoidung where nd.taikhoan ='{0}' "
-                   // + "and cn.muccon='top'"
+                    + "and cn.muccon='top'"
                     , MTGlobal.MT_USER_LOGIN);
                 DataTable otblMenu = MTSQLServer.getMTSQLServer().wRead(mSQL, null, false);
                 if (otblMenu != null)
@@ -163,10 +162,10 @@ namespace PosMiso
                 foreach (DM_ChucNang grp in groups)
                 {
                     ToolStripMenuItem menuGrp = new ToolStripMenuItem();
-                    menuGrp.Name = grp.code;
+                    menuGrp.Name = grp.formName;
                     menuGrp.Size = new System.Drawing.Size(163, 22);
                     menuGrp.Text = grp.name;
-                   // menuGrp.Image = Image.FromFile(string.Format("../../Medias/Icons/{0}", grp.icon));
+                    menuGrp.Image = Image.FromFile(string.Format("../../Medias/Icons/{0}", grp.icon));
 
                     List<ToolStripMenuItem> menuItems = new List<ToolStripMenuItem>();
                     foreach (DM_ChucNang itm in items)
@@ -174,10 +173,10 @@ namespace PosMiso
                         if (itm.root == grp.id)
                         {
                             ToolStripMenuItem menuItem = new ToolStripMenuItem();
-                            menuItem.Name = itm.code;
+                            menuItem.Name = itm.formName;
                             menuItem.Size = new System.Drawing.Size(163, 22);
                             menuItem.Text = itm.name;
-                           // menuItem.Image = Image.FromFile(string.Format("../../Medias/Icons/{0}", itm.icon));
+                            menuItem.Image = Image.FromFile(string.Format("../../Medias/Icons/{0}", itm.icon));
                             menuItem.Click += menuItem_Click;
                             menuItems.Add(menuItem);
                         }

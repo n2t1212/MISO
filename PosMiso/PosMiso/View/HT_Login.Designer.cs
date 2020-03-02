@@ -40,6 +40,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblWelcome = new System.Windows.Forms.Label();
+            this.lblCreateData = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.txtUserName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPassWord.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -59,7 +60,7 @@
             // lblUsername
             // 
             this.lblUsername.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsername.Location = new System.Drawing.Point(64, 112);
+            this.lblUsername.Location = new System.Drawing.Point(64, 80);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(82, 23);
             this.lblUsername.TabIndex = 1;
@@ -68,7 +69,7 @@
             // labelControl3
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl3.Location = new System.Drawing.Point(64, 184);
+            this.labelControl3.Location = new System.Drawing.Point(64, 152);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(78, 23);
             this.labelControl3.TabIndex = 1;
@@ -79,7 +80,7 @@
             this.chkRemember.AutoSize = true;
             this.chkRemember.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkRemember.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
-            this.chkRemember.Location = new System.Drawing.Point(64, 264);
+            this.chkRemember.Location = new System.Drawing.Point(64, 240);
             this.chkRemember.Name = "chkRemember";
             this.chkRemember.Size = new System.Drawing.Size(148, 27);
             this.chkRemember.TabIndex = 2;
@@ -88,7 +89,7 @@
             // 
             // txtUserName
             // 
-            this.txtUserName.Location = new System.Drawing.Point(64, 144);
+            this.txtUserName.Location = new System.Drawing.Point(64, 112);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUserName.Properties.Appearance.Options.UseFont = true;
@@ -100,12 +101,12 @@
             // txtPassWord
             // 
             this.txtPassWord.EnterMoveNextControl = true;
-            this.txtPassWord.Location = new System.Drawing.Point(64, 216);
+            this.txtPassWord.Location = new System.Drawing.Point(64, 184);
             this.txtPassWord.Name = "txtPassWord";
             this.txtPassWord.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassWord.Properties.Appearance.Options.UseFont = true;
             this.txtPassWord.Properties.PasswordChar = '*';
-            this.txtPassWord.Size = new System.Drawing.Size(280, 30);
+            this.txtPassWord.Size = new System.Drawing.Size(272, 30);
             this.txtPassWord.TabIndex = 3;
             this.txtPassWord.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPassWord_KeyDown);
             // 
@@ -116,7 +117,7 @@
             this.btnLogin.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
             this.btnLogin.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(352, 216);
+            this.btnLogin.Location = new System.Drawing.Point(344, 184);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(136, 32);
             this.btnLogin.TabIndex = 4;
@@ -141,7 +142,7 @@
             // 
             this.lblMsg.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMsg.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
-            this.lblMsg.Location = new System.Drawing.Point(216, 248);
+            this.lblMsg.Location = new System.Drawing.Point(216, 216);
             this.lblMsg.Name = "lblMsg";
             this.lblMsg.Size = new System.Drawing.Size(0, 23);
             this.lblMsg.TabIndex = 5;
@@ -158,6 +159,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(222)))), ((int)(((byte)(255)))));
+            this.panel1.Controls.Add(this.lblCreateData);
             this.panel1.Controls.Add(this.lblWelcome);
             this.panel1.Controls.Add(this.txtUserName);
             this.panel1.Controls.Add(this.lblUsername);
@@ -176,13 +178,28 @@
             this.lblWelcome.AutoSize = true;
             this.lblWelcome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(222)))), ((int)(((byte)(255)))));
             this.lblWelcome.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWelcome.Location = new System.Drawing.Point(64, 128);
+            this.lblWelcome.Location = new System.Drawing.Point(64, 96);
             this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(67, 25);
+            this.lblWelcome.Size = new System.Drawing.Size(0, 25);
             this.lblWelcome.TabIndex = 6;
-            this.lblWelcome.Text = "label1";
             this.lblWelcome.Visible = false;
             this.lblWelcome.Click += new System.EventHandler(this.lblWelcome_Click);
+            // 
+            // lblCreateData
+            // 
+            this.lblCreateData.AutoSize = true;
+            this.lblCreateData.DisabledLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
+            this.lblCreateData.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCreateData.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
+            this.lblCreateData.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
+            this.lblCreateData.Location = new System.Drawing.Point(360, 344);
+            this.lblCreateData.Name = "lblCreateData";
+            this.lblCreateData.Size = new System.Drawing.Size(150, 24);
+            this.lblCreateData.TabIndex = 7;
+            this.lblCreateData.TabStop = true;
+            this.lblCreateData.Text = "Tạo mới dữ liệu";
+            this.lblCreateData.VisitedLinkColor = System.Drawing.Color.Lime;
+            this.lblCreateData.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblCreateData_LinkClicked);
             // 
             // HT_Login
             // 
@@ -226,5 +243,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblWelcome;
+        private System.Windows.Forms.LinkLabel lblCreateData;
     }
 }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PosMiso.View
 {
-    public partial class Form1 : Form
+    public partial class HH_PhieuXuat : Form
     {
-        public Form1()
+        public HH_PhieuXuat()
         {
             InitializeComponent();
         }

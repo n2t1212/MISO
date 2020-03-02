@@ -250,11 +250,47 @@
     <Compile Include="Report\rptTL_DiemTichLuy.designer.cs">
       <DependentUpon>rptTL_DiemTichLuy.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Form1.cs">
+    <Compile Include="View\DM_ChanhXe.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="View\DM_ChanhXe.Designer.cs">
+      <DependentUpon>DM_ChanhXe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\DM_DonGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\DM_DonGia.Designer.cs">
+      <DependentUpon>DM_DonGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\DM_KhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\DM_KhachHang.Designer.cs">
+      <DependentUpon>DM_KhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\DM_NhomSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\DM_NhomSanPham.Designer.cs">
+      <DependentUpon>DM_NhomSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\DM_SanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\DM_SanPham.Designer.cs">
+      <DependentUpon>DM_SanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\DM_Xe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\DM_Xe.Designer.cs">
+      <DependentUpon>DM_Xe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\HH_PhieuXuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\HH_PhieuXuat.Designer.cs">
+      <DependentUpon>HH_PhieuXuat.cs</DependentUpon>
     </Compile>
     <Compile Include="View\HT_CreateConection.cs">
       <SubType>Form</SubType>
@@ -285,12 +321,6 @@
     </Compile>
     <Compile Include="View\PrintPreview.Designer.cs">
       <DependentUpon>PrintPreview.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\Test.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\Test.Designer.cs">
-      <DependentUpon>Test.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="MisoMain.resx">
       <DependentUpon>MisoMain.cs</DependentUpon>
@@ -375,9 +405,6 @@
     <EmbeddedResource Include="Report\rptTL_DiemTichLuy.resx">
       <DependentUpon>rptTL_DiemTichLuy.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="View\HT_CreateConection.resx">
       <DependentUpon>HT_CreateConection.cs</DependentUpon>
     </EmbeddedResource>
@@ -392,9 +419,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\PrintPreview.resx">
       <DependentUpon>PrintPreview.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\Test.resx">
-      <DependentUpon>Test.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
