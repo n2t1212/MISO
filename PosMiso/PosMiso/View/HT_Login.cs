@@ -213,8 +213,8 @@ namespace PosMiso.View
         private void lblCreateData_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             HT_CreateConection createData = new HT_CreateConection();
-            createData.ShowDialog();
             this.Hide();
+            createData.ShowDialog();
         }
     }
 }
