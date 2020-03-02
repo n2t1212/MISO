@@ -159,6 +159,7 @@ namespace PosMiso.View
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
+            SERVER = cbServer.SelectedText.Trim();
             DBNAME = txtDB.Text.ToString().Trim();
             USERNAME = txtUsername.Text.ToString().Trim();
             PASSWORD = txtPassword.Text.ToString().Trim();
@@ -211,7 +212,7 @@ namespace PosMiso.View
             }
             else
             {
-                Utils.showMessage("Tạo CSDL không thành công", "Thông báo");
+                Utils.showMessage("Không thể tạo CSDL", "Thông báo");
                 isConnect = false;
             }
         }

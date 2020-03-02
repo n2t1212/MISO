@@ -60,6 +60,7 @@
             // lblUsername
             // 
             this.lblUsername.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsername.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
             this.lblUsername.Location = new System.Drawing.Point(64, 80);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(82, 23);
@@ -69,6 +70,7 @@
             // labelControl3
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl3.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
             this.labelControl3.Location = new System.Drawing.Point(64, 152);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(78, 23);
@@ -119,7 +121,7 @@
             this.btnLogin.ForeColor = System.Drawing.Color.White;
             this.btnLogin.Location = new System.Drawing.Point(344, 184);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(136, 32);
+            this.btnLogin.Size = new System.Drawing.Size(144, 32);
             this.btnLogin.TabIndex = 4;
             this.btnLogin.Text = "Đăng nhập";
             this.btnLogin.UseVisualStyleBackColor = false;
@@ -189,12 +191,12 @@
             // 
             this.lblCreateData.AutoSize = true;
             this.lblCreateData.DisabledLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
-            this.lblCreateData.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCreateData.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCreateData.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
             this.lblCreateData.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
-            this.lblCreateData.Location = new System.Drawing.Point(360, 344);
+            this.lblCreateData.Location = new System.Drawing.Point(368, 344);
             this.lblCreateData.Name = "lblCreateData";
-            this.lblCreateData.Size = new System.Drawing.Size(150, 24);
+            this.lblCreateData.Size = new System.Drawing.Size(122, 19);
             this.lblCreateData.TabIndex = 7;
             this.lblCreateData.TabStop = true;
             this.lblCreateData.Text = "Tạo mới dữ liệu";

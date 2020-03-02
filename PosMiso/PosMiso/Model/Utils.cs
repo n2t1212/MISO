@@ -264,13 +264,22 @@ namespace PosMiso.Model
             {
                 string sqlCreateDB = "IF  NOT EXISTS (SELECT * FROM sys.databases WHERE name = N'" + databaseName + "') BEGIN CREATE DATABASE [" + databaseName + "] END";
 
+
+                string killDB = "USE [master] IF  EXISTS (SELECT * FROM sys.databases WHERE name = N'" + databaseName + "') " + 
+                                "BEGIN DECLARE @kill varchar(8000) = ''; "+
+                                "SELECT @kill = @kill + 'kill ' + CONVERT(varchar(5), spid) + ';' FROM sys.sysprocesses "+
+                                " WHERE dbid = db_id('" + databaseName + "') EXEC(@kill); END";
+
                 string sqlRestore_x64 = @"USE master RESTORE DATABASE [" + databaseName + "] FROM  DISK = N'" + @restoreFile +
                     "' WITH  FILE = 1, MOVE N'MTPOS' TO N'" + MTGlobal.MT_SQL_DATA_PATH_x64 + databaseName +
-                    ".mdf', MOVE N'MTPOS_log' TO N'" + MTGlobal.MT_SQL_DATA_PATH_x64 + databaseName + ".ldf',NOUNLOAD, REPLACE, STATS = 10";
+                    ".mdf', MOVE N'" + databaseName + "_log' TO N'" + MTGlobal.MT_SQL_DATA_PATH_x64 + databaseName + ".ldf',NOUNLOAD, REPLACE, STATS = 10";
 
                 string sqlRestore_x86 = @"USE master RESTORE DATABASE [" + databaseName + "] FROM  DISK = N'" + @restoreFile +
                     "' WITH  FILE = 1, MOVE N'MTPOS' TO N'" + MTGlobal.MT_SQL_DATA_PATH_x86 + databaseName +
-                    ".mdf', MOVE N'MTPOS_log' TO N'" + MTGlobal.MT_SQL_DATA_PATH_x86 + databaseName + ".ldf',NOUNLOAD, REPLACE, STATS = 10";
+                    ".mdf', MOVE N'" + databaseName  + "_log' TO N'" + MTGlobal.MT_SQL_DATA_PATH_x86 + databaseName + ".ldf',NOUNLOAD, REPLACE, STATS = 10";
+
+                string sqlRestore = @"USE master RESTORE DATABASE [" + databaseName + "] FROM  DISK = N'" + @restoreFile +
+                    "' WITH REPLACE";
 
                 string connectionString = string.Format(@"Data Source={0};Persist Security Info=True;User ID={1};Password={2};Max Pool Size=2000", server, username, password);
                 using (SqlConnection con = new SqlConnection(connectionString))
@@ -281,10 +290,13 @@ namespace PosMiso.Model
                     SqlCommand sqlCmdCreateDB = new SqlCommand(sqlCreateDB, con);
                     sqlCmdCreateDB.ExecuteNonQuery();
 
+                    SqlCommand sqlCmdKillDB = new SqlCommand(killDB, con);
+                    sqlCmdKillDB.ExecuteNonQuery();
+
                     // Restore DB
                     try
                     {
-                        SqlCommand sqlCmdRestore_x64 = new SqlCommand(sqlRestore_x64, con);
+                        SqlCommand sqlCmdRestore_x64 = new SqlCommand(sqlRestore, con);
                         sqlCmdRestore_x64.ExecuteNonQuery();
                         MTGlobal.WriteRegistryKey(MTGlobal.MT_REGKEY_SECTION_SQL, MTGlobal.MT_REGKEY_DBNAME, databaseName);
                         return true;
