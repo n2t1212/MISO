@@ -35,12 +35,12 @@
             this.txtUserName = new DevExpress.XtraEditors.TextEdit();
             this.txtPassWord = new DevExpress.XtraEditors.TextEdit();
             this.btnLogin = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
             this.lblMsg = new DevExpress.XtraEditors.LabelControl();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblWelcome = new System.Windows.Forms.Label();
             this.lblCreateData = new System.Windows.Forms.LinkLabel();
+            this.lblWelcome = new System.Windows.Forms.Label();
+            this.btnCancel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.txtUserName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPassWord.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -118,27 +118,14 @@
             this.btnLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnLogin.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
             this.btnLogin.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.ForeColor = System.Drawing.Color.White;
+            this.btnLogin.ForeColor = System.Drawing.Color.Transparent;
             this.btnLogin.Location = new System.Drawing.Point(344, 184);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(144, 32);
+            this.btnLogin.Size = new System.Drawing.Size(144, 40);
             this.btnLogin.TabIndex = 4;
             this.btnLogin.Text = "Đăng nhập";
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
-            this.btnCancel.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Location = new System.Drawing.Point(816, 0);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(56, 40);
-            this.btnCancel.TabIndex = 4;
-            this.btnCancel.Text = "X";
-            this.btnCancel.UseVisualStyleBackColor = false;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // lblMsg
             // 
@@ -175,18 +162,6 @@
             this.panel1.Size = new System.Drawing.Size(520, 384);
             this.panel1.TabIndex = 7;
             // 
-            // lblWelcome
-            // 
-            this.lblWelcome.AutoSize = true;
-            this.lblWelcome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(222)))), ((int)(((byte)(255)))));
-            this.lblWelcome.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWelcome.Location = new System.Drawing.Point(64, 96);
-            this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(0, 25);
-            this.lblWelcome.TabIndex = 6;
-            this.lblWelcome.Visible = false;
-            this.lblWelcome.Click += new System.EventHandler(this.lblWelcome_Click);
-            // 
             // lblCreateData
             // 
             this.lblCreateData.AutoSize = true;
@@ -202,6 +177,31 @@
             this.lblCreateData.Text = "Tạo mới dữ liệu";
             this.lblCreateData.VisitedLinkColor = System.Drawing.Color.Lime;
             this.lblCreateData.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblCreateData_LinkClicked);
+            // 
+            // lblWelcome
+            // 
+            this.lblWelcome.AutoSize = true;
+            this.lblWelcome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(222)))), ((int)(((byte)(255)))));
+            this.lblWelcome.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWelcome.Location = new System.Drawing.Point(64, 96);
+            this.lblWelcome.Name = "lblWelcome";
+            this.lblWelcome.Size = new System.Drawing.Size(0, 25);
+            this.lblWelcome.TabIndex = 6;
+            this.lblWelcome.Visible = false;
+            this.lblWelcome.Click += new System.EventHandler(this.lblWelcome_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
+            this.btnCancel.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.ForeColor = System.Drawing.Color.White;
+            this.btnCancel.Location = new System.Drawing.Point(816, 0);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(56, 40);
+            this.btnCancel.TabIndex = 4;
+            this.btnCancel.Text = "X";
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // HT_Login
             // 
@@ -240,11 +240,11 @@
         private DevExpress.XtraEditors.TextEdit txtUserName;
         private DevExpress.XtraEditors.TextEdit txtPassWord;
         private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.Button btnCancel;
         private DevExpress.XtraEditors.LabelControl lblMsg;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblWelcome;
         private System.Windows.Forms.LinkLabel lblCreateData;
+        private System.Windows.Forms.Button btnCancel;
     }
 }

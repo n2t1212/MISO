@@ -40,71 +40,73 @@
             this.txtImei = new DevExpress.XtraEditors.TextEdit();
             this.txtAPIServer = new DevExpress.XtraEditors.TextEdit();
             this.btnRegister = new DevExpress.XtraEditors.SimpleButton();
-            this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnExit = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.txtCustomer.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddress.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPhone.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtImei.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAPIServer.Properties)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelControl1
             // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.labelControl1.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
-            this.labelControl1.Location = new System.Drawing.Point(24, 88);
+            this.labelControl1.Location = new System.Drawing.Point(30, 88);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(154, 19);
+            this.labelControl1.Size = new System.Drawing.Size(139, 19);
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "Tên đơn vị sử dụng";
             // 
             // labelControl2
             // 
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
-            this.labelControl2.Location = new System.Drawing.Point(120, 128);
+            this.labelControl2.Location = new System.Drawing.Point(121, 128);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(55, 19);
+            this.labelControl2.Size = new System.Drawing.Size(48, 19);
             this.labelControl2.TabIndex = 0;
             this.labelControl2.Text = "Địa chỉ";
             // 
             // labelControl3
             // 
-            this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.labelControl3.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
-            this.labelControl3.Location = new System.Drawing.Point(72, 168);
+            this.labelControl3.Location = new System.Drawing.Point(76, 168);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(107, 19);
+            this.labelControl3.Size = new System.Drawing.Size(93, 19);
             this.labelControl3.TabIndex = 0;
             this.labelControl3.Text = "Số điện thoại";
             // 
             // labelControl4
             // 
-            this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.labelControl4.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
-            this.labelControl4.Location = new System.Drawing.Point(112, 208);
+            this.labelControl4.Location = new System.Drawing.Point(113, 208);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(63, 19);
+            this.labelControl4.Size = new System.Drawing.Size(56, 19);
             this.labelControl4.TabIndex = 0;
             this.labelControl4.Text = "Số IMEI";
             // 
             // lblAPIServer
             // 
-            this.lblAPIServer.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAPIServer.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.lblAPIServer.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
-            this.lblAPIServer.Location = new System.Drawing.Point(72, 248);
+            this.lblAPIServer.Location = new System.Drawing.Point(80, 248);
             this.lblAPIServer.Name = "lblAPIServer";
-            this.lblAPIServer.Size = new System.Drawing.Size(101, 19);
+            this.lblAPIServer.Size = new System.Drawing.Size(89, 19);
             this.lblAPIServer.TabIndex = 0;
             this.lblAPIServer.Text = "Máy chủ API";
             // 
             // labelControl6
             // 
-            this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl6.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
-            this.labelControl6.Location = new System.Drawing.Point(200, 32);
+            this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl6.Appearance.ForeColor = System.Drawing.Color.White;
+            this.labelControl6.Location = new System.Drawing.Point(16, 8);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(221, 25);
+            this.labelControl6.Size = new System.Drawing.Size(180, 23);
             this.labelControl6.TabIndex = 0;
             this.labelControl6.Text = "ĐĂNG KÍ THÔNG TIN";
             // 
@@ -169,25 +171,33 @@
             this.btnRegister.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
             this.btnRegister.Appearance.Options.UseFont = true;
             this.btnRegister.Appearance.Options.UseForeColor = true;
-            this.btnRegister.Location = new System.Drawing.Point(192, 288);
+            this.btnRegister.Location = new System.Drawing.Point(272, 296);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(104, 32);
             this.btnRegister.TabIndex = 2;
             this.btnRegister.Text = "Đăng kí";
             this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
-            // btnCancel
+            // panel1
             // 
-            this.btnCancel.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
-            this.btnCancel.Appearance.Options.UseFont = true;
-            this.btnCancel.Appearance.Options.UseForeColor = true;
-            this.btnCancel.Location = new System.Drawing.Point(368, 288);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(96, 32);
-            this.btnCancel.TabIndex = 3;
-            this.btnCancel.Text = "Thoát";
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
+            this.panel1.Controls.Add(this.btnExit);
+            this.panel1.Controls.Add(this.labelControl6);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(632, 40);
+            this.panel1.TabIndex = 6;
+            // 
+            // btnExit
+            // 
+            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExit.Location = new System.Drawing.Point(584, 8);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(34, 28);
+            this.btnExit.TabIndex = 10;
+            this.btnExit.Text = "X";
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // HT_Register
             // 
@@ -199,7 +209,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(633, 358);
             this.ControlBox = false;
-            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.txtAPIServer);
             this.Controls.Add(this.txtImei);
@@ -210,7 +220,6 @@
             this.Controls.Add(this.labelControl4);
             this.Controls.Add(this.labelControl3);
             this.Controls.Add(this.labelControl2);
-            this.Controls.Add(this.labelControl6);
             this.Controls.Add(this.labelControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.LookAndFeel.SkinName = "Office 2013";
@@ -224,6 +233,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtPhone.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtImei.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAPIServer.Properties)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -243,6 +254,7 @@
         private DevExpress.XtraEditors.TextEdit txtImei;
         private DevExpress.XtraEditors.TextEdit txtAPIServer;
         private DevExpress.XtraEditors.SimpleButton btnRegister;
-        private DevExpress.XtraEditors.SimpleButton btnCancel;
+        private System.Windows.Forms.Panel panel1;
+        private DevExpress.XtraEditors.SimpleButton btnExit;
     }
 }
