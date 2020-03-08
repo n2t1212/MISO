@@ -16,6 +16,8 @@ namespace PosMiso.View
         DataTable otblSrcSanPham = null;
         DataTable otblSrcNhomSanPham = null;
 
+        String maNhomSPId = "";
+
         public DM_SanPham()
         {
             InitializeComponent();
@@ -76,8 +78,8 @@ namespace PosMiso.View
 
             if(dataRow != null)
             {
-                String Manhomspid = dataRow["Manhomspid"].ToString();
-                setDataSourceSanPham(Manhomspid);
+                maNhomSPId = dataRow["Manhomspid"].ToString();
+                setDataSourceSanPham(maNhomSPId);
             }
         }
 
@@ -85,6 +87,44 @@ namespace PosMiso.View
         {
             frmInMa inMa = new frmInMa();
             inMa.ShowDialog();
+        }
+
+        private void btnImport_Click(object sender, EventArgs e)
+        {
+            if (maNhomSPId.Length == 0)
+            {
+                Utils.showMessage("Vui lòng chọn nhóm sản phẩm cần nhập", "Thông báo");
+                return;
+            }
+
+            dlg_ImportSanPham importSP = new dlg_ImportSanPham(maNhomSPId);
+            importSP.ShowDialog();
+        }
+
+        private void btnDownTemplate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                FolderBrowserDialog fdl = new FolderBrowserDialog();
+                if (fdl.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    if (System.IO.File.Exists(fdl.SelectedPath + @"\Bieu_mau_san_pham.xlsx"))
+                    {
+                        Utils.showMessage("File mẫu đang tồn tại trong thư mục. Vui lòng kiểm tra lại..", "Thông báo");
+                    }
+                    else
+                    {
+                        System.IO.File.Copy(@"Bieu_mau_san_pham.xlsx", fdl.SelectedPath + @"\Bieu_mau_san_pham.xlsx");
+                        Utils.showMessage("Đã tải file mẫu thành công.", "Thông báo");
+                    }
+                    return;
+                }
+            }
+            catch (Exception ex)
+            {
+                Utils.showMessage("Lỗi tải file. Vui lòng kiểm tra đường dẫn", "Thông báo");
+                return;
+            }
         }
     }
 }

@@ -46,6 +46,8 @@
             this.colTennhom = new DevExpress.XtraGrid.Columns.GridColumn();
             this.splitContainerDMSP = new System.Windows.Forms.SplitContainer();
             this.panelFunction = new System.Windows.Forms.Panel();
+            this.btnDownTemplate = new System.Windows.Forms.Button();
+            this.btnImport = new System.Windows.Forms.Button();
             this.btnInMa = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grdSanPham)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvSanPham)).BeginInit();
@@ -242,6 +244,8 @@
             // 
             // panelFunction
             // 
+            this.panelFunction.Controls.Add(this.btnDownTemplate);
+            this.panelFunction.Controls.Add(this.btnImport);
             this.panelFunction.Controls.Add(this.btnInMa);
             this.panelFunction.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelFunction.Location = new System.Drawing.Point(0, 475);
@@ -249,11 +253,37 @@
             this.panelFunction.Size = new System.Drawing.Size(1191, 56);
             this.panelFunction.TabIndex = 3;
             // 
+            // btnDownTemplate
+            // 
+            this.btnDownTemplate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDownTemplate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
+            this.btnDownTemplate.Location = new System.Drawing.Point(696, 16);
+            this.btnDownTemplate.Name = "btnDownTemplate";
+            this.btnDownTemplate.Size = new System.Drawing.Size(96, 23);
+            this.btnDownTemplate.TabIndex = 4;
+            this.btnDownTemplate.Text = "Tải mẫu (.xls)";
+            this.btnDownTemplate.UseVisualStyleBackColor = true;
+            this.btnDownTemplate.Click += new System.EventHandler(this.btnDownTemplate_Click);
+            // 
+            // btnImport
+            // 
+            this.btnImport.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImport.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
+            this.btnImport.Location = new System.Drawing.Point(832, 16);
+            this.btnImport.Name = "btnImport";
+            this.btnImport.Size = new System.Drawing.Size(88, 23);
+            this.btnImport.TabIndex = 3;
+            this.btnImport.Text = "Nhập (.xls)";
+            this.btnImport.UseVisualStyleBackColor = true;
+            this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
+            // 
             // btnInMa
             // 
-            this.btnInMa.Location = new System.Drawing.Point(496, 13);
+            this.btnInMa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInMa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
+            this.btnInMa.Location = new System.Drawing.Point(576, 16);
             this.btnInMa.Name = "btnInMa";
-            this.btnInMa.Size = new System.Drawing.Size(75, 23);
+            this.btnInMa.Size = new System.Drawing.Size(88, 23);
             this.btnInMa.TabIndex = 2;
             this.btnInMa.Text = "In mã";
             this.btnInMa.UseVisualStyleBackColor = true;
@@ -303,5 +333,7 @@
         private System.Windows.Forms.SplitContainer splitContainerDMSP;
         private System.Windows.Forms.Panel panelFunction;
         private System.Windows.Forms.Button btnInMa;
+        private System.Windows.Forms.Button btnImport;
+        private System.Windows.Forms.Button btnDownTemplate;
     }
 }

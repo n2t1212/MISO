@@ -251,30 +251,36 @@
     <Compile Include="Report\rptTL_DiemTichLuy.designer.cs">
       <DependentUpon>rptTL_DiemTichLuy.cs</DependentUpon>
     </Compile>
-	<Compile Include="Report\rptBarCode2515.cs">
-	  <SubType>Component</SubType>
-	</Compile>
-	<Compile Include="Report\rptBarCode2515.designer.cs">
-	  <DependentUpon>rptBarCode2515.cs</DependentUpon>
-	</Compile>
-	<Compile Include="Report\rptBarCode3522.cs">
-	  <SubType>Component</SubType>
-	</Compile>
-	<Compile Include="Report\rptBarCode3522.designer.cs">
-	  <DependentUpon>rptBarCode3522.cs</DependentUpon>
-	</Compile>
-	<Compile Include="Report\rptQRCode2515.cs">
-	  <SubType>Component</SubType>
-	</Compile>
-	<Compile Include="Report\rptQRCode2515.designer.cs">
-	  <DependentUpon>rptQRCode2515.cs</DependentUpon>
-	</Compile>
-	<Compile Include="Report\rptQRCode3522.cs">
-	  <SubType>Component</SubType>
-	</Compile>
-	<Compile Include="Report\rptQRCode3522.designer.cs">
-	  <DependentUpon>rptQRCode3522.cs</DependentUpon>
-	</Compile>
+    <Compile Include="Report\rptBarCode2515.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptBarCode2515.designer.cs">
+      <DependentUpon>rptBarCode2515.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptBarCode3522.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptBarCode3522.designer.cs">
+      <DependentUpon>rptBarCode3522.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptQRCode2515.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptQRCode2515.designer.cs">
+      <DependentUpon>rptQRCode2515.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptQRCode3522.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptQRCode3522.designer.cs">
+      <DependentUpon>rptQRCode3522.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\dlg_ImportSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\dlg_ImportSanPham.Designer.cs">
+      <DependentUpon>dlg_ImportSanPham.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\DM_ChanhXe.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -442,19 +448,21 @@
     <EmbeddedResource Include="Report\rptTL_DiemTichLuy.resx">
       <DependentUpon>rptTL_DiemTichLuy.cs</DependentUpon>
     </EmbeddedResource>
-	<EmbeddedResource Include="Report\rptBarCode2515.resx">
-	  <DependentUpon>rptBarCode2515.cs</DependentUpon>
-	</EmbeddedResource>
-	<EmbeddedResource Include="Report\rptBarCode3522.resx">
-	  <DependentUpon>rptBarCode3522.cs</DependentUpon>
-	</EmbeddedResource>
-	<EmbeddedResource Include="Report\rptQRCode2515.resx">
-	  <DependentUpon>rptQRCode2515.cs</DependentUpon>
-	</EmbeddedResource>
-	<EmbeddedResource Include="Report\rptQRCode3522.resx">
-	  <DependentUpon>rptQRCode3522.cs</DependentUpon>
-	</EmbeddedResource>
-
+    <EmbeddedResource Include="Report\rptBarCode2515.resx">
+      <DependentUpon>rptBarCode2515.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptBarCode3522.resx">
+      <DependentUpon>rptBarCode3522.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptQRCode2515.resx">
+      <DependentUpon>rptQRCode2515.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptQRCode3522.resx">
+      <DependentUpon>rptQRCode3522.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\dlg_ImportSanPham.resx">
+      <DependentUpon>dlg_ImportSanPham.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\DM_SanPham.resx">
       <DependentUpon>DM_SanPham.cs</DependentUpon>
     </EmbeddedResource>
@@ -476,7 +484,7 @@
     <EmbeddedResource Include="View\PrintPreview.resx">
       <DependentUpon>PrintPreview.cs</DependentUpon>
     </EmbeddedResource>
-	<EmbeddedResource Include="View\frmInMa.resx">
+    <EmbeddedResource Include="View\frmInMa.resx">
       <DependentUpon>frmInMa.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
@@ -776,6 +784,9 @@
     <Content Include="Medias\SVG\Wedding Cake.svg" />
     <Content Include="Medias\SVG\Wind Rose.svg" />
     <Content Include="Medias\SVG\Worldwide Location.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="FileTemplate\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

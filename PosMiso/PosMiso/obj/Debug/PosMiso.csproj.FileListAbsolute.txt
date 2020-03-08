@@ -90,3 +90,4 @@ D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.rptQRCode3522.resources
 D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.exe
 D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.pdb
 D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.frmInMa.resources
+D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.dlg_ImportSanPham.resources
