@@ -91,3 +91,7 @@ D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.exe
 D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.pdb
 D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.frmInMa.resources
 D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.dlg_ImportSanPham.resources
+D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.csprojResolveAssemblyReference.cache
+D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.DM_KhachHang.resources
+D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.DM_DonGia.resources
+D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.dlg_ImportGiaSanPham.resources

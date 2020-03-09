@@ -74,13 +74,7 @@ namespace PosMiso.View
 
         private void gvNhomSanPham_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
-            DataRow dataRow = gvNhomSanPham.GetDataRow(e.FocusedRowHandle);
 
-            if(dataRow != null)
-            {
-                maNhomSPId = dataRow["Manhomspid"].ToString();
-                setDataSourceSanPham(maNhomSPId);
-            }
         }
 
         private void btnInMa_Click(object sender, EventArgs e)
@@ -124,6 +118,17 @@ namespace PosMiso.View
             {
                 Utils.showMessage("Lỗi tải file. Vui lòng kiểm tra đường dẫn", "Thông báo");
                 return;
+            }
+        }
+
+        private void gvNhomSanPham_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
+        {
+            DataRow dataRow = gvNhomSanPham.GetDataRow(e.RowHandle);
+
+            if (dataRow != null)
+            {
+                maNhomSPId = dataRow["Manhomspid"].ToString();
+                setDataSourceSanPham(maNhomSPId);
             }
         }
     }

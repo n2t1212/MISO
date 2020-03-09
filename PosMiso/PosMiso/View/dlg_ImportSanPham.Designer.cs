@@ -39,15 +39,15 @@
             this.grdSanPhamImport = new DevExpress.XtraGrid.GridControl();
             this.gvSanPhamImport = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colMasp = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.btnImport = new System.Windows.Forms.Button();
             this.colTensp = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDvt = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colQuycach = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colQuydoikgl = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colQuydoithung = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNhacungcap = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnImport = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdSanPhamImport)).BeginInit();
@@ -63,14 +63,14 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1008, 48);
+            this.panel1.Size = new System.Drawing.Size(1000, 48);
             this.panel1.TabIndex = 0;
             // 
             // btnExit
             // 
             this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExit.Location = new System.Drawing.Point(960, 8);
+            this.btnExit.Location = new System.Drawing.Point(952, 8);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(34, 28);
             this.btnExit.TabIndex = 12;
@@ -133,7 +133,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 48);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1008, 481);
+            this.panel2.Size = new System.Drawing.Size(1000, 452);
             this.panel2.TabIndex = 5;
             // 
             // txtFile
@@ -175,40 +175,6 @@
             this.colMasp.Visible = true;
             this.colMasp.VisibleIndex = 0;
             this.colMasp.Width = 172;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.btnCancel);
-            this.panel4.Controls.Add(this.btnImport);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 473);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1008, 56);
-            this.panel4.TabIndex = 7;
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
-            this.btnCancel.Location = new System.Drawing.Point(520, 16);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(80, 32);
-            this.btnCancel.TabIndex = 1;
-            this.btnCancel.Text = "Thoát";
-            this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
-            // btnImport
-            // 
-            this.btnImport.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnImport.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
-            this.btnImport.Location = new System.Drawing.Point(312, 16);
-            this.btnImport.Name = "btnImport";
-            this.btnImport.Size = new System.Drawing.Size(104, 32);
-            this.btnImport.TabIndex = 0;
-            this.btnImport.Text = "Đồng ý";
-            this.btnImport.UseVisualStyleBackColor = true;
-            this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
             // 
             // colTensp
             // 
@@ -264,11 +230,45 @@
             this.colNhacungcap.VisibleIndex = 6;
             this.colNhacungcap.Width = 141;
             // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.btnCancel);
+            this.panel4.Controls.Add(this.btnImport);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel4.Location = new System.Drawing.Point(0, 444);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1000, 56);
+            this.panel4.TabIndex = 7;
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
+            this.btnCancel.Location = new System.Drawing.Point(520, 16);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(80, 32);
+            this.btnCancel.TabIndex = 1;
+            this.btnCancel.Text = "Thoát";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnImport
+            // 
+            this.btnImport.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImport.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
+            this.btnImport.Location = new System.Drawing.Point(312, 16);
+            this.btnImport.Name = "btnImport";
+            this.btnImport.Size = new System.Drawing.Size(104, 32);
+            this.btnImport.TabIndex = 0;
+            this.btnImport.Text = "Đồng ý";
+            this.btnImport.UseVisualStyleBackColor = true;
+            this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
+            // 
             // dlg_ImportSanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1008, 529);
+            this.ClientSize = new System.Drawing.Size(1000, 500);
             this.ControlBox = false;
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);

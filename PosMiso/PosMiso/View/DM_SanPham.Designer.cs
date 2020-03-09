@@ -67,7 +67,7 @@
             this.grdSanPham.Location = new System.Drawing.Point(0, 0);
             this.grdSanPham.MainView = this.gvSanPham;
             this.grdSanPham.Name = "grdSanPham";
-            this.grdSanPham.Size = new System.Drawing.Size(1191, 295);
+            this.grdSanPham.Size = new System.Drawing.Size(1191, 303);
             this.grdSanPham.TabIndex = 0;
             this.grdSanPham.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvSanPham});
@@ -177,7 +177,7 @@
             this.grdNhomSanPham.Location = new System.Drawing.Point(0, 0);
             this.grdNhomSanPham.MainView = this.gvNhomSanPham;
             this.grdNhomSanPham.Name = "grdNhomSanPham";
-            this.grdNhomSanPham.Size = new System.Drawing.Size(1191, 232);
+            this.grdNhomSanPham.Size = new System.Drawing.Size(1191, 224);
             this.grdNhomSanPham.TabIndex = 1;
             this.grdNhomSanPham.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvNhomSanPham});
@@ -198,7 +198,7 @@
             this.gvNhomSanPham.OptionsView.ShowHorizontalLines = DevExpress.Utils.DefaultBoolean.True;
             this.gvNhomSanPham.OptionsView.ShowVerticalLines = DevExpress.Utils.DefaultBoolean.True;
             this.gvNhomSanPham.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Always;
-            this.gvNhomSanPham.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gvNhomSanPham_FocusedRowChanged);
+            this.gvNhomSanPham.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gvNhomSanPham_RowClick);
             // 
             // colManhomspid
             // 
@@ -239,7 +239,7 @@
             // 
             this.splitContainerDMSP.Panel2.Controls.Add(this.grdSanPham);
             this.splitContainerDMSP.Size = new System.Drawing.Size(1191, 531);
-            this.splitContainerDMSP.SplitterDistance = 232;
+            this.splitContainerDMSP.SplitterDistance = 224;
             this.splitContainerDMSP.TabIndex = 2;
             // 
             // panelFunction
@@ -255,11 +255,11 @@
             // 
             // btnDownTemplate
             // 
-            this.btnDownTemplate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDownTemplate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDownTemplate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
-            this.btnDownTemplate.Location = new System.Drawing.Point(696, 16);
+            this.btnDownTemplate.Location = new System.Drawing.Point(152, 8);
             this.btnDownTemplate.Name = "btnDownTemplate";
-            this.btnDownTemplate.Size = new System.Drawing.Size(96, 23);
+            this.btnDownTemplate.Size = new System.Drawing.Size(112, 32);
             this.btnDownTemplate.TabIndex = 4;
             this.btnDownTemplate.Text = "Tải mẫu (.xls)";
             this.btnDownTemplate.UseVisualStyleBackColor = true;
@@ -267,11 +267,11 @@
             // 
             // btnImport
             // 
-            this.btnImport.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImport.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImport.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
-            this.btnImport.Location = new System.Drawing.Point(832, 16);
+            this.btnImport.Location = new System.Drawing.Point(288, 8);
             this.btnImport.Name = "btnImport";
-            this.btnImport.Size = new System.Drawing.Size(88, 23);
+            this.btnImport.Size = new System.Drawing.Size(104, 32);
             this.btnImport.TabIndex = 3;
             this.btnImport.Text = "Nhập (.xls)";
             this.btnImport.UseVisualStyleBackColor = true;
@@ -279,11 +279,11 @@
             // 
             // btnInMa
             // 
-            this.btnInMa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInMa.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInMa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
-            this.btnInMa.Location = new System.Drawing.Point(576, 16);
+            this.btnInMa.Location = new System.Drawing.Point(24, 8);
             this.btnInMa.Name = "btnInMa";
-            this.btnInMa.Size = new System.Drawing.Size(88, 23);
+            this.btnInMa.Size = new System.Drawing.Size(104, 32);
             this.btnInMa.TabIndex = 2;
             this.btnInMa.Text = "In mã";
             this.btnInMa.UseVisualStyleBackColor = true;

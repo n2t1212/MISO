@@ -275,6 +275,12 @@
     <Compile Include="Report\rptQRCode3522.designer.cs">
       <DependentUpon>rptQRCode3522.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\dlg_ImportGiaSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\dlg_ImportGiaSanPham.Designer.cs">
+      <DependentUpon>dlg_ImportGiaSanPham.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\dlg_ImportSanPham.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -460,8 +466,17 @@
     <EmbeddedResource Include="Report\rptQRCode3522.resx">
       <DependentUpon>rptQRCode3522.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\dlg_ImportGiaSanPham.resx">
+      <DependentUpon>dlg_ImportGiaSanPham.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\dlg_ImportSanPham.resx">
       <DependentUpon>dlg_ImportSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\DM_DonGia.resx">
+      <DependentUpon>DM_DonGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\DM_KhachHang.resx">
+      <DependentUpon>DM_KhachHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\DM_SanPham.resx">
       <DependentUpon>DM_SanPham.cs</DependentUpon>
