@@ -11,34 +11,34 @@ using System.Windows.Forms;
 
 namespace PosMiso.View
 {
-    public partial class DM_Xe : Form
+    public partial class DM_LyDo : Form
     {
-        DataTable otblSrcXe = null;
+        DataTable otblSrcLyDo = null;
 
-        public DM_Xe()
+        public DM_LyDo()
         {
             InitializeComponent();
         }
 
-        private void DM_Xe_Load(object sender, EventArgs e)
+        private void DM_LyDo_Load(object sender, EventArgs e)
         {
-            setDataSourceXe();
+            setDataSourceLyDo();
         }
 
-        private void setDataSourceXe()
+        private void setDataSourceLyDo()
         {
             try
             {
-                String mSql = String.Format("select Xeid,Soxe,Loaixe,Taixe,Dienthoai,Diachi,Ghichu from DM_XE order by Xeid asc");
-                otblSrcXe = MTSQLServer.getMTSQLServer().wRead(mSql, null, false);
-                if (otblSrcXe == null)
+                String mSql = String.Format("select Mald,Lydo,Loai,TKNo,TKCo,Ghichu from DM_LYDO order by Mald asc");
+                otblSrcLyDo = MTSQLServer.getMTSQLServer().wRead(mSql, null, false);
+                if (otblSrcLyDo == null)
                 {
                     Utils.showMessage("Không thể đọc dữ liệu cần chọn...", "Thông báo");
                     return;
                 }
 
-                grdXe.DataSource = otblSrcXe;
-                SysPar.SetGridReadOnly(true, gvXe);
+                grdLyDo.DataSource = otblSrcLyDo;
+                SysPar.SetGridReadOnly(true, gvLyDo);
             }
             catch (Exception ex) { }
 

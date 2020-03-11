@@ -305,6 +305,18 @@
     <Compile Include="View\DM_KhachHang.Designer.cs">
       <DependentUpon>DM_KhachHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\DM_Kho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\DM_Kho.Designer.cs">
+      <DependentUpon>DM_Kho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\DM_LyDo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\DM_LyDo.Designer.cs">
+      <DependentUpon>DM_LyDo.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\DM_NhomSanPham.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -478,8 +490,20 @@
     <EmbeddedResource Include="View\DM_KhachHang.resx">
       <DependentUpon>DM_KhachHang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\DM_Kho.resx">
+      <DependentUpon>DM_Kho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\DM_LyDo.resx">
+      <DependentUpon>DM_LyDo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\DM_NhomSanPham.resx">
+      <DependentUpon>DM_NhomSanPham.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\DM_SanPham.resx">
       <DependentUpon>DM_SanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\DM_Xe.resx">
+      <DependentUpon>DM_Xe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmPrintPreview.resx">
       <DependentUpon>frmPrintPreview.cs</DependentUpon>
