@@ -365,11 +365,23 @@
     <Compile Include="View\HT_Login.Designer.cs">
       <DependentUpon>HT_Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\HT_PhucHoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\HT_PhucHoi.Designer.cs">
+      <DependentUpon>HT_PhucHoi.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\HT_Register.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\HT_Register.Designer.cs">
       <DependentUpon>HT_Register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\HT_SaoLuu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\HT_SaoLuu.Designer.cs">
+      <DependentUpon>HT_SaoLuu.cs</DependentUpon>
     </Compile>
     <Compile Include="View\HT_StartingForm.cs">
       <SubType>Form</SubType>
@@ -514,8 +526,14 @@
     <EmbeddedResource Include="View\HT_Login.resx">
       <DependentUpon>HT_Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\HT_PhucHoi.resx">
+      <DependentUpon>HT_PhucHoi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\HT_Register.resx">
       <DependentUpon>HT_Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\HT_SaoLuu.resx">
+      <DependentUpon>HT_SaoLuu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\HT_StartingForm.resx">
       <DependentUpon>HT_StartingForm.cs</DependentUpon>

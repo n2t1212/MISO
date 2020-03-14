@@ -166,6 +166,7 @@ namespace PosMiso
                     menuGrp.Size = new System.Drawing.Size(163, 22);
                     menuGrp.Text = grp.name;
                     menuGrp.Image = Image.FromFile(string.Format("../../Medias/Icons/{0}", grp.icon));
+                    menuGrp.Click += menuGrp_Click;
 
                     List<ToolStripMenuItem> menuItems = new List<ToolStripMenuItem>();
                     foreach (DM_ChucNang itm in items)
@@ -195,9 +196,32 @@ namespace PosMiso
             
         }
 
+        private void menuGrp_Click(object sender, EventArgs e)
+        {
+            var menuItem = sender as ToolStripMenuItem;
+            String frmName = menuItem.Name;
+            String description = menuItem.Text;
+
+            if (frmName == "HT_Thoat")
+            {
+                this.Close();
+            }
+
+            OpenForm(frmName, description);
+        }
+
         void menuItem_Click(object sender, EventArgs e)
         {
-            OpenForm("", "");
+            var menuItem = sender as ToolStripMenuItem;
+            String frmName = menuItem.Name;
+            String description = menuItem.Text;
+
+            if (frmName == "HT_Thoat")
+            {
+                this.Close();
+            }
+
+            OpenForm(frmName, description);
         }
         #endregion
 
