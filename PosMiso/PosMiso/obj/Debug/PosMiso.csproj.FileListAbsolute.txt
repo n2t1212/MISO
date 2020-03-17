@@ -101,3 +101,5 @@ D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.DM_Kho.resources
 D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.DM_Xe.resources
 D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.HT_SaoLuu.resources
 D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.HT_PhucHoi.resources
+D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.HT_QuyenHan.resources
+D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.dlg_AddQuyenHan.resources

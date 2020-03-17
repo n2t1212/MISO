@@ -212,16 +212,17 @@ namespace PosMiso
 
         void menuItem_Click(object sender, EventArgs e)
         {
-            var menuItem = sender as ToolStripMenuItem;
-            String frmName = menuItem.Name;
-            String description = menuItem.Text;
+            //var menuItem = sender as ToolStripMenuItem;
+            //String frmName = menuItem.Name;
+            //String description = menuItem.Text;
 
-            if (frmName == "HT_Thoat")
-            {
-                this.Close();
-            }
+            //if (frmName == "HT_Thoat")
+            //{
+            //    this.Close();
+            //}
 
-            OpenForm(frmName, description);
+            //OpenForm(frmName, description);
+            OpenForm("HT_QuyenHan", "Quyền hạn");
         }
         #endregion
 

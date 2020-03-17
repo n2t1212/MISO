@@ -157,6 +157,7 @@
             this.gvGiaImport.GridControl = this.grdGiaImport;
             this.gvGiaImport.Name = "gvGiaImport";
             this.gvGiaImport.OptionsView.ShowGroupPanel = false;
+            this.gvGiaImport.ViewCaption = "DANH SÁCH GIÁ SẢN PHẨM";
             // 
             // colMavung
             // 

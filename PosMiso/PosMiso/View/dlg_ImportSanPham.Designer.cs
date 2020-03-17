@@ -166,6 +166,7 @@
             this.colNhacungcap});
             this.gvSanPhamImport.GridControl = this.grdSanPhamImport;
             this.gvSanPhamImport.Name = "gvSanPhamImport";
+            this.gvSanPhamImport.OptionsView.ShowGroupPanel = false;
             // 
             // colMasp
             // 
