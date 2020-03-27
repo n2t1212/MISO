@@ -270,16 +270,28 @@ namespace PosMiso.Model
                                 "SELECT @kill = @kill + 'kill ' + CONVERT(varchar(5), spid) + ';' FROM sys.sysprocesses "+
                                 " WHERE dbid = db_id('" + databaseName + "') EXEC(@kill); END";
 
+                string logicalNameDB = @"DECLARE @Table TABLE (LogicalName varchar(128),[PhysicalName] varchar(128), [Type] varchar, [FileGroupName] varchar(128), [Size] varchar(128), " +
+                                        "[MaxSize] varchar(128), [FileId]varchar(128), [CreateLSN]varchar(128), [DropLSN]varchar(128), [UniqueId]varchar(128), [ReadOnlyLSN]varchar(128), [ReadWriteLSN]varchar(128), " +
+                                        "[BackupSizeInBytes]varchar(128), [SourceBlockSize]varchar(128), [FileGroupId]varchar(128), [LogGroupGUID]varchar(128), [DifferentialBaseLSN]varchar(128), [DifferentialBaseGUID]varchar(128), [IsReadOnly]varchar(128), [IsPresent]varchar(128), [TDEThumbprint]varchar(128)" +
+                                        ") " +
+                                        "DECLARE @Path varchar(1000)=N'" + @restoreFile + "' " +
+                                        "DECLARE @LogicalNameData varchar(128),@LogicalNameLog varchar(128) " +
+                                        "INSERT INTO @table " +
+                                        "EXEC(' " +
+                                        "RESTORE FILELISTONLY " +
+                                           "FROM DISK=''' +@Path+ ''' " +
+                                           "') " +
+                                        "SET @LogicalNameData=(SELECT LogicalName FROM @Table WHERE Type='D') " +
+                                        "SET @LogicalNameLog=(SELECT LogicalName FROM @Table WHERE Type='L') ";
+
                 string sqlRestore_x64 = @"USE master RESTORE DATABASE [" + databaseName + "] FROM  DISK = N'" + @restoreFile +
-                    "' WITH  FILE = 1, MOVE N'MTPOS' TO N'" + MTGlobal.MT_SQL_DATA_PATH_x64 + databaseName +
-                    ".mdf', MOVE N'" + databaseName + "_log' TO N'" + MTGlobal.MT_SQL_DATA_PATH_x64 + databaseName + ".ldf',NOUNLOAD, REPLACE, STATS = 10";
+                    "' WITH  FILE = 1, MOVE @LogicalNameData TO N'" + MTGlobal.MT_SQL_DATA_PATH_x64 + databaseName +
+                    ".mdf', MOVE @LogicalNameLog TO N'" + MTGlobal.MT_SQL_DATA_PATH_x64 + databaseName + ".ldf',NOUNLOAD, REPLACE, STATS = 10";
 
                 string sqlRestore_x86 = @"USE master RESTORE DATABASE [" + databaseName + "] FROM  DISK = N'" + @restoreFile +
-                    "' WITH  FILE = 1, MOVE N'MTPOS' TO N'" + MTGlobal.MT_SQL_DATA_PATH_x86 + databaseName +
-                    ".mdf', MOVE N'" + databaseName  + "_log' TO N'" + MTGlobal.MT_SQL_DATA_PATH_x86 + databaseName + ".ldf',NOUNLOAD, REPLACE, STATS = 10";
+                    "' WITH  FILE = 1, MOVE @LogicalNameData TO N'" + MTGlobal.MT_SQL_DATA_PATH_x86 + databaseName +
+                    ".mdf', MOVE @LogicalNameLog TO N'" + MTGlobal.MT_SQL_DATA_PATH_x86 + databaseName + ".ldf',NOUNLOAD, REPLACE, STATS = 10";
 
-                string sqlRestore = @"USE master RESTORE DATABASE [" + databaseName + "] FROM  DISK = N'" + @restoreFile +
-                    "' WITH REPLACE";
 
                 string connectionString = string.Format(@"Data Source={0};Persist Security Info=True;User ID={1};Password={2};Max Pool Size=2000", server, username, password);
                 using (SqlConnection con = new SqlConnection(connectionString))
@@ -296,14 +308,14 @@ namespace PosMiso.Model
                     // Restore DB
                     try
                     {
-                        SqlCommand sqlCmdRestore_x64 = new SqlCommand(sqlRestore, con);
+                        SqlCommand sqlCmdRestore_x64 = new SqlCommand(logicalNameDB + sqlRestore_x64, con);
                         sqlCmdRestore_x64.ExecuteNonQuery();
                         MTGlobal.WriteRegistryKey(MTGlobal.MT_REGKEY_SECTION_SQL, MTGlobal.MT_REGKEY_DBNAME, databaseName);
                         return true;
                     }
                     catch
                     {
-                        SqlCommand sqlCmdRestore_x86 = new SqlCommand(sqlRestore_x86, con);
+                        SqlCommand sqlCmdRestore_x86 = new SqlCommand(logicalNameDB + sqlRestore_x86, con);
                         sqlCmdRestore_x86.ExecuteNonQuery();
                         MTGlobal.WriteRegistryKey(MTGlobal.MT_REGKEY_SECTION_SQL, MTGlobal.MT_REGKEY_DBNAME, databaseName);
                         return true;
