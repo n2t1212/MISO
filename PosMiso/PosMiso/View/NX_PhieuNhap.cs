@@ -270,7 +270,7 @@ namespace PosMiso.View
                 {
                     //var row = filteredRows[i];
                     DataRow cR = tmpPNCT.NewRow();
-                    cR["Phieunxctid"] = MTGlobal.GetNewID();
+                    cR["Phieunxctid"] = sR["Phieunxctid"];
                     cR["Phieunxid"] = pPhieuNXID;
                     cR["Maspid"] = sR["Maspid"];
                     cR["Masp"] = sR["Masp"];
@@ -439,74 +439,52 @@ namespace PosMiso.View
         {
             try
             {
-                //gvPhieuNhap.SetRowCellValue(e.RowHandle, colPhieunxctid, MTGlobal.GetNewID());
-                //gvPhieuNhap.SetRowCellValue(e.RowHandle, colPhieunxid, pPhieuNXID);
+                gvPhieuNhap.SetRowCellValue(e.RowHandle, colPhieunxctid, MTGlobal.GetNewID());
+                gvPhieuNhap.SetRowCellValue(e.RowHandle, colPhieunxid, pPhieuNXID);
             }
             catch { }
-        }
-
-        private void setProductInfor(string masp)
-        {
-            DataRow[] vRow = otblSP.Select(string.Format("Masp='{0}'", masp));
-            if (vRow.Length > 0)
-            {
-                double dSL = 0;
-                try
-                {
-                    double.TryParse(gvPhieuNhap.GetRowCellValue(gvPhieuNhap.FocusedRowHandle, colSLThung).ToString(), out dSL);
-                    if (dSL == 0) { dSL = 1; }
-                }
-                catch { dSL = 1; }
-
-                gvPhieuNhap.SetRowCellValue(gvPhieuNhap.FocusedRowHandle, colTensp, vRow[0]["Tensp"].ToString());
-                gvPhieuNhap.SetRowCellValue(gvPhieuNhap.FocusedRowHandle, colDvt, vRow[0]["Dvt"].ToString());
-                gvPhieuNhap.SetRowCellValue(gvPhieuNhap.FocusedRowHandle, colQuycach, vRow[0]["Quycach"].ToString());
-                gvPhieuNhap.SetRowCellValue(gvPhieuNhap.FocusedRowHandle, colSoluong, dSL);
-                gvPhieuNhap.CloseEditor();
-                gvPhieuNhap.ShowEditor();
-            }
         }
 
         private void grdPhieuNhap_KeyDown(object sender, KeyEventArgs e)
         {
             if (isEdit == false) { return; }
-            if (e.KeyCode == Keys.Enter)
-            {
-                if (gvPhieuNhap.FocusedColumn.FieldName == "Masp" && gvPhieuNhap.FocusedColumn.Name == "colMasp")
-                {
-                    if (gvPhieuNhap.GetFocusedRowCellValue(colMasp) == null)  // || gvPhieuNhap.GetFocusedRowCellValue(colMasp).ToString() == ""
-                    {
-                        gvPhieuNhap.FocusedColumn = colMasp;
-                        return;
-                    }
+            //if (e.KeyCode == Keys.Enter)
+            //{
+            //    if (gvPhieuNhap.FocusedColumn.FieldName == "Masp" && gvPhieuNhap.FocusedColumn.Name == "colMasp")
+            //    {
+            //        if (gvPhieuNhap.GetFocusedRowCellValue(colMasp) == null)  // || gvPhieuNhap.GetFocusedRowCellValue(colMasp).ToString() == ""
+            //        {
+            //            gvPhieuNhap.FocusedColumn = colMasp;
+            //            return;
+            //        }
 
-                    String sMasp = gvPhieuNhap.GetRowCellValue(gvPhieuNhap.FocusedRowHandle, colMasp).ToString();
-                    if (sMasp == null || sMasp == "")
-                    {
-                        gvPhieuNhap.FocusedColumn = colMasp;
-                        return;
-                    }
+            //        String sMasp = gvPhieuNhap.GetRowCellValue(gvPhieuNhap.FocusedRowHandle, colMasp).ToString();
+            //        if (sMasp == null || sMasp == "")
+            //        {
+            //            gvPhieuNhap.FocusedColumn = colMasp;
+            //            return;
+            //        }
 
-                    DataRow[] vRow = otblSP.Select(string.Format("Masp='{0}'", sMasp));
-                    if (vRow.Length > 0)
-                    {
-                        double dSL = 0;
-                        try
-                        {
-                            double.TryParse(gvPhieuNhap.GetRowCellValue(gvPhieuNhap.FocusedRowHandle, colSLThung).ToString(), out dSL);
-                            if (dSL == 0) { dSL = 1; }
-                        }
-                        catch { dSL = 1; }
+            //        DataRow[] vRow = otblSP.Select(string.Format("Masp='{0}'", sMasp));
+            //        if (vRow.Length > 0)
+            //        {
+            //            double dSL = 0;
+            //            try
+            //            {
+            //                double.TryParse(gvPhieuNhap.GetRowCellValue(gvPhieuNhap.FocusedRowHandle, colSLThung).ToString(), out dSL);
+            //                if (dSL == 0) { dSL = 1; }
+            //            }
+            //            catch { dSL = 1; }
 
-                        gvPhieuNhap.SetRowCellValue(gvPhieuNhap.FocusedRowHandle, colTensp, vRow[0]["Tensp"].ToString());
-                        gvPhieuNhap.SetRowCellValue(gvPhieuNhap.FocusedRowHandle, colDvt, vRow[0]["Dvt"].ToString());
-                        gvPhieuNhap.SetRowCellValue(gvPhieuNhap.FocusedRowHandle, colQuycach, vRow[0]["Quycach"].ToString());
-                        gvPhieuNhap.SetRowCellValue(gvPhieuNhap.FocusedRowHandle, colSoluong, dSL);
-                        gvPhieuNhap.CloseEditor();
-                        gvPhieuNhap.ShowEditor();
-                    }
-                }
-            }
+            //            gvPhieuNhap.SetRowCellValue(gvPhieuNhap.FocusedRowHandle, colTensp, vRow[0]["Tensp"].ToString());
+            //            gvPhieuNhap.SetRowCellValue(gvPhieuNhap.FocusedRowHandle, colDvt, vRow[0]["Dvt"].ToString());
+            //            gvPhieuNhap.SetRowCellValue(gvPhieuNhap.FocusedRowHandle, colQuycach, vRow[0]["Quycach"].ToString());
+            //            gvPhieuNhap.SetRowCellValue(gvPhieuNhap.FocusedRowHandle, colSoluong, dSL);
+            //            gvPhieuNhap.CloseEditor();
+            //            gvPhieuNhap.ShowEditor();
+            //        }
+            //    }
+            //}
             if (e.KeyCode == Keys.Delete)
             {
                 try
@@ -527,11 +505,11 @@ namespace PosMiso.View
 
         private void loadProductToLookupEdit(DataTable otblSP)
         {
-            repositoryItems.DataSource = otblSP;
-            repositoryItems.ValueMember = "Masp";
-            repositoryItems.DisplayMember = "Masp";
-            repositoryItems.NullText = "Chọn sản phẩm";
-            colMasp.ColumnEdit = repositoryItems;
+            repositoryItems1.DataSource = otblSP;
+            repositoryItems1.ValueMember = "Masp";
+            repositoryItems1.DisplayMember = "Masp";
+            repositoryItems1.NullText = "Chọn sản phẩm";
+            colMasp.ColumnEdit = repositoryItems1;
         }
 
         private void gvPhieuNhap_CellValueChanging(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)

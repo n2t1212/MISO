@@ -101,6 +101,12 @@
     <Compile Include="MisoMain.Designer.cs">
       <DependentUpon>MisoMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\CustomGridControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Model\CustomGridLookUpEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Model\DM_ChucNang.cs" />
     <Compile Include="Model\modMember.cs" />
     <Compile Include="Model\modPhieuNX.cs" />

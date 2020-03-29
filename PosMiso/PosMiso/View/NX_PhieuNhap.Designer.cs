@@ -89,6 +89,13 @@
             this.colTTVat = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colThanhtien = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colGhichu = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItems1 = new PosMiso.Model.RepositoryItemCustomGridLookUpEdit();
+            this.repositoryItemCustomGridLookUpEdit1View = new PosMiso.Model.CustomGridView();
+            this.colMaspid2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMasp2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTensp2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDvt2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colQuycach2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -103,6 +110,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.gvPhieuNhap)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItems)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItems1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCustomGridLookUpEdit1View)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -520,7 +529,8 @@
             this.grdPhieuNhap.MainView = this.gvPhieuNhap;
             this.grdPhieuNhap.Name = "grdPhieuNhap";
             this.grdPhieuNhap.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.repositoryItems});
+            this.repositoryItems,
+            this.repositoryItems1});
             this.grdPhieuNhap.Size = new System.Drawing.Size(1000, 333);
             this.grdPhieuNhap.TabIndex = 0;
             this.grdPhieuNhap.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -639,7 +649,7 @@
             // colMasp
             // 
             this.colMasp.Caption = "Mã sản phẩm";
-            this.colMasp.ColumnEdit = this.repositoryItems;
+            this.colMasp.ColumnEdit = this.repositoryItems1;
             this.colMasp.FieldName = "Masp";
             this.colMasp.Name = "colMasp";
             this.colMasp.Visible = true;
@@ -739,6 +749,67 @@
             this.colGhichu.Visible = true;
             this.colGhichu.VisibleIndex = 11;
             // 
+            // repositoryItems1
+            // 
+            this.repositoryItems1.AutoComplete = false;
+            this.repositoryItems1.AutoHeight = false;
+            this.repositoryItems1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItems1.Name = "repositoryItems1";
+            this.repositoryItems1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.repositoryItems1.View = this.repositoryItemCustomGridLookUpEdit1View;
+            // 
+            // repositoryItemCustomGridLookUpEdit1View
+            // 
+            this.repositoryItemCustomGridLookUpEdit1View.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colMaspid2,
+            this.colMasp2,
+            this.colTensp2,
+            this.colDvt2,
+            this.colQuycach2});
+            this.repositoryItemCustomGridLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.repositoryItemCustomGridLookUpEdit1View.Name = "repositoryItemCustomGridLookUpEdit1View";
+            this.repositoryItemCustomGridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.repositoryItemCustomGridLookUpEdit1View.OptionsView.ShowGroupPanel = false;
+            // 
+            // colMaspid2
+            // 
+            this.colMaspid2.Caption = "Maspid";
+            this.colMaspid2.FieldName = "Maspid";
+            this.colMaspid2.Name = "colMaspid2";
+            // 
+            // colMasp2
+            // 
+            this.colMasp2.Caption = "Mã sản phẩm";
+            this.colMasp2.FieldName = "Masp";
+            this.colMasp2.Name = "colMasp2";
+            this.colMasp2.Visible = true;
+            this.colMasp2.VisibleIndex = 0;
+            // 
+            // colTensp2
+            // 
+            this.colTensp2.Caption = "Tên sản phẩm";
+            this.colTensp2.FieldName = "Tensp";
+            this.colTensp2.Name = "colTensp2";
+            this.colTensp2.Visible = true;
+            this.colTensp2.VisibleIndex = 1;
+            // 
+            // colDvt2
+            // 
+            this.colDvt2.Caption = "ĐVT";
+            this.colDvt2.FieldName = "Dvt";
+            this.colDvt2.Name = "colDvt2";
+            this.colDvt2.Visible = true;
+            this.colDvt2.VisibleIndex = 2;
+            // 
+            // colQuycach2
+            // 
+            this.colQuycach2.Caption = "Quy cách";
+            this.colQuycach2.FieldName = "Quycach";
+            this.colQuycach2.Name = "colQuycach2";
+            this.colQuycach2.Visible = true;
+            this.colQuycach2.VisibleIndex = 3;
+            // 
             // NX_PhieuNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -768,6 +839,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.gvPhieuNhap)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItems)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItems1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCustomGridLookUpEdit1View)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -835,5 +908,12 @@
         private DevExpress.XtraGrid.Columns.GridColumn colTensp1;
         private DevExpress.XtraGrid.Columns.GridColumn colDvt1;
         private DevExpress.XtraGrid.Columns.GridColumn colQuycach1;
+        private Model.RepositoryItemCustomGridLookUpEdit repositoryItems1;
+        private Model.CustomGridView repositoryItemCustomGridLookUpEdit1View;
+        private DevExpress.XtraGrid.Columns.GridColumn colMaspid2;
+        private DevExpress.XtraGrid.Columns.GridColumn colMasp2;
+        private DevExpress.XtraGrid.Columns.GridColumn colTensp2;
+        private DevExpress.XtraGrid.Columns.GridColumn colDvt2;
+        private DevExpress.XtraGrid.Columns.GridColumn colQuycach2;
     }
 }
