@@ -138,6 +138,7 @@
             this.ClientSize = new System.Drawing.Size(1111, 530);
             this.Controls.Add(this.grdKho);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DM_Kho";
             this.Text = "DM_Kho";
             this.Load += new System.EventHandler(this.DM_Kho_Load);

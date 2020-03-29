@@ -148,6 +148,7 @@
             this.ClientSize = new System.Drawing.Size(1194, 579);
             this.Controls.Add(this.grdXe);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DM_Xe";
             this.Text = "DM_Xe";
             this.Load += new System.EventHandler(this.DM_Xe_Load);

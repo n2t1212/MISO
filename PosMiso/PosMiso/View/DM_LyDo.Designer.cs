@@ -140,6 +140,7 @@
             this.ClientSize = new System.Drawing.Size(1119, 534);
             this.Controls.Add(this.grdLyDo);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DM_LyDo";
             this.Text = "DM_LyDo";
             this.Load += new System.EventHandler(this.DM_LyDo_Load);

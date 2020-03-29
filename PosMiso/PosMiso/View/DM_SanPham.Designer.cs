@@ -296,6 +296,7 @@
             this.ClientSize = new System.Drawing.Size(1191, 531);
             this.Controls.Add(this.panelFunction);
             this.Controls.Add(this.splitContainerDMSP);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DM_SanPham";
             this.Text = "DM_SanPham";
             this.Load += new System.EventHandler(this.DM_SanPham_Load);

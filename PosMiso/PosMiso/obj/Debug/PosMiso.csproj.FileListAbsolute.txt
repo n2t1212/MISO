@@ -113,7 +113,6 @@ F:\Git\MISO\PosMiso\PosMiso\bin\Debug\System.Net.Http.Primitives.dll
 F:\Git\MISO\PosMiso\PosMiso\bin\Debug\Newtonsoft.Json.xml
 F:\Git\MISO\PosMiso\PosMiso\bin\Debug\System.Net.Http.Extensions.xml
 F:\Git\MISO\PosMiso\PosMiso\bin\Debug\System.Net.Http.Primitives.xml
-F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.csprojResolveAssemblyReference.cache
 F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.MisoMain.resources
 F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.Properties.Resources.resources
 F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptBH_InBill.resources
@@ -165,3 +164,10 @@ F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.PrintPreview.resources
 F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.frmInMa.resources
 F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.csproj.GenerateResource.Cache
 F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.exe.licenses
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.dlg_ChonNgay.resources
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.DM_ChanhXe.resources
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.HH_PhieuXuat.resources
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.HH_PhieuNhap.resources
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.NX_PhieuNhap.resources
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.NX_PhieuXuat.resources
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.csprojResolveAssemblyReference.cache

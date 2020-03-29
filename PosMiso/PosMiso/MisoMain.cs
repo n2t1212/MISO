@@ -31,6 +31,11 @@ namespace PosMiso
         }
 
         #region "MENU"
+        public bool ThumbnailCallback()
+        {
+            return false;
+        }
+
         private void InitMenuLeftComponent()
         {
             List<NavBarGroup> navGroups = new List<NavBarGroup>();
@@ -73,7 +78,10 @@ namespace PosMiso
                     navGrp.Caption = grp.name;
                     navGrp.Expanded = true;
                     navGrp.Name = grp.formName;
-                    navGrp.LargeImage = Image.FromFile(string.Format("../../Medias/Icons/{0}", grp.icon));
+                    Image icon = Image.FromFile(string.Format("../../Medias/Icons/{0}", grp.icon));
+                    Image.GetThumbnailImageAbort callback = new Image.GetThumbnailImageAbort(ThumbnailCallback);
+                    icon = icon.GetThumbnailImage(20, 20, callback, IntPtr.Zero);
+                    navGrp.SmallImage = icon;
 
                     List<NavBarItemLink> itemLink = new List<NavBarItemLink>();
                     foreach (DM_ChucNang itm in items)
@@ -83,7 +91,10 @@ namespace PosMiso
                             NavBarItem navItm = new NavBarItem();
                             navItm.Caption = itm.name;
                             navItm.Name = itm.formName;
-                            navItm.SmallImage = Image.FromFile(string.Format("../../Medias/Icons/{0}", itm.icon));
+                            Image icon1 = Image.FromFile(string.Format("../../Medias/Icons/{0}", itm.icon));
+                            Image.GetThumbnailImageAbort callback1 = new Image.GetThumbnailImageAbort(ThumbnailCallback);
+                            icon1 = icon1.GetThumbnailImage(20, 20, callback, IntPtr.Zero);
+                            navItm.SmallImage = icon1;
                             navItm.LinkClicked += navItm_LinkClicked;
                             navItems.Add(navItm);
                             itemLink.Add(new NavBarItemLink(navItm));
@@ -212,17 +223,16 @@ namespace PosMiso
 
         void menuItem_Click(object sender, EventArgs e)
         {
-            //var menuItem = sender as ToolStripMenuItem;
-            //String frmName = menuItem.Name;
-            //String description = menuItem.Text;
+            var menuItem = sender as ToolStripMenuItem;
+            String frmName = menuItem.Name;
+            String description = menuItem.Text;
 
-            //if (frmName == "HT_Thoat")
-            //{
-            //    this.Close();
-            //}
+            if (frmName == "HT_Thoat")
+            {
+                this.Close();
+            }
 
-            //OpenForm(frmName, description);
-            OpenForm("HT_QuyenHan", "Quyền hạn");
+            OpenForm(frmName, description);
         }
         #endregion
 
@@ -274,18 +284,34 @@ namespace PosMiso
                     Form frm;
                     if (obj != null)
                     {
-                        frm = Activator.CreateInstance(obj) as Form;
-                        frm.Name = frmName;
-                        frm.Text = mCaption.Replace("&", " ");
-                        frm.Tag = mPermit;
+                        if (frmName == "HH_PhieuXuat" || frmName == "HH_PhieuNhap")
+                        {
+                            if (Utils.ChonThoiGian())
+                            {
+                                frm = Activator.CreateInstance(obj) as Form;
+                                frm.Name = frmName;
+                                frm.Text = mCaption.Replace("&", " ");
+                                frm.Tag = mPermit;
 
-                        //if (frmName.Substring(0, 3) != "dlg")
-                        //{
+                                frm.MdiParent = this;
+                                frm.Show();
+                            }
+                        }
+                        else
+                        {
+                            frm = Activator.CreateInstance(obj) as Form;
+                            frm.Name = frmName;
+                            frm.Text = mCaption.Replace("&", " ");
+                            frm.Tag = mPermit;
+
+                            //if (frmName.Substring(0, 3) != "dlg")
+                            //{
                             frm.MdiParent = this;
                             frm.Show();
-                        //}
-                        //else
-                        //    frm.ShowDialog();
+                            //}
+                            //else
+                            //    frm.ShowDialog();
+                        }
                     }
                 }
                 RefreshForm(false);

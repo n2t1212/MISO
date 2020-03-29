@@ -49,7 +49,7 @@ namespace PosMiso.Model
             catch { }
         }
 
-        public static void SetGridReadOnly(bool isReadOnly, DevExpress.XtraGrid.Views.Grid.GridView View)
+        public static bool SetGridReadOnly(bool isReadOnly, DevExpress.XtraGrid.Views.Grid.GridView View)
         {
             try
             {
@@ -60,10 +60,11 @@ namespace PosMiso.Model
                         View.Columns[i].OptionsColumn.AllowEdit = !isReadOnly;
                         View.Columns[i].OptionsColumn.ReadOnly = isReadOnly;
                     }
-                    catch { }
+                    catch { return false; }
                 }
             }
-            catch { }
+            catch { return false; }
+            return true;
         }
     }
 }

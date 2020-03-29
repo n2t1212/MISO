@@ -107,7 +107,7 @@
             // 
             // btnImport
             // 
-            this.btnImport.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImport.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImport.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
             this.btnImport.Location = new System.Drawing.Point(368, 8);
             this.btnImport.Name = "btnImport";
@@ -219,7 +219,7 @@
             // 
             this.tvChucNang.CheckBoxes = true;
             this.tvChucNang.Dock = System.Windows.Forms.DockStyle.Left;
-            this.tvChucNang.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tvChucNang.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tvChucNang.Location = new System.Drawing.Point(0, 0);
             this.tvChucNang.Name = "tvChucNang";
             this.tvChucNang.Size = new System.Drawing.Size(280, 379);

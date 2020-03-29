@@ -45,9 +45,9 @@
             this.colGiale = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colGhichu = new DevExpress.XtraGrid.Columns.GridColumn();
             this.txtFile = new System.Windows.Forms.TextBox();
-            this.isNew = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
             this.btnFile = new System.Windows.Forms.Button();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -99,7 +99,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
             this.btnCancel.Location = new System.Drawing.Point(606, 8);
             this.btnCancel.Name = "btnCancel";
@@ -111,11 +111,11 @@
             // 
             // btnImport
             // 
-            this.btnImport.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImport.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImport.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
             this.btnImport.Location = new System.Drawing.Point(398, 8);
             this.btnImport.Name = "btnImport";
-            this.btnImport.Size = new System.Drawing.Size(104, 32);
+            this.btnImport.Size = new System.Drawing.Size(97, 32);
             this.btnImport.TabIndex = 2;
             this.btnImport.Text = "Đồng ý";
             this.btnImport.UseVisualStyleBackColor = true;
@@ -123,9 +123,9 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.checkBox1);
             this.panel3.Controls.Add(this.grdGiaImport);
             this.panel3.Controls.Add(this.txtFile);
-            this.panel3.Controls.Add(this.isNew);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.btnFile);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -224,33 +224,20 @@
             // 
             // txtFile
             // 
-            this.txtFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFile.Location = new System.Drawing.Point(104, 24);
+            this.txtFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFile.Location = new System.Drawing.Point(92, 27);
             this.txtFile.Name = "txtFile";
-            this.txtFile.Size = new System.Drawing.Size(312, 26);
+            this.txtFile.Size = new System.Drawing.Size(312, 22);
             this.txtFile.TabIndex = 10;
-            // 
-            // isNew
-            // 
-            this.isNew.AutoSize = true;
-            this.isNew.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.isNew.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
-            this.isNew.Location = new System.Drawing.Point(520, 24);
-            this.isNew.Name = "isNew";
-            this.isNew.Size = new System.Drawing.Size(150, 23);
-            this.isNew.TabIndex = 9;
-            this.isNew.TabStop = true;
-            this.isNew.Text = "Nhập mới dữ liệu";
-            this.isNew.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
-            this.label1.Location = new System.Drawing.Point(24, 24);
+            this.label1.Location = new System.Drawing.Point(28, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 19);
+            this.label1.Size = new System.Drawing.Size(58, 16);
             this.label1.TabIndex = 7;
             this.label1.Text = "Chọn file";
             // 
@@ -258,13 +245,25 @@
             // 
             this.btnFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
-            this.btnFile.Location = new System.Drawing.Point(424, 24);
+            this.btnFile.Location = new System.Drawing.Point(410, 27);
             this.btnFile.Name = "btnFile";
             this.btnFile.Size = new System.Drawing.Size(40, 26);
             this.btnFile.TabIndex = 8;
             this.btnFile.Text = "...";
             this.btnFile.UseVisualStyleBackColor = true;
             this.btnFile.Click += new System.EventHandler(this.btnFile_Click);
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
+            this.checkBox1.Location = new System.Drawing.Point(496, 32);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(127, 20);
+            this.checkBox1.TabIndex = 12;
+            this.checkBox1.Text = "Nhập mới dữ liệu";
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // dlg_ImportGiaSanPham
             // 
@@ -301,7 +300,6 @@
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnImport;
         private System.Windows.Forms.TextBox txtFile;
-        private System.Windows.Forms.RadioButton isNew;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnFile;
         private DevExpress.XtraGrid.GridControl grdGiaImport;
@@ -313,5 +311,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colGiasi;
         private DevExpress.XtraGrid.Columns.GridColumn colGiale;
         private DevExpress.XtraGrid.Columns.GridColumn colGhichu;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }

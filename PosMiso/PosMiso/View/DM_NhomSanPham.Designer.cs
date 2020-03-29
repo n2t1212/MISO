@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.grdNhomSanPham = new DevExpress.XtraGrid.GridControl();
             this.gvNhomSanPham = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colManhomspid = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colManhom = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTennhom = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdNhomSanPham)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvNhomSanPham)).BeginInit();
@@ -48,6 +48,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1107, 44);
             this.panel1.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(16, 8);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // grdNhomSanPham
             // 
@@ -92,15 +101,6 @@
             this.colTennhom.Visible = true;
             this.colTennhom.VisibleIndex = 1;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(16, 8);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // DM_NhomSanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -108,6 +108,7 @@
             this.ClientSize = new System.Drawing.Size(1107, 524);
             this.Controls.Add(this.grdNhomSanPham);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DM_NhomSanPham";
             this.Text = "DM_NhomSanPham";
             this.Load += new System.EventHandler(this.DM_NhomSanPham_Load);

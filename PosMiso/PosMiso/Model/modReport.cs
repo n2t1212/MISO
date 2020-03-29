@@ -119,7 +119,7 @@ namespace PosMiso.Model
                 arrPara[4] = new SqlParameter("@Denngay", SqlDbType.NVarChar, 15);
                 arrPara[4].Value = DateTime.Now.ToShortDateString();
                 arrPara[5] = new SqlParameter("@Nguoidung", SqlDbType.NVarChar, 50);
-                arrPara[5].Value ="Admin";
+                arrPara[5].Value ="dmin";
 
                 DataTable otblMaCode = MTSQLServer.getMTSQLServer().wRead("rptDM_InMaQRCode", arrPara);
                 

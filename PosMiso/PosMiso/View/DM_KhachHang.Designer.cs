@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.btnImport = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.grdKhachHang = new DevExpress.XtraGrid.GridControl();
             this.gvKhachHang = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colMakhid = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -59,15 +59,6 @@
             this.panel1.Size = new System.Drawing.Size(1172, 48);
             this.panel1.TabIndex = 0;
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.grdKhachHang);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1172, 567);
-            this.panel2.TabIndex = 1;
-            // 
             // btnImport
             // 
             this.btnImport.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -78,6 +69,15 @@
             this.btnImport.TabIndex = 4;
             this.btnImport.Text = "Nhập (.xls)";
             this.btnImport.UseVisualStyleBackColor = true;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.grdKhachHang);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1172, 567);
+            this.panel2.TabIndex = 1;
             // 
             // grdKhachHang
             // 
@@ -201,6 +201,7 @@
             this.ClientSize = new System.Drawing.Size(1172, 615);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DM_KhachHang";
             this.Text = "DM_KhachHang";
             this.Load += new System.EventHandler(this.DM_KhachHang_Load);

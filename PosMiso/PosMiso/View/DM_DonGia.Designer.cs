@@ -295,6 +295,7 @@
             this.ClientSize = new System.Drawing.Size(1191, 627);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DM_DonGia";
             this.Text = "DM_DonGia";
             this.Load += new System.EventHandler(this.DM_DonGia_Load);

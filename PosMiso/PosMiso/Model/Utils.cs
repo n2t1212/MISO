@@ -8,6 +8,7 @@ using System.Text.RegularExpressions;
 using System.Data.SqlClient;
 using DevExpress.XtraEditors;
 using System.Windows.Forms;
+using PosMiso.View;
 
 namespace PosMiso.Model
 {
@@ -121,16 +122,17 @@ namespace PosMiso.Model
             catch (Exception ex) { };
         }
 
-        //public static bool ChonThoiGian(bool isNgay = true, bool isThang = true, bool isNam = true) {
-        //    try
-        //    {
-        //        dlg_ChonNgay dlgChon = new dlg_ChonNgay();
-        //        dlgChon.setPermit(isNgay, isThang, isNam);
-        //        dlgChon.ShowDialog();
-        //        return dlgChon.isChon;
-        //    }
-        //    catch { return false; }
-        //}
+        public static bool ChonThoiGian(bool isNgay = true, bool isThang = true, bool isNam = true)
+        {
+            try
+            {
+                dlg_ChonNgay dlgChon = new dlg_ChonNgay();
+                dlgChon.setPermit(isNgay, isThang, isNam);
+                dlgChon.ShowDialog();
+                return dlgChon.isChon;
+            }
+            catch { return false; }
+        }
 
         //public static System.Data.DataTable ChonKhachhang()
         //{

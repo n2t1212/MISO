@@ -103,6 +103,7 @@
     </Compile>
     <Compile Include="Model\DM_ChucNang.cs" />
     <Compile Include="Model\modMember.cs" />
+    <Compile Include="Model\modPhieuNX.cs" />
     <Compile Include="Model\modReport.cs" />
     <Compile Include="Model\MTGlobal.cs" />
     <Compile Include="Model\MTReport.cs" />
@@ -281,6 +282,12 @@
     <Compile Include="View\dlg_AddQuyenHan.Designer.cs">
       <DependentUpon>dlg_AddQuyenHan.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\dlg_ChonNgay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\dlg_ChonNgay.Designer.cs">
+      <DependentUpon>dlg_ChonNgay.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\dlg_ImportGiaSanPham.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -353,6 +360,12 @@
     <Compile Include="View\frmPrintPreview.Designer.cs">
       <DependentUpon>frmPrintPreview.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\HH_PhieuNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\HH_PhieuNhap.Designer.cs">
+      <DependentUpon>HH_PhieuNhap.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\HH_PhieuXuat.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -400,6 +413,18 @@
     </Compile>
     <Compile Include="View\HT_StartingForm.Designer.cs">
       <DependentUpon>HT_StartingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\NX_PhieuNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\NX_PhieuNhap.Designer.cs">
+      <DependentUpon>NX_PhieuNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\NX_PhieuXuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\NX_PhieuXuat.Designer.cs">
+      <DependentUpon>NX_PhieuXuat.cs</DependentUpon>
     </Compile>
     <Compile Include="View\PrintPreview.cs">
       <SubType>Form</SubType>
@@ -505,11 +530,17 @@
     <EmbeddedResource Include="View\dlg_AddQuyenHan.resx">
       <DependentUpon>dlg_AddQuyenHan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\dlg_ChonNgay.resx">
+      <DependentUpon>dlg_ChonNgay.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\dlg_ImportGiaSanPham.resx">
       <DependentUpon>dlg_ImportGiaSanPham.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\dlg_ImportSanPham.resx">
       <DependentUpon>dlg_ImportSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\DM_ChanhXe.resx">
+      <DependentUpon>DM_ChanhXe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\DM_DonGia.resx">
       <DependentUpon>DM_DonGia.cs</DependentUpon>
@@ -535,6 +566,12 @@
     <EmbeddedResource Include="View\frmPrintPreview.resx">
       <DependentUpon>frmPrintPreview.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\HH_PhieuNhap.resx">
+      <DependentUpon>HH_PhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\HH_PhieuXuat.resx">
+      <DependentUpon>HH_PhieuXuat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\HT_CreateConection.resx">
       <DependentUpon>HT_CreateConection.cs</DependentUpon>
     </EmbeddedResource>
@@ -555,6 +592,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\HT_StartingForm.resx">
       <DependentUpon>HT_StartingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\NX_PhieuNhap.resx">
+      <DependentUpon>NX_PhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\NX_PhieuXuat.resx">
+      <DependentUpon>NX_PhieuXuat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\PrintPreview.resx">
       <DependentUpon>PrintPreview.cs</DependentUpon>

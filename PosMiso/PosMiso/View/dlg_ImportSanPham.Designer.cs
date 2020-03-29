@@ -33,7 +33,6 @@
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.label1 = new System.Windows.Forms.Label();
             this.btnFile = new System.Windows.Forms.Button();
-            this.isNew = new System.Windows.Forms.RadioButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtFile = new System.Windows.Forms.TextBox();
             this.grdSanPhamImport = new DevExpress.XtraGrid.GridControl();
@@ -48,6 +47,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnImport = new System.Windows.Forms.Button();
+            this.isNew = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdSanPhamImport)).BeginInit();
@@ -90,11 +90,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
-            this.label1.Location = new System.Drawing.Point(32, 24);
+            this.label1.Location = new System.Drawing.Point(48, 28);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 19);
+            this.label1.Size = new System.Drawing.Size(58, 16);
             this.label1.TabIndex = 1;
             this.label1.Text = "Chọn file";
             // 
@@ -110,24 +110,11 @@
             this.btnFile.UseVisualStyleBackColor = true;
             this.btnFile.Click += new System.EventHandler(this.btnFile_Click);
             // 
-            // isNew
-            // 
-            this.isNew.AutoSize = true;
-            this.isNew.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.isNew.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
-            this.isNew.Location = new System.Drawing.Point(528, 24);
-            this.isNew.Name = "isNew";
-            this.isNew.Size = new System.Drawing.Size(150, 23);
-            this.isNew.TabIndex = 4;
-            this.isNew.TabStop = true;
-            this.isNew.Text = "Nhập mới dữ liệu";
-            this.isNew.UseVisualStyleBackColor = true;
-            // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.isNew);
             this.panel2.Controls.Add(this.txtFile);
             this.panel2.Controls.Add(this.grdSanPhamImport);
-            this.panel2.Controls.Add(this.isNew);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.btnFile);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -138,10 +125,10 @@
             // 
             // txtFile
             // 
-            this.txtFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFile.Location = new System.Drawing.Point(112, 24);
             this.txtFile.Name = "txtFile";
-            this.txtFile.Size = new System.Drawing.Size(312, 26);
+            this.txtFile.Size = new System.Drawing.Size(312, 22);
             this.txtFile.TabIndex = 6;
             // 
             // grdSanPhamImport
@@ -243,7 +230,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
             this.btnCancel.Location = new System.Drawing.Point(520, 16);
             this.btnCancel.Name = "btnCancel";
@@ -255,7 +242,7 @@
             // 
             // btnImport
             // 
-            this.btnImport.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImport.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImport.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
             this.btnImport.Location = new System.Drawing.Point(312, 16);
             this.btnImport.Name = "btnImport";
@@ -264,6 +251,18 @@
             this.btnImport.Text = "Đồng ý";
             this.btnImport.UseVisualStyleBackColor = true;
             this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
+            // 
+            // isNew
+            // 
+            this.isNew.AutoSize = true;
+            this.isNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.isNew.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
+            this.isNew.Location = new System.Drawing.Point(509, 28);
+            this.isNew.Name = "isNew";
+            this.isNew.Size = new System.Drawing.Size(127, 20);
+            this.isNew.TabIndex = 7;
+            this.isNew.Text = "Nhập mới dữ liệu";
+            this.isNew.UseVisualStyleBackColor = true;
             // 
             // dlg_ImportSanPham
             // 
@@ -297,7 +296,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl6;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnFile;
-        private System.Windows.Forms.RadioButton isNew;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btnCancel;
@@ -312,5 +310,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colQuydoikgl;
         private DevExpress.XtraGrid.Columns.GridColumn colQuydoithung;
         private DevExpress.XtraGrid.Columns.GridColumn colNhacungcap;
+        private System.Windows.Forms.CheckBox isNew;
     }
 }
