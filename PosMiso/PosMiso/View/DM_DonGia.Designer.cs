@@ -251,6 +251,8 @@
             // colGiagoc
             // 
             this.colGiagoc.Caption = "Giá gốc";
+            this.colGiagoc.DisplayFormat.FormatString = "n0";
+            this.colGiagoc.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colGiagoc.FieldName = "Giagoc";
             this.colGiagoc.Name = "colGiagoc";
             this.colGiagoc.Visible = true;
@@ -259,6 +261,8 @@
             // colGiasi
             // 
             this.colGiasi.Caption = "Giá sỉ";
+            this.colGiasi.DisplayFormat.FormatString = "n0";
+            this.colGiasi.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colGiasi.FieldName = "Giasi";
             this.colGiasi.Name = "colGiasi";
             this.colGiasi.Visible = true;
@@ -267,6 +271,8 @@
             // colGiale
             // 
             this.colGiale.Caption = "Giá lẻ";
+            this.colGiale.DisplayFormat.FormatString = "no";
+            this.colGiale.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colGiale.FieldName = "Giale";
             this.colGiale.Name = "colGiale";
             this.colGiale.Visible = true;

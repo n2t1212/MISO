@@ -38,7 +38,7 @@ namespace PosMiso.View
             }
         }
 
-        private void btnBackup_Click(object sender, EventArgs e)
+        private void btnBackup_Click_1(object sender, EventArgs e)
         {
             try
             {

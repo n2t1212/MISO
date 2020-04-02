@@ -40,6 +40,26 @@
             this.btnIn = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.txtMald = new PosMiso.Model.CustomGridLookUpEdit();
+            this.viewLydo = new PosMiso.Model.CustomGridView();
+            this.colMald = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colLydo = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTKNo = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTKCo = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colGchu = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.txtMadv = new PosMiso.Model.CustomGridLookUpEdit();
+            this.viewKH = new PosMiso.Model.CustomGridView();
+            this.colMakhid = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMakh = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTenkh = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDienthoai = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDChi = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.txtMaKho = new PosMiso.Model.CustomGridLookUpEdit();
+            this.viewKho = new PosMiso.Model.CustomGridView();
+            this.colKhoid = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMakho = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTenkho = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDiachi = new DevExpress.XtraGrid.Columns.GridColumn();
             this.cbNguyente = new System.Windows.Forms.ComboBox();
             this.dtpNgayPS = new DevExpress.XtraEditors.DateEdit();
             this.dtpNgaylap = new DevExpress.XtraEditors.DateEdit();
@@ -47,10 +67,7 @@
             this.txtTendonvi = new System.Windows.Forms.TextBox();
             this.txtGhichu = new System.Windows.Forms.TextBox();
             this.txtNguoigiao = new System.Windows.Forms.TextBox();
-            this.txtMald = new System.Windows.Forms.TextBox();
-            this.txtMadv = new System.Windows.Forms.TextBox();
             this.txtTenkho = new System.Windows.Forms.TextBox();
-            this.txtMakho = new System.Windows.Forms.TextBox();
             this.txtTygia = new System.Windows.Forms.TextBox();
             this.txtSoctgoc = new System.Windows.Forms.TextBox();
             this.txtSophieu = new System.Windows.Forms.TextBox();
@@ -78,17 +95,6 @@
             this.colPhieunxid = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMaspid = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMasp = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colTensp = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colDvt = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colQuycach = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colSLThung = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colSoluong = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colDongia = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colNguyente = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colVat = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colTTVat = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colThanhtien = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colGhichu = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItems1 = new PosMiso.Model.RepositoryItemCustomGridLookUpEdit();
             this.repositoryItemCustomGridLookUpEdit1View = new PosMiso.Model.CustomGridView();
             this.colMaspid2 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -96,12 +102,29 @@
             this.colTensp2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDvt2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colQuycach2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTensp = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDvt = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colQuycach = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDongia = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSLThung = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSoluong = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colNguyente = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colVat = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTTVat = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colThanhtien = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colGhichu = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMald.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.viewLydo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMadv.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.viewKH)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMaKho.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.viewKho)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtpNgayPS.Properties.VistaTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtpNgayPS.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtpNgaylap.Properties.VistaTimeProperties)).BeginInit();
@@ -248,6 +271,9 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.txtMald);
+            this.splitContainer1.Panel1.Controls.Add(this.txtMadv);
+            this.splitContainer1.Panel1.Controls.Add(this.txtMaKho);
             this.splitContainer1.Panel1.Controls.Add(this.cbNguyente);
             this.splitContainer1.Panel1.Controls.Add(this.dtpNgayPS);
             this.splitContainer1.Panel1.Controls.Add(this.dtpNgaylap);
@@ -255,10 +281,7 @@
             this.splitContainer1.Panel1.Controls.Add(this.txtTendonvi);
             this.splitContainer1.Panel1.Controls.Add(this.txtGhichu);
             this.splitContainer1.Panel1.Controls.Add(this.txtNguoigiao);
-            this.splitContainer1.Panel1.Controls.Add(this.txtMald);
-            this.splitContainer1.Panel1.Controls.Add(this.txtMadv);
             this.splitContainer1.Panel1.Controls.Add(this.txtTenkho);
-            this.splitContainer1.Panel1.Controls.Add(this.txtMakho);
             this.splitContainer1.Panel1.Controls.Add(this.txtTygia);
             this.splitContainer1.Panel1.Controls.Add(this.txtSoctgoc);
             this.splitContainer1.Panel1.Controls.Add(this.txtSophieu);
@@ -280,6 +303,204 @@
             this.splitContainer1.Size = new System.Drawing.Size(1000, 505);
             this.splitContainer1.SplitterDistance = 168;
             this.splitContainer1.TabIndex = 4;
+            // 
+            // txtMald
+            // 
+            this.txtMald.EnterMoveNextControl = true;
+            this.txtMald.Location = new System.Drawing.Point(486, 65);
+            this.txtMald.Name = "txtMald";
+            this.txtMald.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMald.Properties.Appearance.Options.UseFont = true;
+            this.txtMald.Properties.AutoComplete = false;
+            this.txtMald.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtMald.Properties.NullText = "";
+            this.txtMald.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.txtMald.Properties.View = this.viewLydo;
+            this.txtMald.Size = new System.Drawing.Size(124, 22);
+            this.txtMald.TabIndex = 7;
+            this.txtMald.EditValueChanged += new System.EventHandler(this.txtMald_EditValueChanged);
+            // 
+            // viewLydo
+            // 
+            this.viewLydo.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colMald,
+            this.colLydo,
+            this.colTKNo,
+            this.colTKCo,
+            this.colGchu});
+            this.viewLydo.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.viewLydo.Name = "viewLydo";
+            this.viewLydo.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.viewLydo.OptionsView.ShowGroupPanel = false;
+            // 
+            // colMald
+            // 
+            this.colMald.Caption = "Mald";
+            this.colMald.FieldName = "Mald";
+            this.colMald.Name = "colMald";
+            // 
+            // colLydo
+            // 
+            this.colLydo.Caption = "Lý do";
+            this.colLydo.FieldName = "Lydo";
+            this.colLydo.Name = "colLydo";
+            this.colLydo.Visible = true;
+            this.colLydo.VisibleIndex = 0;
+            // 
+            // colTKNo
+            // 
+            this.colTKNo.Caption = "TK Nợ";
+            this.colTKNo.FieldName = "TKNo";
+            this.colTKNo.Name = "colTKNo";
+            this.colTKNo.Visible = true;
+            this.colTKNo.VisibleIndex = 1;
+            // 
+            // colTKCo
+            // 
+            this.colTKCo.Caption = "TK Có";
+            this.colTKCo.FieldName = "TKCo";
+            this.colTKCo.Name = "colTKCo";
+            this.colTKCo.Visible = true;
+            this.colTKCo.VisibleIndex = 2;
+            // 
+            // colGchu
+            // 
+            this.colGchu.Caption = "Ghi chú";
+            this.colGchu.FieldName = "Ghichu";
+            this.colGchu.Name = "colGchu";
+            this.colGchu.Visible = true;
+            this.colGchu.VisibleIndex = 3;
+            // 
+            // txtMadv
+            // 
+            this.txtMadv.EditValue = "";
+            this.txtMadv.EnterMoveNextControl = true;
+            this.txtMadv.Location = new System.Drawing.Point(486, 42);
+            this.txtMadv.Name = "txtMadv";
+            this.txtMadv.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMadv.Properties.Appearance.Options.UseFont = true;
+            this.txtMadv.Properties.AutoComplete = false;
+            this.txtMadv.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtMadv.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.txtMadv.Properties.View = this.viewKH;
+            this.txtMadv.Size = new System.Drawing.Size(124, 22);
+            this.txtMadv.TabIndex = 6;
+            this.txtMadv.EditValueChanged += new System.EventHandler(this.txtMadv_EditValueChanged);
+            // 
+            // viewKH
+            // 
+            this.viewKH.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colMakhid,
+            this.colMakh,
+            this.colTenkh,
+            this.colDienthoai,
+            this.colDChi});
+            this.viewKH.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.viewKH.Name = "viewKH";
+            this.viewKH.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.viewKH.OptionsView.ShowGroupPanel = false;
+            // 
+            // colMakhid
+            // 
+            this.colMakhid.Caption = "Makhid";
+            this.colMakhid.FieldName = "Makhid";
+            this.colMakhid.Name = "colMakhid";
+            // 
+            // colMakh
+            // 
+            this.colMakh.Caption = "Mã KH";
+            this.colMakh.FieldName = "Makh";
+            this.colMakh.Name = "colMakh";
+            this.colMakh.Visible = true;
+            this.colMakh.VisibleIndex = 0;
+            // 
+            // colTenkh
+            // 
+            this.colTenkh.Caption = "Tên KH";
+            this.colTenkh.FieldName = "Tenkh";
+            this.colTenkh.Name = "colTenkh";
+            this.colTenkh.Visible = true;
+            this.colTenkh.VisibleIndex = 1;
+            // 
+            // colDienthoai
+            // 
+            this.colDienthoai.Caption = "SĐT";
+            this.colDienthoai.FieldName = "Dienthoai";
+            this.colDienthoai.Name = "colDienthoai";
+            this.colDienthoai.Visible = true;
+            this.colDienthoai.VisibleIndex = 2;
+            // 
+            // colDChi
+            // 
+            this.colDChi.Caption = "Địa chỉ";
+            this.colDChi.FieldName = "Diachi";
+            this.colDChi.Name = "colDChi";
+            this.colDChi.Visible = true;
+            this.colDChi.VisibleIndex = 3;
+            // 
+            // txtMaKho
+            // 
+            this.txtMaKho.EditValue = "";
+            this.txtMaKho.EnterMoveNextControl = true;
+            this.txtMaKho.Location = new System.Drawing.Point(486, 19);
+            this.txtMaKho.Name = "txtMaKho";
+            this.txtMaKho.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaKho.Properties.Appearance.Options.UseFont = true;
+            this.txtMaKho.Properties.AutoComplete = false;
+            this.txtMaKho.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtMaKho.Properties.DisplayMember = "Makho";
+            this.txtMaKho.Properties.NullText = "Chọn kho hàng";
+            this.txtMaKho.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.txtMaKho.Properties.ValueMember = "Makho";
+            this.txtMaKho.Properties.View = this.viewKho;
+            this.txtMaKho.Size = new System.Drawing.Size(124, 22);
+            this.txtMaKho.TabIndex = 5;
+            this.txtMaKho.EditValueChanged += new System.EventHandler(this.txtMaKho_EditValueChanged);
+            // 
+            // viewKho
+            // 
+            this.viewKho.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colKhoid,
+            this.colMakho,
+            this.colTenkho,
+            this.colDiachi});
+            this.viewKho.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.viewKho.Name = "viewKho";
+            this.viewKho.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.viewKho.OptionsView.ShowGroupPanel = false;
+            // 
+            // colKhoid
+            // 
+            this.colKhoid.Caption = "Khoid";
+            this.colKhoid.FieldName = "Khoid";
+            this.colKhoid.Name = "colKhoid";
+            // 
+            // colMakho
+            // 
+            this.colMakho.Caption = "Mã kho";
+            this.colMakho.FieldName = "Makho";
+            this.colMakho.Name = "colMakho";
+            this.colMakho.Visible = true;
+            this.colMakho.VisibleIndex = 0;
+            // 
+            // colTenkho
+            // 
+            this.colTenkho.Caption = "Tên kho";
+            this.colTenkho.FieldName = "Tenkho";
+            this.colTenkho.Name = "colTenkho";
+            this.colTenkho.Visible = true;
+            this.colTenkho.VisibleIndex = 1;
+            // 
+            // colDiachi
+            // 
+            this.colDiachi.Caption = "Địa chỉ";
+            this.colDiachi.FieldName = "Diachi";
+            this.colDiachi.Name = "colDiachi";
+            this.colDiachi.Visible = true;
+            this.colDiachi.VisibleIndex = 2;
             // 
             // cbNguyente
             // 
@@ -354,22 +575,6 @@
             this.txtNguoigiao.Size = new System.Drawing.Size(485, 22);
             this.txtNguoigiao.TabIndex = 2;
             // 
-            // txtMald
-            // 
-            this.txtMald.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMald.Location = new System.Drawing.Point(486, 65);
-            this.txtMald.Name = "txtMald";
-            this.txtMald.Size = new System.Drawing.Size(124, 22);
-            this.txtMald.TabIndex = 2;
-            // 
-            // txtMadv
-            // 
-            this.txtMadv.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMadv.Location = new System.Drawing.Point(486, 42);
-            this.txtMadv.Name = "txtMadv";
-            this.txtMadv.Size = new System.Drawing.Size(124, 22);
-            this.txtMadv.TabIndex = 2;
-            // 
             // txtTenkho
             // 
             this.txtTenkho.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -377,15 +582,6 @@
             this.txtTenkho.Name = "txtTenkho";
             this.txtTenkho.Size = new System.Drawing.Size(360, 22);
             this.txtTenkho.TabIndex = 2;
-            // 
-            // txtMakho
-            // 
-            this.txtMakho.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMakho.Location = new System.Drawing.Point(486, 19);
-            this.txtMakho.Name = "txtMakho";
-            this.txtMakho.Size = new System.Drawing.Size(124, 22);
-            this.txtMakho.TabIndex = 2;
-            this.txtMakho.Leave += new System.EventHandler(this.txtMakho_Leave);
             // 
             // txtTygia
             // 
@@ -547,9 +743,9 @@
             this.colTensp,
             this.colDvt,
             this.colQuycach,
+            this.colDongia,
             this.colSLThung,
             this.colSoluong,
-            this.colDongia,
             this.colNguyente,
             this.colVat,
             this.colTTVat,
@@ -557,6 +753,9 @@
             this.colGhichu});
             this.gvPhieuNhap.GridControl = this.grdPhieuNhap;
             this.gvPhieuNhap.Name = "gvPhieuNhap";
+            this.gvPhieuNhap.NewItemRowText = "Nhấp chọn để thêm mới";
+            this.gvPhieuNhap.OptionsNavigation.EnterMoveNextColumn = true;
+            this.gvPhieuNhap.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Bottom;
             this.gvPhieuNhap.OptionsView.ShowGroupPanel = false;
             this.gvPhieuNhap.InitNewRow += new DevExpress.XtraGrid.Views.Grid.InitNewRowEventHandler(this.gvPhieuNhap_InitNewRow);
             this.gvPhieuNhap.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gvPhieuNhap_CellValueChanged);
@@ -581,7 +780,6 @@
             this.repositoryItems.NullText = "";
             this.repositoryItems.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.repositoryItems.View = this.repositoryItemView;
-            this.repositoryItems.KeyDown += new System.Windows.Forms.KeyEventHandler(this.repositoryItems_KeyDown);
             // 
             // repositoryItemView
             // 
@@ -654,100 +852,7 @@
             this.colMasp.Name = "colMasp";
             this.colMasp.Visible = true;
             this.colMasp.VisibleIndex = 0;
-            // 
-            // colTensp
-            // 
-            this.colTensp.Caption = "Tên sản phẩm";
-            this.colTensp.FieldName = "Tensp";
-            this.colTensp.Name = "colTensp";
-            this.colTensp.Visible = true;
-            this.colTensp.VisibleIndex = 1;
-            // 
-            // colDvt
-            // 
-            this.colDvt.Caption = "ĐVT";
-            this.colDvt.FieldName = "Dvt";
-            this.colDvt.Name = "colDvt";
-            this.colDvt.Visible = true;
-            this.colDvt.VisibleIndex = 2;
-            // 
-            // colQuycach
-            // 
-            this.colQuycach.Caption = "Quy cách";
-            this.colQuycach.FieldName = "Quycach";
-            this.colQuycach.Name = "colQuycach";
-            this.colQuycach.Visible = true;
-            this.colQuycach.VisibleIndex = 3;
-            // 
-            // colSLThung
-            // 
-            this.colSLThung.Caption = "Số thùng";
-            this.colSLThung.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.colSLThung.FieldName = "SLThung";
-            this.colSLThung.Name = "colSLThung";
-            this.colSLThung.Visible = true;
-            this.colSLThung.VisibleIndex = 6;
-            // 
-            // colSoluong
-            // 
-            this.colSoluong.Caption = "Số lượng";
-            this.colSoluong.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.colSoluong.FieldName = "Soluong";
-            this.colSoluong.Name = "colSoluong";
-            this.colSoluong.Visible = true;
-            this.colSoluong.VisibleIndex = 4;
-            // 
-            // colDongia
-            // 
-            this.colDongia.Caption = "Đơn giá";
-            this.colDongia.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.colDongia.FieldName = "Dongia";
-            this.colDongia.Name = "colDongia";
-            this.colDongia.Visible = true;
-            this.colDongia.VisibleIndex = 5;
-            // 
-            // colNguyente
-            // 
-            this.colNguyente.Caption = "Nguyên tệ";
-            this.colNguyente.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.colNguyente.FieldName = "Nguyente";
-            this.colNguyente.Name = "colNguyente";
-            this.colNguyente.Visible = true;
-            this.colNguyente.VisibleIndex = 7;
-            // 
-            // colVat
-            // 
-            this.colVat.Caption = "VAT (%)";
-            this.colVat.FieldName = "Vat";
-            this.colVat.Name = "colVat";
-            this.colVat.Visible = true;
-            this.colVat.VisibleIndex = 8;
-            // 
-            // colTTVat
-            // 
-            this.colTTVat.Caption = "Tiền (VAT)";
-            this.colTTVat.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.colTTVat.FieldName = "TTVat";
-            this.colTTVat.Name = "colTTVat";
-            this.colTTVat.Visible = true;
-            this.colTTVat.VisibleIndex = 9;
-            // 
-            // colThanhtien
-            // 
-            this.colThanhtien.Caption = "Thành tiền";
-            this.colThanhtien.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.colThanhtien.FieldName = "Thanhtien";
-            this.colThanhtien.Name = "colThanhtien";
-            this.colThanhtien.Visible = true;
-            this.colThanhtien.VisibleIndex = 10;
-            // 
-            // colGhichu
-            // 
-            this.colGhichu.Caption = "Ghi chú";
-            this.colGhichu.FieldName = "Ghichu";
-            this.colGhichu.Name = "colGhichu";
-            this.colGhichu.Visible = true;
-            this.colGhichu.VisibleIndex = 11;
+            this.colMasp.Width = 81;
             // 
             // repositoryItems1
             // 
@@ -785,6 +890,7 @@
             this.colMasp2.Name = "colMasp2";
             this.colMasp2.Visible = true;
             this.colMasp2.VisibleIndex = 0;
+            this.colMasp2.Width = 96;
             // 
             // colTensp2
             // 
@@ -793,6 +899,7 @@
             this.colTensp2.Name = "colTensp2";
             this.colTensp2.Visible = true;
             this.colTensp2.VisibleIndex = 1;
+            this.colTensp2.Width = 100;
             // 
             // colDvt2
             // 
@@ -801,6 +908,7 @@
             this.colDvt2.Name = "colDvt2";
             this.colDvt2.Visible = true;
             this.colDvt2.VisibleIndex = 2;
+            this.colDvt2.Width = 94;
             // 
             // colQuycach2
             // 
@@ -809,6 +917,123 @@
             this.colQuycach2.Name = "colQuycach2";
             this.colQuycach2.Visible = true;
             this.colQuycach2.VisibleIndex = 3;
+            this.colQuycach2.Width = 94;
+            // 
+            // colTensp
+            // 
+            this.colTensp.Caption = "Tên sản phẩm";
+            this.colTensp.FieldName = "Tensp";
+            this.colTensp.Name = "colTensp";
+            this.colTensp.Visible = true;
+            this.colTensp.VisibleIndex = 1;
+            this.colTensp.Width = 100;
+            // 
+            // colDvt
+            // 
+            this.colDvt.Caption = "ĐVT";
+            this.colDvt.FieldName = "Dvt";
+            this.colDvt.Name = "colDvt";
+            this.colDvt.OptionsColumn.AllowEdit = false;
+            this.colDvt.Visible = true;
+            this.colDvt.VisibleIndex = 2;
+            this.colDvt.Width = 79;
+            // 
+            // colQuycach
+            // 
+            this.colQuycach.Caption = "Quy cách";
+            this.colQuycach.FieldName = "Quycach";
+            this.colQuycach.Name = "colQuycach";
+            this.colQuycach.OptionsColumn.AllowEdit = false;
+            this.colQuycach.Visible = true;
+            this.colQuycach.VisibleIndex = 3;
+            this.colQuycach.Width = 79;
+            // 
+            // colDongia
+            // 
+            this.colDongia.Caption = "Đơn giá";
+            this.colDongia.DisplayFormat.FormatString = "n0";
+            this.colDongia.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.colDongia.FieldName = "Dongia";
+            this.colDongia.Name = "colDongia";
+            this.colDongia.Visible = true;
+            this.colDongia.VisibleIndex = 6;
+            this.colDongia.Width = 79;
+            // 
+            // colSLThung
+            // 
+            this.colSLThung.Caption = "SL thùng";
+            this.colSLThung.DisplayFormat.FormatString = "n0";
+            this.colSLThung.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.colSLThung.FieldName = "SLThung";
+            this.colSLThung.Name = "colSLThung";
+            this.colSLThung.Visible = true;
+            this.colSLThung.VisibleIndex = 4;
+            this.colSLThung.Width = 79;
+            // 
+            // colSoluong
+            // 
+            this.colSoluong.Caption = "Số lượng";
+            this.colSoluong.DisplayFormat.FormatString = "n0";
+            this.colSoluong.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.colSoluong.FieldName = "Soluong";
+            this.colSoluong.Name = "colSoluong";
+            this.colSoluong.Visible = true;
+            this.colSoluong.VisibleIndex = 5;
+            this.colSoluong.Width = 79;
+            // 
+            // colNguyente
+            // 
+            this.colNguyente.Caption = "Nguyên tệ";
+            this.colNguyente.DisplayFormat.FormatString = "n0";
+            this.colNguyente.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.colNguyente.FieldName = "Nguyente";
+            this.colNguyente.Name = "colNguyente";
+            this.colNguyente.Visible = true;
+            this.colNguyente.VisibleIndex = 7;
+            this.colNguyente.Width = 79;
+            // 
+            // colVat
+            // 
+            this.colVat.Caption = "VAT (%)";
+            this.colVat.DisplayFormat.FormatString = "n0";
+            this.colVat.FieldName = "Vat";
+            this.colVat.Name = "colVat";
+            this.colVat.Visible = true;
+            this.colVat.VisibleIndex = 8;
+            this.colVat.Width = 79;
+            // 
+            // colTTVat
+            // 
+            this.colTTVat.Caption = "Tiền (VAT)";
+            this.colTTVat.DisplayFormat.FormatString = "n0";
+            this.colTTVat.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.colTTVat.FieldName = "TTVat";
+            this.colTTVat.Name = "colTTVat";
+            this.colTTVat.OptionsColumn.AllowEdit = false;
+            this.colTTVat.OptionsColumn.ReadOnly = true;
+            this.colTTVat.Visible = true;
+            this.colTTVat.VisibleIndex = 9;
+            this.colTTVat.Width = 79;
+            // 
+            // colThanhtien
+            // 
+            this.colThanhtien.Caption = "Thành tiền";
+            this.colThanhtien.DisplayFormat.FormatString = "n0";
+            this.colThanhtien.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.colThanhtien.FieldName = "Thanhtien";
+            this.colThanhtien.Name = "colThanhtien";
+            this.colThanhtien.Visible = true;
+            this.colThanhtien.VisibleIndex = 10;
+            this.colThanhtien.Width = 79;
+            // 
+            // colGhichu
+            // 
+            this.colGhichu.Caption = "Ghi chú";
+            this.colGhichu.FieldName = "Ghichu";
+            this.colGhichu.Name = "colGhichu";
+            this.colGhichu.Visible = true;
+            this.colGhichu.VisibleIndex = 11;
+            this.colGhichu.Width = 90;
             // 
             // NX_PhieuNhap
             // 
@@ -831,6 +1056,12 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.txtMald.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.viewLydo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMadv.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.viewKH)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMaKho.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.viewKho)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtpNgayPS.Properties.VistaTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtpNgayPS.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtpNgaylap.Properties.VistaTimeProperties)).EndInit();
@@ -872,9 +1103,9 @@
         private DevExpress.XtraGrid.Columns.GridColumn colTensp;
         private DevExpress.XtraGrid.Columns.GridColumn colDvt;
         private DevExpress.XtraGrid.Columns.GridColumn colQuycach;
+        private DevExpress.XtraGrid.Columns.GridColumn colDongia;
         private DevExpress.XtraGrid.Columns.GridColumn colSLThung;
         private DevExpress.XtraGrid.Columns.GridColumn colSoluong;
-        private DevExpress.XtraGrid.Columns.GridColumn colDongia;
         private DevExpress.XtraGrid.Columns.GridColumn colNguyente;
         private DevExpress.XtraGrid.Columns.GridColumn colVat;
         private DevExpress.XtraGrid.Columns.GridColumn colTTVat;
@@ -887,10 +1118,7 @@
         private System.Windows.Forms.TextBox txtTendonvi;
         private System.Windows.Forms.TextBox txtGhichu;
         private System.Windows.Forms.TextBox txtNguoigiao;
-        private System.Windows.Forms.TextBox txtMald;
-        private System.Windows.Forms.TextBox txtMadv;
         private System.Windows.Forms.TextBox txtTenkho;
-        private System.Windows.Forms.TextBox txtMakho;
         private System.Windows.Forms.TextBox txtTygia;
         private System.Windows.Forms.TextBox txtSoctgoc;
         private System.Windows.Forms.TextBox txtSophieu;
@@ -915,5 +1143,25 @@
         private DevExpress.XtraGrid.Columns.GridColumn colTensp2;
         private DevExpress.XtraGrid.Columns.GridColumn colDvt2;
         private DevExpress.XtraGrid.Columns.GridColumn colQuycach2;
+        private Model.CustomGridLookUpEdit txtMaKho;
+        private Model.CustomGridView viewKho;
+        private DevExpress.XtraGrid.Columns.GridColumn colKhoid;
+        private DevExpress.XtraGrid.Columns.GridColumn colMakho;
+        private DevExpress.XtraGrid.Columns.GridColumn colTenkho;
+        private DevExpress.XtraGrid.Columns.GridColumn colDiachi;
+        private Model.CustomGridLookUpEdit txtMadv;
+        private Model.CustomGridView viewKH;
+        private DevExpress.XtraGrid.Columns.GridColumn colMakhid;
+        private DevExpress.XtraGrid.Columns.GridColumn colMakh;
+        private DevExpress.XtraGrid.Columns.GridColumn colTenkh;
+        private DevExpress.XtraGrid.Columns.GridColumn colDienthoai;
+        private DevExpress.XtraGrid.Columns.GridColumn colDChi;
+        private Model.CustomGridLookUpEdit txtMald;
+        private Model.CustomGridView viewLydo;
+        private DevExpress.XtraGrid.Columns.GridColumn colMald;
+        private DevExpress.XtraGrid.Columns.GridColumn colLydo;
+        private DevExpress.XtraGrid.Columns.GridColumn colTKNo;
+        private DevExpress.XtraGrid.Columns.GridColumn colTKCo;
+        private DevExpress.XtraGrid.Columns.GridColumn colGchu;
     }
 }

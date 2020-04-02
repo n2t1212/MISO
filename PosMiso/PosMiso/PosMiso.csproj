@@ -705,6 +705,7 @@
     <Content Include="Medias\Icons\unchecked.png" />
     <Content Include="Medias\Icons\user.png" />
     <Content Include="Medias\Pictures\app_logo.PNG" />
+    <None Include="Medias\Pictures\data-backup.jpg" />
     <Content Include="Medias\Pictures\login_bg.png" />
     <Content Include="Medias\Pictures\logo_gtc.PNG" />
     <Content Include="Medias\Pictures\mtpos_bg.png" />

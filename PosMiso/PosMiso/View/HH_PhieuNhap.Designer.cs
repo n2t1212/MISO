@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.colTTien = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTTVatCT = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colVATCT = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -61,9 +64,6 @@
             this.colThanhtien = new DevExpress.XtraGrid.Columns.GridColumn();
             this.grdPhieuNhap = new DevExpress.XtraGrid.GridControl();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvPhieuNXCT)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdPhieuNXCT)).BeginInit();
@@ -86,9 +86,44 @@
             this.panel1.Size = new System.Drawing.Size(848, 46);
             this.panel1.TabIndex = 3;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.label3.Location = new System.Drawing.Point(336, 15);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(91, 16);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "F7: In chứng từ";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.label2.Location = new System.Drawing.Point(169, 15);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(132, 16);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "F6: Xem chi tiết phiếu";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.label1.Location = new System.Drawing.Point(47, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(89, 16);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "F2: Thêm mới";
+            // 
             // colTTien
             // 
             this.colTTien.Caption = "Thành tiền";
+            this.colTTien.DisplayFormat.FormatString = "n0";
+            this.colTTien.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colTTien.FieldName = "Thanhtien";
             this.colTTien.Name = "colTTien";
             this.colTTien.Visible = true;
@@ -97,6 +132,8 @@
             // colTTVatCT
             // 
             this.colTTVatCT.Caption = "Tiền VAT";
+            this.colTTVatCT.DisplayFormat.FormatString = "n0";
+            this.colTTVatCT.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colTTVatCT.FieldName = "TTVat";
             this.colTTVatCT.Name = "colTTVatCT";
             this.colTTVatCT.Visible = true;
@@ -105,6 +142,8 @@
             // colVATCT
             // 
             this.colVATCT.Caption = "VAT (%)";
+            this.colVATCT.DisplayFormat.FormatString = "n0";
+            this.colVATCT.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colVATCT.FieldName = "Vat";
             this.colVATCT.Name = "colVATCT";
             this.colVATCT.Visible = true;
@@ -113,6 +152,8 @@
             // colNgte
             // 
             this.colNgte.Caption = "Nguyên tệ";
+            this.colNgte.DisplayFormat.FormatString = "n0";
+            this.colNgte.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colNgte.FieldName = "Nguyente";
             this.colNgte.Name = "colNgte";
             this.colNgte.Visible = true;
@@ -121,6 +162,8 @@
             // colDongia
             // 
             this.colDongia.Caption = "Đơn giá";
+            this.colDongia.DisplayFormat.FormatString = "n0";
+            this.colDongia.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colDongia.FieldName = "Dongia";
             this.colDongia.Name = "colDongia";
             this.colDongia.Visible = true;
@@ -129,6 +172,8 @@
             // colSoluong
             // 
             this.colSoluong.Caption = "Số lượng";
+            this.colSoluong.DisplayFormat.FormatString = "n0";
+            this.colSoluong.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colSoluong.FieldName = "Soluong";
             this.colSoluong.Name = "colSoluong";
             this.colSoluong.Visible = true;
@@ -137,6 +182,8 @@
             // colSLThung
             // 
             this.colSLThung.Caption = "Số thùng";
+            this.colSLThung.DisplayFormat.FormatString = "n0";
+            this.colSLThung.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colSLThung.FieldName = "SLThung";
             this.colSLThung.Name = "colSLThung";
             this.colSLThung.Visible = true;
@@ -233,6 +280,8 @@
             // colTTVat
             // 
             this.colTTVat.Caption = "Tiền VAT";
+            this.colTTVat.DisplayFormat.FormatString = "n0";
+            this.colTTVat.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colTTVat.FieldName = "TTVat";
             this.colTTVat.Name = "colTTVat";
             this.colTTVat.Visible = true;
@@ -242,6 +291,8 @@
             // colVat
             // 
             this.colVat.Caption = "VAT";
+            this.colVat.DisplayFormat.FormatString = "n0";
+            this.colVat.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colVat.FieldName = "Vat";
             this.colVat.Name = "colVat";
             this.colVat.Visible = true;
@@ -251,6 +302,8 @@
             // colNguyente
             // 
             this.colNguyente.Caption = "Nguyên tệ";
+            this.colNguyente.DisplayFormat.FormatString = "n0";
+            this.colNguyente.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colNguyente.FieldName = "Nguyente";
             this.colNguyente.Name = "colNguyente";
             this.colNguyente.Visible = true;
@@ -362,6 +415,8 @@
             // colThanhtien
             // 
             this.colThanhtien.Caption = "Tổng tiền";
+            this.colThanhtien.DisplayFormat.FormatString = "n0";
+            this.colThanhtien.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colThanhtien.FieldName = "Thanhtien";
             this.colThanhtien.Name = "colThanhtien";
             this.colThanhtien.Visible = true;
@@ -397,39 +452,6 @@
             this.splitContainer1.Size = new System.Drawing.Size(848, 412);
             this.splitContainer1.SplitterDistance = 187;
             this.splitContainer1.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
-            this.label1.Location = new System.Drawing.Point(47, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "F2: Thêm mới";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
-            this.label2.Location = new System.Drawing.Point(169, 15);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(132, 16);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "F6: Xem chi tiết phiếu";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
-            this.label3.Location = new System.Drawing.Point(336, 15);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(91, 16);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "F7: In chứng từ";
             // 
             // HH_PhieuNhap
             // 

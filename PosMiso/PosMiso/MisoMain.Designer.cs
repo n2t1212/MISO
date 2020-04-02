@@ -288,7 +288,7 @@
             // 
             this.menuTop.Location = new System.Drawing.Point(0, 0);
             this.menuTop.Name = "menuTop";
-            this.menuTop.Size = new System.Drawing.Size(1374, 24);
+            this.menuTop.Size = new System.Drawing.Size(1362, 24);
             this.menuTop.TabIndex = 5;
             this.menuTop.Text = "menuStrip1";
             // 
@@ -316,7 +316,7 @@
             this.systemTime});
             this.statusStrip1.Location = new System.Drawing.Point(0, 667);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1374, 24);
+            this.statusStrip1.Size = new System.Drawing.Size(1362, 24);
             this.statusStrip1.TabIndex = 6;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -373,7 +373,7 @@
             this.picLayout.Image = global::PosMiso.Properties.Resources.mtpos_bg;
             this.picLayout.Location = new System.Drawing.Point(0, 24);
             this.picLayout.Name = "picLayout";
-            this.picLayout.Size = new System.Drawing.Size(1374, 643);
+            this.picLayout.Size = new System.Drawing.Size(1362, 643);
             this.picLayout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.picLayout.TabIndex = 8;
             this.picLayout.TabStop = false;
@@ -391,11 +391,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1374, 691);
+            this.ClientSize = new System.Drawing.Size(1362, 691);
             this.Controls.Add(this.picLayout);
             this.Controls.Add(this.panelMenuLeft);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuTop);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.LookAndFeel.SkinName = "Office 2013";
