@@ -1,4 +1,5 @@
 ﻿using DevExpress.XtraGrid;
+using DevExpress.XtraGrid.Columns;
 using DevExpress.XtraGrid.Views.Grid;
 using PosMiso.Model;
 using System;
@@ -275,27 +276,30 @@ namespace PosMiso.View
                 gvPhieuNhap.CloseEditor();
                 otblPNXCT.AcceptChanges();
                 //for (int i = 0; i < filteredRows.Count; i++){
-                foreach (DataRow sR in otblPNXCT.Rows)
+                for (int i = 0; i < gvPhieuNhap.DataRowCount; i++)  
                 {
-                    //var row = filteredRows[i];
                     DataRow cR = tmpPNCT.NewRow();
-                    cR["Phieunxctid"] = sR["Phieunxctid"];
+                    foreach (GridColumn column in gvPhieuNhap.VisibleColumns)
+                    {
+                        cR[column.FieldName] = gvPhieuNhap.GetRowCellValue(i, column);
+                    }
+
+                    cR["Phieunxctid"] = gvPhieuNhap.GetRowCellValue(i, colPhieunxctid);
                     cR["Phieunxid"] = pPhieuNXID;
-                    cR["Maspid"] = sR["Maspid"];
-                    cR["Masp"] = sR["Masp"];
-                    cR["Tensp"] = sR["Tensp"];
-                    cR["Quycach"] = sR["Quycach"];
-                    cR["Dvt"] = sR["Dvt"];
-                    cR["SLThung"] = sR["SLThung"];
-                    cR["Soluong"] = sR["Soluong"];
-                    cR["Dongia"] = sR["Dongia"];
-                    cR["Nguyente"] = sR["Nguyente"];
-                    cR["Vat"] = sR["Vat"];
-                    cR["TTVat"] = sR["TTVat"];
-                    cR["Thanhtien"] = sR["Thanhtien"];
+                    //cR["Maspid"] = sR["Maspid"];
+                    //cR["Masp"] = sR["Masp"];
+                    //cR["Tensp"] = sR["Tensp"];
+                    //cR["Quycach"] = sR["Quycach"];
+                    //cR["Dvt"] = sR["Dvt"];
+                    //cR["SLThung"] = sR["SLThung"];
+                    //cR["Soluong"] = sR["Soluong"];
+                    //cR["Dongia"] = sR["Dongia"];
+                    //cR["Nguyente"] = sR["Nguyente"];
+                    //cR["Vat"] = sR["Vat"];
+                    //cR["TTVat"] = sR["TTVat"];
+                    //cR["Thanhtien"] = sR["Thanhtien"];
                     cR["Songaychono"] = 0;
                     cR["Ghiso"] = 1;
-                    cR["Ghichu"] = sR["Ghichu"];
                     tmpPNCT.Rows.Add(cR);
                 }
                 tmpPNCT.AcceptChanges();
@@ -579,7 +583,7 @@ namespace PosMiso.View
             txtMald.Properties.NullText = "Chọn lý do";
         }
 
-        private void gvPhieuNhap_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
+        private void gvPhieuNhap_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)  
         {
             if (isEdit == false) { return; }
 
@@ -624,6 +628,7 @@ namespace PosMiso.View
                     fThanhTien(gvPhieuNhap.FocusedRowHandle);
                 }
             }
+            
         }
 
         private void gvPhieuNhap_ValidateRow(object sender, DevExpress.XtraGrid.Views.Base.ValidateRowEventArgs e)
@@ -689,7 +694,7 @@ namespace PosMiso.View
                     e.Valid = false;
                     return;
                 }
-                gvPhieuNhap.SetRowCellValue(e.RowHandle, colPhieunxctid, MTGlobal.GetNewID());
+                gvPhieuNhap.UpdateCurrentRow();
             }
             catch { } 
         }

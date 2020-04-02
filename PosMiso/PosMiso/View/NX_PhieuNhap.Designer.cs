@@ -995,7 +995,7 @@
             // colVat
             // 
             this.colVat.Caption = "VAT (%)";
-            this.colVat.DisplayFormat.FormatString = "n0";
+            this.colVat.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colVat.FieldName = "Vat";
             this.colVat.Name = "colVat";
             this.colVat.Visible = true;
