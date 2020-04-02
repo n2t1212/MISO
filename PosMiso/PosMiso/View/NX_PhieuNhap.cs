@@ -600,7 +600,30 @@ namespace PosMiso.View
                 {
                     fThanhTien(e.RowHandle);
                 }
-            } 
+            }
+
+            else if (gvPhieuNhap.FocusedColumn.FieldName == "SLThung" && e.Column.Name == "colSLThung")
+            {
+                Double slThung = 0;
+
+                Double.TryParse(gvPhieuNhap.GetRowCellValue(e.RowHandle, colSLThung).ToString(), out slThung);
+                fQuydoithung(slThung);
+                if (gvPhieuNhap.GetRowCellValue(gvPhieuNhap.FocusedRowHandle, colDongia).ToString() != "")
+                {
+                    fThanhTien(gvPhieuNhap.FocusedRowHandle);
+                }
+            }
+
+            else if (gvPhieuNhap.FocusedColumn.FieldName == "Soluong" && e.Column.Name == "colSoluong")
+            {
+                Double slLe = 0;
+                Double.TryParse(gvPhieuNhap.GetRowCellValue(gvPhieuNhap.FocusedRowHandle, colSoluong).ToString(), out slLe);
+                fQuydoile2thung(slLe);
+                if (gvPhieuNhap.GetRowCellValue(gvPhieuNhap.FocusedRowHandle, colDongia).ToString() != "")
+                {
+                    fThanhTien(gvPhieuNhap.FocusedRowHandle);
+                }
+            }
         }
 
         private void gvPhieuNhap_ValidateRow(object sender, DevExpress.XtraGrid.Views.Base.ValidateRowEventArgs e)
@@ -675,27 +698,33 @@ namespace PosMiso.View
         {
             if (e.KeyCode == Keys.F2)
             {
-                btnThem_Click(sender, e);
+                fdoAdd();
             }
             else if (e.KeyCode == Keys.F3)
             {
-                btnSua_Click(sender, e);
+                fdoEdit();
             }
             else if (e.KeyCode == Keys.F5)
             {
-                btnLuu_Click(sender, e);
+                fdoSave();
             }
             else if (e.KeyCode == Keys.F7)
             {
-                btnIn_Click(sender, e);
+                if (pPhieuNXID == "")
+                {
+                    Utils.showMessage("Bạn chưa chọn phiếu để in...", "Lưu ý");
+                }
+                new MTReport().rptNX_Phieunhap(pPhieuNXID);
             }
             else if (e.KeyCode == Keys.F8)
             {
-                btnExit1_Click(sender, e);
+                this.Close();
             }
             else if (e.KeyCode == Keys.Escape)
             {
-                btnHuy_Click(sender, e);
+                BindData();
+                setReadOnly(true);
+                //MTGlobal.SetButtonAction(pACT_ROLE, MTButton, "ABORT");
             }
         }
 
@@ -758,37 +787,7 @@ namespace PosMiso.View
                         gvPhieuNhap.FocusedColumn = colSoluong;
                     }
                 }
-                if (gvPhieuNhap.FocusedColumn.FieldName == "SLThung" && gvPhieuNhap.FocusedColumn.Name == "colSLThung")
-                {
-                    Double slThung = 0;
-                    if (editObj != null)
-                    {
-                        Double.TryParse(editObj.ToString(), out slThung);
-                    }
-                    if (gvPhieuNhap.GetRowCellValue(gvPhieuNhap.FocusedRowHandle, colDongia).ToString() != "")
-                    {
-                        fThanhTien(gvPhieuNhap.FocusedRowHandle);
-                    }
-                    fQuydoithung(slThung);
-                    
-                }
-
-                if (gvPhieuNhap.FocusedColumn.FieldName == "Soluong" && gvPhieuNhap.FocusedColumn.Name == "colSoluong")
-                {
-                    //string value = ((DevExpress.Xpf.Grid.CellValueEventArgs)(e)).Value.ToString();
-                    if (gvPhieuNhap.GetRowCellValue(gvPhieuNhap.FocusedRowHandle, colSoluong) != null
-                        && gvPhieuNhap.GetRowCellValue(gvPhieuNhap.FocusedRowHandle, colSoluong).ToString() != "")
-                    {
-                        Double slLe = 0;
-                        if (editObj != null)
-                        {
-                            Double.TryParse(editObj.ToString(), out slLe);
-                        }
-                        fThanhTien(gvPhieuNhap.FocusedRowHandle);
-                        fQuydoile2thung(slLe);
-                        
-                    }
-                }
+          
             }
         }
 

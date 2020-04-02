@@ -396,7 +396,6 @@
             this.Controls.Add(this.panelMenuLeft);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuTop);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.LookAndFeel.SkinName = "Office 2013";

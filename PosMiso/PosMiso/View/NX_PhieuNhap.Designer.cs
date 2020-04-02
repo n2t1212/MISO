@@ -1010,6 +1010,7 @@
             this.colTTVat.FieldName = "TTVat";
             this.colTTVat.Name = "colTTVat";
             this.colTTVat.OptionsColumn.AllowEdit = false;
+            this.colTTVat.OptionsColumn.AllowFocus = false;
             this.colTTVat.OptionsColumn.ReadOnly = true;
             this.colTTVat.Visible = true;
             this.colTTVat.VisibleIndex = 9;
@@ -1022,6 +1023,9 @@
             this.colThanhtien.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colThanhtien.FieldName = "Thanhtien";
             this.colThanhtien.Name = "colThanhtien";
+            this.colThanhtien.OptionsColumn.AllowEdit = false;
+            this.colThanhtien.OptionsColumn.AllowFocus = false;
+            this.colThanhtien.OptionsColumn.ReadOnly = true;
             this.colThanhtien.Visible = true;
             this.colThanhtien.VisibleIndex = 10;
             this.colThanhtien.Width = 79;
