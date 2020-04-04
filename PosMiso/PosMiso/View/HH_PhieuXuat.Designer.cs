@@ -127,6 +127,7 @@
             this.gvPhieuXuat.Name = "gvPhieuXuat";
             this.gvPhieuXuat.OptionsView.ShowGroupPanel = false;
             this.gvPhieuXuat.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gvPhieuXuat_RowClick);
+            this.gvPhieuXuat.DoubleClick += new System.EventHandler(this.gvPhieuXuat_DoubleClick);
             // 
             // colPhieunxid
             // 

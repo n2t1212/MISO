@@ -12,28 +12,31 @@ using System.Windows.Forms;
 
 namespace PosMiso.View
 {
-    public partial class HH_PhieuXuat : Form
+    public partial class TC_PhieuThu : Form
     {
-        private DataTable oTblNX;
+        private MTGlobal.MT_ROLE MTROLE;
+        private MTGlobal.MT_BUTTONACTION MTButton;
+
         private String pPhieuID = "";
         private String pLoaiPhieu = "";
         private String pTuNgay = "";
         private String pDenNgay = "";
-
-        private MTGlobal.MT_ROLE MTROLE;
-        private MTGlobal.MT_BUTTONACTION MTButton;
-
         DevExpress.Utils.WaitDialogForm Dlg;
 
-        public HH_PhieuXuat()
+        private DataTable oTblTC = null;
+
+
+        public TC_PhieuThu()
         {
             InitializeComponent();
+
             Dlg = Utils.shwWait();
             try
             {
-                pLoaiPhieu = MTGlobal.PX;
+                pLoaiPhieu = MTGlobal.PT;
                 pTuNgay = MTGlobal.MT_TUNGAY;
                 pDenNgay = MTGlobal.MT_DENNGAY;
+
                 setUserRight();
                 BindData();
             }
@@ -68,26 +71,80 @@ namespace PosMiso.View
                 arrPara[2].Value = pDenNgay;
                 arrPara[3] = new SqlParameter("@NGUOIDUNG", SqlDbType.NVarChar, 50);
                 arrPara[3].Value = MTGlobal.MT_USER_LOGIN;
-                oTblNX = new MTSQLServer().wRead("NX_shwPhieuList", arrPara);
+                oTblTC = new MTSQLServer().wRead("TC_shwPhieuTCList", arrPara);
 
-                grdPhieuXuat.DataSource = oTblNX;
-                SysPar.SetGridReadOnly(true, gvPhieuXuat);
+                grdPhieuThu.DataSource = oTblTC;
+                SysPar.SetGridReadOnly(true, gvPhieuThu);
             }
             catch { }
         }
+
         private void BindDataCT(String mPhieuID)
         {
             try
             {
-                String mSql = String.Format("SELECT * FROM NX_PHIEUNXCT where phieunxid='{0}' ORDER BY Phieunxctid asc", mPhieuID);
+                String mSql = String.Format("SELECT * FROM TC_PHIEUTCCT where phieutcid='{0}' ORDER BY Phieutcctid asc", mPhieuID);
                 DataTable oTblNXCT = new MTSQLServer().wRead(mSql, null, false);
-                grdPhieuNXCT.DataSource = oTblNXCT;
-                SysPar.SetGridReadOnly(true, gvPhieuNXCT);
+                grdPhieuThuCT.DataSource = oTblNXCT;
+                SysPar.SetGridReadOnly(true, gvPhieuThuCT);
             }
             catch { }
         }
 
-        private void grdPhieuXuat_KeyDown(object sender, KeyEventArgs e)
+        private void fChitietPhieu(bool isNew = false)
+        {
+            try
+            {
+                if (gvPhieuThu.FocusedRowHandle < 0)
+                {
+                    pPhieuID = "";
+                }
+                else
+                {
+                    try
+                    {
+                        pPhieuID = gvPhieuThu.GetRowCellValue(gvPhieuThu.FocusedRowHandle, colPhieutcid).ToString();
+                    }
+                    catch { }
+                }
+
+                if (isNew == false && (pPhieuID == "" || gvPhieuThu.DataRowCount <= 0))
+                {
+                    isNew = true;
+                }
+
+
+                if (pLoaiPhieu == MTGlobal.PT)
+                {
+                    TC_PhieuThuFrm ofrmPT = new TC_PhieuThuFrm(pPhieuID, this.pLoaiPhieu, this.pTuNgay, this.pDenNgay, MTROLE, isNew);
+                    ofrmPT.ShowDialog();
+                    BindData();
+                }
+            }
+            catch (Exception ex) { Utils.showMessage(ex.Message.ToString(), "Thông báo lỗi"); }
+        }
+
+        private void gvPhieuThu_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
+        {
+            try
+            {
+                DataRow dataRow = gvPhieuThu.GetDataRow(e.RowHandle);
+
+                if (dataRow != null)
+                {
+                    pPhieuID = dataRow["Phieutcid"].ToString();
+                    BindDataCT(pPhieuID);
+                }
+            }
+            catch (Exception ex) { ex.Data.Clear(); }
+        }
+
+        private void gvPhieuThu_DoubleClick(object sender, EventArgs e)
+        {
+            fChitietPhieu();
+        }
+
+        private void grdPhieuThu_KeyDown(object sender, KeyEventArgs e)
         {
             switch (e.KeyCode)
             {
@@ -104,9 +161,13 @@ namespace PosMiso.View
                     {
                         Utils.showMessage("Bạn chưa chọn phiếu để in...", "Lưu ý");
                     }
-                    if (pLoaiPhieu == MTGlobal.PX)
+                    if (pLoaiPhieu == MTGlobal.PT)
                     {
-                        new MTReport().rptNX_Phieuxuat(pPhieuID);
+
+                    }
+                    else
+                    {
+                        //
                     }
                     break;
 
@@ -118,64 +179,6 @@ namespace PosMiso.View
                     catch { }
                     break;
             }
-        }
-
-        private void fChitietPhieu(bool isNew = false)
-        {
-            try
-            {
-                if (gvPhieuXuat.FocusedRowHandle < 0)
-                {
-                    pPhieuID = "";
-                }
-                else
-                {
-                    try
-                    {
-                        DataRow dataRow = gvPhieuXuat.GetDataRow(gvPhieuXuat.FocusedRowHandle);
-
-                        if (dataRow != null)
-                        {
-                            pPhieuID = dataRow["Phieunxid"].ToString();
-                        }
-                    }
-                    catch { }
-                }
-
-                if (isNew == false && (pPhieuID == "" || gvPhieuXuat.DataRowCount <= 0))
-                {
-                    isNew = true;
-                }
-
-
-                if (pLoaiPhieu == MTGlobal.PX)
-                {
-                    NX_PhieuXuat ofrmPX = new NX_PhieuXuat(pPhieuID, this.pLoaiPhieu, this.pTuNgay, this.pDenNgay, MTROLE, isNew);
-                    ofrmPX.ShowDialog();
-                    BindData();
-                }
-            }
-            catch (Exception ex) { Utils.showMessage(ex.Message.ToString(), "Thông báo lỗi"); }
-        }
-
-        private void gvPhieuXuat_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
-        {
-            try
-            {
-                DataRow dataRow = gvPhieuXuat.GetDataRow(e.RowHandle);
-
-                if (dataRow != null)
-                {
-                    pPhieuID = dataRow["Phieunxid"].ToString();
-                    BindDataCT(pPhieuID);
-                }
-            }
-            catch (Exception ex) { ex.Data.Clear(); }
-        }
-
-        private void gvPhieuXuat_DoubleClick(object sender, EventArgs e)
-        {
-            fChitietPhieu();
         }
     }
 }

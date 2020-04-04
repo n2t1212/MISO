@@ -273,6 +273,8 @@ namespace PosMiso
 
         private void OpenForm(string frmName = "", string mCaption = "")
         {
+            if (frmName == "")
+                return;
             try
             {
                 string mPermit = "", mOptTime = "", mOptEnable = "";            
@@ -284,17 +286,34 @@ namespace PosMiso
                     Form frm;
                     if (obj != null)
                     {
-                        if (frmName == "HH_PhieuXuat" || frmName == "HH_PhieuNhap")
+                        if (Utils.isUsingDateForm(frmName))
                         {
                             if (Utils.ChonThoiGian())
                             {
-                                frm = Activator.CreateInstance(obj) as Form;
-                                frm.Name = frmName;
-                                frm.Text = mCaption.Replace("&", " ");
-                                frm.Tag = mPermit;
+                                if (frmName == "BH_PhieuBH")
+                                {
+                                    MTGlobal.MT_LOAIP = MTGlobal.BH;
+                                    if (Utils.ChonQuay(MTGlobal.BH))
+                                    {
+                                        frm = Activator.CreateInstance(obj) as Form;
+                                        frm.Name = frmName;
+                                        frm.Text = mCaption.Replace("&", " ");
+                                        frm.Tag = mPermit;
 
-                                frm.MdiParent = this;
-                                frm.Show();
+                                        frm.MdiParent = this;
+                                        frm.Show();
+                                    }
+                                }
+                                else
+                                {
+                                    frm = Activator.CreateInstance(obj) as Form;
+                                    frm.Name = frmName;
+                                    frm.Text = mCaption.Replace("&", " ");
+                                    frm.Tag = mPermit;
+
+                                    frm.MdiParent = this;
+                                    frm.Show();
+                                }
                             }
                         }
                         else
@@ -303,14 +322,8 @@ namespace PosMiso
                             frm.Name = frmName;
                             frm.Text = mCaption.Replace("&", " ");
                             frm.Tag = mPermit;
-
-                            //if (frmName.Substring(0, 3) != "dlg")
-                            //{
                             frm.MdiParent = this;
                             frm.Show();
-                            //}
-                            //else
-                            //    frm.ShowDialog();
                         }
                     }
                 }

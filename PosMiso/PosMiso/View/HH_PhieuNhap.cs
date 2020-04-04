@@ -19,7 +19,10 @@ namespace PosMiso.View
         private String pLoaiPhieu = "";
         private String pTuNgay = "";
         private String pDenNgay = "";
-        private MTGlobal.MT_ROLE mActRole;
+
+        private MTGlobal.MT_ROLE MTROLE;
+        private MTGlobal.MT_BUTTONACTION MTButton;
+
         DevExpress.Utils.WaitDialogForm Dlg;
 
         public HH_PhieuNhap()
@@ -28,14 +31,28 @@ namespace PosMiso.View
             Dlg = PosMiso.Model.Utils.shwWait();
             try
             {
-
                 pLoaiPhieu = MTGlobal.PN;
                 pTuNgay = MTGlobal.MT_TUNGAY;
                 pDenNgay = MTGlobal.MT_DENNGAY;
+                setUserRight();
                 BindData();
             }
             catch { }
             Utils.closeWait(Dlg);
+        }
+
+        private void setUserRight()
+        {
+            DataTable oTblRole = UserRoleFuntional.getRoleByFunctionID(this.Name.ToString());
+
+            if (oTblRole.Rows.Count == 1)
+            {
+                DataRow rw = oTblRole.Rows[0];
+                MTROLE.isAdd = Utils.parseStringToBoolean(rw["them"].ToString());
+                MTROLE.isEdit = Utils.parseStringToBoolean(rw["sua"].ToString());
+                MTROLE.isDel = Utils.parseStringToBoolean(rw["xoa"].ToString());
+                MTROLE.isPrint = Utils.parseStringToBoolean(rw["in"].ToString());
+            }
         }
 
         private void BindData()
@@ -75,7 +92,7 @@ namespace PosMiso.View
             switch (e.KeyCode)
             {
                 case Keys.F2:
-                    //cmdAdd_Click(sender, e);
+                    fChitietPhieu(true);
                     break;
 
                 case Keys.F6:
@@ -137,14 +154,8 @@ namespace PosMiso.View
 
                 if (pLoaiPhieu == MTGlobal.PN)
                 {
-                    NX_PhieuNhap ofrmPN = new NX_PhieuNhap(pPhieuID, this.pLoaiPhieu, this.pTuNgay, this.pDenNgay, mActRole, isNew);
+                    NX_PhieuNhap ofrmPN = new NX_PhieuNhap(pPhieuID, this.pLoaiPhieu, this.pTuNgay, this.pDenNgay, MTROLE, isNew);
                     ofrmPN.ShowDialog();
-                    BindData();
-                }
-                else if (pLoaiPhieu == MTGlobal.PX)
-                {
-                    //NX_PhieuXuat ofrmPX = new NX_PhieuXuat(pPhieuID, this.pLoaiPhieu, this.pTuNgay, this.pDenNgay, mActRole, isNew);
-                    //ofrmPX.ShowDialog();
                     BindData();
                 }
             }

@@ -33,12 +33,12 @@
             this.lblTitle = new DevExpress.XtraEditors.LabelControl();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnExit1 = new System.Windows.Forms.Button();
-            this.btnHuy = new System.Windows.Forms.Button();
-            this.btnLuu = new System.Windows.Forms.Button();
-            this.btnXoa = new System.Windows.Forms.Button();
-            this.btnSua = new System.Windows.Forms.Button();
-            this.btnIn = new System.Windows.Forms.Button();
-            this.btnThem = new System.Windows.Forms.Button();
+            this.cmdAbort = new System.Windows.Forms.Button();
+            this.cmdSave = new System.Windows.Forms.Button();
+            this.cmdDel = new System.Windows.Forms.Button();
+            this.cmdEdit = new System.Windows.Forms.Button();
+            this.cmdPrint = new System.Windows.Forms.Button();
+            this.cmdAdd = new System.Windows.Forms.Button();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.txtMald = new PosMiso.Model.CustomGridLookUpEdit();
             this.viewLydo = new PosMiso.Model.CustomGridView();
@@ -173,12 +173,12 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(193)))), ((int)(((byte)(222)))));
             this.panel3.Controls.Add(this.btnExit1);
-            this.panel3.Controls.Add(this.btnHuy);
-            this.panel3.Controls.Add(this.btnLuu);
-            this.panel3.Controls.Add(this.btnXoa);
-            this.panel3.Controls.Add(this.btnSua);
-            this.panel3.Controls.Add(this.btnIn);
-            this.panel3.Controls.Add(this.btnThem);
+            this.panel3.Controls.Add(this.cmdAbort);
+            this.panel3.Controls.Add(this.cmdSave);
+            this.panel3.Controls.Add(this.cmdDel);
+            this.panel3.Controls.Add(this.cmdEdit);
+            this.panel3.Controls.Add(this.cmdPrint);
+            this.panel3.Controls.Add(this.cmdAdd);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(0, 553);
             this.panel3.Name = "panel3";
@@ -196,71 +196,71 @@
             this.btnExit1.UseVisualStyleBackColor = true;
             this.btnExit1.Click += new System.EventHandler(this.btnExit1_Click);
             // 
-            // btnHuy
+            // cmdAbort
             // 
-            this.btnHuy.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHuy.Location = new System.Drawing.Point(789, 6);
-            this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(102, 32);
-            this.btnHuy.TabIndex = 0;
-            this.btnHuy.Text = "Bỏ qua (Esc)";
-            this.btnHuy.UseVisualStyleBackColor = true;
-            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
+            this.cmdAbort.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdAbort.Location = new System.Drawing.Point(789, 6);
+            this.cmdAbort.Name = "cmdAbort";
+            this.cmdAbort.Size = new System.Drawing.Size(102, 32);
+            this.cmdAbort.TabIndex = 0;
+            this.cmdAbort.Text = "Bỏ qua (Esc)";
+            this.cmdAbort.UseVisualStyleBackColor = true;
+            this.cmdAbort.Click += new System.EventHandler(this.btnHuy_Click);
             // 
-            // btnLuu
+            // cmdSave
             // 
-            this.btnLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLuu.Location = new System.Drawing.Point(693, 6);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(90, 32);
-            this.btnLuu.TabIndex = 0;
-            this.btnLuu.Text = "Lưu (F5)";
-            this.btnLuu.UseVisualStyleBackColor = true;
-            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
+            this.cmdSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdSave.Location = new System.Drawing.Point(693, 6);
+            this.cmdSave.Name = "cmdSave";
+            this.cmdSave.Size = new System.Drawing.Size(90, 32);
+            this.cmdSave.TabIndex = 0;
+            this.cmdSave.Text = "Lưu (F5)";
+            this.cmdSave.UseVisualStyleBackColor = true;
+            this.cmdSave.Click += new System.EventHandler(this.btnLuu_Click);
             // 
-            // btnXoa
+            // cmdDel
             // 
-            this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoa.Location = new System.Drawing.Point(597, 6);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(90, 32);
-            this.btnXoa.TabIndex = 0;
-            this.btnXoa.Text = "Xóa (F4)";
-            this.btnXoa.UseVisualStyleBackColor = true;
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            this.cmdDel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdDel.Location = new System.Drawing.Point(597, 6);
+            this.cmdDel.Name = "cmdDel";
+            this.cmdDel.Size = new System.Drawing.Size(90, 32);
+            this.cmdDel.TabIndex = 0;
+            this.cmdDel.Text = "Xóa (F4)";
+            this.cmdDel.UseVisualStyleBackColor = true;
+            this.cmdDel.Click += new System.EventHandler(this.btnXoa_Click);
             // 
-            // btnSua
+            // cmdEdit
             // 
-            this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSua.Location = new System.Drawing.Point(501, 6);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(90, 32);
-            this.btnSua.TabIndex = 0;
-            this.btnSua.Text = "Sửa (F3)";
-            this.btnSua.UseVisualStyleBackColor = true;
-            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
+            this.cmdEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdEdit.Location = new System.Drawing.Point(501, 6);
+            this.cmdEdit.Name = "cmdEdit";
+            this.cmdEdit.Size = new System.Drawing.Size(90, 32);
+            this.cmdEdit.TabIndex = 0;
+            this.cmdEdit.Text = "Sửa (F3)";
+            this.cmdEdit.UseVisualStyleBackColor = true;
+            this.cmdEdit.Click += new System.EventHandler(this.btnSua_Click);
             // 
-            // btnIn
+            // cmdPrint
             // 
-            this.btnIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIn.Location = new System.Drawing.Point(309, 6);
-            this.btnIn.Name = "btnIn";
-            this.btnIn.Size = new System.Drawing.Size(90, 32);
-            this.btnIn.TabIndex = 0;
-            this.btnIn.Text = "In (F7)";
-            this.btnIn.UseVisualStyleBackColor = true;
-            this.btnIn.Click += new System.EventHandler(this.btnIn_Click);
+            this.cmdPrint.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdPrint.Location = new System.Drawing.Point(309, 6);
+            this.cmdPrint.Name = "cmdPrint";
+            this.cmdPrint.Size = new System.Drawing.Size(90, 32);
+            this.cmdPrint.TabIndex = 0;
+            this.cmdPrint.Text = "In (F7)";
+            this.cmdPrint.UseVisualStyleBackColor = true;
+            this.cmdPrint.Click += new System.EventHandler(this.btnIn_Click);
             // 
-            // btnThem
+            // cmdAdd
             // 
-            this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.Location = new System.Drawing.Point(405, 6);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(90, 32);
-            this.btnThem.TabIndex = 0;
-            this.btnThem.Text = "Thêm (F2)";
-            this.btnThem.UseVisualStyleBackColor = true;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            this.cmdAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdAdd.Location = new System.Drawing.Point(405, 6);
+            this.cmdAdd.Name = "cmdAdd";
+            this.cmdAdd.Size = new System.Drawing.Size(90, 32);
+            this.cmdAdd.TabIndex = 0;
+            this.cmdAdd.Text = "Thêm (F2)";
+            this.cmdAdd.UseVisualStyleBackColor = true;
+            this.cmdAdd.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // splitContainer1
             // 
@@ -988,6 +988,9 @@
             this.colNguyente.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colNguyente.FieldName = "Nguyente";
             this.colNguyente.Name = "colNguyente";
+            this.colNguyente.OptionsColumn.AllowEdit = false;
+            this.colNguyente.OptionsColumn.AllowFocus = false;
+            this.colNguyente.OptionsColumn.ReadOnly = true;
             this.colNguyente.Visible = true;
             this.colNguyente.VisibleIndex = 7;
             this.colNguyente.Width = 79;
@@ -1087,7 +1090,7 @@
         private DevExpress.XtraEditors.LabelControl lblTitle;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnExit1;
-        private System.Windows.Forms.Button btnThem;
+        private System.Windows.Forms.Button cmdAdd;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private DevExpress.XtraGrid.GridControl grdPhieuNhap;
         private DevExpress.XtraGrid.Views.Grid.GridView gvPhieuNhap;
@@ -1128,11 +1131,11 @@
         private System.Windows.Forms.TextBox txtSophieu;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button btnXoa;
-        private System.Windows.Forms.Button btnSua;
-        private System.Windows.Forms.Button btnIn;
-        private System.Windows.Forms.Button btnLuu;
-        private System.Windows.Forms.Button btnHuy;
+        private System.Windows.Forms.Button cmdDel;
+        private System.Windows.Forms.Button cmdEdit;
+        private System.Windows.Forms.Button cmdPrint;
+        private System.Windows.Forms.Button cmdSave;
+        private System.Windows.Forms.Button cmdAbort;
         private DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit repositoryItems;
         private DevExpress.XtraGrid.Views.Grid.GridView repositoryItemView;
         private DevExpress.XtraGrid.Columns.GridColumn colMaspid1;

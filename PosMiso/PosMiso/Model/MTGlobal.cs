@@ -705,7 +705,5 @@ namespace PosMiso.Model
         
     #endregion
 
- 
-    
-  }
+   }
 }

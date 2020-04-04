@@ -29,6 +29,9 @@ namespace PosMiso.View
         private bool isEdit = false;
         DevExpress.Utils.WaitDialogForm Dlg;
 
+        MTGlobal.MT_ROLE pACT_ROLE;
+        private MTGlobal.MT_BUTTONACTION MTButton;
+
         private DataTable otblSP = null;
 
         public NX_PhieuNhap()
@@ -44,9 +47,10 @@ namespace PosMiso.View
             this.pTuNgay = mTuNgay == "" ? DateTime.Now.ToShortDateString() : mTuNgay;
             this.pDenNgay = mDenNgay == "" ? DateTime.Now.ToShortDateString() : mDenNgay;
             this.pLoaiPhieu = mLoaiPhieu;
-            //this.pACT_ROLE = mActRole;
+            this.pACT_ROLE = mActRole;
 
             Dlg = Utils.shwWait();
+            setUserRight();
             loadWarehourseToLookupEdit();
             loadCustomerToLookupEdit();
             loadLydoToLookupEdit();
@@ -65,6 +69,21 @@ namespace PosMiso.View
             oThreSP.Start();
 
             Utils.closeWait(Dlg);
+        }
+
+        private void setUserRight()
+        {
+            this.cmdAdd.Enabled = pACT_ROLE.isAdd;
+            this.cmdEdit.Enabled = pACT_ROLE.isEdit;
+            this.cmdDel.Enabled = pACT_ROLE.isDel;
+            this.cmdPrint.Enabled = pACT_ROLE.isPrint;
+            MTButton.cmdAdd = this.cmdAdd;
+            MTButton.cmdEdit = this.cmdEdit;
+            MTButton.cmdDel = this.cmdDel;
+            MTButton.cmdSave = this.cmdSave;
+            MTButton.cmdAbort = this.cmdAbort;
+            MTButton.cmdPrint = this.cmdPrint;
+            MTGlobal.SetButtonAction(pACT_ROLE, MTButton, "INIT");
         }
 
         private void setReadOnly(bool ReadOnly = false)
@@ -216,7 +235,7 @@ namespace PosMiso.View
                 }
 
                 setReadOnly(false);
-                //MTGlobal.SetButtonAction(pACT_ROLE, MTButton, "ADD");
+                MTGlobal.SetButtonAction(pACT_ROLE, MTButton, "ADD");
                 txtSophieu.Focus();
                 isEdit = true;
             }
@@ -226,7 +245,7 @@ namespace PosMiso.View
         private void fdoEdit()
         {
             setReadOnly(false);
-           // MTGlobal.SetButtonAction(pACT_ROLE, MTButton, "EDIT");
+            MTGlobal.SetButtonAction(pACT_ROLE, MTButton, "EDIT");
             isEdit = true;
             txtSophieu.Focus();
             if (SysPar.SetGridReadOnly(false, gvPhieuNhap))
@@ -308,7 +327,7 @@ namespace PosMiso.View
                 if (Rs == "")
                 {
                     setReadOnly(true);
-                    //MTGlobal.SetButtonAction(pACT_ROLE, MTButton, "SAVE");
+                    MTGlobal.SetButtonAction(pACT_ROLE, MTButton, "SAVE");
                     SysPar.SetGridReadOnly(true, gvPhieuNhap);
                     isEdit = false;
                 }
@@ -439,7 +458,7 @@ namespace PosMiso.View
                     pPhieuNXID = "";
                     BindData();
                     setReadOnly(true);
-                    //MTGlobal.SetButtonAction(pACT_ROLE, MTButton, "ABORT");
+                    MTGlobal.SetButtonAction(pACT_ROLE, MTButton, "ABORT");
                 }
                 else
                 {
@@ -458,7 +477,7 @@ namespace PosMiso.View
         {
             BindData();
             setReadOnly(true);
-            //MTGlobal.SetButtonAction(pACT_ROLE, MTButton, "ABORT");
+            MTGlobal.SetButtonAction(pACT_ROLE, MTButton, "ABORT");
         }
 
         private void btnExit1_Click(object sender, EventArgs e)
@@ -514,7 +533,7 @@ namespace PosMiso.View
                             if (dSL == 0) { dSL = 1; }
                         }
                         catch { dSL = 1; }
-                        gvPhieuNhap.SetRowCellValue(gvPhieuNhap.FocusedRowHandle, colMasp, sMasp);
+                        //gvPhieuNhap.SetRowCellValue(gvPhieuNhap.FocusedRowHandle, colMasp, sMasp);
                         gvPhieuNhap.SetRowCellValue(gvPhieuNhap.FocusedRowHandle, colTensp, vRow[0]["Tensp"].ToString());
                         gvPhieuNhap.SetRowCellValue(gvPhieuNhap.FocusedRowHandle, colDvt, vRow[0]["Dvt"].ToString());
                         gvPhieuNhap.SetRowCellValue(gvPhieuNhap.FocusedRowHandle, colQuycach, vRow[0]["Quycach"].ToString());
@@ -729,7 +748,7 @@ namespace PosMiso.View
             {
                 BindData();
                 setReadOnly(true);
-                //MTGlobal.SetButtonAction(pACT_ROLE, MTButton, "ABORT");
+                MTGlobal.SetButtonAction(pACT_ROLE, MTButton, "ABORT");
             }
         }
 

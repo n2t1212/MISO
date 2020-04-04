@@ -170,21 +170,22 @@ namespace PosMiso.Model
         //    catch { return false; }
         //}
 
-        //public static bool ChonQuay(String mLoaiPhieu)
-        //{
-        //    try
-        //    {
-        //        if (mLoaiPhieu==MTGlobal.BH){
-        //                  dlg_ChonQuay dlgChon = new dlg_ChonQuay(); 
-        //                  dlgChon.ShowDialog();
-        //                return dlgChon.isChon;
+        public static bool ChonQuay(String mLoaiPhieu)
+        {
+            try
+            {
+                if (mLoaiPhieu == MTGlobal.BH)
+                {
+                    dlg_ChonQuay dlgChon = new dlg_ChonQuay();
+                    dlgChon.ShowDialog();
+                    return dlgChon.isChon;
 
-        //        }
-        //        return false;
-              
-        //    }
-        //    catch { return false; }
-        //}
+                }
+                return false;
+
+            }
+            catch { return false; }
+        }
         
         public static bool validateFileType(string filename, string FILE_TYPE)
         {
@@ -244,6 +245,7 @@ namespace PosMiso.Model
         //    catch { }
         //}
 
+        #region "DB"
         public static bool isDatabaseExisted(string databaseName)
         {
             string sqlCheck = "SELECT * FROM sys.databases WHERE name = N'" + databaseName + "'";
@@ -356,6 +358,25 @@ namespace PosMiso.Model
             {
                 return false;
             }
+        }
+        #endregion
+
+        public static bool parseStringToBoolean(String strValue)
+        {
+            bool result;
+            Boolean.TryParse(strValue, out result);
+            return result;
+        }
+
+        public static String[] formsName = new String[5] { "HH_PhieuXuat",
+                                                           "HH_PhieuNhap",
+                                                           "TC_PhieuThu",
+                                                           "TC_PhieuChi",
+                                                           "BH_PhieuBH"};
+
+        public static bool isUsingDateForm(String formName)
+        {
+            return formsName.Contains(formName);
         }
     }   
 }

@@ -108,14 +108,17 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Model\DM_ChucNang.cs" />
+    <Compile Include="Model\modPhieuBH.cs" />
     <Compile Include="Model\modMember.cs" />
     <Compile Include="Model\modPhieuNX.cs" />
+    <Compile Include="Model\modPhieuTC.cs" />
     <Compile Include="Model\modReport.cs" />
     <Compile Include="Model\MTGlobal.cs" />
     <Compile Include="Model\MTReport.cs" />
     <Compile Include="Model\MTSQLServer.cs" />
     <Compile Include="Model\MTSynData.cs" />
     <Compile Include="Model\SysPar.cs" />
+    <Compile Include="Model\UserRoleFuntional.cs" />
     <Compile Include="Model\Utils.cs" />
     <Compile Include="Model\ValidateHelper.cs" />
     <Compile Include="Program.cs" />
@@ -282,6 +285,18 @@
     <Compile Include="Report\rptQRCode3522.designer.cs">
       <DependentUpon>rptQRCode3522.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\BH_PhieuBH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\BH_PhieuBH.Designer.cs">
+      <DependentUpon>BH_PhieuBH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\BH_PhieuBHFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\BH_PhieuBHFrm.Designer.cs">
+      <DependentUpon>BH_PhieuBHFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\dlg_AddQuyenHan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -294,6 +309,12 @@
     <Compile Include="View\dlg_ChonNgay.Designer.cs">
       <DependentUpon>dlg_ChonNgay.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\dlg_ChonQuay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\dlg_ChonQuay.Designer.cs">
+      <DependentUpon>dlg_ChonQuay.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\dlg_ImportGiaSanPham.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -305,6 +326,12 @@
     </Compile>
     <Compile Include="View\dlg_ImportSanPham.Designer.cs">
       <DependentUpon>dlg_ImportSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\dlg_TonKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\dlg_TonKho.Designer.cs">
+      <DependentUpon>dlg_TonKho.cs</DependentUpon>
     </Compile>
     <Compile Include="View\DM_ChanhXe.cs">
       <SubType>Form</SubType>
@@ -438,6 +465,24 @@
     <Compile Include="View\PrintPreview.Designer.cs">
       <DependentUpon>PrintPreview.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\TC_PhieuChi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TC_PhieuChi.Designer.cs">
+      <DependentUpon>TC_PhieuChi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TC_PhieuThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TC_PhieuThu.Designer.cs">
+      <DependentUpon>TC_PhieuThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TC_PhieuThuFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TC_PhieuThuFrm.Designer.cs">
+      <DependentUpon>TC_PhieuThuFrm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="MisoMain.resx">
       <DependentUpon>MisoMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -533,17 +578,29 @@
     <EmbeddedResource Include="Report\rptQRCode3522.resx">
       <DependentUpon>rptQRCode3522.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\BH_PhieuBH.resx">
+      <DependentUpon>BH_PhieuBH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\BH_PhieuBHFrm.resx">
+      <DependentUpon>BH_PhieuBHFrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\dlg_AddQuyenHan.resx">
       <DependentUpon>dlg_AddQuyenHan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\dlg_ChonNgay.resx">
       <DependentUpon>dlg_ChonNgay.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\dlg_ChonQuay.resx">
+      <DependentUpon>dlg_ChonQuay.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\dlg_ImportGiaSanPham.resx">
       <DependentUpon>dlg_ImportGiaSanPham.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\dlg_ImportSanPham.resx">
       <DependentUpon>dlg_ImportSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\dlg_TonKho.resx">
+      <DependentUpon>dlg_TonKho.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\DM_ChanhXe.resx">
       <DependentUpon>DM_ChanhXe.cs</DependentUpon>
@@ -610,6 +667,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmInMa.resx">
       <DependentUpon>frmInMa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TC_PhieuChi.resx">
+      <DependentUpon>TC_PhieuChi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TC_PhieuThu.resx">
+      <DependentUpon>TC_PhieuThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TC_PhieuThuFrm.resx">
+      <DependentUpon>TC_PhieuThuFrm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
