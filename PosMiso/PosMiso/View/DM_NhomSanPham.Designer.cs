@@ -29,34 +29,22 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.grdNhomSanPham = new DevExpress.XtraGrid.GridControl();
             this.gvNhomSanPham = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colManhomspid = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colManhom = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTennhom = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdNhomSanPham)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvNhomSanPham)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 480);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1107, 44);
             this.panel1.TabIndex = 0;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(16, 8);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // grdNhomSanPham
             // 
@@ -110,9 +98,8 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DM_NhomSanPham";
-            this.Text = "DM_NhomSanPham";
+            this.Text = "Nhóm sản phẩm";
             this.Load += new System.EventHandler(this.DM_NhomSanPham_Load);
-            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grdNhomSanPham)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvNhomSanPham)).EndInit();
             this.ResumeLayout(false);
@@ -127,6 +114,5 @@
         private DevExpress.XtraGrid.Columns.GridColumn colManhomspid;
         private DevExpress.XtraGrid.Columns.GridColumn colManhom;
         private DevExpress.XtraGrid.Columns.GridColumn colTennhom;
-        private System.Windows.Forms.Button button1;
     }
 }

@@ -35,13 +35,13 @@
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.rdbQ1 = new System.Windows.Forms.RadioButton();
-            this.rdbQ2 = new System.Windows.Forms.RadioButton();
             this.rdbQ3 = new System.Windows.Forms.RadioButton();
+            this.rdbQ2 = new System.Windows.Forms.RadioButton();
+            this.rdbQ1 = new System.Windows.Forms.RadioButton();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.rdbC3 = new System.Windows.Forms.RadioButton();
             this.rdbC1 = new System.Windows.Forms.RadioButton();
             this.rdbC2 = new System.Windows.Forms.RadioButton();
-            this.rdbC3 = new System.Windows.Forms.RadioButton();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -126,6 +126,39 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Quầy";
             // 
+            // rdbQ3
+            // 
+            this.rdbQ3.AutoSize = true;
+            this.rdbQ3.Location = new System.Drawing.Point(40, 85);
+            this.rdbQ3.Name = "rdbQ3";
+            this.rdbQ3.Size = new System.Drawing.Size(86, 20);
+            this.rdbQ3.TabIndex = 0;
+            this.rdbQ3.TabStop = true;
+            this.rdbQ3.Text = "Quầy số 3";
+            this.rdbQ3.UseVisualStyleBackColor = true;
+            // 
+            // rdbQ2
+            // 
+            this.rdbQ2.AutoSize = true;
+            this.rdbQ2.Location = new System.Drawing.Point(40, 59);
+            this.rdbQ2.Name = "rdbQ2";
+            this.rdbQ2.Size = new System.Drawing.Size(86, 20);
+            this.rdbQ2.TabIndex = 0;
+            this.rdbQ2.TabStop = true;
+            this.rdbQ2.Text = "Quầy số 2";
+            this.rdbQ2.UseVisualStyleBackColor = true;
+            // 
+            // rdbQ1
+            // 
+            this.rdbQ1.AutoSize = true;
+            this.rdbQ1.Location = new System.Drawing.Point(40, 33);
+            this.rdbQ1.Name = "rdbQ1";
+            this.rdbQ1.Size = new System.Drawing.Size(86, 20);
+            this.rdbQ1.TabIndex = 0;
+            this.rdbQ1.TabStop = true;
+            this.rdbQ1.Text = "Quầy số 1";
+            this.rdbQ1.UseVisualStyleBackColor = true;
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.rdbC3);
@@ -139,38 +172,16 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Ca";
             // 
-            // rdbQ1
+            // rdbC3
             // 
-            this.rdbQ1.AutoSize = true;
-            this.rdbQ1.Location = new System.Drawing.Point(40, 33);
-            this.rdbQ1.Name = "rdbQ1";
-            this.rdbQ1.Size = new System.Drawing.Size(86, 20);
-            this.rdbQ1.TabIndex = 0;
-            this.rdbQ1.TabStop = true;
-            this.rdbQ1.Text = "Quầy số 1";
-            this.rdbQ1.UseVisualStyleBackColor = true;
-            // 
-            // rdbQ2
-            // 
-            this.rdbQ2.AutoSize = true;
-            this.rdbQ2.Location = new System.Drawing.Point(40, 59);
-            this.rdbQ2.Name = "rdbQ2";
-            this.rdbQ2.Size = new System.Drawing.Size(86, 20);
-            this.rdbQ2.TabIndex = 0;
-            this.rdbQ2.TabStop = true;
-            this.rdbQ2.Text = "Quầy số 2";
-            this.rdbQ2.UseVisualStyleBackColor = true;
-            // 
-            // rdbQ3
-            // 
-            this.rdbQ3.AutoSize = true;
-            this.rdbQ3.Location = new System.Drawing.Point(40, 85);
-            this.rdbQ3.Name = "rdbQ3";
-            this.rdbQ3.Size = new System.Drawing.Size(86, 20);
-            this.rdbQ3.TabIndex = 0;
-            this.rdbQ3.TabStop = true;
-            this.rdbQ3.Text = "Quầy số 3";
-            this.rdbQ3.UseVisualStyleBackColor = true;
+            this.rdbC3.AutoSize = true;
+            this.rdbC3.Location = new System.Drawing.Point(42, 85);
+            this.rdbC3.Name = "rdbC3";
+            this.rdbC3.Size = new System.Drawing.Size(71, 20);
+            this.rdbC3.TabIndex = 0;
+            this.rdbC3.TabStop = true;
+            this.rdbC3.Text = "Ca số 3";
+            this.rdbC3.UseVisualStyleBackColor = true;
             // 
             // rdbC1
             // 
@@ -194,17 +205,6 @@
             this.rdbC2.Text = "Ca số 2";
             this.rdbC2.UseVisualStyleBackColor = true;
             // 
-            // rdbC3
-            // 
-            this.rdbC3.AutoSize = true;
-            this.rdbC3.Location = new System.Drawing.Point(42, 85);
-            this.rdbC3.Name = "rdbC3";
-            this.rdbC3.Size = new System.Drawing.Size(71, 20);
-            this.rdbC3.TabIndex = 0;
-            this.rdbC3.TabStop = true;
-            this.rdbC3.Text = "Ca số 3";
-            this.rdbC3.UseVisualStyleBackColor = true;
-            // 
             // dlg_ChonQuay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -217,7 +217,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "dlg_ChonQuay";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "dlg_ChonQuay";
+            this.Text = "Chọn ca làm việc";
             this.panel3.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

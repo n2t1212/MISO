@@ -303,7 +303,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DM_DonGia";
-            this.Text = "DM_DonGia";
+            this.Text = "Đơn giá";
             this.Load += new System.EventHandler(this.DM_DonGia_Load);
             this.panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);

@@ -959,7 +959,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "NX_PhieuXuat";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "NX_PhieuXuat";
+            this.Text = "Phiếu xuất";
             ((System.ComponentModel.ISupportInitialize)(this.dtpNgayPS.Properties.VistaTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtpNgayPS.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtpNgaylap.Properties.VistaTimeProperties)).EndInit();

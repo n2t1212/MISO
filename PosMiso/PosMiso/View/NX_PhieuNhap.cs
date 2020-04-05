@@ -781,9 +781,7 @@ namespace PosMiso.View
                         return;
                     }
                     //String sMasp = gvPhieuNhap.GetRowCellValue(gvPhieuNhap.FocusedRowHandle, colMasp).ToString();
-                    String sMasp;
-                    
-                    sMasp = editObj != null ? editObj.ToString() : "";
+                    String sMasp = editObj != null ? editObj.ToString() : "";
                     if (sMasp == null || sMasp == "")
                     {
                         gvPhieuNhap.FocusedColumn = colMasp;

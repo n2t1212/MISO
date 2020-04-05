@@ -289,7 +289,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "dlg_AddQuyenHan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "dlg_AddQuyenHan";
+            this.Text = "Thêm quyền hạn";
             this.Load += new System.EventHandler(this.dlg_AddQuyenHan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pnlTitleForm)).EndInit();
             this.pnlTitleForm.ResumeLayout(false);

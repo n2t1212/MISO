@@ -150,7 +150,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DM_Xe";
-            this.Text = "DM_Xe";
+            this.Text = "Xe";
             this.Load += new System.EventHandler(this.DM_Xe_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grdXe)).EndInit();

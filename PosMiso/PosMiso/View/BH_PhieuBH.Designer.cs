@@ -615,7 +615,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "BH_PhieuBH";
-            this.Text = "BH_PhieuBH";
+            this.Text = "Phiếu bán hàng";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.splitContainer1.Panel1.ResumeLayout(false);

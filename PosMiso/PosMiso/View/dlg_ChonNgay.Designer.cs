@@ -108,7 +108,7 @@
             // 
             this.rdbNam.AutoSize = true;
             this.rdbNam.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbNam.Location = new System.Drawing.Point(296, 15);
+            this.rdbNam.Location = new System.Drawing.Point(328, 15);
             this.rdbNam.Name = "rdbNam";
             this.rdbNam.Size = new System.Drawing.Size(86, 20);
             this.rdbNam.TabIndex = 2;
@@ -121,7 +121,7 @@
             // 
             this.rdbThang.AutoSize = true;
             this.rdbThang.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbThang.Location = new System.Drawing.Point(153, 15);
+            this.rdbThang.Location = new System.Drawing.Point(165, 15);
             this.rdbThang.Name = "rdbThang";
             this.rdbThang.Size = new System.Drawing.Size(93, 20);
             this.rdbThang.TabIndex = 1;
@@ -134,7 +134,7 @@
             // 
             this.rdbNgay.AutoSize = true;
             this.rdbNgay.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbNgay.Location = new System.Drawing.Point(16, 15);
+            this.rdbNgay.Location = new System.Drawing.Point(26, 15);
             this.rdbNgay.Name = "rdbNgay";
             this.rdbNgay.Size = new System.Drawing.Size(90, 20);
             this.rdbNgay.TabIndex = 0;
@@ -157,7 +157,7 @@
             // btnExit1
             // 
             this.btnExit1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit1.Location = new System.Drawing.Point(265, 6);
+            this.btnExit1.Location = new System.Drawing.Point(248, 7);
             this.btnExit1.Name = "btnExit1";
             this.btnExit1.Size = new System.Drawing.Size(100, 32);
             this.btnExit1.TabIndex = 1;
@@ -168,7 +168,7 @@
             // btnOK
             // 
             this.btnOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOK.Location = new System.Drawing.Point(71, 6);
+            this.btnOK.Location = new System.Drawing.Point(88, 7);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(90, 32);
             this.btnOK.TabIndex = 0;
@@ -316,7 +316,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "dlg_ChonNgay";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "dlg_ChonNgay";
+            this.Text = "Chọn thời gian";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

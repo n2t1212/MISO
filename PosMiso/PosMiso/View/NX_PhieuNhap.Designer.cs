@@ -1053,7 +1053,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "NX_PhieuNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "NX_PhieuNhap";
+            this.Text = "Phiếu nhập";
             this.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.NX_PhieuNhap_PreviewKeyDown);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

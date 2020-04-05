@@ -462,7 +462,7 @@
             this.Controls.Add(this.splitContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "HH_PhieuNhap";
-            this.Text = "HH_PhieuNhap";
+            this.Text = "Phiếu nhập";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvPhieuNXCT)).EndInit();

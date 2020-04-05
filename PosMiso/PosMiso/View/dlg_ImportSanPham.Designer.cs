@@ -34,6 +34,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnFile = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.isNew = new System.Windows.Forms.CheckBox();
             this.txtFile = new System.Windows.Forms.TextBox();
             this.grdSanPhamImport = new DevExpress.XtraGrid.GridControl();
             this.gvSanPhamImport = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -47,7 +48,6 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnImport = new System.Windows.Forms.Button();
-            this.isNew = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdSanPhamImport)).BeginInit();
@@ -122,6 +122,18 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1000, 452);
             this.panel2.TabIndex = 5;
+            // 
+            // isNew
+            // 
+            this.isNew.AutoSize = true;
+            this.isNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.isNew.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
+            this.isNew.Location = new System.Drawing.Point(509, 28);
+            this.isNew.Name = "isNew";
+            this.isNew.Size = new System.Drawing.Size(127, 20);
+            this.isNew.TabIndex = 7;
+            this.isNew.Text = "Nhập mới dữ liệu";
+            this.isNew.UseVisualStyleBackColor = true;
             // 
             // txtFile
             // 
@@ -252,18 +264,6 @@
             this.btnImport.UseVisualStyleBackColor = true;
             this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
             // 
-            // isNew
-            // 
-            this.isNew.AutoSize = true;
-            this.isNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.isNew.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
-            this.isNew.Location = new System.Drawing.Point(509, 28);
-            this.isNew.Name = "isNew";
-            this.isNew.Size = new System.Drawing.Size(127, 20);
-            this.isNew.TabIndex = 7;
-            this.isNew.Text = "Nhập mới dữ liệu";
-            this.isNew.UseVisualStyleBackColor = true;
-            // 
             // dlg_ImportSanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -276,7 +276,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "dlg_ImportSanPham";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "dlg_ImportSanPham";
+            this.Text = "Nhập sản phẩm";
             this.Load += new System.EventHandler(this.dlg_ImportSanPham_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

@@ -178,3 +178,4 @@ F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.pdb
 F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.csprojResolveAssemblyReference.cache
 F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.BH_PhieuBHFrm.resources
 F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.dlg_TonKho.resources
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.CX_PhieuCX.resources

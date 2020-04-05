@@ -46,33 +46,33 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
-            this.label1.Location = new System.Drawing.Point(116, 37);
+            this.label1.Location = new System.Drawing.Point(121, 37);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 16);
+            this.label1.Size = new System.Drawing.Size(50, 18);
             this.label1.TabIndex = 1;
             this.label1.Text = "Server";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
-            this.label2.Location = new System.Drawing.Point(98, 64);
+            this.label2.Location = new System.Drawing.Point(99, 64);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 16);
+            this.label2.Size = new System.Drawing.Size(72, 18);
             this.label2.TabIndex = 2;
             this.label2.Text = "Tài khoản";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
             this.label3.Location = new System.Drawing.Point(102, 89);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 16);
+            this.label3.Size = new System.Drawing.Size(69, 18);
             this.label3.TabIndex = 3;
             this.label3.Text = "Mật khẩu";
             // 
@@ -95,11 +95,11 @@
             // 
             // btnCheckConnect
             // 
-            this.btnCheckConnect.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCheckConnect.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCheckConnect.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
-            this.btnCheckConnect.Location = new System.Drawing.Point(476, 64);
+            this.btnCheckConnect.Location = new System.Drawing.Point(462, 61);
             this.btnCheckConnect.Name = "btnCheckConnect";
-            this.btnCheckConnect.Size = new System.Drawing.Size(113, 26);
+            this.btnCheckConnect.Size = new System.Drawing.Size(119, 26);
             this.btnCheckConnect.TabIndex = 7;
             this.btnCheckConnect.Text = "Kiểm tra kết nối";
             this.btnCheckConnect.UseVisualStyleBackColor = true;
@@ -124,32 +124,32 @@
             // lblCSDL
             // 
             this.lblCSDL.AutoSize = true;
-            this.lblCSDL.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCSDL.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCSDL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
             this.lblCSDL.Location = new System.Drawing.Point(98, 140);
             this.lblCSDL.Name = "lblCSDL";
-            this.lblCSDL.Size = new System.Drawing.Size(64, 16);
+            this.lblCSDL.Size = new System.Drawing.Size(73, 18);
             this.lblCSDL.TabIndex = 9;
             this.lblCSDL.Text = "Tên CSDL";
             // 
             // lblFile
             // 
             this.lblFile.AutoSize = true;
-            this.lblFile.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFile.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
-            this.lblFile.Location = new System.Drawing.Point(104, 114);
+            this.lblFile.Location = new System.Drawing.Point(108, 114);
             this.lblFile.Name = "lblFile";
-            this.lblFile.Size = new System.Drawing.Size(58, 16);
+            this.lblFile.Size = new System.Drawing.Size(63, 18);
             this.lblFile.TabIndex = 8;
             this.lblFile.Text = "Chọn file";
             // 
             // btnPath
             // 
-            this.btnPath.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPath.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPath.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
-            this.btnPath.Location = new System.Drawing.Point(476, 108);
+            this.btnPath.Location = new System.Drawing.Point(462, 109);
             this.btnPath.Name = "btnPath";
-            this.btnPath.Size = new System.Drawing.Size(50, 27);
+            this.btnPath.Size = new System.Drawing.Size(66, 27);
             this.btnPath.TabIndex = 12;
             this.btnPath.Text = "Chọn";
             this.btnPath.UseVisualStyleBackColor = true;
@@ -157,9 +157,9 @@
             // 
             // btnRestore
             // 
-            this.btnRestore.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRestore.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRestore.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
-            this.btnRestore.Location = new System.Drawing.Point(269, 175);
+            this.btnRestore.Location = new System.Drawing.Point(264, 174);
             this.btnRestore.Name = "btnRestore";
             this.btnRestore.Size = new System.Drawing.Size(104, 32);
             this.btnRestore.TabIndex = 13;
@@ -194,8 +194,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "HT_PhucHoi";
-            this.Text = "HT_PhucHoi";
+            this.Text = "Phục hồi dữ liệu";
             this.Load += new System.EventHandler(this.HT_PhucHoi_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -296,5 +296,10 @@ namespace PosMiso.View
             this.Close();
         }
 
+        private void cmdExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
     }
 }

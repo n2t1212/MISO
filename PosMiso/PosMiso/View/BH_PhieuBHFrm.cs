@@ -128,9 +128,20 @@ namespace PosMiso.View
             {
                 String mSql = "SELECT Maspid,Manhomspid,Masp,Tensp,Dvt,Quycach,Quydoikgl,Quydoithung,Nhacungcap,Maqrcode,Mabarcode FROM DM_SANPHAM with(nolock) order by Masp asc";
                 otblSP = new MTSQLServer().wRead(mSql, null, false);
+                loadProductToLookupEdit(otblSP);
             }
             catch (Exception ex) { }
         }
+
+        private void loadProductToLookupEdit(DataTable otblSP)
+        {
+            repositoryItem.DataSource = otblSP;
+            repositoryItem.ValueMember = "Masp";
+            repositoryItem.DisplayMember = "Masp";
+            repositoryItem.NullText = "";
+            colMasp.ColumnEdit = repositoryItem;
+        }
+
 
         private void BindData()
         {
@@ -307,11 +318,11 @@ namespace PosMiso.View
         {
             try
             {
-                try { gvPhieuBH.PostEditor(); }
+                try { gvPhieuBH.PostEditor(); gvPhieuBH.RefreshData(); }
                 catch { }
 
                 Double dThanhtien = 0, dThanhtienTmp = 0, dTongTTCK = 0, dTongTTCKTmp = 0;
-                for (int i = 0; i < gvPhieuBH.DataRowCount; i++)
+                for (int i = 0; i < gvPhieuBH.RowCount; i++)
                 {
                     int iRowHandle = gvPhieuBH.GetRowHandle(i);
                     try
@@ -346,7 +357,6 @@ namespace PosMiso.View
             catch { }
         }
 
-
         private void fTinhThanhToan()
         {
             try
@@ -373,7 +383,6 @@ namespace PosMiso.View
             }
             catch { }
         }
-
 
         private void fQuydoithung(int iRowHander)
         {
@@ -690,14 +699,14 @@ namespace PosMiso.View
             {
                 if (isEdit == false) { return; }
 
-                if (gvPhieuBH.FocusedColumn.FieldName == "Dongia" && e.Column.Name == "colDonGia")
+                if (gvPhieuBH.FocusedColumn.FieldName == "Dongia" && e.Column.Name == "colDongia")
                 {
                     if (gvPhieuBH.GetRowCellValue(e.RowHandle, colDongia).ToString() != "" && gvPhieuBH.GetRowCellValue(e.RowHandle, colSoluong).ToString() != "")
                     {
                         fThanhTienRow(e.RowHandle);
                     }
                 }
-                else if (gvPhieuBH.FocusedColumn.FieldName == "SLThung" && e.Column.Name == "colSoThung")
+                else if (gvPhieuBH.FocusedColumn.FieldName == "SLThung" && e.Column.Name == "colSLThung")
                 {
                     fQuydoithung(e.RowHandle);
                     fThanhTienRow(e.RowHandle);
@@ -743,6 +752,7 @@ namespace PosMiso.View
         {
             try
             {
+                
                 if (e.Row == null) return;
                 if (gvPhieuBH.GetRowCellValue(e.RowHandle, colMasp) == null || gvPhieuBH.GetRowCellValue(e.RowHandle, colMasp).ToString() == "")
                 {
@@ -880,11 +890,11 @@ namespace PosMiso.View
         {
             if (e.KeyCode == Keys.Enter)
             {
-                grdPhieuBH.Focus();
-                gvPhieuBH.OptionsView.NewItemRowPosition = NewItemRowPosition.Bottom;
-                gvPhieuBH.FocusedRowHandle = GridControl.NewItemRowHandle;
-                gvPhieuBH.FocusedColumn = colMasp;
-                gvPhieuBH.ShowEditor();
+                //grdPhieuBH.Focus();
+                //gvPhieuBH.OptionsView.NewItemRowPosition = NewItemRowPosition.Bottom;
+                //gvPhieuBH.FocusedRowHandle = GridControl.NewItemRowHandle;
+                //gvPhieuBH.FocusedColumn = colMasp;
+                //gvPhieuBH.ShowEditor();
             }        
         }
 
@@ -1195,15 +1205,17 @@ namespace PosMiso.View
                 if (isEdit == false) { return; }
                 if (e.KeyCode == Keys.Enter)
                 {
+                    var editObj = ((DevExpress.XtraGrid.Views.Grid.GridView)(sender)).EditingValue;
                     if (gvPhieuBH.FocusedColumn.FieldName == "Masp" && gvPhieuBH.FocusedColumn.Name == "colMasp")
                     {
-                        if (gvPhieuBH.GetFocusedRowCellValue(colMasp) == null || gvPhieuBH.GetFocusedRowCellValue(colMasp).ToString() == "")
+                        if (gvPhieuBH.GetFocusedRowCellValue(colMasp) == null)// || gvPhieuBH.GetFocusedRowCellValue(colMasp).ToString() == "")
                         {
                             gvPhieuBH.FocusedColumn = colMasp;
                             return;
                         }
 
-                        String sMasp = gvPhieuBH.GetRowCellValue(gvPhieuBH.FocusedRowHandle, colMasp).ToString();
+                        //String sMasp = gvPhieuBH.GetRowCellValue(gvPhieuBH.FocusedRowHandle, colMasp).ToString();
+                        String sMasp = editObj != null ? editObj.ToString() : "";
                         if (sMasp == null || sMasp == "")
                         {
                             gvPhieuBH.FocusedColumn = colMasp;
@@ -1219,6 +1231,7 @@ namespace PosMiso.View
                                 if (dSL == 0) { dSL = 1; }
                             }
                             catch { dSL = 1; }
+
 
                             if (otblSP != null && otblSP.Rows.Count > 0)
                             {
@@ -1240,34 +1253,7 @@ namespace PosMiso.View
                                     }
 
                                 }
-                                else
-                                {
-                                    //dlg_ChonSanPham oChonSP = new dlg_ChonSanPham(otblSP);
-                                    //oChonSP.ShowDialog();
-                                    //DataRowView vRw = oChonSP.pRowChon;
-                                    //if (vRw != null && vRw.Row.ItemArray.Length > 0)
-                                    //{
-                                    //    grdPhieuBH.SetCellValue(tblView.FocusedRowHandle, colTensp, vRw.Row.ItemArray.GetValue(3).ToString());
-                                    //    grdPhieuBH.SetCellValue(tblView.FocusedRowHandle, colDVT, vRw.Row.ItemArray.GetValue(4).ToString());
-                                    //    grdPhieuBH.SetCellValue(tblView.FocusedRowHandle, colQC, vRw.Row.ItemArray.GetValue(5).ToString());
-
-                                    //    sMasp = vRw.Row.ItemArray.GetValue(2).ToString().ToUpper();
-                                    //    Double dDGX = MTGlobal.GetDonGia(sMasp, pDenNgay);
-                                    //    grdPhieuBH.SetCellValue(tblView.FocusedRowHandle, colDonGia, dDGX);
-                                    //    grdPhieuBH.SetCellValue(tblView.FocusedRowHandle, colSoluong, dSL);
-
-                                    //    if (dDGX > 0)
-                                    //    {
-                                    //        Double dNguyente = Math.Round(dDGX * dSL, 0, MidpointRounding.AwayFromZero);
-                                    //        grdPhieuBH.SetCellValue(tblView.FocusedRowHandle, colNguyente, dNguyente);
-                                    //        grdPhieuBH.SetCellValue(tblView.FocusedRowHandle, colThanhtien, dNguyente);
-                                    //    }
-                                    //}
-                                    //else
-                                    //{
-                                    //    tblView.FocusedColumn = colMasp;
-                                    //}
-                                }
+                              
                             }
                             gvPhieuBH.CloseEditor();
                             gvPhieuBH.ShowEditor();
@@ -1275,6 +1261,11 @@ namespace PosMiso.View
 
                         }
                     }
+                    //else if (gvPhieuBH.FocusedColumn.FieldName == "SLThung" && gvPhieuBH.FocusedColumn.Name == "colSLThung")
+                    //{
+                    //    fQuydoithung(gvPhieuBH.FocusedRowHandle);
+                    //    fThanhTienRow(gvPhieuBH.FocusedRowHandle);
+                    //}
                 }
                 if (e.KeyCode == Keys.Delete)
                 {

@@ -51,7 +51,7 @@
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.ForeColor = System.Drawing.Color.White;
-            this.labelControl1.Location = new System.Drawing.Point(360, 8);
+            this.labelControl1.Location = new System.Drawing.Point(378, 12);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(128, 25);
             this.labelControl1.TabIndex = 0;
@@ -141,7 +141,7 @@
             this.pictureBox1.Image = global::PosMiso.Properties.Resources.login_bg;
             this.pictureBox1.Location = new System.Drawing.Point(24, 48);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(336, 384);
+            this.pictureBox1.Size = new System.Drawing.Size(330, 351);
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
@@ -159,7 +159,7 @@
             this.panel1.Controls.Add(this.txtPassWord);
             this.panel1.Location = new System.Drawing.Point(360, 48);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(520, 384);
+            this.panel1.Size = new System.Drawing.Size(510, 351);
             this.panel1.TabIndex = 7;
             // 
             // lblCreateData
@@ -169,7 +169,7 @@
             this.lblCreateData.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCreateData.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
             this.lblCreateData.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
-            this.lblCreateData.Location = new System.Drawing.Point(368, 344);
+            this.lblCreateData.Location = new System.Drawing.Point(358, 302);
             this.lblCreateData.Name = "lblCreateData";
             this.lblCreateData.Size = new System.Drawing.Size(122, 19);
             this.lblCreateData.TabIndex = 7;
@@ -209,7 +209,7 @@
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(882, 457);
+            this.ClientSize = new System.Drawing.Size(882, 427);
             this.ControlBox = false;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);

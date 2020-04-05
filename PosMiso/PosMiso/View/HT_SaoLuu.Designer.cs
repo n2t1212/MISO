@@ -39,11 +39,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
             this.label1.Location = new System.Drawing.Point(87, 47);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 16);
+            this.label1.Size = new System.Drawing.Size(149, 18);
             this.label1.TabIndex = 0;
             this.label1.Text = "Chọn thư mục lưu trữ";
             // 
@@ -58,9 +58,9 @@
             // 
             // btnSelectPath
             // 
-            this.btnSelectPath.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSelectPath.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSelectPath.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
-            this.btnSelectPath.Location = new System.Drawing.Point(464, 72);
+            this.btnSelectPath.Location = new System.Drawing.Point(464, 74);
             this.btnSelectPath.Name = "btnSelectPath";
             this.btnSelectPath.Size = new System.Drawing.Size(58, 26);
             this.btnSelectPath.TabIndex = 2;
@@ -80,9 +80,9 @@
             // 
             // btnBackup
             // 
-            this.btnBackup.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBackup.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBackup.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
-            this.btnBackup.Location = new System.Drawing.Point(217, 128);
+            this.btnBackup.Location = new System.Drawing.Point(193, 114);
             this.btnBackup.Name = "btnBackup";
             this.btnBackup.Size = new System.Drawing.Size(90, 29);
             this.btnBackup.TabIndex = 5;
@@ -100,8 +100,9 @@
             this.Controls.Add(this.btnSelectPath);
             this.Controls.Add(this.txtPath);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "HT_SaoLuu";
-            this.Text = "HT_SaoLuu";
+            this.Text = "Sao lưu";
             ((System.ComponentModel.ISupportInitialize)(this.txtPath.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

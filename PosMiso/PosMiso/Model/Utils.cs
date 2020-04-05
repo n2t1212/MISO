@@ -368,11 +368,12 @@ namespace PosMiso.Model
             return result;
         }
 
-        public static String[] formsName = new String[5] { "HH_PhieuXuat",
+        public static String[] formsName = new String[6] { "HH_PhieuXuat",
                                                            "HH_PhieuNhap",
                                                            "TC_PhieuThu",
                                                            "TC_PhieuChi",
-                                                           "BH_PhieuBH"};
+                                                           "BH_PhieuBH",
+                                                           "DM_ChanhXe"};
 
         public static bool isUsingDateForm(String formName)
         {

@@ -42,6 +42,7 @@
             this.btnRegister = new DevExpress.XtraEditors.SimpleButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnExit = new DevExpress.XtraEditors.SimpleButton();
+            this.cmdExit = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.txtCustomer.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddress.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPhone.Properties)).BeginInit();
@@ -53,8 +54,8 @@
             // labelControl1
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.labelControl1.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
-            this.labelControl1.Location = new System.Drawing.Point(30, 88);
+            this.labelControl1.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.labelControl1.Location = new System.Drawing.Point(9, 71);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(139, 19);
             this.labelControl1.TabIndex = 0;
@@ -63,8 +64,8 @@
             // labelControl2
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.labelControl2.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
-            this.labelControl2.Location = new System.Drawing.Point(121, 128);
+            this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.labelControl2.Location = new System.Drawing.Point(100, 98);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(48, 19);
             this.labelControl2.TabIndex = 0;
@@ -73,8 +74,8 @@
             // labelControl3
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.labelControl3.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
-            this.labelControl3.Location = new System.Drawing.Point(76, 168);
+            this.labelControl3.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.labelControl3.Location = new System.Drawing.Point(55, 125);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(93, 19);
             this.labelControl3.TabIndex = 0;
@@ -83,8 +84,8 @@
             // labelControl4
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.labelControl4.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
-            this.labelControl4.Location = new System.Drawing.Point(113, 208);
+            this.labelControl4.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.labelControl4.Location = new System.Drawing.Point(92, 152);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(56, 19);
             this.labelControl4.TabIndex = 0;
@@ -93,8 +94,8 @@
             // lblAPIServer
             // 
             this.lblAPIServer.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.lblAPIServer.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
-            this.lblAPIServer.Location = new System.Drawing.Point(80, 248);
+            this.lblAPIServer.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.lblAPIServer.Location = new System.Drawing.Point(59, 179);
             this.lblAPIServer.Name = "lblAPIServer";
             this.lblAPIServer.Size = new System.Drawing.Size(89, 19);
             this.lblAPIServer.TabIndex = 0;
@@ -102,18 +103,18 @@
             // 
             // labelControl6
             // 
-            this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl6.Appearance.ForeColor = System.Drawing.Color.White;
-            this.labelControl6.Location = new System.Drawing.Point(16, 8);
+            this.labelControl6.Location = new System.Drawing.Point(13, 12);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(180, 23);
+            this.labelControl6.Size = new System.Drawing.Size(156, 19);
             this.labelControl6.TabIndex = 0;
             this.labelControl6.Text = "ĐĂNG KÍ THÔNG TIN";
             // 
             // txtCustomer
             // 
             this.txtCustomer.EnterMoveNextControl = true;
-            this.txtCustomer.Location = new System.Drawing.Point(192, 88);
+            this.txtCustomer.Location = new System.Drawing.Point(154, 68);
             this.txtCustomer.Name = "txtCustomer";
             this.txtCustomer.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCustomer.Properties.Appearance.Options.UseFont = true;
@@ -124,7 +125,7 @@
             // txtAddress
             // 
             this.txtAddress.EnterMoveNextControl = true;
-            this.txtAddress.Location = new System.Drawing.Point(192, 128);
+            this.txtAddress.Location = new System.Drawing.Point(154, 95);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAddress.Properties.Appearance.Options.UseFont = true;
@@ -135,7 +136,7 @@
             // txtPhone
             // 
             this.txtPhone.EnterMoveNextControl = true;
-            this.txtPhone.Location = new System.Drawing.Point(192, 168);
+            this.txtPhone.Location = new System.Drawing.Point(154, 122);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhone.Properties.Appearance.Options.UseFont = true;
@@ -146,7 +147,7 @@
             // txtImei
             // 
             this.txtImei.EnterMoveNextControl = true;
-            this.txtImei.Location = new System.Drawing.Point(192, 208);
+            this.txtImei.Location = new System.Drawing.Point(154, 149);
             this.txtImei.Name = "txtImei";
             this.txtImei.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtImei.Properties.Appearance.Options.UseFont = true;
@@ -158,7 +159,7 @@
             // txtAPIServer
             // 
             this.txtAPIServer.EnterMoveNextControl = true;
-            this.txtAPIServer.Location = new System.Drawing.Point(192, 248);
+            this.txtAPIServer.Location = new System.Drawing.Point(154, 176);
             this.txtAPIServer.Name = "txtAPIServer";
             this.txtAPIServer.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAPIServer.Properties.Appearance.Options.UseFont = true;
@@ -171,7 +172,7 @@
             this.btnRegister.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
             this.btnRegister.Appearance.Options.UseFont = true;
             this.btnRegister.Appearance.Options.UseForeColor = true;
-            this.btnRegister.Location = new System.Drawing.Point(272, 296);
+            this.btnRegister.Location = new System.Drawing.Point(139, 222);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(104, 32);
             this.btnRegister.TabIndex = 2;
@@ -183,21 +184,35 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
             this.panel1.Controls.Add(this.btnExit);
             this.panel1.Controls.Add(this.labelControl6);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(632, 40);
+            this.panel1.Size = new System.Drawing.Size(537, 40);
             this.panel1.TabIndex = 6;
             // 
             // btnExit
             // 
             this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExit.Location = new System.Drawing.Point(584, 8);
+            this.btnExit.Location = new System.Drawing.Point(491, 3);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(34, 28);
             this.btnExit.TabIndex = 10;
             this.btnExit.Text = "X";
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // cmdExit
+            // 
+            this.cmdExit.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdExit.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
+            this.cmdExit.Appearance.Options.UseFont = true;
+            this.cmdExit.Appearance.Options.UseForeColor = true;
+            this.cmdExit.Location = new System.Drawing.Point(324, 222);
+            this.cmdExit.Name = "cmdExit";
+            this.cmdExit.Size = new System.Drawing.Size(104, 32);
+            this.cmdExit.TabIndex = 2;
+            this.cmdExit.Text = "Thoát";
+            this.cmdExit.Click += new System.EventHandler(this.cmdExit_Click);
             // 
             // HT_Register
             // 
@@ -207,9 +222,10 @@
             this.Appearance.Options.UseForeColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(633, 358);
+            this.ClientSize = new System.Drawing.Size(537, 277);
             this.ControlBox = false;
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.cmdExit);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.txtAPIServer);
             this.Controls.Add(this.txtImei);
@@ -256,5 +272,6 @@
         private DevExpress.XtraEditors.SimpleButton btnRegister;
         private System.Windows.Forms.Panel panel1;
         private DevExpress.XtraEditors.SimpleButton btnExit;
+        private DevExpress.XtraEditors.SimpleButton cmdExit;
     }
 }

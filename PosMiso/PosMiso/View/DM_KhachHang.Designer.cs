@@ -203,7 +203,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DM_KhachHang";
-            this.Text = "DM_KhachHang";
+            this.Text = "Khách hàng";
             this.Load += new System.EventHandler(this.DM_KhachHang_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

@@ -415,7 +415,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TC_PhieuChi";
-            this.Text = "TC_PhieuChi";
+            this.Text = "Phiếu chi";
             ((System.ComponentModel.ISupportInitialize)(this.grdPhieuThuCT)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvPhieuThuCT)).EndInit();
             this.panel1.ResumeLayout(false);

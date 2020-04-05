@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.grdLyDo = new DevExpress.XtraGrid.GridControl();
             this.gvLyDo = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colMald = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -38,28 +37,17 @@
             this.colTKNo = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTKCo = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colGhichu = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdLyDo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvLyDo)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 494);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1119, 40);
             this.panel1.TabIndex = 0;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(16, 8);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // grdLyDo
             // 
@@ -142,9 +130,8 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DM_LyDo";
-            this.Text = "DM_LyDo";
+            this.Text = "Lý do";
             this.Load += new System.EventHandler(this.DM_LyDo_Load);
-            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grdLyDo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvLyDo)).EndInit();
             this.ResumeLayout(false);
@@ -154,7 +141,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
         private DevExpress.XtraGrid.GridControl grdLyDo;
         private DevExpress.XtraGrid.Views.Grid.GridView gvLyDo;
         private DevExpress.XtraGrid.Columns.GridColumn colMald;
