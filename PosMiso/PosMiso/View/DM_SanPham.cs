@@ -18,7 +18,7 @@ namespace PosMiso.View
     public partial class DM_SanPham : Form
     {
         private MTGlobal.MT_ROLE MTROLE;
-        private MTGlobal.MT_BUTTONACTION MTButton;
+        private MTGlobal.MT_TOOL_TRIP_BUTTONACTION MTButton;
 
         DataTable otblSrcSanPham = null;
         DataTable otblSrcNhomSanPham = null;
@@ -59,6 +59,9 @@ namespace PosMiso.View
                 MTButton.cmdAdd = this.cmdAdd;
                 MTButton.cmdEdit = this.cmdEdit;
                 MTButton.cmdSave = this.cmdSave;
+                MTButton.cmdDel = this.cmdDel;
+
+                MTGlobal.SetPermitToolStrip(MTROLE, MTButton);
             }
         }
 
@@ -130,6 +133,50 @@ namespace PosMiso.View
 
             dlg_ImportSanPham importSP = new dlg_ImportSanPham(maNhomSPId);
             importSP.ShowDialog();
+        }
+
+        private void fdoImport()
+        {
+            if (maNhomSPId.Length == 0)
+            {
+                Utils.showMessage("Vui lòng chọn nhóm sản phẩm cần nhập", "Thông báo");
+                return;
+            }
+
+            dlg_ImportSanPham importSP = new dlg_ImportSanPham(maNhomSPId);
+            importSP.ShowDialog();
+        }
+
+        private void fdoDownload()
+        {
+            try
+            {
+                FolderBrowserDialog fdl = new FolderBrowserDialog();
+                if (fdl.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    if (System.IO.File.Exists(fdl.SelectedPath + @"\Bieu_mau_san_pham.xlsx"))
+                    {
+                        Utils.showMessage("File mẫu đang tồn tại trong thư mục. Vui lòng kiểm tra lại..", "Thông báo");
+                    }
+                    else
+                    {
+                        System.IO.File.Copy(@"Bieu_mau_san_pham.xlsx", fdl.SelectedPath + @"\Bieu_mau_san_pham.xlsx");
+                        Utils.showMessage("Đã tải file mẫu thành công.", "Thông báo");
+                    }
+                    return;
+                }
+            }
+            catch (Exception ex)
+            {
+                Utils.showMessage("Lỗi tải file. Vui lòng kiểm tra đường dẫn", "Thông báo");
+                return;
+            }
+        }
+
+        private void fdoPrintCode()
+        {
+            frmInMa inMa = new frmInMa();
+            inMa.ShowDialog();
         }
 
         private void btnDownTemplate_Click(object sender, EventArgs e)
@@ -207,7 +254,7 @@ namespace PosMiso.View
                 gvSanPham.FocusedColumn = colMasp;
                 gvSanPham.Focus();
                 gvSanPham.ShowEditor();
-                MTGlobal.SetButtonAction(MTROLE, MTButton, "ADD");
+                MTGlobal.SetToolStripButtonAction(MTROLE, MTButton, "ADD");
             }
 
             DisableEditCode();
@@ -222,7 +269,7 @@ namespace PosMiso.View
                 gvSanPham.Focus();
                 gvSanPham.FocusedColumn = colMasp;
                 gvSanPham.ShowEditor();
-                MTGlobal.SetButtonAction(MTROLE, MTButton, "EDIT");
+                MTGlobal.SetToolStripButtonAction(MTROLE, MTButton, "EDIT");
                 DisableEditCode();
             }
         }
@@ -239,7 +286,7 @@ namespace PosMiso.View
                     if (MTSQLServer.getMTSQLServer().doSaveTable(SQLAdaptor, dt))
                     {
                         SysPar.SetGridReadOnly(true, gvSanPham);
-                        MTGlobal.SetButtonAction(MTROLE, MTButton, "SAVE");
+                        MTGlobal.SetToolStripButtonAction(MTROLE, MTButton, "SAVE");
                         setDataSourceSanPham(maNhomSPId);
                         msg = Utils.SAVE_DB_OK;
                     }
@@ -305,7 +352,7 @@ namespace PosMiso.View
             {
                 MTSQLServer.getMTSQLServer().Abort(SQLAdaptor, DSetMain.Tables["DM_SANPHAM"]);
                 SysPar.SetGridReadOnly(true, gvSanPham);
-                MTGlobal.SetButtonAction(MTROLE, MTButton, "ABORT");
+                MTGlobal.SetToolStripButtonAction(MTROLE, MTButton, "ABORT");
             }
             catch { }
         }
@@ -389,6 +436,83 @@ namespace PosMiso.View
                     gvSanPham.SetRowCellValue(gvSanPham.FocusedRowHandle, colMabarcode, sMasp);
                     gvSanPham.SetRowCellValue(gvSanPham.FocusedRowHandle, colMaqrcode, sMasp);
                 }
+            }
+        }
+
+        private void cmdDownload_Click(object sender, EventArgs e)
+        {
+            fdoDownload();
+        }
+
+        private void btnImport_Click_1(object sender, EventArgs e)
+        {
+            fdoImport();
+        }
+
+        private void cmdAdd_Click_1(object sender, EventArgs e)
+        {
+            fdoAdd();
+        }
+
+        private void cmdEdit_Click_1(object sender, EventArgs e)
+        {
+            fdoEdit();
+        }
+
+        private void cmdDel_Click_1(object sender, EventArgs e)
+        {
+            fdoDel();
+        }
+
+        private void cmdSave_Click_1(object sender, EventArgs e)
+        {
+            fdoSave();
+        }
+
+        private void cmdAbort_Click_1(object sender, EventArgs e)
+        {
+            fdoAbort();
+        }
+
+        private void cmdPrintCode_Click(object sender, EventArgs e)
+        {
+            fdoPrintCode();
+        }
+
+        private void cmdExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void grdSanPham_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            if (e.KeyCode == Keys.F2)
+            {
+                fdoAdd();
+            }
+            else if (e.KeyCode == Keys.F3)
+            {
+                fdoEdit();
+            }
+            else if (e.KeyCode == Keys.F4)
+            {
+                fdoDel();
+            }
+            else if (e.KeyCode == Keys.F5)
+            {
+                fdoSave();
+            }
+            else if (e.KeyCode == Keys.Escape)
+            {
+                fdoAbort();
+            }
+            else if (e.KeyCode == Keys.F7)
+            {
+                fdoPrintCode();
+            }
+            else if (e.KeyCode == Keys.F8)
+            {
+                this.Close();
             }
         }
     }

@@ -17,7 +17,7 @@ namespace PosMiso.View
     public partial class CX_PhieuCX : Form
     {
         MTGlobal.MT_ROLE pACT_ROLE;
-        private MTGlobal.MT_BUTTONACTION MTButton;
+        private MTGlobal.MT_TOOL_TRIP_BUTTONACTION MTButton;
 
         private string pPhieuID = "";
         private string pDenNgay = "";
@@ -78,7 +78,7 @@ namespace PosMiso.View
             MTButton.cmdDel = this.cmdDel;
             MTButton.cmdSave = this.cmdSave;
             MTButton.cmdAbort = this.cmdAbort;
-            MTGlobal.SetButtonAction(pACT_ROLE, MTButton, "INIT");
+            MTGlobal.SetToolStripButtonAction(pACT_ROLE, MTButton, "INIT");
         }
 
         private void setReadOnly(bool isReadonly = false)
@@ -290,7 +290,7 @@ namespace PosMiso.View
                 }
 
                 setReadOnly(false);
-                MTGlobal.SetButtonAction(pACT_ROLE, MTButton, "ADD");
+                MTGlobal.SetToolStripButtonAction(pACT_ROLE, MTButton, "ADD");
                 txtSophieu.Focus();
                 isEdit = true;
             }
@@ -300,7 +300,7 @@ namespace PosMiso.View
         private void fdoEdit()
         {
             setReadOnly(false);
-            MTGlobal.SetButtonAction(pACT_ROLE, MTButton, "EDIT");
+            MTGlobal.SetToolStripButtonAction(pACT_ROLE, MTButton, "EDIT");
             isEdit = true;
             txtSophieu.Focus();
             if (SysPar.SetGridReadOnly(false, gvPhieu))
@@ -370,7 +370,7 @@ namespace PosMiso.View
                 {
                     BindData(true);
                     setReadOnly(true);
-                    MTGlobal.SetButtonAction(pACT_ROLE, MTButton, "SAVE");
+                    MTGlobal.SetToolStripButtonAction(pACT_ROLE, MTButton, "SAVE");
                     SysPar.SetGridReadOnly(true, gvPhieu);
                     isEdit = false;
                 }
@@ -394,7 +394,7 @@ namespace PosMiso.View
                     pPhieuID = "";
                     BindData();
                     setReadOnly(true);
-                    MTGlobal.SetButtonAction(pACT_ROLE, MTButton, "ABORT");
+                    MTGlobal.SetToolStripButtonAction(pACT_ROLE, MTButton, "ABORT");
                 }
                 else
                 {
@@ -407,7 +407,7 @@ namespace PosMiso.View
         {
             BindData();
             setReadOnly(true);
-            MTGlobal.SetButtonAction(pACT_ROLE, MTButton, "ABORT");      
+            MTGlobal.SetToolStripButtonAction(pACT_ROLE, MTButton, "ABORT");      
         }
 
         private void fdoPrint()
@@ -650,6 +650,41 @@ namespace PosMiso.View
         private void cmdAbort_Click(object sender, EventArgs e)
         {
             fdoAbort();
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            fdoAdd();
+        }
+
+        private void cmdExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void cmdEdit_Click_1(object sender, EventArgs e)
+        {
+            fdoEdit();
+        }
+
+        private void cmdDel_Click_1(object sender, EventArgs e)
+        {
+            fdoSave();
+        }
+
+        private void cmdSave_Click_1(object sender, EventArgs e)
+        {
+            fdoSave();
+        }
+
+        private void cmdAbort_Click_1(object sender, EventArgs e)
+        {
+            fdoAbort();
+        }
+
+        private void toolStripButton7_Click(object sender, EventArgs e)
+        {
+            fdoPrint();
         }
     }
 }

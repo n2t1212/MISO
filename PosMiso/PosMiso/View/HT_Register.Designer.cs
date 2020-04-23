@@ -43,19 +43,21 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnExit = new DevExpress.XtraEditors.SimpleButton();
             this.cmdExit = new DevExpress.XtraEditors.SimpleButton();
+            this.panel3 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.txtCustomer.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddress.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPhone.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtImei.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAPIServer.Properties)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelControl1
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.labelControl1.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl1.Location = new System.Drawing.Point(9, 71);
+            this.labelControl1.Location = new System.Drawing.Point(31, 71);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(139, 19);
             this.labelControl1.TabIndex = 0;
@@ -65,7 +67,7 @@
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl2.Location = new System.Drawing.Point(100, 98);
+            this.labelControl2.Location = new System.Drawing.Point(122, 98);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(48, 19);
             this.labelControl2.TabIndex = 0;
@@ -75,7 +77,7 @@
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.labelControl3.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl3.Location = new System.Drawing.Point(55, 125);
+            this.labelControl3.Location = new System.Drawing.Point(77, 125);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(93, 19);
             this.labelControl3.TabIndex = 0;
@@ -85,7 +87,7 @@
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.labelControl4.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl4.Location = new System.Drawing.Point(92, 152);
+            this.labelControl4.Location = new System.Drawing.Point(114, 152);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(56, 19);
             this.labelControl4.TabIndex = 0;
@@ -95,7 +97,7 @@
             // 
             this.lblAPIServer.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.lblAPIServer.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.lblAPIServer.Location = new System.Drawing.Point(59, 179);
+            this.lblAPIServer.Location = new System.Drawing.Point(81, 179);
             this.lblAPIServer.Name = "lblAPIServer";
             this.lblAPIServer.Size = new System.Drawing.Size(89, 19);
             this.lblAPIServer.TabIndex = 0;
@@ -103,18 +105,18 @@
             // 
             // labelControl6
             // 
-            this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl6.Appearance.ForeColor = System.Drawing.Color.White;
-            this.labelControl6.Location = new System.Drawing.Point(13, 12);
+            this.labelControl6.Location = new System.Drawing.Point(13, 10);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(156, 19);
+            this.labelControl6.Size = new System.Drawing.Size(146, 18);
             this.labelControl6.TabIndex = 0;
             this.labelControl6.Text = "ĐĂNG KÍ THÔNG TIN";
             // 
             // txtCustomer
             // 
             this.txtCustomer.EnterMoveNextControl = true;
-            this.txtCustomer.Location = new System.Drawing.Point(154, 68);
+            this.txtCustomer.Location = new System.Drawing.Point(182, 68);
             this.txtCustomer.Name = "txtCustomer";
             this.txtCustomer.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCustomer.Properties.Appearance.Options.UseFont = true;
@@ -125,7 +127,7 @@
             // txtAddress
             // 
             this.txtAddress.EnterMoveNextControl = true;
-            this.txtAddress.Location = new System.Drawing.Point(154, 95);
+            this.txtAddress.Location = new System.Drawing.Point(182, 95);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAddress.Properties.Appearance.Options.UseFont = true;
@@ -136,7 +138,7 @@
             // txtPhone
             // 
             this.txtPhone.EnterMoveNextControl = true;
-            this.txtPhone.Location = new System.Drawing.Point(154, 122);
+            this.txtPhone.Location = new System.Drawing.Point(182, 122);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhone.Properties.Appearance.Options.UseFont = true;
@@ -147,7 +149,7 @@
             // txtImei
             // 
             this.txtImei.EnterMoveNextControl = true;
-            this.txtImei.Location = new System.Drawing.Point(154, 149);
+            this.txtImei.Location = new System.Drawing.Point(182, 149);
             this.txtImei.Name = "txtImei";
             this.txtImei.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtImei.Properties.Appearance.Options.UseFont = true;
@@ -159,7 +161,7 @@
             // txtAPIServer
             // 
             this.txtAPIServer.EnterMoveNextControl = true;
-            this.txtAPIServer.Location = new System.Drawing.Point(154, 176);
+            this.txtAPIServer.Location = new System.Drawing.Point(182, 176);
             this.txtAPIServer.Name = "txtAPIServer";
             this.txtAPIServer.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAPIServer.Properties.Appearance.Options.UseFont = true;
@@ -172,9 +174,10 @@
             this.btnRegister.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
             this.btnRegister.Appearance.Options.UseFont = true;
             this.btnRegister.Appearance.Options.UseForeColor = true;
-            this.btnRegister.Location = new System.Drawing.Point(139, 222);
+            this.btnRegister.Image = global::PosMiso.Properties.Resources.ic_btn_ok;
+            this.btnRegister.Location = new System.Drawing.Point(145, 9);
             this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(104, 32);
+            this.btnRegister.Size = new System.Drawing.Size(96, 32);
             this.btnRegister.TabIndex = 2;
             this.btnRegister.Text = "Đăng kí";
             this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
@@ -187,14 +190,14 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(537, 40);
+            this.panel1.Size = new System.Drawing.Size(583, 37);
             this.panel1.TabIndex = 6;
             // 
             // btnExit
             // 
             this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExit.Location = new System.Drawing.Point(491, 3);
+            this.btnExit.Location = new System.Drawing.Point(537, 3);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(34, 28);
             this.btnExit.TabIndex = 10;
@@ -207,26 +210,37 @@
             this.cmdExit.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
             this.cmdExit.Appearance.Options.UseFont = true;
             this.cmdExit.Appearance.Options.UseForeColor = true;
-            this.cmdExit.Location = new System.Drawing.Point(324, 222);
+            this.cmdExit.Image = global::PosMiso.Properties.Resources.ic_btn_exit;
+            this.cmdExit.Location = new System.Drawing.Point(315, 9);
             this.cmdExit.Name = "cmdExit";
-            this.cmdExit.Size = new System.Drawing.Size(104, 32);
+            this.cmdExit.Size = new System.Drawing.Size(96, 32);
             this.cmdExit.TabIndex = 2;
             this.cmdExit.Text = "Thoát";
             this.cmdExit.Click += new System.EventHandler(this.cmdExit_Click);
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(193)))), ((int)(((byte)(222)))));
+            this.panel3.Controls.Add(this.cmdExit);
+            this.panel3.Controls.Add(this.btnRegister);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(0, 236);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(583, 47);
+            this.panel3.TabIndex = 7;
+            // 
             // HT_Register
             // 
-            this.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(222)))), ((int)(((byte)(255)))));
+            this.Appearance.BackColor = System.Drawing.SystemColors.Control;
             this.Appearance.ForeColor = System.Drawing.Color.Black;
             this.Appearance.Options.UseBackColor = true;
             this.Appearance.Options.UseForeColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(537, 277);
+            this.ClientSize = new System.Drawing.Size(583, 283);
             this.ControlBox = false;
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.cmdExit);
-            this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.txtAPIServer);
             this.Controls.Add(this.txtImei);
             this.Controls.Add(this.txtPhone);
@@ -251,6 +265,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtAPIServer.Properties)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -273,5 +288,6 @@
         private System.Windows.Forms.Panel panel1;
         private DevExpress.XtraEditors.SimpleButton btnExit;
         private DevExpress.XtraEditors.SimpleButton cmdExit;
+        private System.Windows.Forms.Panel panel3;
     }
 }

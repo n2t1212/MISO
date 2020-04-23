@@ -29,14 +29,19 @@
         private void InitializeComponent()
         {
             this.panelFunction = new System.Windows.Forms.Panel();
-            this.btnDownTemplate = new System.Windows.Forms.Button();
-            this.cmdSave = new System.Windows.Forms.Button();
-            this.cmdAbort = new System.Windows.Forms.Button();
-            this.cmdDel = new System.Windows.Forms.Button();
-            this.cmdEdit = new System.Windows.Forms.Button();
-            this.cmdAdd = new System.Windows.Forms.Button();
-            this.btnImport = new System.Windows.Forms.Button();
-            this.btnInMa = new System.Windows.Forms.Button();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.cmdDownload = new System.Windows.Forms.ToolStripButton();
+            this.btnImport = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.cmdAdd = new System.Windows.Forms.ToolStripButton();
+            this.cmdEdit = new System.Windows.Forms.ToolStripButton();
+            this.cmdDel = new System.Windows.Forms.ToolStripButton();
+            this.cmdSave = new System.Windows.Forms.ToolStripButton();
+            this.cmdAbort = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.cmdPrintCode = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.cmdExit = new System.Windows.Forms.ToolStripButton();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.grdNhomSanPham = new DevExpress.XtraGrid.GridControl();
             this.gvNhomSanPham = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -47,6 +52,7 @@
             this.grdSanPham = new DevExpress.XtraGrid.GridControl();
             this.gvSanPham = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colMaspid = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colManhomspid1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMasp = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTensp = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDvt = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -55,8 +61,8 @@
             this.colQuydoithung = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMabarcode = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMaqrcode = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colManhomspid1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panelFunction.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -70,120 +76,143 @@
             // 
             // panelFunction
             // 
-            this.panelFunction.Controls.Add(this.btnDownTemplate);
-            this.panelFunction.Controls.Add(this.cmdSave);
-            this.panelFunction.Controls.Add(this.cmdAbort);
-            this.panelFunction.Controls.Add(this.cmdDel);
-            this.panelFunction.Controls.Add(this.cmdEdit);
-            this.panelFunction.Controls.Add(this.cmdAdd);
-            this.panelFunction.Controls.Add(this.btnImport);
-            this.panelFunction.Controls.Add(this.btnInMa);
-            this.panelFunction.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelFunction.Location = new System.Drawing.Point(0, 482);
+            this.panelFunction.Controls.Add(this.toolStrip1);
+            this.panelFunction.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelFunction.Location = new System.Drawing.Point(0, 0);
             this.panelFunction.Name = "panelFunction";
             this.panelFunction.Size = new System.Drawing.Size(1191, 49);
             this.panelFunction.TabIndex = 7;
             // 
-            // btnDownTemplate
+            // toolStrip1
             // 
-            this.btnDownTemplate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDownTemplate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
-            this.btnDownTemplate.Location = new System.Drawing.Point(152, 8);
-            this.btnDownTemplate.Name = "btnDownTemplate";
-            this.btnDownTemplate.Size = new System.Drawing.Size(112, 32);
-            this.btnDownTemplate.TabIndex = 4;
-            this.btnDownTemplate.Text = "Tải mẫu (.xls)";
-            this.btnDownTemplate.UseVisualStyleBackColor = true;
-            this.btnDownTemplate.Click += new System.EventHandler(this.btnDownTemplate_Click);
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cmdDownload,
+            this.btnImport,
+            this.toolStripSeparator1,
+            this.cmdAdd,
+            this.cmdEdit,
+            this.cmdDel,
+            this.cmdSave,
+            this.cmdAbort,
+            this.toolStripSeparator2,
+            this.cmdPrintCode,
+            this.toolStripSeparator3,
+            this.cmdExit});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(1191, 38);
+            this.toolStrip1.TabIndex = 0;
+            this.toolStrip1.Text = "toolStrip1";
             // 
-            // cmdSave
+            // cmdDownload
             // 
-            this.cmdSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdSave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
-            this.cmdSave.Location = new System.Drawing.Point(802, 8);
-            this.cmdSave.Name = "cmdSave";
-            this.cmdSave.Size = new System.Drawing.Size(104, 32);
-            this.cmdSave.TabIndex = 3;
-            this.cmdSave.Text = "Lưu (F5)";
-            this.cmdSave.UseVisualStyleBackColor = true;
-            this.cmdSave.Click += new System.EventHandler(this.cmdSave_Click);
-            // 
-            // cmdAbort
-            // 
-            this.cmdAbort.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdAbort.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
-            this.cmdAbort.Location = new System.Drawing.Point(929, 8);
-            this.cmdAbort.Name = "cmdAbort";
-            this.cmdAbort.Size = new System.Drawing.Size(104, 32);
-            this.cmdAbort.TabIndex = 3;
-            this.cmdAbort.Text = "Hủy (Esc)";
-            this.cmdAbort.UseVisualStyleBackColor = true;
-            this.cmdAbort.Click += new System.EventHandler(this.cmdAbort_Click);
-            // 
-            // cmdDel
-            // 
-            this.cmdDel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdDel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
-            this.cmdDel.Location = new System.Drawing.Point(677, 8);
-            this.cmdDel.Name = "cmdDel";
-            this.cmdDel.Size = new System.Drawing.Size(104, 32);
-            this.cmdDel.TabIndex = 3;
-            this.cmdDel.Text = "Xóa (F4)";
-            this.cmdDel.UseVisualStyleBackColor = true;
-            this.cmdDel.Click += new System.EventHandler(this.cmdDel_Click);
-            // 
-            // cmdEdit
-            // 
-            this.cmdEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdEdit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
-            this.cmdEdit.Location = new System.Drawing.Point(557, 8);
-            this.cmdEdit.Name = "cmdEdit";
-            this.cmdEdit.Size = new System.Drawing.Size(104, 32);
-            this.cmdEdit.TabIndex = 3;
-            this.cmdEdit.Text = "Sửa (F3)";
-            this.cmdEdit.UseVisualStyleBackColor = true;
-            this.cmdEdit.Click += new System.EventHandler(this.cmdEdit_Click);
-            // 
-            // cmdAdd
-            // 
-            this.cmdAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdAdd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
-            this.cmdAdd.Location = new System.Drawing.Point(434, 8);
-            this.cmdAdd.Name = "cmdAdd";
-            this.cmdAdd.Size = new System.Drawing.Size(104, 32);
-            this.cmdAdd.TabIndex = 3;
-            this.cmdAdd.Text = "Thêm (F2)";
-            this.cmdAdd.UseVisualStyleBackColor = true;
-            this.cmdAdd.Click += new System.EventHandler(this.cmdAdd_Click);
+            this.cmdDownload.Image = global::PosMiso.Properties.Resources.ic_btn_download;
+            this.cmdDownload.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.cmdDownload.Name = "cmdDownload";
+            this.cmdDownload.Size = new System.Drawing.Size(54, 35);
+            this.cmdDownload.Text = "Tải Mẫu";
+            this.cmdDownload.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.cmdDownload.Click += new System.EventHandler(this.cmdDownload_Click);
             // 
             // btnImport
             // 
-            this.btnImport.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnImport.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
-            this.btnImport.Location = new System.Drawing.Point(288, 8);
+            this.btnImport.Image = global::PosMiso.Properties.Resources.ic_btn_upload;
+            this.btnImport.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnImport.Name = "btnImport";
-            this.btnImport.Size = new System.Drawing.Size(104, 32);
-            this.btnImport.TabIndex = 3;
-            this.btnImport.Text = "Nhập (.xls)";
-            this.btnImport.UseVisualStyleBackColor = true;
-            this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
+            this.btnImport.Size = new System.Drawing.Size(59, 35);
+            this.btnImport.Text = "Nhập file";
+            this.btnImport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnImport.Click += new System.EventHandler(this.btnImport_Click_1);
             // 
-            // btnInMa
+            // toolStripSeparator1
             // 
-            this.btnInMa.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInMa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
-            this.btnInMa.Location = new System.Drawing.Point(24, 8);
-            this.btnInMa.Name = "btnInMa";
-            this.btnInMa.Size = new System.Drawing.Size(104, 32);
-            this.btnInMa.TabIndex = 2;
-            this.btnInMa.Text = "In mã";
-            this.btnInMa.UseVisualStyleBackColor = true;
-            this.btnInMa.Click += new System.EventHandler(this.btnInMa_Click);
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 38);
+            // 
+            // cmdAdd
+            // 
+            this.cmdAdd.Image = global::PosMiso.Properties.Resources.ic_btn_add1;
+            this.cmdAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.cmdAdd.Name = "cmdAdd";
+            this.cmdAdd.Size = new System.Drawing.Size(65, 35);
+            this.cmdAdd.Text = "Thêm (F2)";
+            this.cmdAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.cmdAdd.Click += new System.EventHandler(this.cmdAdd_Click_1);
+            // 
+            // cmdEdit
+            // 
+            this.cmdEdit.Image = global::PosMiso.Properties.Resources.ic_btn_edit;
+            this.cmdEdit.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.cmdEdit.Name = "cmdEdit";
+            this.cmdEdit.Size = new System.Drawing.Size(53, 35);
+            this.cmdEdit.Text = "Sửa (F3)";
+            this.cmdEdit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.cmdEdit.Click += new System.EventHandler(this.cmdEdit_Click_1);
+            // 
+            // cmdDel
+            // 
+            this.cmdDel.Image = global::PosMiso.Properties.Resources.ic_btn_del;
+            this.cmdDel.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.cmdDel.Name = "cmdDel";
+            this.cmdDel.Size = new System.Drawing.Size(54, 35);
+            this.cmdDel.Text = "Xóa (F4)";
+            this.cmdDel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.cmdDel.Click += new System.EventHandler(this.cmdDel_Click_1);
+            // 
+            // cmdSave
+            // 
+            this.cmdSave.Image = global::PosMiso.Properties.Resources.ic_btn_save;
+            this.cmdSave.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.cmdSave.Name = "cmdSave";
+            this.cmdSave.Size = new System.Drawing.Size(54, 35);
+            this.cmdSave.Text = "Lưu (F5)";
+            this.cmdSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.cmdSave.Click += new System.EventHandler(this.cmdSave_Click_1);
+            // 
+            // cmdAbort
+            // 
+            this.cmdAbort.Image = global::PosMiso.Properties.Resources.ic_btn_abort;
+            this.cmdAbort.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.cmdAbort.Name = "cmdAbort";
+            this.cmdAbort.Size = new System.Drawing.Size(61, 35);
+            this.cmdAbort.Text = "Hủy (Esc)";
+            this.cmdAbort.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.cmdAbort.Click += new System.EventHandler(this.cmdAbort_Click_1);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 38);
+            // 
+            // cmdPrintCode
+            // 
+            this.cmdPrintCode.Image = global::PosMiso.Properties.Resources.ic_btn_print_qr;
+            this.cmdPrintCode.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.cmdPrintCode.Name = "cmdPrintCode";
+            this.cmdPrintCode.Size = new System.Drawing.Size(64, 35);
+            this.cmdPrintCode.Text = "In mã (F7)";
+            this.cmdPrintCode.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.cmdPrintCode.Click += new System.EventHandler(this.cmdPrintCode_Click);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 38);
+            // 
+            // cmdExit
+            // 
+            this.cmdExit.Image = global::PosMiso.Properties.Resources.ic_exit;
+            this.cmdExit.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.cmdExit.Name = "cmdExit";
+            this.cmdExit.Size = new System.Drawing.Size(65, 35);
+            this.cmdExit.Text = "Thoát (F8)";
+            this.cmdExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.cmdExit.Click += new System.EventHandler(this.cmdExit_Click);
             // 
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Location = new System.Drawing.Point(0, 49);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -268,6 +297,7 @@
             this.grdSanPham.TabIndex = 1;
             this.grdSanPham.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvSanPham});
+            this.grdSanPham.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.grdSanPham_PreviewKeyDown);
             // 
             // gvSanPham
             // 
@@ -298,6 +328,12 @@
             this.colMaspid.Caption = "MASPID";
             this.colMaspid.FieldName = "Maspid";
             this.colMaspid.Name = "colMaspid";
+            // 
+            // colManhomspid1
+            // 
+            this.colManhomspid1.Caption = "Manhomspid";
+            this.colManhomspid1.FieldName = "Manhomspid";
+            this.colManhomspid1.Name = "colManhomspid1";
             // 
             // colMasp
             // 
@@ -377,12 +413,6 @@
             this.colMaqrcode.VisibleIndex = 7;
             this.colMaqrcode.Width = 144;
             // 
-            // colManhomspid1
-            // 
-            this.colManhomspid1.Caption = "Manhomspid";
-            this.colManhomspid1.FieldName = "Manhomspid";
-            this.colManhomspid1.Name = "colManhomspid1";
-            // 
             // DM_SanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -395,6 +425,9 @@
             this.Text = "Sản phẩm";
             this.Load += new System.EventHandler(this.DM_SanPham_Load);
             this.panelFunction.ResumeLayout(false);
+            this.panelFunction.PerformLayout();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
@@ -411,14 +444,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panelFunction;
-        private System.Windows.Forms.Button btnDownTemplate;
-        private System.Windows.Forms.Button cmdSave;
-        private System.Windows.Forms.Button cmdAbort;
-        private System.Windows.Forms.Button cmdDel;
-        private System.Windows.Forms.Button cmdEdit;
-        private System.Windows.Forms.Button cmdAdd;
-        private System.Windows.Forms.Button btnImport;
-        private System.Windows.Forms.Button btnInMa;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private DevExpress.XtraGrid.GridControl grdNhomSanPham;
         private DevExpress.XtraGrid.Views.Grid.GridView gvNhomSanPham;
@@ -438,6 +463,19 @@
         private DevExpress.XtraGrid.Columns.GridColumn colMabarcode;
         private DevExpress.XtraGrid.Columns.GridColumn colMaqrcode;
         private DevExpress.XtraGrid.Columns.GridColumn colManhomspid1;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton cmdDownload;
+        private System.Windows.Forms.ToolStripButton btnImport;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripButton cmdAdd;
+        private System.Windows.Forms.ToolStripButton cmdEdit;
+        private System.Windows.Forms.ToolStripButton cmdDel;
+        private System.Windows.Forms.ToolStripButton cmdSave;
+        private System.Windows.Forms.ToolStripButton cmdAbort;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripButton cmdPrintCode;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripButton cmdExit;
 
     }
 }

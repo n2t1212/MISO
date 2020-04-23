@@ -101,9 +101,9 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 558);
+            this.panel1.Location = new System.Drawing.Point(0, 566);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1100, 42);
+            this.panel1.Size = new System.Drawing.Size(1100, 34);
             this.panel1.TabIndex = 0;
             // 
             // label3
@@ -111,7 +111,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
-            this.label3.Location = new System.Drawing.Point(338, 14);
+            this.label3.Location = new System.Drawing.Point(338, 9);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(91, 16);
             this.label3.TabIndex = 4;
@@ -122,7 +122,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
-            this.label2.Location = new System.Drawing.Point(171, 14);
+            this.label2.Location = new System.Drawing.Point(171, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(132, 16);
             this.label2.TabIndex = 5;
@@ -133,7 +133,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
-            this.label1.Location = new System.Drawing.Point(49, 14);
+            this.label1.Location = new System.Drawing.Point(49, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(89, 16);
             this.label1.TabIndex = 6;
@@ -153,8 +153,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.tabBH);
-            this.splitContainer1.Size = new System.Drawing.Size(1100, 558);
-            this.splitContainer1.SplitterDistance = 244;
+            this.splitContainer1.Size = new System.Drawing.Size(1100, 566);
+            this.splitContainer1.SplitterDistance = 247;
             this.splitContainer1.TabIndex = 1;
             // 
             // grdPhieu
@@ -163,7 +163,7 @@
             this.grdPhieu.Location = new System.Drawing.Point(0, 0);
             this.grdPhieu.MainView = this.gvPhieu;
             this.grdPhieu.Name = "grdPhieu";
-            this.grdPhieu.Size = new System.Drawing.Size(1100, 244);
+            this.grdPhieu.Size = new System.Drawing.Size(1100, 247);
             this.grdPhieu.TabIndex = 0;
             this.grdPhieu.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvPhieu});
@@ -367,7 +367,7 @@
             this.tabBH.Location = new System.Drawing.Point(0, 0);
             this.tabBH.Name = "tabBH";
             this.tabBH.SelectedIndex = 0;
-            this.tabBH.Size = new System.Drawing.Size(1100, 310);
+            this.tabBH.Size = new System.Drawing.Size(1100, 315);
             this.tabBH.TabIndex = 0;
             // 
             // tabBHCT
@@ -376,7 +376,7 @@
             this.tabBHCT.Location = new System.Drawing.Point(4, 22);
             this.tabBHCT.Name = "tabBHCT";
             this.tabBHCT.Padding = new System.Windows.Forms.Padding(3);
-            this.tabBHCT.Size = new System.Drawing.Size(1092, 284);
+            this.tabBHCT.Size = new System.Drawing.Size(1092, 289);
             this.tabBHCT.TabIndex = 0;
             this.tabBHCT.Text = "Chi tiết hàng hóa";
             this.tabBHCT.UseVisualStyleBackColor = true;
@@ -387,7 +387,7 @@
             this.grdPhieuCT.Location = new System.Drawing.Point(3, 3);
             this.grdPhieuCT.MainView = this.gvPhieuCT;
             this.grdPhieuCT.Name = "grdPhieuCT";
-            this.grdPhieuCT.Size = new System.Drawing.Size(1086, 278);
+            this.grdPhieuCT.Size = new System.Drawing.Size(1086, 283);
             this.grdPhieuCT.TabIndex = 0;
             this.grdPhieuCT.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvPhieuCT});

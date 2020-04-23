@@ -379,5 +379,28 @@ namespace PosMiso.Model
         {
             return formsName.Contains(formName);
         }
+
+        public static String[] formsNameWithoutMdiParent = new String[1] { "CN_ChungTu" };
+
+        public static bool isMdiParent(String formName)
+        {
+            return !formsNameWithoutMdiParent.Contains(formName);
+        }
+
+        public static string formatNumber(string number)
+        {
+            if (number == null || number == "")
+            {
+                return "0";
+            }
+            try
+            {
+                return string.Format("{0:#,##0}", double.Parse(number));
+            }
+            catch(Exception ex)
+            {
+                return "0";
+            }
+        }
     }   
 }

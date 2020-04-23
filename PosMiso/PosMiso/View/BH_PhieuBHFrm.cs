@@ -17,7 +17,7 @@ namespace PosMiso.View
     public partial class BH_PhieuBHFrm : Form
     {
         MTGlobal.MT_ROLE pACT_ROLE;
-        private MTGlobal.MT_BUTTONACTION MTButton;
+        private MTGlobal.MT_TOOL_TRIP_BUTTONACTION MTButton;
 
         private string pPhieuID = "";
         private string pDenNgay = "";
@@ -96,8 +96,8 @@ namespace PosMiso.View
             MTButton.cmdDel = this.cmdDel;
             MTButton.cmdSave = this.cmdSave;
             MTButton.cmdAbort = this.cmdAbort;
-            MTButton.cmdPrint = this.cmdPrint;
-            MTGlobal.SetButtonAction(pACT_ROLE, MTButton, "INIT");
+            //MTButton.cmdPrint = this.cmdPrint;
+            MTGlobal.SetToolStripButtonAction(pACT_ROLE, MTButton, "INIT");
         }
 
         private void setReadOnly(bool isReadonly = false)
@@ -186,12 +186,12 @@ namespace PosMiso.View
                             txtCa.Text = vR["Ca"].ToString();
                             txtThuNgan.Text = vR["Thungan"].ToString();
 
-                            txtThanhtien.Text = vR["Nguyente"].ToString();
-                            txtTongCK.Text = vR["Ck"].ToString();
-                            txtTongTTCK.Text = vR["TTCk"].ToString();
-                            txtThanhtien.Text = vR["Thanhtien"].ToString();
-                            txtTientra.Text = vR["Tientra"].ToString();
-                            txtTienthua.Text = vR["Tienthoi"].ToString();
+                            txtThanhtien.Text = Utils.formatNumber(vR["Nguyente"].ToString());
+                            txtTongCK.Text = Utils.formatNumber(vR["Ck"].ToString());
+                            txtTongTTCK.Text = Utils.formatNumber(vR["TTCk"].ToString());
+                            txtThanhtien.Text = Utils.formatNumber(vR["Thanhtien"].ToString());
+                            txtTientra.Text = Utils.formatNumber(vR["Tientra"].ToString());
+                            txtTienthua.Text = Utils.formatNumber(vR["Tienthoi"].ToString());
                             if (vR["LoaiKH"] != null && vR["LoaiKH"].ToString() == "VIP")
                             {
                                 chkVIP.Checked = true;
@@ -349,9 +349,14 @@ namespace PosMiso.View
                     dTongTTCK = Math.Round(dThanhtien * dTongCK / 100, 0, MidpointRounding.AwayFromZero);
                 }
 
-                txtThanhtien.Text = Math.Round(dThanhtien, 0, MidpointRounding.AwayFromZero).ToString();
-                txtTongTTCK.Text = Math.Round(dTongTTCK, 0, MidpointRounding.AwayFromZero).ToString();
-                txtThanhtoan.Text = Math.Round(dThanhtien - dTongTTCK, 0, MidpointRounding.AwayFromZero).ToString();
+                string thanhTien =  Math.Round(dThanhtien, 0, MidpointRounding.AwayFromZero).ToString();
+                txtThanhtien.Text = Utils.formatNumber(thanhTien);
+
+                string tongTTCK = Math.Round(dTongTTCK, 0, MidpointRounding.AwayFromZero).ToString();
+                txtTongTTCK.Text = Utils.formatNumber(tongTTCK);
+
+                string thanhToan = Math.Round(dThanhtien - dTongTTCK, 0, MidpointRounding.AwayFromZero).ToString();
+                txtThanhtoan.Text = Utils.formatNumber(thanhToan);
 
             }
             catch { }
@@ -377,9 +382,9 @@ namespace PosMiso.View
                 dThanhtoan = Math.Round(dThanhtien - dTTCK, 0, MidpointRounding.AwayFromZero);
                 dTienthoi = Math.Round(dTientra - dThanhtoan, 0, MidpointRounding.AwayFromZero);
 
-                txtTongTTCK.Text = dTTCK.ToString();
-                txtThanhtoan.Text = dThanhtoan.ToString();
-                txtTienthua.Text = dTienthoi.ToString();
+                txtTongTTCK.Text = Utils.formatNumber(dTTCK.ToString());
+                txtThanhtoan.Text = Utils.formatNumber(dThanhtoan.ToString());
+                txtTienthua.Text = Utils.formatNumber(dTienthoi.ToString());
             }
             catch { }
         }
@@ -426,7 +431,7 @@ namespace PosMiso.View
                 }
 
                 setReadOnly(false);
-                MTGlobal.SetButtonAction(pACT_ROLE, MTButton, "ADD");
+                MTGlobal.SetToolStripButtonAction(pACT_ROLE, MTButton, "ADD");
                 txtSophieu.Focus();
                 isEdit = true;
             }
@@ -436,7 +441,7 @@ namespace PosMiso.View
         private void fdoEdit()
         {
             setReadOnly(false);
-            MTGlobal.SetButtonAction(pACT_ROLE, MTButton, "EDIT");
+            MTGlobal.SetToolStripButtonAction(pACT_ROLE, MTButton, "EDIT");
             isEdit = true;
             txtSophieu.Focus();
             if (SysPar.SetGridReadOnly(false, gvPhieuBH))
@@ -525,7 +530,7 @@ namespace PosMiso.View
                     String msg = new modPhieuBH().SaveDiemTichLuy(txtMadv.Text.ToString().ToUpper(), tmpBHCT);
 
                     setReadOnly(true);
-                    MTGlobal.SetButtonAction(pACT_ROLE, MTButton, "SAVE");
+                    MTGlobal.SetToolStripButtonAction(pACT_ROLE, MTButton, "SAVE");
                     SysPar.SetGridReadOnly(true, gvPhieuBH);
                     isEdit = false;
                 }
@@ -598,15 +603,6 @@ namespace PosMiso.View
             fdoPrint();
         }
 
-        private void cmdAdd_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                fdoAdd();
-            }
-            catch (Exception ex) { Utils.showMessage(ex.Message.ToString(), "Thông báo lỗi"); }
-        }
-
         private void cmdEdit_Click(object sender, EventArgs e)
         {
             fdoEdit();
@@ -626,7 +622,7 @@ namespace PosMiso.View
                     pPhieuID = "";
                     BindData();
                     setReadOnly(true);
-                    MTGlobal.SetButtonAction(pACT_ROLE, MTButton, "ABORT");
+                    MTGlobal.SetToolStripButtonAction(pACT_ROLE, MTButton, "ABORT");
                 }
                 else
                 {
@@ -658,13 +654,7 @@ namespace PosMiso.View
         private void fdoAbort()
         {
             setReadOnly(true);
-            MTGlobal.SetButtonAction(pACT_ROLE, MTButton, "ABORT");
-        }
-
-        private void cmdAbort_Click(object sender, EventArgs e)
-        {
-            setReadOnly(true);
-            MTGlobal.SetButtonAction(pACT_ROLE, MTButton, "ABORT");
+            MTGlobal.SetToolStripButtonAction(pACT_ROLE, MTButton, "ABORT");
         }
 
         private void gvPhieuBH_InitNewRow(object sender, InitNewRowEventArgs e)
@@ -885,26 +875,7 @@ namespace PosMiso.View
                 txtDiachi.Text = diachi;
             }
         }
-
-        private void txtGhichu_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                //grdPhieuBH.Focus();
-                //gvPhieuBH.OptionsView.NewItemRowPosition = NewItemRowPosition.Bottom;
-                //gvPhieuBH.FocusedRowHandle = GridControl.NewItemRowHandle;
-                //gvPhieuBH.FocusedColumn = colMasp;
-                //gvPhieuBH.ShowEditor();
-            }        
-        }
-
-        private void grdPhieuBH_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                gvPhieuBH.MoveNext();
-            }
-        }
+        
 
         private void txtBarCode_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
         {
@@ -1261,6 +1232,12 @@ namespace PosMiso.View
 
                         }
                     }
+
+                    else if (gvPhieuBH.FocusedColumn.FieldName == "Ghichu" && gvPhieuBH.FocusedColumn.Name == "colGhichu1")
+                    {
+                        gvPhieuBH.AddNewRow();
+                        gvPhieuBH.FocusedColumn = colMasp;
+                    }
                     //else if (gvPhieuBH.FocusedColumn.FieldName == "SLThung" && gvPhieuBH.FocusedColumn.Name == "colSLThung")
                     //{
                     //    fQuydoithung(gvPhieuBH.FocusedRowHandle);
@@ -1286,5 +1263,116 @@ namespace PosMiso.View
             }
             catch (Exception ex) { Utils.showMessage("Phát sinh lỗi xử lý[KEYDOWN]=>" + ex.Message.ToString(), "Thông báo lỗi"); }
         }
+
+        private void cmdAdd_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                fdoAdd();
+            }
+            catch (Exception ex) { Utils.showMessage(ex.Message.ToString(), "Thông báo lỗi"); }
+        }
+
+        private void cmdDel_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmdDel_Click_2(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void cmdAbort_Click_1(object sender, EventArgs e)
+        {
+            fdoAbort();
+        }
+
+        private void fdoStock()
+        {
+            if (pDenNgay == "")
+            {
+                Utils.showMessage("Không xác định được ngày kết tồn kho..", "Thông báo");
+                return;
+            }
+
+            DataTable oTblSPC = new DataTable();
+            oTblSPC.Columns.Add("Maspid", typeof(System.String));
+            oTblSPC.Columns.Add("Masp", typeof(System.String));
+
+            dlg_TonKho oTonkho = new dlg_TonKho(oTblSPC, pDenNgay);
+            oTonkho.ShowDialog();
+        }
+
+        private void cmdStock_Click_1(object sender, EventArgs e)
+        {
+            fdoStock();
+        }
+
+        private void grdPhieuBH_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            try
+            {
+                if (e.KeyCode == Keys.F2)
+                {
+                    fdoAdd();
+                }
+                else if (e.KeyCode == Keys.F3)
+                {
+                    fdoEdit();
+                }
+                else if (e.KeyCode == Keys.F5)
+                {
+                    fdoSave();
+                }
+                else if (e.KeyCode == Keys.F7)
+                {
+                    fdoPrint();
+                }
+                else if (e.KeyCode == Keys.F8)
+                {
+                    System.Threading.Thread vThread = new System.Threading.Thread(() =>
+                    {
+                        try
+                        {
+                            MTSynData.doSyncPost();
+                        }
+                        catch { }
+                    });
+                    vThread.Start();
+                    this.Close();
+                }
+                else if (e.KeyCode == Keys.Escape)
+                {
+                    fdoAbort();
+                }
+                else if (e.KeyCode == Keys.F9)
+                {
+                    cmdViewStock();
+                }
+                else if (e.KeyCode == Keys.Q && e.KeyCode == Keys.ControlKey)
+                {
+                    if (isEdit)
+                    {
+                        txtBarCode.Focus();
+                        txtBarCode.SelectAll();
+                    }
+                }
+                else if (e.KeyCode == Keys.I && e.KeyCode == Keys.ControlKey)
+                {
+                    if (isEdit)
+                    {
+                        grdPhieuBH.Focus();
+                        gvPhieuBH.OptionsView.NewItemRowPosition = NewItemRowPosition.Bottom;
+                        gvPhieuBH.FocusedRowHandle = GridControl.NewItemRowHandle;
+                        gvPhieuBH.FocusedColumn = colMasp;
+                        gvPhieuBH.ShowEditor();
+                    }
+                }
+            }
+            catch { }
+        }
+
+        
     }
 }

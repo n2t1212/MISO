@@ -20,6 +20,7 @@ namespace PosMiso.View
         private DataTable tblSrc = null;
         private DataTable tblNQCN = null;
         private DataTable tblSelected = null;
+        private String removeFunctionIds = "";
 
         private List<FunctionNode> trees;
         private List<FunctionNode> selectedNode = new List<FunctionNode>();
@@ -35,6 +36,7 @@ namespace PosMiso.View
             this.nhomQuyenId = nhomQuyenId;
             InitTableSelected();
             InitTableNhomQuyenChucNang();
+            loadGridChucNang();
 
             //MTGlobal.SetFormatGridControl(grdChucNang, tblChucNang);
             //MTGlobal.SetFormatGridControl(grdNhomQuyenChucNang, tblNhomQuyenChucNang);
@@ -90,7 +92,34 @@ namespace PosMiso.View
         #region "GET_DATA"
         private List<FunctionNode> initParents()
         {
-            string sql = string.Format("select cn.* from DM_CHUCNANG cn where cn.macn not in (select nqcn.macn from HT_NHOMQUYEN_CHUCNANG nqcn where nqcn.manhom = '{0}') and macnroot is null", this.nhomQuyenId);
+            string sql = string.Format("select cn.* from DM_CHUCNANG cn " +
+                                        "where (cn.macn not in (select nqcn.macn " +
+					                                           "from HT_NHOMQUYEN_CHUCNANG nqcn "  +
+					                                           "where nqcn.manhom = '{0}') " +
+                                                "or cn.macn in (select distinct a.macnroot " +
+					                                           "from DM_CHUCNANG a " +
+					                                           "where a.macnroot is not null " +
+					                                                 "and a.macn not in (select nqcn.macn " +
+					                                                                    "from HT_NHOMQUYEN_CHUCNANG nqcn " +
+					                                                                   " where nqcn.manhom = '{0}'))) " +
+		                                        "and macnroot is null", this.nhomQuyenId);
+
+            if (removeFunctionIds != "")
+            {
+                sql = string.Format("select cn.* from DM_CHUCNANG cn " +
+                                        "where (cn.macn not in (select nqcn.macn " +
+                                                               "from HT_NHOMQUYEN_CHUCNANG nqcn " +
+                                                               "where nqcn.manhom = '{0}') " +
+                                                "or cn.macn in (select distinct a.macnroot " +
+                                                               "from DM_CHUCNANG a " +
+                                                               "where a.macnroot is not null " +
+                                                                     "and a.macn not in (select nqcn.macn " +
+                                                                                        "from HT_NHOMQUYEN_CHUCNANG nqcn " +
+                                                                                       " where nqcn.manhom = '{0}'))) " +
+                                                "or cn.macn in ({1}) and macnroot is null", this.nhomQuyenId, removeFunctionIds);
+                //sql = string.Format("select cn.* from DM_CHUCNANG cn where cn.macn not in (select nqcn.macn from HT_NHOMQUYEN_CHUCNANG nqcn where nqcn.manhom = '{0}') or cn.macn in ({1}) and macnroot is null", this.nhomQuyenId, removeFunctionIds);
+            }
+
             SQLAdaptor = MTSQLServer.getMTSQLServer().wAdapter(sql, null, false);
             DSetMain = new DataSet();
             SQLAdaptor.Fill(DSetMain, "DM_CHUCNANG");
@@ -110,6 +139,12 @@ namespace PosMiso.View
         private void initChildForParent()
         {
             string sql = string.Format("select cn.* from DM_CHUCNANG cn where cn.macn not in (select nqcn.macn from HT_NHOMQUYEN_CHUCNANG nqcn where nqcn.manhom = '{0}') and macnroot is not null", this.nhomQuyenId);
+
+            if (removeFunctionIds != "")
+            {
+                sql = string.Format("select cn.* from DM_CHUCNANG cn where cn.macn not in (select nqcn.macn from HT_NHOMQUYEN_CHUCNANG nqcn where nqcn.manhom = '{0}') or cn.macn in ({1}) and macnroot is not null", this.nhomQuyenId, removeFunctionIds);
+            }
+
             SQLAdaptor = MTSQLServer.getMTSQLServer().wAdapter(sql, null, false);
             DSetMain = new DataSet();
             SQLAdaptor.Fill(DSetMain, "DM_CHUCNANG");
@@ -142,6 +177,7 @@ namespace PosMiso.View
         private void InitTableSelected()
         {
             tblSelected = new DataTable();
+            tblSelected.Columns.Add("soid", typeof(string));
             tblSelected.Columns.Add("macn", typeof(string));
             tblSelected.Columns.Add("tencn", typeof(string));
             tblSelected.Columns.Add("them", typeof(bool));
@@ -181,6 +217,7 @@ namespace PosMiso.View
             foreach (FunctionNode node in selectedNode)
             {
                 DataRow rw = tblSelected.NewRow();
+                rw["soid"] = MTGlobal.GetNewID();
                 rw["macn"] = node.macn;
                 rw["tencn"] = node.chucnang;
                 rw["them"] = true;
@@ -192,6 +229,16 @@ namespace PosMiso.View
             }
             grdChucNang.DataSource = tblSelected;
             selectedNode.Clear();
+        }
+
+        private void loadGridChucNang()
+        {
+            String mSql = mSql = String.Format("select nqcn.soid as soid, nqcn.macn as macn, cn.chucnang as tencn, " +
+                                                 "nqcn.them as them, nqcn.xoa as xoa, nqcn.sua as sua, nqcn.duyet as duyet, nqcn.[in] as [in]" +
+                                                  " from HT_NHOMQUYEN_CHUCNANG nqcn left join DM_CHUCNANG cn on cn.macn = nqcn.macn" +
+                                                  " where nqcn.manhom='{0}' order by manhom asc", nhomQuyenId);
+            tblSelected = MTSQLServer.getMTSQLServer().wRead(mSql, null, false);
+            grdChucNang.DataSource = tblSelected;
         }
 
         private void FindCheckedNodes(List<TreeNode> checked_nodes, TreeNodeCollection nodes)
@@ -229,10 +276,14 @@ namespace PosMiso.View
             bool isChild = false;
             foreach (FunctionNode parent in trees)
             {
-                if (parent.macn == macn && parent.child.Count == 0)
+                if (parent.macn == macn)
                 {
                     selectedNode.Add(parent);
-                    trees.Remove(parent);
+                    if (parent.child.Count == 0)
+                    {
+                        trees.Remove(parent);
+                    }
+                   
                     break;
                 }
                 FunctionNode newParent = parent;
@@ -370,6 +421,9 @@ namespace PosMiso.View
 
             try
             {
+                String sql = String.Format("DELETE HT_NHOMQUYEN_CHUCNANG where manhom = '{0}'", nhomQuyenId);
+                int result = MTSQLServer.getMTSQLServer().wExec(sql, null, false);          
+
                 SqlParameter[] arrPara = new SqlParameter[3];
                 arrPara[0] = new SqlParameter("@nhomQuyenChucNangTbl", SqlDbType.Structured);
                 arrPara[0].Value = tblNQCN;
@@ -403,6 +457,7 @@ namespace PosMiso.View
             foreach (FunctionNode node in trees)
             {
                 DataRow rw = tblSelected.NewRow();
+                rw["soid"] = MTGlobal.GetNewID();
                 rw["macn"] = node.macn;
                 rw["tencn"] = node.chucnang;
                 rw["them"] = true;
@@ -415,6 +470,7 @@ namespace PosMiso.View
                 foreach (FunctionNode child in node.child)
                 {
                     DataRow rw1 = tblSelected.NewRow();
+                    rw1["soid"] = MTGlobal.GetNewID();
                     rw1["macn"] = child.macn;
                     rw1["tencn"] = child.chucnang;
                     rw1["them"] = true;
@@ -538,6 +594,19 @@ namespace PosMiso.View
 
         private void cmdRemoveAll_Click(object sender, EventArgs e)
         {
+            int count = 0;
+            foreach (DataRow row in tblSelected.Rows)
+            {
+                if (count == 0)
+                {
+                    removeFunctionIds += String.Format("'{0}'", row["macn"].ToString());
+                }
+                else
+                {
+                    removeFunctionIds += String.Format(",'{0}'", row["macn"].ToString());
+                }
+                count++;
+            }
             tblSelected.Clear();
             grdChucNang.DataSource = tblSelected;
             initTreeViewChucNang();

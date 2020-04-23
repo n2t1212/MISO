@@ -62,14 +62,14 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(854, 48);
+            this.panel1.Size = new System.Drawing.Size(854, 36);
             this.panel1.TabIndex = 5;
             // 
             // btnExit
             // 
             this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExit.Location = new System.Drawing.Point(802, 8);
+            this.btnExit.Location = new System.Drawing.Point(811, 3);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(34, 28);
             this.btnExit.TabIndex = 13;
@@ -78,11 +78,11 @@
             // 
             // lblTitle
             // 
-            this.lblTitle.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.Appearance.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(16, 16);
+            this.lblTitle.Location = new System.Drawing.Point(16, 10);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(228, 19);
+            this.lblTitle.Size = new System.Drawing.Size(210, 18);
             this.lblTitle.TabIndex = 12;
             this.lblTitle.Text = "BẢNG KÊ HÀNG HÓA TỒN KHO";
             // 
@@ -154,21 +154,23 @@
             // cmdExit
             // 
             this.cmdExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdExit.Image = global::PosMiso.Properties.Resources.ic_btn_exit;
             this.cmdExit.Location = new System.Drawing.Point(379, 5);
             this.cmdExit.Name = "cmdExit";
             this.cmdExit.Size = new System.Drawing.Size(90, 32);
             this.cmdExit.TabIndex = 7;
             this.cmdExit.Text = "Thoát";
+            this.cmdExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.cmdExit.UseVisualStyleBackColor = true;
             this.cmdExit.Click += new System.EventHandler(this.cmdExit_Click);
             // 
             // grdTonKho
             // 
             this.grdTonKho.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdTonKho.Location = new System.Drawing.Point(0, 48);
+            this.grdTonKho.Location = new System.Drawing.Point(0, 36);
             this.grdTonKho.MainView = this.gvTonKho;
             this.grdTonKho.Name = "grdTonKho";
-            this.grdTonKho.Size = new System.Drawing.Size(854, 334);
+            this.grdTonKho.Size = new System.Drawing.Size(854, 346);
             this.grdTonKho.TabIndex = 7;
             this.grdTonKho.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvTonKho});

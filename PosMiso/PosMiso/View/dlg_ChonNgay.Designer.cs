@@ -69,14 +69,14 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(445, 48);
+            this.panel1.Size = new System.Drawing.Size(445, 42);
             this.panel1.TabIndex = 1;
             // 
             // btnExit
             // 
             this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExit.Location = new System.Drawing.Point(393, 8);
+            this.btnExit.Location = new System.Drawing.Point(395, 6);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(34, 28);
             this.btnExit.TabIndex = 13;
@@ -85,11 +85,11 @@
             // 
             // labelControl6
             // 
-            this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl6.Appearance.ForeColor = System.Drawing.Color.White;
-            this.labelControl6.Location = new System.Drawing.Point(16, 16);
+            this.labelControl6.Location = new System.Drawing.Point(16, 12);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(132, 19);
+            this.labelControl6.Size = new System.Drawing.Size(122, 18);
             this.labelControl6.TabIndex = 12;
             this.labelControl6.Text = "CHỌN THỜI GIAN";
             // 
@@ -99,9 +99,9 @@
             this.panel2.Controls.Add(this.rdbNam);
             this.panel2.Controls.Add(this.rdbThang);
             this.panel2.Controls.Add(this.rdbNgay);
-            this.panel2.Location = new System.Drawing.Point(0, 48);
+            this.panel2.Location = new System.Drawing.Point(0, 40);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(447, 47);
+            this.panel2.Size = new System.Drawing.Size(447, 52);
             this.panel2.TabIndex = 2;
             // 
             // rdbNam
@@ -157,22 +157,26 @@
             // btnExit1
             // 
             this.btnExit1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit1.Image = global::PosMiso.Properties.Resources.ic_btn_exit;
             this.btnExit1.Location = new System.Drawing.Point(248, 7);
             this.btnExit1.Name = "btnExit1";
             this.btnExit1.Size = new System.Drawing.Size(100, 32);
             this.btnExit1.TabIndex = 1;
             this.btnExit1.Text = "Thoát";
+            this.btnExit1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnExit1.UseVisualStyleBackColor = true;
             this.btnExit1.Click += new System.EventHandler(this.btnExit1_Click);
             // 
             // btnOK
             // 
             this.btnOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOK.Image = global::PosMiso.Properties.Resources.ic_btn_ok;
             this.btnOK.Location = new System.Drawing.Point(88, 7);
             this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(90, 32);
+            this.btnOK.Size = new System.Drawing.Size(100, 32);
             this.btnOK.TabIndex = 0;
             this.btnOK.Text = "Đồng ý";
+            this.btnOK.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnOK.UseVisualStyleBackColor = true;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 

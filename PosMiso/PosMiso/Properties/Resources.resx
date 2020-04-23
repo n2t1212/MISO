@@ -118,16 +118,67 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="logo_gtc" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Medias\Pictures\logo_gtc.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ic-btn-exit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Medias\Icons\ic-btn-exit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ic-btn-del" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Medias\Icons\ic-btn-del.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="mtpos_bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Medias\Pictures\mtpos_bg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="data-backup" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Medias\Pictures\data-backup.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ic-btn-add1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Medias\Icons\ic-btn-add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ic-btn-edit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Medias\Icons\ic-btn-edit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ic-btn-upload" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Medias\Icons\ic-btn-upload.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logo_gtc" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Medias\Pictures\logo_gtc.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ic-btn-ok" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Medias\Icons\ic-btn-ok.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ic-btn-select" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Medias\Icons\ic-btn-select.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ic-btn-remain-stock" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Medias\Icons\ic-btn-remain-stock.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ic-btn-add" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ic-btn-add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ic-btn-print" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Medias\Icons\ic-btn-print.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ic-btn-abort" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Medias\Icons\ic-btn-abort.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="login_bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Medias\Pictures\login_bg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="data-backup" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Medias\Pictures\data-backup.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ic-btn-save" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Medias\Icons\ic-btn-save.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ic_btn_connect" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Medias\Icons\ic_btn_connect.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ic_quyenhan" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Medias\Icons\ic_quyenhan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ic_exit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Medias\Icons\ic_exit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ic-btn-download" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Medias\Icons\ic-btn-download.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ic_btn_print_qr" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Medias\Icons\ic_btn_print_qr.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

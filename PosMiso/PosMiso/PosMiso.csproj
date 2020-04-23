@@ -109,6 +109,7 @@
     </Compile>
     <Compile Include="Model\DM_ChucNang.cs" />
     <Compile Include="Model\modChanhxe.cs" />
+    <Compile Include="Model\modNguoiDung.cs" />
     <Compile Include="Model\modPhieuBH.cs" />
     <Compile Include="Model\modMember.cs" />
     <Compile Include="Model\modPhieuNX.cs" />
@@ -298,6 +299,12 @@
     <Compile Include="View\BH_PhieuBHFrm.Designer.cs">
       <DependentUpon>BH_PhieuBHFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\CN_ChungTu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\CN_ChungTu.Designer.cs">
+      <DependentUpon>CN_ChungTu.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\CX_PhieuCX.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -370,6 +377,12 @@
     <Compile Include="View\DM_LyDo.Designer.cs">
       <DependentUpon>DM_LyDo.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\DM_NhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\DM_NhanVien.Designer.cs">
+      <DependentUpon>DM_NhanVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\DM_NhomSanPham.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -423,6 +436,18 @@
     </Compile>
     <Compile Include="View\HT_Login.Designer.cs">
       <DependentUpon>HT_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\HT_NguoiDung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\HT_NguoiDung.Designer.cs">
+      <DependentUpon>HT_NguoiDung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\HT_NhomQuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\HT_NhomQuyen.Designer.cs">
+      <DependentUpon>HT_NhomQuyen.cs</DependentUpon>
     </Compile>
     <Compile Include="View\HT_PhucHoi.cs">
       <SubType>Form</SubType>
@@ -591,6 +616,9 @@
     <EmbeddedResource Include="View\BH_PhieuBHFrm.resx">
       <DependentUpon>BH_PhieuBHFrm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\CN_ChungTu.resx">
+      <DependentUpon>CN_ChungTu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\CX_PhieuCX.resx">
       <DependentUpon>CX_PhieuCX.cs</DependentUpon>
     </EmbeddedResource>
@@ -627,6 +655,9 @@
     <EmbeddedResource Include="View\DM_LyDo.resx">
       <DependentUpon>DM_LyDo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\DM_NhanVien.resx">
+      <DependentUpon>DM_NhanVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\DM_NhomSanPham.resx">
       <DependentUpon>DM_NhomSanPham.cs</DependentUpon>
     </EmbeddedResource>
@@ -650,6 +681,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\HT_Login.resx">
       <DependentUpon>HT_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\HT_NguoiDung.resx">
+      <DependentUpon>HT_NguoiDung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\HT_NhomQuyen.resx">
+      <DependentUpon>HT_NhomQuyen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\HT_PhucHoi.resx">
       <DependentUpon>HT_PhucHoi.cs</DependentUpon>
@@ -725,6 +762,18 @@
     <Content Include="Medias\Icons\blueunchecked.png" />
     <Content Include="Medias\Icons\checked.png" />
     <Content Include="Medias\Icons\Group.png" />
+    <Content Include="Medias\Icons\ic-btn-abort.png" />
+    <Content Include="Medias\Icons\ic-btn-add.png" />
+    <Content Include="Medias\Icons\ic-btn-del.png" />
+    <Content Include="Medias\Icons\ic-btn-download.png" />
+    <Content Include="Medias\Icons\ic-btn-edit.png" />
+    <Content Include="Medias\Icons\ic-btn-exit.png" />
+    <Content Include="Medias\Icons\ic-btn-ok.png" />
+    <Content Include="Medias\Icons\ic-btn-print.png" />
+    <Content Include="Medias\Icons\ic-btn-remain-stock.png" />
+    <Content Include="Medias\Icons\ic-btn-save.png" />
+    <Content Include="Medias\Icons\ic-btn-select.png" />
+    <Content Include="Medias\Icons\ic-btn-upload.png" />
     <Content Include="Medias\Icons\ico-user-logon.png" />
     <Content Include="Medias\Icons\icon_catalog.png" />
     <Content Include="Medias\Icons\icon_chanh_xe.png" />
@@ -734,6 +783,48 @@
     <Content Include="Medias\Icons\icon_phieu_nhap.png" />
     <Content Include="Medias\Icons\icon_sp.png" />
     <Content Include="Medias\Icons\icon_ton_kho.png" />
+    <Content Include="Medias\Icons\ic_banggia.png" />
+    <Content Include="Medias\Icons\ic_banhang.png" />
+    <Content Include="Medias\Icons\ic_baocaobanhang.png" />
+    <Content Include="Medias\Icons\ic_baocaodiemtichluy.png" />
+    <Content Include="Medias\Icons\ic_baocaonhapxuatton.png" />
+    <Content Include="Medias\Icons\ic_baocaothongke.png" />
+    <Content Include="Medias\Icons\ic_btn_connect.png" />
+    <Content Include="Medias\Icons\ic_btn_print_qr.png" />
+    <Content Include="Medias\Icons\ic_chanhxe.png" />
+    <Content Include="Medias\Icons\ic_chiphi.png" />
+    <Content Include="Medias\Icons\ic_congnophaithu.png" />
+    <Content Include="Medias\Icons\ic_congnophaithuchitiet.png" />
+    <Content Include="Medias\Icons\ic_congnophaithutonghop.png" />
+    <Content Include="Medias\Icons\ic_congnophaitra.png" />
+    <Content Include="Medias\Icons\ic_danhmuckho.png" />
+    <Content Include="Medias\Icons\ic_danhmuclydo.png" />
+    <Content Include="Medias\Icons\ic_danhmucsanpham.png" />
+    <Content Include="Medias\Icons\ic_danhmucxe.png" />
+    <Content Include="Medias\Icons\ic_dongiaxuat.png" />
+    <Content Include="Medias\Icons\ic_exit.png" />
+    <Content Include="Medias\Icons\ic_hanghoa.png" />
+    <Content Include="Medias\Icons\ic_hethong.png" />
+    <Content Include="Medias\Icons\ic_ketchuyensodu.png" />
+    <Content Include="Medias\Icons\ic_khachhang.png" />
+    <Content Include="Medias\Icons\ic_nguoidung.png" />
+    <Content Include="Medias\Icons\ic_nhanvien.png" />
+    <Content Include="Medias\Icons\ic_nhomquyen.png" />
+    <Content Include="Medias\Icons\ic_nhomsanpham.png" />
+    <Content Include="Medias\Icons\ic_phieubanhang.png" />
+    <Content Include="Medias\Icons\ic_phieuchi.png" />
+    <Content Include="Medias\Icons\ic_phieunhap.png" />
+    <Content Include="Medias\Icons\ic_phieuthu.png" />
+    <Content Include="Medias\Icons\ic_phieuthuchi.png" />
+    <Content Include="Medias\Icons\ic_phieuxuat.png" />
+    <Content Include="Medias\Icons\ic_phuchoidulieu.png" />
+    <Content Include="Medias\Icons\ic_quanlydanhmuc.png" />
+    <Content Include="Medias\Icons\ic_quyenhan.png" />
+    <Content Include="Medias\Icons\ic_saoluudulieu.png" />
+    <Content Include="Medias\Icons\ic_taikhoan.png" />
+    <Content Include="Medias\Icons\ic_thekho.png" />
+    <Content Include="Medias\Icons\ic_thongkeguichanh.png" />
+    <Content Include="Medias\Icons\ic_tichluydiem.png" />
     <Content Include="Medias\Icons\Item.png" />
     <Content Include="Medias\Icons\list.png" />
     <Content Include="Medias\Icons\pinkchecked.png" />
@@ -781,6 +872,7 @@
     <Content Include="Medias\Icons\unchecked.png" />
     <Content Include="Medias\Icons\user.png" />
     <Content Include="Medias\Pictures\app_logo.PNG" />
+    <None Include="Resources\ic-btn-add.png" />
     <None Include="Medias\Pictures\data-backup.jpg" />
     <Content Include="Medias\Pictures\login_bg.png" />
     <Content Include="Medias\Pictures\logo_gtc.PNG" />

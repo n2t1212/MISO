@@ -33,14 +33,16 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
-            this.btnCheckConnect = new System.Windows.Forms.Button();
             this.txtCSDL = new System.Windows.Forms.TextBox();
             this.txtPath = new System.Windows.Forms.TextBox();
             this.lblCSDL = new System.Windows.Forms.Label();
             this.lblFile = new System.Windows.Forms.Label();
-            this.btnPath = new System.Windows.Forms.Button();
-            this.btnRestore = new System.Windows.Forms.Button();
             this.cbxServer = new System.Windows.Forms.ComboBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnRestore = new System.Windows.Forms.Button();
+            this.btnPath = new System.Windows.Forms.Button();
+            this.btnCheckConnect = new System.Windows.Forms.Button();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -48,7 +50,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
-            this.label1.Location = new System.Drawing.Point(121, 37);
+            this.label1.Location = new System.Drawing.Point(44, 39);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 18);
             this.label1.TabIndex = 1;
@@ -59,7 +61,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
-            this.label2.Location = new System.Drawing.Point(99, 64);
+            this.label2.Location = new System.Drawing.Point(22, 66);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(72, 18);
             this.label2.TabIndex = 2;
@@ -70,7 +72,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
-            this.label3.Location = new System.Drawing.Point(102, 89);
+            this.label3.Location = new System.Drawing.Point(25, 91);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 18);
             this.label3.TabIndex = 3;
@@ -79,7 +81,7 @@
             // txtUsername
             // 
             this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(184, 61);
+            this.txtUsername.Location = new System.Drawing.Point(107, 63);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(272, 22);
             this.txtUsername.TabIndex = 5;
@@ -87,28 +89,16 @@
             // txtPassword
             // 
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(184, 86);
+            this.txtPassword.Location = new System.Drawing.Point(107, 88);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(272, 22);
             this.txtPassword.TabIndex = 6;
             // 
-            // btnCheckConnect
-            // 
-            this.btnCheckConnect.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCheckConnect.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
-            this.btnCheckConnect.Location = new System.Drawing.Point(462, 61);
-            this.btnCheckConnect.Name = "btnCheckConnect";
-            this.btnCheckConnect.Size = new System.Drawing.Size(119, 26);
-            this.btnCheckConnect.TabIndex = 7;
-            this.btnCheckConnect.Text = "Kiểm tra kết nối";
-            this.btnCheckConnect.UseVisualStyleBackColor = true;
-            this.btnCheckConnect.Click += new System.EventHandler(this.btnCheckConnect_Click);
-            // 
             // txtCSDL
             // 
             this.txtCSDL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCSDL.Location = new System.Drawing.Point(184, 137);
+            this.txtCSDL.Location = new System.Drawing.Point(107, 139);
             this.txtCSDL.Name = "txtCSDL";
             this.txtCSDL.Size = new System.Drawing.Size(272, 22);
             this.txtCSDL.TabIndex = 11;
@@ -116,7 +106,7 @@
             // txtPath
             // 
             this.txtPath.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPath.Location = new System.Drawing.Point(184, 111);
+            this.txtPath.Location = new System.Drawing.Point(107, 113);
             this.txtPath.Name = "txtPath";
             this.txtPath.Size = new System.Drawing.Size(272, 22);
             this.txtPath.TabIndex = 10;
@@ -126,7 +116,7 @@
             this.lblCSDL.AutoSize = true;
             this.lblCSDL.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCSDL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
-            this.lblCSDL.Location = new System.Drawing.Point(98, 140);
+            this.lblCSDL.Location = new System.Drawing.Point(21, 142);
             this.lblCSDL.Name = "lblCSDL";
             this.lblCSDL.Size = new System.Drawing.Size(73, 18);
             this.lblCSDL.TabIndex = 9;
@@ -137,69 +127,97 @@
             this.lblFile.AutoSize = true;
             this.lblFile.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
-            this.lblFile.Location = new System.Drawing.Point(108, 114);
+            this.lblFile.Location = new System.Drawing.Point(31, 116);
             this.lblFile.Name = "lblFile";
             this.lblFile.Size = new System.Drawing.Size(63, 18);
             this.lblFile.TabIndex = 8;
             this.lblFile.Text = "Chọn file";
             // 
-            // btnPath
+            // cbxServer
             // 
-            this.btnPath.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPath.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
-            this.btnPath.Location = new System.Drawing.Point(462, 109);
-            this.btnPath.Name = "btnPath";
-            this.btnPath.Size = new System.Drawing.Size(66, 27);
-            this.btnPath.TabIndex = 12;
-            this.btnPath.Text = "Chọn";
-            this.btnPath.UseVisualStyleBackColor = true;
-            this.btnPath.Click += new System.EventHandler(this.btnPath_Click);
+            this.cbxServer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxServer.FormattingEnabled = true;
+            this.cbxServer.Location = new System.Drawing.Point(107, 36);
+            this.cbxServer.Name = "cbxServer";
+            this.cbxServer.Size = new System.Drawing.Size(272, 24);
+            this.cbxServer.TabIndex = 14;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.cbxServer);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.btnRestore);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.btnPath);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.txtCSDL);
+            this.groupBox1.Controls.Add(this.txtUsername);
+            this.groupBox1.Controls.Add(this.txtPath);
+            this.groupBox1.Controls.Add(this.txtPassword);
+            this.groupBox1.Controls.Add(this.lblCSDL);
+            this.groupBox1.Controls.Add(this.btnCheckConnect);
+            this.groupBox1.Controls.Add(this.lblFile);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(60, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(582, 239);
+            this.groupBox1.TabIndex = 15;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Phục hồi dữ liệu";
             // 
             // btnRestore
             // 
             this.btnRestore.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRestore.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
-            this.btnRestore.Location = new System.Drawing.Point(264, 174);
+            this.btnRestore.Image = global::PosMiso.Properties.Resources.ic_btn_ok;
+            this.btnRestore.Location = new System.Drawing.Point(187, 176);
             this.btnRestore.Name = "btnRestore";
             this.btnRestore.Size = new System.Drawing.Size(104, 32);
             this.btnRestore.TabIndex = 13;
             this.btnRestore.Text = "Khôi phục";
+            this.btnRestore.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnRestore.UseVisualStyleBackColor = true;
             this.btnRestore.Click += new System.EventHandler(this.btnRestore_Click);
             // 
-            // cbxServer
+            // btnPath
             // 
-            this.cbxServer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxServer.FormattingEnabled = true;
-            this.cbxServer.Location = new System.Drawing.Point(184, 34);
-            this.cbxServer.Name = "cbxServer";
-            this.cbxServer.Size = new System.Drawing.Size(272, 24);
-            this.cbxServer.TabIndex = 14;
+            this.btnPath.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPath.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
+            this.btnPath.Image = global::PosMiso.Properties.Resources.ic_btn_select;
+            this.btnPath.Location = new System.Drawing.Point(383, 112);
+            this.btnPath.Name = "btnPath";
+            this.btnPath.Size = new System.Drawing.Size(32, 23);
+            this.btnPath.TabIndex = 12;
+            this.btnPath.UseVisualStyleBackColor = true;
+            this.btnPath.Click += new System.EventHandler(this.btnPath_Click);
+            // 
+            // btnCheckConnect
+            // 
+            this.btnCheckConnect.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCheckConnect.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
+            this.btnCheckConnect.Image = global::PosMiso.Properties.Resources.ic_quyenhan;
+            this.btnCheckConnect.Location = new System.Drawing.Point(391, 43);
+            this.btnCheckConnect.Name = "btnCheckConnect";
+            this.btnCheckConnect.Size = new System.Drawing.Size(178, 61);
+            this.btnCheckConnect.TabIndex = 7;
+            this.btnCheckConnect.Text = "Kiểm tra kết nối";
+            this.btnCheckConnect.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCheckConnect.UseVisualStyleBackColor = true;
+            this.btnCheckConnect.Click += new System.EventHandler(this.btnCheckConnect_Click);
             // 
             // HT_PhucHoi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1028, 509);
-            this.Controls.Add(this.cbxServer);
-            this.Controls.Add(this.btnRestore);
-            this.Controls.Add(this.btnPath);
-            this.Controls.Add(this.txtCSDL);
-            this.Controls.Add(this.txtPath);
-            this.Controls.Add(this.lblCSDL);
-            this.Controls.Add(this.lblFile);
-            this.Controls.Add(this.btnCheckConnect);
-            this.Controls.Add(this.txtPassword);
-            this.Controls.Add(this.txtUsername);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "HT_PhucHoi";
             this.Text = "Phục hồi dữ liệu";
             this.Load += new System.EventHandler(this.HT_PhucHoi_Load);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -218,5 +236,6 @@
         private System.Windows.Forms.Button btnPath;
         private System.Windows.Forms.Button btnRestore;
         private System.Windows.Forms.ComboBox cbxServer;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

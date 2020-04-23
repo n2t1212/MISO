@@ -153,7 +153,6 @@ namespace PosMiso.View
             MTButton.cmdDel = this.cmdDel;
             MTButton.cmdSave = this.cmdSave;
             MTButton.cmdAbort = this.cmdAbort;
-            MTButton.cmdPrint = this.cmdPrint;
             MTGlobal.SetButtonAction(pACT_ROLE, MTButton, "INIT");
         }
 

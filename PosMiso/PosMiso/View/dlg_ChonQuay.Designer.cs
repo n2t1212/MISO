@@ -51,22 +51,26 @@
             // btnExit1
             // 
             this.btnExit1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit1.Image = global::PosMiso.Properties.Resources.ic_btn_exit;
             this.btnExit1.Location = new System.Drawing.Point(265, 6);
             this.btnExit1.Name = "btnExit1";
             this.btnExit1.Size = new System.Drawing.Size(100, 32);
             this.btnExit1.TabIndex = 1;
             this.btnExit1.Text = "Thoát";
+            this.btnExit1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnExit1.UseVisualStyleBackColor = true;
             this.btnExit1.Click += new System.EventHandler(this.btnExit1_Click);
             // 
             // btnOK
             // 
             this.btnOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOK.Image = global::PosMiso.Properties.Resources.ic_btn_ok;
             this.btnOK.Location = new System.Drawing.Point(71, 6);
             this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(90, 32);
+            this.btnOK.Size = new System.Drawing.Size(100, 32);
             this.btnOK.TabIndex = 0;
             this.btnOK.Text = "Đồng ý";
+            this.btnOK.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnOK.UseVisualStyleBackColor = true;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
@@ -85,7 +89,7 @@
             // 
             this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExit.Location = new System.Drawing.Point(399, 8);
+            this.btnExit.Location = new System.Drawing.Point(400, 7);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(34, 28);
             this.btnExit.TabIndex = 13;
@@ -94,11 +98,11 @@
             // 
             // labelControl6
             // 
-            this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl6.Appearance.ForeColor = System.Drawing.Color.White;
-            this.labelControl6.Location = new System.Drawing.Point(16, 16);
+            this.labelControl6.Location = new System.Drawing.Point(16, 13);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(146, 19);
+            this.labelControl6.Size = new System.Drawing.Size(133, 18);
             this.labelControl6.TabIndex = 12;
             this.labelControl6.Text = "CHỌN CA LÀM VIỆC";
             // 
@@ -110,7 +114,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(451, 48);
+            this.panel1.Size = new System.Drawing.Size(451, 44);
             this.panel1.TabIndex = 7;
             // 
             // groupBox1

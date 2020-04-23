@@ -21,7 +21,7 @@ namespace PosMiso.View
         private String pDenNgay = "";
 
         private MTGlobal.MT_ROLE MTROLE;
-        private MTGlobal.MT_BUTTONACTION MTButton;
+        private MTGlobal.MT_TOOL_TRIP_BUTTONACTION MTButton;
 
         DevExpress.Utils.WaitDialogForm Dlg;
 
@@ -52,6 +52,8 @@ namespace PosMiso.View
                 MTROLE.isEdit = Utils.parseStringToBoolean(rw["sua"].ToString());
                 MTROLE.isDel = Utils.parseStringToBoolean(rw["xoa"].ToString());
                 MTROLE.isPrint = Utils.parseStringToBoolean(rw["in"].ToString());
+
+                MTGlobal.SetPermitToolStrip(MTROLE, MTButton);
             }
         }
 

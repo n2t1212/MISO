@@ -113,6 +113,16 @@ namespace PosMiso.Model
            public Button cmdPrint;           
        }
 
+       public struct MT_TOOL_TRIP_BUTTONACTION
+       {
+           public ToolStripButton cmdAdd;
+           public ToolStripButton cmdEdit;
+           public ToolStripButton cmdDel;
+           public ToolStripButton cmdSave;
+           public ToolStripButton cmdAbort;
+           public ToolStripButton cmdPrint;
+       }
+
        public static String MT_CURRENT_ACTION = "";
     #endregion
 
@@ -704,6 +714,81 @@ namespace PosMiso.Model
        }
         
     #endregion
+
+       public static void SetToolStripButtonAction(MT_ROLE oROLE, MT_TOOL_TRIP_BUTTONACTION oButton, string isAction)
+       {
+           MT_CURRENT_ACTION = isAction;
+           if (oButton.cmdAdd == null) oButton.cmdAdd = new ToolStripButton();
+           if (oButton.cmdEdit == null) oButton.cmdEdit = new ToolStripButton();
+           if (oButton.cmdDel == null) oButton.cmdDel = new ToolStripButton();
+           if (oButton.cmdAbort == null) oButton.cmdAbort = new ToolStripButton();
+           if (oButton.cmdPrint == null) oButton.cmdPrint = new ToolStripButton();
+
+           switch (isAction)
+           {
+               case "INIT":
+               case "ABORT":
+               case "SAVE":
+                   oButton.cmdAdd.Visible = true;
+                   oButton.cmdEdit.Visible = true;
+                   oButton.cmdDel.Enabled = true;
+                   oButton.cmdSave.Visible = false;
+                   oButton.cmdAbort.Visible = false;
+
+                   oButton.cmdAdd.Enabled = oROLE.isAdd;
+                   oButton.cmdEdit.Enabled = oROLE.isEdit;
+                   oButton.cmdDel.Enabled = oROLE.isDel;
+                   oButton.cmdPrint.Enabled = oROLE.isPrint;
+                   break;
+
+               case "ADD":
+                   oButton.cmdAdd.Enabled = oROLE.isAdd;
+                   oButton.cmdEdit.Enabled = oROLE.isEdit;
+                   oButton.cmdDel.Enabled = oROLE.isDel;
+                   oButton.cmdPrint.Enabled = oROLE.isPrint;
+
+                   oButton.cmdAdd.Visible = false;
+                   oButton.cmdEdit.Visible = false;
+                   oButton.cmdDel.Enabled = false;
+                   oButton.cmdSave.Visible = true;
+                   oButton.cmdAbort.Visible = true;
+                   break;
+
+               case "EDIT":
+                   oButton.cmdAdd.Enabled = oROLE.isAdd;
+                   oButton.cmdEdit.Enabled = oROLE.isEdit;
+                   oButton.cmdDel.Enabled = oROLE.isDel;
+                   oButton.cmdPrint.Enabled = oROLE.isPrint;
+
+                   oButton.cmdAdd.Visible = false;
+                   oButton.cmdEdit.Visible = false;
+                   oButton.cmdDel.Enabled = false;
+                   oButton.cmdSave.Visible = true;
+                   oButton.cmdAbort.Visible = true;
+                   break;
+               default:
+                   break;
+           }
+       }
+
+       public static void SetPermitToolStrip(MT_ROLE mROLE, MT_TOOL_TRIP_BUTTONACTION oButton)
+       {
+           if (oButton.cmdAdd != null)
+           {
+               oButton.cmdAdd.Enabled = mROLE.isAdd;
+           }
+
+           if (oButton.cmdEdit != null)
+           {
+               oButton.cmdEdit.Enabled = mROLE.isEdit;
+           }
+
+           if (oButton.cmdDel != null)
+           {
+               oButton.cmdDel.Enabled = mROLE.isDel;
+           }
+
+       }
 
    }
 }

@@ -63,27 +63,27 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1000, 48);
+            this.panel1.Size = new System.Drawing.Size(1000, 43);
             this.panel1.TabIndex = 0;
             // 
             // btnExit
             // 
             this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExit.Location = new System.Drawing.Point(948, 8);
+            this.btnExit.Location = new System.Drawing.Point(956, 8);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(34, 28);
+            this.btnExit.Size = new System.Drawing.Size(32, 28);
             this.btnExit.TabIndex = 13;
             this.btnExit.Text = "X";
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // labelControl6
             // 
-            this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl6.Appearance.ForeColor = System.Drawing.Color.White;
-            this.labelControl6.Location = new System.Drawing.Point(16, 16);
+            this.labelControl6.Location = new System.Drawing.Point(12, 12);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(222, 19);
+            this.labelControl6.Size = new System.Drawing.Size(203, 18);
             this.labelControl6.TabIndex = 12;
             this.labelControl6.Text = "NHẬP GIÁ SẢN PHẨM TỪ FILE";
             // 
@@ -92,20 +92,22 @@
             this.panel2.Controls.Add(this.btnCancel);
             this.panel2.Controls.Add(this.btnImport);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 452);
+            this.panel2.Location = new System.Drawing.Point(0, 449);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1000, 48);
+            this.panel2.Size = new System.Drawing.Size(1000, 51);
             this.panel2.TabIndex = 1;
             // 
             // btnCancel
             // 
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
-            this.btnCancel.Location = new System.Drawing.Point(606, 8);
+            this.btnCancel.Image = global::PosMiso.Properties.Resources.ic_btn_exit;
+            this.btnCancel.Location = new System.Drawing.Point(577, 8);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(80, 32);
             this.btnCancel.TabIndex = 3;
             this.btnCancel.Text = "Thoát";
+            this.btnCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
@@ -113,11 +115,13 @@
             // 
             this.btnImport.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImport.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
+            this.btnImport.Image = global::PosMiso.Properties.Resources.ic_btn_ok;
             this.btnImport.Location = new System.Drawing.Point(398, 8);
             this.btnImport.Name = "btnImport";
-            this.btnImport.Size = new System.Drawing.Size(97, 32);
+            this.btnImport.Size = new System.Drawing.Size(80, 32);
             this.btnImport.TabIndex = 2;
             this.btnImport.Text = "Đồng ý";
+            this.btnImport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnImport.UseVisualStyleBackColor = true;
             this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
             // 
@@ -129,9 +133,9 @@
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.btnFile);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(0, 48);
+            this.panel3.Location = new System.Drawing.Point(0, 43);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1000, 404);
+            this.panel3.Size = new System.Drawing.Size(1000, 406);
             this.panel3.TabIndex = 2;
             // 
             // checkBox1
@@ -139,7 +143,7 @@
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
-            this.checkBox1.Location = new System.Drawing.Point(496, 32);
+            this.checkBox1.Location = new System.Drawing.Point(479, 29);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(127, 20);
             this.checkBox1.TabIndex = 12;
@@ -257,11 +261,11 @@
             // 
             this.btnFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
+            this.btnFile.Image = global::PosMiso.Properties.Resources.ic_btn_select;
             this.btnFile.Location = new System.Drawing.Point(410, 27);
             this.btnFile.Name = "btnFile";
-            this.btnFile.Size = new System.Drawing.Size(40, 26);
+            this.btnFile.Size = new System.Drawing.Size(29, 22);
             this.btnFile.TabIndex = 8;
-            this.btnFile.Text = "...";
             this.btnFile.UseVisualStyleBackColor = true;
             this.btnFile.Click += new System.EventHandler(this.btnFile_Click);
             // 

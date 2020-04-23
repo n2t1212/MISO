@@ -2,44 +2,32 @@
 {
     partial class BH_PhieuBHFrm
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
-        private System.ComponentModel.IContainer components = null;
-
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
-            base.Dispose(disposing);
-        }
+        private System.Windows.Forms.Panel panel1;
+        private DevExpress.XtraEditors.SimpleButton btnExit;
+        private DevExpress.XtraEditors.LabelControl lblTitle;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.GroupBox groupBox1;
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnExit = new DevExpress.XtraEditors.SimpleButton();
             this.lblTitle = new DevExpress.XtraEditors.LabelControl();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnExit1 = new System.Windows.Forms.Button();
-            this.cmdStock = new System.Windows.Forms.Button();
-            this.cmdAbort = new System.Windows.Forms.Button();
-            this.cmdSave = new System.Windows.Forms.Button();
-            this.cmdDel = new System.Windows.Forms.Button();
-            this.cmdEdit = new System.Windows.Forms.Button();
-            this.cmdAdd = new System.Windows.Forms.Button();
+            this.btnDownTemplate = new System.Windows.Forms.ToolStrip();
+            this.cmdAdd = new System.Windows.Forms.ToolStripButton();
+            this.cmdEdit = new System.Windows.Forms.ToolStripButton();
+            this.cmdDel = new System.Windows.Forms.ToolStripButton();
+            this.cmdSave = new System.Windows.Forms.ToolStripButton();
+            this.cmdAbort = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.cmdStock = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.grdPhieuBH = new DevExpress.XtraGrid.GridControl();
             this.gvPhieuBH = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -124,6 +112,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.btnDownTemplate.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -155,139 +144,145 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1368, 48);
+            this.panel1.Size = new System.Drawing.Size(1368, 36);
             this.panel1.TabIndex = 4;
             // 
             // btnExit
             // 
             this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExit.Location = new System.Drawing.Point(1316, 8);
+            this.btnExit.Location = new System.Drawing.Point(1325, 4);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(34, 28);
+            this.btnExit.Size = new System.Drawing.Size(29, 26);
             this.btnExit.TabIndex = 13;
             this.btnExit.Text = "X";
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // lblTitle
             // 
-            this.lblTitle.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.Appearance.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(16, 16);
+            this.lblTitle.Location = new System.Drawing.Point(16, 8);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(164, 19);
+            this.lblTitle.Size = new System.Drawing.Size(148, 18);
             this.lblTitle.TabIndex = 12;
             this.lblTitle.Text = "LẬP PHIẾU BÁN HÀNG";
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(193)))), ((int)(((byte)(222)))));
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.btnExit1);
-            this.panel2.Controls.Add(this.cmdStock);
-            this.panel2.Controls.Add(this.cmdAbort);
-            this.panel2.Controls.Add(this.cmdSave);
-            this.panel2.Controls.Add(this.cmdDel);
-            this.panel2.Controls.Add(this.cmdEdit);
-            this.panel2.Controls.Add(this.cmdAdd);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 722);
+            this.panel2.Controls.Add(this.btnDownTemplate);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 36);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1368, 46);
             this.panel2.TabIndex = 5;
             // 
-            // label1
+            // btnDownTemplate
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
-            this.label1.Location = new System.Drawing.Point(13, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(259, 16);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Nhấn: Ctr+Q: Quét mã, Ctr+I: Nhập thủ công";
-            // 
-            // btnExit1
-            // 
-            this.btnExit1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit1.Location = new System.Drawing.Point(1260, 7);
-            this.btnExit1.Name = "btnExit1";
-            this.btnExit1.Size = new System.Drawing.Size(100, 32);
-            this.btnExit1.TabIndex = 8;
-            this.btnExit1.Text = "Thoát (F8)";
-            this.btnExit1.UseVisualStyleBackColor = true;
-            this.btnExit1.Click += new System.EventHandler(this.btnExit1_Click);
-            // 
-            // cmdStock
-            // 
-            this.cmdStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdStock.Location = new System.Drawing.Point(1154, 7);
-            this.cmdStock.Name = "cmdStock";
-            this.cmdStock.Size = new System.Drawing.Size(102, 32);
-            this.cmdStock.TabIndex = 2;
-            this.cmdStock.Text = "Tồn kho (F9)";
-            this.cmdStock.UseVisualStyleBackColor = true;
-            this.cmdStock.Click += new System.EventHandler(this.cmdStock_Click);
-            // 
-            // cmdAbort
-            // 
-            this.cmdAbort.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdAbort.Location = new System.Drawing.Point(1047, 7);
-            this.cmdAbort.Name = "cmdAbort";
-            this.cmdAbort.Size = new System.Drawing.Size(102, 32);
-            this.cmdAbort.TabIndex = 2;
-            this.cmdAbort.Text = "Bỏ qua (Esc)";
-            this.cmdAbort.UseVisualStyleBackColor = true;
-            this.cmdAbort.Click += new System.EventHandler(this.cmdAbort_Click);
-            // 
-            // cmdSave
-            // 
-            this.cmdSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdSave.Location = new System.Drawing.Point(951, 7);
-            this.cmdSave.Name = "cmdSave";
-            this.cmdSave.Size = new System.Drawing.Size(90, 32);
-            this.cmdSave.TabIndex = 3;
-            this.cmdSave.Text = "Lưu (F5)";
-            this.cmdSave.UseVisualStyleBackColor = true;
-            this.cmdSave.Click += new System.EventHandler(this.cmdSave_Click);
-            // 
-            // cmdDel
-            // 
-            this.cmdDel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdDel.Location = new System.Drawing.Point(855, 7);
-            this.cmdDel.Name = "cmdDel";
-            this.cmdDel.Size = new System.Drawing.Size(90, 32);
-            this.cmdDel.TabIndex = 4;
-            this.cmdDel.Text = "Xóa (F4)";
-            this.cmdDel.UseVisualStyleBackColor = true;
-            this.cmdDel.Click += new System.EventHandler(this.cmdDel_Click);
-            // 
-            // cmdEdit
-            // 
-            this.cmdEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdEdit.Location = new System.Drawing.Point(759, 7);
-            this.cmdEdit.Name = "cmdEdit";
-            this.cmdEdit.Size = new System.Drawing.Size(90, 32);
-            this.cmdEdit.TabIndex = 5;
-            this.cmdEdit.Text = "Sửa (F3)";
-            this.cmdEdit.UseVisualStyleBackColor = true;
-            this.cmdEdit.Click += new System.EventHandler(this.cmdEdit_Click);
+            this.btnDownTemplate.Dock = System.Windows.Forms.DockStyle.None;
+            this.btnDownTemplate.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cmdAdd,
+            this.cmdEdit,
+            this.cmdDel,
+            this.cmdSave,
+            this.cmdAbort,
+            this.toolStripSeparator2,
+            this.cmdStock,
+            this.toolStripSeparator3,
+            this.toolStripLabel1});
+            this.btnDownTemplate.Location = new System.Drawing.Point(0, 4);
+            this.btnDownTemplate.Name = "btnDownTemplate";
+            this.btnDownTemplate.Size = new System.Drawing.Size(666, 38);
+            this.btnDownTemplate.TabIndex = 13;
+            this.btnDownTemplate.Text = "toolStrip1";
             // 
             // cmdAdd
             // 
-            this.cmdAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdAdd.Location = new System.Drawing.Point(663, 7);
+            this.cmdAdd.Image = global::PosMiso.Properties.Resources.ic_btn_add1;
+            this.cmdAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.cmdAdd.Name = "cmdAdd";
-            this.cmdAdd.Size = new System.Drawing.Size(90, 32);
-            this.cmdAdd.TabIndex = 7;
+            this.cmdAdd.Size = new System.Drawing.Size(65, 35);
             this.cmdAdd.Text = "Thêm (F2)";
-            this.cmdAdd.UseVisualStyleBackColor = true;
-            this.cmdAdd.Click += new System.EventHandler(this.cmdAdd_Click);
+            this.cmdAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.cmdAdd.ToolTipText = "Thêm (F2)";
+            this.cmdAdd.Click += new System.EventHandler(this.cmdAdd_Click_1);
+            // 
+            // cmdEdit
+            // 
+            this.cmdEdit.Image = global::PosMiso.Properties.Resources.ic_btn_edit;
+            this.cmdEdit.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.cmdEdit.Name = "cmdEdit";
+            this.cmdEdit.Size = new System.Drawing.Size(53, 35);
+            this.cmdEdit.Text = "Sửa (F3)";
+            this.cmdEdit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.cmdEdit.ToolTipText = "Sửa (F3)";
+            this.cmdEdit.Click += new System.EventHandler(this.cmdEdit_Click);
+            // 
+            // cmdDel
+            // 
+            this.cmdDel.Image = global::PosMiso.Properties.Resources.ic_btn_del;
+            this.cmdDel.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.cmdDel.Name = "cmdDel";
+            this.cmdDel.Size = new System.Drawing.Size(54, 35);
+            this.cmdDel.Text = "Xóa (F4)";
+            this.cmdDel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.cmdDel.ToolTipText = "Xóa (F4)";
+            this.cmdDel.Click += new System.EventHandler(this.cmdDel_Click_2);
+            // 
+            // cmdSave
+            // 
+            this.cmdSave.Image = global::PosMiso.Properties.Resources.ic_btn_save;
+            this.cmdSave.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.cmdSave.Name = "cmdSave";
+            this.cmdSave.Size = new System.Drawing.Size(54, 35);
+            this.cmdSave.Text = "Lưu (F5)";
+            this.cmdSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.cmdSave.ToolTipText = "Lưu (F5)";
+            this.cmdSave.Click += new System.EventHandler(this.cmdSave_Click);
+            // 
+            // cmdAbort
+            // 
+            this.cmdAbort.Image = global::PosMiso.Properties.Resources.ic_btn_abort;
+            this.cmdAbort.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.cmdAbort.Name = "cmdAbort";
+            this.cmdAbort.Size = new System.Drawing.Size(61, 35);
+            this.cmdAbort.Text = "Hủy (Esc)";
+            this.cmdAbort.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.cmdAbort.ToolTipText = "Hủy (Esc)";
+            this.cmdAbort.Click += new System.EventHandler(this.cmdAbort_Click_1);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 38);
+            // 
+            // cmdStock
+            // 
+            this.cmdStock.Image = global::PosMiso.Properties.Resources.ic_btn_remain_stock;
+            this.cmdStock.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.cmdStock.Name = "cmdStock";
+            this.cmdStock.Size = new System.Drawing.Size(78, 35);
+            this.cmdStock.Text = "Tồn kho (F9)";
+            this.cmdStock.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.cmdStock.ToolTipText = "Tồn kho (F9)";
+            this.cmdStock.Click += new System.EventHandler(this.cmdStock_Click_1);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 38);
+            // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(246, 35);
+            this.toolStripLabel1.Text = "Nhấn: Ctr+Q: Quét mã, Ctr+I: Nhập thủ công";
             // 
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 48);
+            this.splitContainer1.Location = new System.Drawing.Point(0, 82);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -299,7 +294,7 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.panel5);
             this.splitContainer1.Panel2.Controls.Add(this.panel4);
-            this.splitContainer1.Size = new System.Drawing.Size(1368, 674);
+            this.splitContainer1.Size = new System.Drawing.Size(1368, 686);
             this.splitContainer1.SplitterDistance = 1085;
             this.splitContainer1.TabIndex = 6;
             // 
@@ -312,7 +307,7 @@
             this.grdPhieuBH.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCheckEdit1,
             this.repositoryItem});
-            this.grdPhieuBH.Size = new System.Drawing.Size(1085, 477);
+            this.grdPhieuBH.Size = new System.Drawing.Size(1085, 489);
             this.grdPhieuBH.TabIndex = 1;
             this.grdPhieuBH.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvPhieuBH});
@@ -340,6 +335,7 @@
             this.colGhichu1});
             this.gvPhieuBH.GridControl = this.grdPhieuBH;
             this.gvPhieuBH.Name = "gvPhieuBH";
+            this.gvPhieuBH.OptionsNavigation.EnterMoveNextColumn = true;
             this.gvPhieuBH.OptionsView.ShowGroupPanel = false;
             this.gvPhieuBH.InitNewRow += new DevExpress.XtraGrid.Views.Grid.InitNewRowEventHandler(this.gvPhieuBH_InitNewRow);
             this.gvPhieuBH.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gvPhieuBH_CellValueChanged);
@@ -710,7 +706,6 @@
             this.txtGhichu.Name = "txtGhichu";
             this.txtGhichu.Size = new System.Drawing.Size(528, 22);
             this.txtGhichu.TabIndex = 1;
-            this.txtGhichu.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.txtGhichu_PreviewKeyDown);
             // 
             // txtDienthoai
             // 
@@ -803,7 +798,7 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(0, 197);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(279, 477);
+            this.panel5.Size = new System.Drawing.Size(279, 489);
             this.panel5.TabIndex = 1;
             // 
             // panel7
@@ -950,11 +945,13 @@
             // cmdPrint
             // 
             this.cmdPrint.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdPrint.Image = global::PosMiso.Properties.Resources.ic_btn_print;
             this.cmdPrint.Location = new System.Drawing.Point(15, 14);
             this.cmdPrint.Name = "cmdPrint";
             this.cmdPrint.Size = new System.Drawing.Size(100, 32);
             this.cmdPrint.TabIndex = 8;
             this.cmdPrint.Text = "In (F6)";
+            this.cmdPrint.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.cmdPrint.UseVisualStyleBackColor = true;
             this.cmdPrint.Click += new System.EventHandler(this.cmdPrint_Click);
             // 
@@ -1115,6 +1112,8 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.btnDownTemplate.ResumeLayout(false);
+            this.btnDownTemplate.PerformLayout();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
@@ -1143,23 +1142,8 @@
             this.ResumeLayout(false);
 
         }
-
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private DevExpress.XtraEditors.SimpleButton btnExit;
-        private DevExpress.XtraEditors.LabelControl lblTitle;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btnExit1;
-        private System.Windows.Forms.Button cmdAbort;
-        private System.Windows.Forms.Button cmdSave;
-        private System.Windows.Forms.Button cmdDel;
-        private System.Windows.Forms.Button cmdEdit;
-        private System.Windows.Forms.Button cmdAdd;
-        private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.GroupBox groupBox1;
         private Model.CustomGridLookUpEdit txtMadv;
         private Model.CustomGridView viewKH;
         private DevExpress.XtraGrid.Columns.GridColumn colMakhid;
@@ -1232,7 +1216,6 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button cmdPrint;
-        private System.Windows.Forms.Button cmdStock;
         private Model.RepositoryItemCustomGridLookUpEdit repositoryItem;
         private Model.CustomGridView viewSP;
         private DevExpress.XtraGrid.Columns.GridColumn colMaspid1;
@@ -1240,5 +1223,16 @@
         private DevExpress.XtraGrid.Columns.GridColumn colTensp1;
         private DevExpress.XtraGrid.Columns.GridColumn colDvt1;
         private DevExpress.XtraGrid.Columns.GridColumn colQuycach1;
+        private System.Windows.Forms.ToolStrip btnDownTemplate;
+        private System.Windows.Forms.ToolStripButton cmdAdd;
+        private System.Windows.Forms.ToolStripButton cmdEdit;
+        private System.Windows.Forms.ToolStripButton cmdDel;
+        private System.Windows.Forms.ToolStripButton cmdSave;
+        private System.Windows.Forms.ToolStripButton cmdAbort;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripButton cmdStock;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
+
     }
 }

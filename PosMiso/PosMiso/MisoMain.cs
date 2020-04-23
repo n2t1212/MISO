@@ -271,6 +271,21 @@ namespace PosMiso
                 Cursor.Current = currentCursor;
         }
 
+        private void handleRenderForm(bool isMdiParent, Type obj, string frmName = "", string mCaption = "", string mPermit = "")
+        {
+            Form frm = Activator.CreateInstance(obj) as Form;
+            frm.Name = frmName;
+            frm.Text = mCaption.Replace("&", " ");
+            frm.Tag = mPermit;
+
+            if (isMdiParent)
+            {
+                frm.MdiParent = this;
+            }
+            
+            frm.Show();
+        }
+
         private void OpenForm(string frmName = "", string mCaption = "")
         {
             if (frmName == "")
@@ -283,7 +298,6 @@ namespace PosMiso
                 if (!CheckFormOpening(frmName))
                 {
                     Type obj = Assembly.GetExecutingAssembly().GetType("PosMiso.View." + frmName);
-                    Form frm;
                     if (obj != null)
                     {
                         if (Utils.isUsingDateForm(frmName))
@@ -295,35 +309,19 @@ namespace PosMiso
                                     MTGlobal.MT_LOAIP = MTGlobal.BH;
                                     if (Utils.ChonQuay(MTGlobal.BH))
                                     {
-                                        frm = Activator.CreateInstance(obj) as Form;
-                                        frm.Name = frmName;
-                                        frm.Text = mCaption.Replace("&", " ");
-                                        frm.Tag = mPermit;
-
-                                        frm.MdiParent = this;
-                                        frm.Show();
+                                        handleRenderForm(true, obj, frmName, mCaption, mPermit);
                                     }
                                 }
                                 else
                                 {
-                                    frm = Activator.CreateInstance(obj) as Form;
-                                    frm.Name = frmName;
-                                    frm.Text = mCaption.Replace("&", " ");
-                                    frm.Tag = mPermit;
-
-                                    frm.MdiParent = this;
-                                    frm.Show();
+                                    handleRenderForm(true, obj, frmName, mCaption, mPermit);
                                 }
                             }
                         }
                         else
                         {
-                            frm = Activator.CreateInstance(obj) as Form;
-                            frm.Name = frmName;
-                            frm.Text = mCaption.Replace("&", " ");
-                            frm.Tag = mPermit;
-                            frm.MdiParent = this;
-                            frm.Show();
+                            bool isMdiParent = Utils.isMdiParent(frmName);
+                            handleRenderForm(isMdiParent, obj, frmName, mCaption, mPermit);
                         }
                     }
                 }

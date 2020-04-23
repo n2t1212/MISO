@@ -30,7 +30,7 @@ namespace PosMiso.View
         DevExpress.Utils.WaitDialogForm Dlg;
 
         MTGlobal.MT_ROLE pACT_ROLE;
-        private MTGlobal.MT_BUTTONACTION MTButton;
+        private MTGlobal.MT_TOOL_TRIP_BUTTONACTION MTButton;
 
         private DataTable otblSP = null;
 
@@ -82,8 +82,8 @@ namespace PosMiso.View
             MTButton.cmdDel = this.cmdDel;
             MTButton.cmdSave = this.cmdSave;
             MTButton.cmdAbort = this.cmdAbort;
-            MTButton.cmdPrint = this.cmdPrint;
-            MTGlobal.SetButtonAction(pACT_ROLE, MTButton, "INIT");
+            //MTButton.cmdPrint = this.cmdPrint;
+            MTGlobal.SetToolStripButtonAction(pACT_ROLE, MTButton, "INIT");
         }
 
         private void setReadOnly(bool ReadOnly = false)
@@ -235,7 +235,7 @@ namespace PosMiso.View
                 }
 
                 setReadOnly(false);
-                MTGlobal.SetButtonAction(pACT_ROLE, MTButton, "ADD");
+                MTGlobal.SetToolStripButtonAction(pACT_ROLE, MTButton, "ADD");
                 txtSophieu.Focus();
                 isEdit = true;
             }
@@ -245,7 +245,7 @@ namespace PosMiso.View
         private void fdoEdit()
         {
             setReadOnly(false);
-            MTGlobal.SetButtonAction(pACT_ROLE, MTButton, "EDIT");
+            MTGlobal.SetToolStripButtonAction(pACT_ROLE, MTButton, "EDIT");
             isEdit = true;
             txtSophieu.Focus();
             if (SysPar.SetGridReadOnly(false, gvPhieuNhap))
@@ -327,7 +327,7 @@ namespace PosMiso.View
                 if (Rs == "")
                 {
                     setReadOnly(true);
-                    MTGlobal.SetButtonAction(pACT_ROLE, MTButton, "SAVE");
+                    MTGlobal.SetToolStripButtonAction(pACT_ROLE, MTButton, "SAVE");
                     SysPar.SetGridReadOnly(true, gvPhieuNhap);
                     isEdit = false;
                 }
@@ -458,7 +458,38 @@ namespace PosMiso.View
                     pPhieuNXID = "";
                     BindData();
                     setReadOnly(true);
-                    MTGlobal.SetButtonAction(pACT_ROLE, MTButton, "ABORT");
+                    MTGlobal.SetToolStripButtonAction(pACT_ROLE, MTButton, "ABORT");
+                }
+                else
+                {
+                    Utils.showMessage("Không thể xóa phiếu, vui lòng kiểm tra lại", "Thông báo");
+                }
+
+            }
+        }
+
+        private void fdoAbort()
+        {
+            BindData();
+            setReadOnly(true);
+            MTGlobal.SetToolStripButtonAction(pACT_ROLE, MTButton, "ABORT");
+        }
+
+        private void fdoDel()
+        {
+            if (pPhieuNXID == "")
+            {
+                Utils.showMessage("Bạn chưa chọn phiếu cần xóa..", "Lưu ý");
+                return;
+            }
+            if (Utils.ConfirmMessage("Bạn có chắc muốn xóa phiếu này?", "Xác nhận"))
+            {
+                if (new modPhieuNX().DelPhieuNX(pPhieuNXID))
+                {
+                    pPhieuNXID = "";
+                    BindData();
+                    setReadOnly(true);
+                    MTGlobal.SetToolStripButtonAction(pACT_ROLE, MTButton, "ABORT");
                 }
                 else
                 {
@@ -477,7 +508,7 @@ namespace PosMiso.View
         {
             BindData();
             setReadOnly(true);
-            MTGlobal.SetButtonAction(pACT_ROLE, MTButton, "ABORT");
+            MTGlobal.SetToolStripButtonAction(pACT_ROLE, MTButton, "ABORT");
         }
 
         private void btnExit1_Click(object sender, EventArgs e)
@@ -748,13 +779,22 @@ namespace PosMiso.View
             {
                 BindData();
                 setReadOnly(true);
-                MTGlobal.SetButtonAction(pACT_ROLE, MTButton, "ABORT");
+                MTGlobal.SetToolStripButtonAction(pACT_ROLE, MTButton, "ABORT");
             }
         }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            btnExit1_Click(sender, e);
+            System.Threading.Thread vThread = new System.Threading.Thread(() =>
+            {
+                try
+                {
+                    MTSynData.doSyncPost();
+                }
+                catch { }
+            });
+            vThread.Start();
+            this.Close();
         }
 
         private void txtMakho_Leave(object sender, EventArgs e)
@@ -861,6 +901,101 @@ namespace PosMiso.View
             {
                 String tenlydo = vRow[0]["Lydo"].ToString();
                 txtLydo.Text = tenlydo;
+            }
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            fdoAdd();
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            fdoEdit();
+        }
+
+        private void toolStripButton4_Click(object sender, EventArgs e)
+        {
+            fdoDel();
+        }
+
+        private void toolStripButton5_Click(object sender, EventArgs e)
+        {
+            fdoSave();
+        }
+
+        private void toolStripButton6_Click(object sender, EventArgs e)
+        {
+            fdoAbort();
+        }
+
+        private void toolStripButton7_Click(object sender, EventArgs e)
+        {
+            if (pPhieuNXID == "")
+            {
+                Utils.showMessage("Bạn chưa chọn phiếu để in...", "Lưu ý");
+            }
+            new MTReport().rptNX_Phieunhap(pPhieuNXID);
+        }
+
+        private void cmdExit_Click(object sender, EventArgs e)
+        {
+            System.Threading.Thread vThread = new System.Threading.Thread(() =>
+            {
+                try
+                {
+                    MTSynData.doSyncPost();
+                }
+                catch { }
+            });
+            vThread.Start();
+            this.Close();
+        }
+
+        private void grdPhieuNhap_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            if (e.KeyCode == Keys.F2)
+            {
+                fdoAdd();
+            }
+            else if (e.KeyCode == Keys.F3)
+            {
+                fdoEdit();
+            }
+            else if (e.KeyCode == Keys.F4)
+            {
+                fdoDel();
+            }
+            else if (e.KeyCode == Keys.F5)
+            {
+                fdoSave();
+            }
+            else if (e.KeyCode == Keys.F7)
+            {
+                if (pPhieuNXID == "")
+                {
+                    Utils.showMessage("Bạn chưa chọn phiếu để in...", "Lưu ý");
+                }
+                new MTReport().rptNX_Phieuxuat(pPhieuNXID);
+            }
+            else if (e.KeyCode == Keys.F8)
+            {
+                System.Threading.Thread vThread = new System.Threading.Thread(() =>
+                {
+                    try
+                    {
+                        MTSynData.doSyncPost();
+                    }
+                    catch { }
+                });
+                vThread.Start();
+                this.Close();
+            }
+            else if (e.KeyCode == Keys.Escape)
+            {
+                BindData();
+                setReadOnly(true);
+                MTGlobal.SetToolStripButtonAction(pACT_ROLE, MTButton, "ABORT");
             }
         }
         

@@ -68,5 +68,10 @@ namespace PosMiso.View
                 Utils.showMessage("Lỗi. Không thể sao lưu dữ liệu", "", "Thông báo");
             }
         }
+
+        private void cmdEdit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
