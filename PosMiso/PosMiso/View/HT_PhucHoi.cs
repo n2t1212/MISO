@@ -42,44 +42,6 @@ namespace PosMiso.View
               
         }
 
-        private void btnCheckConnect_Click(object sender, EventArgs e)
-        {
-            if (cbxServer.SelectedItem == null)
-            {
-                Utils.showMessage("Vui lòng chọn server", "Thông báo");
-                cbxServer.Focus();
-                return;
-            }
-            SERVER = cbxServer.SelectedItem.ToString();
-            USERNAME = txtUsername.Text.Trim();
-            PASSWORD = txtPassword.Text.Trim();
-
-            if (USERNAME.Length == 0)
-            {
-                Utils.showMessage("Tài khoản không được bỏ trống", "Thông báo");
-                return;
-            }
-
-            if (PASSWORD.Length == 0)
-            {
-                Utils.showMessage("Mật khẩu không được bỏ trống", "Thông báo");
-                return;
-            }
-
-            //string testConnectionStr = string.Format(@"Data Source={0};Initial Catalog={1};Persist Security Info=True;User ID={2};Password={3};Max Pool Size=2000", SERVER, MTGlobal.MT_DBNAME, USERNAME, PASSWORD);
-            string testConnectionStr = string.Format(@"Data Source={0};Persist Security Info=True;User ID={1};Password={2};Max Pool Size=2000", SERVER, USERNAME, PASSWORD);
-
-            if (isConnection(testConnectionStr))
-            {
-                Utils.showMessage("Kết nối thành công", "Thông báo");
-                btnCheckConnect.Visible = false;
-                showOrHideRestoreData(true);
-                return;
-            }
-
-            txtCSDL.Focus();
-        }
-
         private bool isConnection(string connectionStr)
         {
             try
@@ -205,7 +167,17 @@ namespace PosMiso.View
             }
         }
 
-        private void btnRestore_Click(object sender, EventArgs e)
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnExit1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnRestore_Click_1(object sender, EventArgs e)
         {
             if (txtCSDL.Text.ToString() == null)
             {
@@ -266,6 +238,44 @@ namespace PosMiso.View
             {
                 Utils.showMessage("Có lỗi trong quá trình phục hồi dữ liệu", "Thông báo");
             }
+        }
+
+        private void btnCheckConnect_Click_1(object sender, EventArgs e)
+        {
+            if (cbxServer.SelectedItem == null)
+            {
+                Utils.showMessage("Vui lòng chọn server", "Thông báo");
+                cbxServer.Focus();
+                return;
+            }
+            SERVER = cbxServer.SelectedItem.ToString();
+            USERNAME = txtUsername.Text.Trim();
+            PASSWORD = txtPassword.Text.Trim();
+
+            if (USERNAME.Length == 0)
+            {
+                Utils.showMessage("Tài khoản không được bỏ trống", "Thông báo");
+                return;
+            }
+
+            if (PASSWORD.Length == 0)
+            {
+                Utils.showMessage("Mật khẩu không được bỏ trống", "Thông báo");
+                return;
+            }
+
+            //string testConnectionStr = string.Format(@"Data Source={0};Initial Catalog={1};Persist Security Info=True;User ID={2};Password={3};Max Pool Size=2000", SERVER, MTGlobal.MT_DBNAME, USERNAME, PASSWORD);
+            string testConnectionStr = string.Format(@"Data Source={0};Persist Security Info=True;User ID={1};Password={2};Max Pool Size=2000", SERVER, USERNAME, PASSWORD);
+
+            if (isConnection(testConnectionStr))
+            {
+                Utils.showMessage("Kết nối thành công", "Thông báo");
+                btnCheckConnect.Visible = false;
+                showOrHideRestoreData(true);
+                return;
+            }
+
+            txtCSDL.Focus();
         }
 
     }

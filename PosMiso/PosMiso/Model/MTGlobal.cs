@@ -698,7 +698,7 @@ namespace PosMiso.Model
                    arrPara[2].Direction = ParameterDirection.Output;
 
                    new MTSQLServer().wExec("spHT_Ketsoton", arrPara);
-                   if (arrPara[2].Value.ToString() == "1") {
+                   if (arrPara[2].Value != null && arrPara[2].Value.ToString() == "1") {
                        Utils.showMessage("Bạn chưa kết số dư tháng trước..", "Thông báo");
                        return;
                    }

@@ -73,5 +73,15 @@ namespace PosMiso.View
         {
             this.Close();
         }
+
+        private void btnExit1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

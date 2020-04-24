@@ -380,7 +380,9 @@ namespace PosMiso.Model
             return formsName.Contains(formName);
         }
 
-        public static String[] formsNameWithoutMdiParent = new String[1] { "CN_ChungTu" };
+        public static String[] formsNameWithoutMdiParent = new String[3] { "CN_ChungTu",
+                                                                           "HT_SaoLuu",
+                                                                           "HT_PhucHoi"};
 
         public static bool isMdiParent(String formName)
         {

@@ -342,3 +342,5 @@ C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\obj\Debug\PosMiso.exe.license
 F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.DM_NhanVien.resources
 F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.HT_NguoiDung.resources
 F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.HT_NhomQuyen.resources
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.DM_DinhMucTichLuy.resources
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.DM_BangGia.resources

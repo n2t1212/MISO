@@ -213,12 +213,34 @@ namespace PosMiso
             String frmName = menuItem.Name;
             String description = menuItem.Text;
 
+            // handle system functionality if any (OpenForm function won't be called)
+            handleSystemFuntionality(frmName);
+
+            OpenForm(frmName, description);
+        }
+
+        private void handleSystemFuntionality(String frmName)
+        {
             if (frmName == "HT_Thoat")
             {
                 this.Close();
             }
 
-            OpenForm(frmName, description);
+            if (frmName == "HT_ThongTin")
+            {
+                HT_Register frm = new HT_Register();
+                frm.ShowDialog();
+                return;
+            }
+
+            if (frmName == "HT_ChuyenSoDu")
+            {
+                if (Utils.ChonThoiGian(false, true, false))
+                {
+                    MTGlobal.Ketchuyensodu();
+                }
+                return;
+            }
         }
 
         void menuItem_Click(object sender, EventArgs e)

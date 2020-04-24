@@ -347,11 +347,23 @@
     <Compile Include="View\dlg_TonKho.Designer.cs">
       <DependentUpon>dlg_TonKho.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\DM_BangGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\DM_BangGia.Designer.cs">
+      <DependentUpon>DM_BangGia.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\DM_ChanhXe.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\DM_ChanhXe.Designer.cs">
       <DependentUpon>DM_ChanhXe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\DM_DinhMucTichLuy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\DM_DinhMucTichLuy.Designer.cs">
+      <DependentUpon>DM_DinhMucTichLuy.cs</DependentUpon>
     </Compile>
     <Compile Include="View\DM_DonGia.cs">
       <SubType>Form</SubType>
@@ -640,8 +652,14 @@
     <EmbeddedResource Include="View\dlg_TonKho.resx">
       <DependentUpon>dlg_TonKho.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\DM_BangGia.resx">
+      <DependentUpon>DM_BangGia.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\DM_ChanhXe.resx">
       <DependentUpon>DM_ChanhXe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\DM_DinhMucTichLuy.resx">
+      <DependentUpon>DM_DinhMucTichLuy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\DM_DonGia.resx">
       <DependentUpon>DM_DonGia.cs</DependentUpon>
