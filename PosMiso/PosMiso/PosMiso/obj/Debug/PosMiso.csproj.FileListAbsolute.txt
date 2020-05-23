@@ -1,0 +1,346 @@
+c:\users\hnc\documents\visual studio 2012\Projects\PosMiso\PosMiso\bin\Debug\PosMiso.exe
+c:\users\hnc\documents\visual studio 2012\Projects\PosMiso\PosMiso\bin\Debug\PosMiso.pdb
+c:\users\hnc\documents\visual studio 2012\Projects\PosMiso\PosMiso\obj\Debug\PosMiso.Properties.Resources.resources
+c:\users\hnc\documents\visual studio 2012\Projects\PosMiso\PosMiso\obj\Debug\PosMiso.csproj.GenerateResource.Cache
+c:\users\hnc\documents\visual studio 2012\Projects\PosMiso\PosMiso\obj\Debug\PosMiso.exe.licenses
+c:\users\hnc\documents\visual studio 2012\Projects\PosMiso\PosMiso\obj\Debug\PosMiso.exe
+c:\users\hnc\documents\visual studio 2012\Projects\PosMiso\PosMiso\obj\Debug\PosMiso.pdb
+C:\Users\HNC\documents\visual studio 2012\Projects\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptBH_InBill.resources
+C:\Users\HNC\documents\visual studio 2012\Projects\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptBH_InBill_80mm.resources
+C:\Users\HNC\documents\visual studio 2012\Projects\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptCN_CanthuCT.resources
+C:\Users\HNC\documents\visual studio 2012\Projects\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptCN_CanthuCT_Sub.resources
+C:\Users\HNC\documents\visual studio 2012\Projects\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptCN_CanthuTH.resources
+C:\Users\HNC\documents\visual studio 2012\Projects\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptCX_Phieuguichanh.resources
+C:\Users\HNC\documents\visual studio 2012\Projects\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptCX_Thongkeguichanh.resources
+C:\Users\HNC\documents\visual studio 2012\Projects\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptDM_SanPham.resources
+C:\Users\HNC\documents\visual studio 2012\Projects\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptHH_Baocaonhapxuatton.resources
+C:\Users\HNC\documents\visual studio 2012\Projects\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptHH_Barcode_25_15.resources
+C:\Users\HNC\documents\visual studio 2012\Projects\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptHH_Barcode_35_22.resources
+C:\Users\HNC\documents\visual studio 2012\Projects\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptHH_QRCode_25_15.resources
+C:\Users\HNC\documents\visual studio 2012\Projects\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptHH_QRCode_30_30.resources
+C:\Users\HNC\documents\visual studio 2012\Projects\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptHH_QRCode_35_22.resources
+C:\Users\HNC\documents\visual studio 2012\Projects\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptHH_QRCode_3temImg_35_22.resources
+C:\Users\HNC\documents\visual studio 2012\Projects\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptHH_Thekho.resources
+C:\Users\HNC\documents\visual studio 2012\Projects\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptHH_TheKho_bk.resources
+C:\Users\HNC\documents\visual studio 2012\Projects\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptNX_Baocaobanhang.resources
+C:\Users\HNC\documents\visual studio 2012\Projects\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptNX_Phieunhap.resources
+C:\Users\HNC\documents\visual studio 2012\Projects\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptNX_Phieuxuat.resources
+C:\Users\HNC\documents\visual studio 2012\Projects\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptTC_Phieuchi.resources
+C:\Users\HNC\documents\visual studio 2012\Projects\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptTC_Phieuthu.resources
+C:\Users\HNC\documents\visual studio 2012\Projects\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptTL_DiemTichLuy.resources
+C:\Users\HNC\documents\visual studio 2012\Projects\PosMiso\PosMiso\bin\Debug\Newtonsoft.Json.dll
+C:\Users\HNC\documents\visual studio 2012\Projects\PosMiso\PosMiso\bin\Debug\System.Net.Http.Extensions.dll
+C:\Users\HNC\documents\visual studio 2012\Projects\PosMiso\PosMiso\bin\Debug\System.Net.Http.Primitives.dll
+C:\Users\HNC\documents\visual studio 2012\Projects\PosMiso\PosMiso\bin\Debug\Newtonsoft.Json.xml
+C:\Users\HNC\documents\visual studio 2012\Projects\PosMiso\PosMiso\bin\Debug\System.Net.Http.Extensions.xml
+C:\Users\HNC\documents\visual studio 2012\Projects\PosMiso\PosMiso\bin\Debug\System.Net.Http.Primitives.xml
+C:\Users\HNC\documents\visual studio 2012\Projects\PosMiso\PosMiso\obj\Debug\PosMiso.View.PrintPreview.resources
+C:\Users\HNC\documents\visual studio 2012\Projects\PosMiso\PosMiso\obj\Debug\PosMiso.View.HT_Login.resources
+C:\Users\HNC\documents\visual studio 2012\Projects\PosMiso\PosMiso\obj\Debug\PosMiso.View.HT_Register.resources
+C:\Users\HNC\documents\visual studio 2012\Projects\PosMiso\PosMiso\obj\Debug\PosMiso.MisoMain.resources
+C:\Users\HNC\documents\visual studio 2012\Projects\PosMiso\PosMiso\obj\Debug\PosMiso.View.HT_CreateConection.resources
+C:\Users\HNC\documents\visual studio 2012\Projects\PosMiso\PosMiso\obj\Debug\PosMiso.View.HT_StartingForm.resources
+C:\Users\HNC\documents\visual studio 2012\Projects\PosMiso\PosMiso\obj\Debug\PosMiso.csprojResolveAssemblyReference.cache
+D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.MisoMain.resources
+D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.Properties.Resources.resources
+D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptBH_InBill.resources
+D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptBH_InBill_80mm.resources
+D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptCN_CanthuCT.resources
+D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptCN_CanthuCT_Sub.resources
+D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptCN_CanthuTH.resources
+D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptCX_Phieuguichanh.resources
+D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptCX_Thongkeguichanh.resources
+D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptDM_SanPham.resources
+D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptHH_Baocaonhapxuatton.resources
+D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptHH_Barcode_25_15.resources
+D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptHH_Barcode_35_22.resources
+D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptHH_QRCode_25_15.resources
+D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptHH_QRCode_30_30.resources
+D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptHH_QRCode_35_22.resources
+D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptHH_QRCode_3temImg_35_22.resources
+D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptHH_Thekho.resources
+D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptHH_TheKho_bk.resources
+D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptNX_Baocaobanhang.resources
+D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptNX_Phieunhap.resources
+D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptNX_Phieuxuat.resources
+D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptTC_Phieuchi.resources
+D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptTC_Phieuthu.resources
+D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptTL_DiemTichLuy.resources
+D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.DM_SanPham.resources
+D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.frmPrintPreview.resources
+D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.HT_CreateConection.resources
+D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.HT_Login.resources
+D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.HT_Register.resources
+D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.HT_StartingForm.resources
+D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.PrintPreview.resources
+D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.csproj.GenerateResource.Cache
+D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.exe.licenses
+D:\Git\MISO\PISO\PosMiso\PosMiso\bin\Debug\PosMiso.exe
+D:\Git\MISO\PISO\PosMiso\PosMiso\bin\Debug\PosMiso.pdb
+D:\Git\MISO\PISO\PosMiso\PosMiso\bin\Debug\Newtonsoft.Json.dll
+D:\Git\MISO\PISO\PosMiso\PosMiso\bin\Debug\System.Net.Http.Extensions.dll
+D:\Git\MISO\PISO\PosMiso\PosMiso\bin\Debug\System.Net.Http.Primitives.dll
+D:\Git\MISO\PISO\PosMiso\PosMiso\bin\Debug\Newtonsoft.Json.xml
+D:\Git\MISO\PISO\PosMiso\PosMiso\bin\Debug\System.Net.Http.Extensions.xml
+D:\Git\MISO\PISO\PosMiso\PosMiso\bin\Debug\System.Net.Http.Primitives.xml
+D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.rptBarCode2515.resources
+D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.rptBarCode3522.resources
+D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.rptQRCode2515.resources
+D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.rptQRCode3522.resources
+D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.exe
+D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.pdb
+D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.frmInMa.resources
+D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.dlg_ImportSanPham.resources
+D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.csprojResolveAssemblyReference.cache
+D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.DM_KhachHang.resources
+D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.DM_DonGia.resources
+D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.dlg_ImportGiaSanPham.resources
+D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.DM_NhomSanPham.resources
+D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.DM_LyDo.resources
+D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.DM_Kho.resources
+D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.DM_Xe.resources
+D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.HT_SaoLuu.resources
+D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.HT_PhucHoi.resources
+D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.HT_QuyenHan.resources
+D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.dlg_AddQuyenHan.resources
+F:\Git\MISO\PosMiso\PosMiso\bin\Debug\PosMiso.exe
+F:\Git\MISO\PosMiso\PosMiso\bin\Debug\PosMiso.pdb
+F:\Git\MISO\PosMiso\PosMiso\bin\Debug\Newtonsoft.Json.dll
+F:\Git\MISO\PosMiso\PosMiso\bin\Debug\System.Net.Http.Extensions.dll
+F:\Git\MISO\PosMiso\PosMiso\bin\Debug\System.Net.Http.Primitives.dll
+F:\Git\MISO\PosMiso\PosMiso\bin\Debug\Newtonsoft.Json.xml
+F:\Git\MISO\PosMiso\PosMiso\bin\Debug\System.Net.Http.Extensions.xml
+F:\Git\MISO\PosMiso\PosMiso\bin\Debug\System.Net.Http.Primitives.xml
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.MisoMain.resources
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.Properties.Resources.resources
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptBH_InBill.resources
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptBH_InBill_80mm.resources
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptCN_CanthuCT.resources
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptCN_CanthuCT_Sub.resources
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptCN_CanthuTH.resources
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptCX_Phieuguichanh.resources
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptCX_Thongkeguichanh.resources
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptDM_SanPham.resources
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptHH_Baocaonhapxuatton.resources
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptHH_Barcode_25_15.resources
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptHH_Barcode_35_22.resources
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptHH_QRCode_25_15.resources
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptHH_QRCode_30_30.resources
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptHH_QRCode_35_22.resources
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptHH_QRCode_3temImg_35_22.resources
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptHH_Thekho.resources
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptHH_TheKho_bk.resources
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptNX_Baocaobanhang.resources
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptNX_Phieunhap.resources
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptNX_Phieuxuat.resources
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptTC_Phieuchi.resources
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptTC_Phieuthu.resources
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptTL_DiemTichLuy.resources
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.rptBarCode2515.resources
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.rptBarCode3522.resources
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.rptQRCode2515.resources
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.rptQRCode3522.resources
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.BH_PhieuBH.resources
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.dlg_AddQuyenHan.resources
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.dlg_ChonNgay.resources
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.dlg_ChonQuay.resources
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.dlg_ImportGiaSanPham.resources
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.dlg_ImportSanPham.resources
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.DM_ChanhXe.resources
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.DM_DonGia.resources
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.DM_KhachHang.resources
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.DM_Kho.resources
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.DM_LyDo.resources
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.DM_NhomSanPham.resources
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.DM_SanPham.resources
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.DM_Xe.resources
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.frmPrintPreview.resources
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.HH_PhieuNhap.resources
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.HH_PhieuXuat.resources
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.HT_CreateConection.resources
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.HT_Login.resources
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.HT_PhucHoi.resources
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.HT_QuyenHan.resources
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.HT_Register.resources
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.HT_SaoLuu.resources
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.HT_StartingForm.resources
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.NX_PhieuNhap.resources
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.NX_PhieuXuat.resources
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.PrintPreview.resources
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.frmInMa.resources
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.TC_PhieuChi.resources
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.TC_PhieuThu.resources
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.TC_PhieuThuFrm.resources
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.csproj.GenerateResource.Cache
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.exe.licenses
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.exe
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.pdb
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.csprojResolveAssemblyReference.cache
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.BH_PhieuBHFrm.resources
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.dlg_TonKho.resources
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.CX_PhieuCX.resources
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.CN_ChungTu.resources
+D:\NTT\PosMiso\PosMiso\obj\Debug\PosMiso.exe
+D:\NTT\PosMiso\PosMiso\obj\Debug\PosMiso.pdb
+D:\NTT\PosMiso\PosMiso\bin\Debug\PosMiso.exe
+D:\NTT\PosMiso\PosMiso\bin\Debug\PosMiso.pdb
+D:\NTT\PosMiso\PosMiso\bin\Debug\Newtonsoft.Json.dll
+D:\NTT\PosMiso\PosMiso\bin\Debug\System.Net.Http.Extensions.dll
+D:\NTT\PosMiso\PosMiso\bin\Debug\System.Net.Http.Primitives.dll
+D:\NTT\PosMiso\PosMiso\bin\Debug\Newtonsoft.Json.xml
+D:\NTT\PosMiso\PosMiso\bin\Debug\System.Net.Http.Extensions.xml
+D:\NTT\PosMiso\PosMiso\bin\Debug\System.Net.Http.Primitives.xml
+D:\NTT\PosMiso\PosMiso\obj\Debug\PosMiso.MisoMain.resources
+D:\NTT\PosMiso\PosMiso\obj\Debug\PosMiso.Properties.Resources.resources
+D:\NTT\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptBH_InBill.resources
+D:\NTT\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptBH_InBill_80mm.resources
+D:\NTT\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptCN_CanthuCT.resources
+D:\NTT\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptCN_CanthuCT_Sub.resources
+D:\NTT\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptCN_CanthuTH.resources
+D:\NTT\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptCX_Phieuguichanh.resources
+D:\NTT\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptCX_Thongkeguichanh.resources
+D:\NTT\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptDM_SanPham.resources
+D:\NTT\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptHH_Baocaonhapxuatton.resources
+D:\NTT\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptHH_Barcode_25_15.resources
+D:\NTT\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptHH_Barcode_35_22.resources
+D:\NTT\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptHH_QRCode_25_15.resources
+D:\NTT\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptHH_QRCode_30_30.resources
+D:\NTT\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptHH_QRCode_35_22.resources
+D:\NTT\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptHH_QRCode_3temImg_35_22.resources
+D:\NTT\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptHH_Thekho.resources
+D:\NTT\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptHH_TheKho_bk.resources
+D:\NTT\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptNX_Baocaobanhang.resources
+D:\NTT\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptNX_Phieunhap.resources
+D:\NTT\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptNX_Phieuxuat.resources
+D:\NTT\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptTC_Phieuchi.resources
+D:\NTT\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptTC_Phieuthu.resources
+D:\NTT\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptTL_DiemTichLuy.resources
+D:\NTT\PosMiso\PosMiso\obj\Debug\PosMiso.rptBarCode2515.resources
+D:\NTT\PosMiso\PosMiso\obj\Debug\PosMiso.rptBarCode3522.resources
+D:\NTT\PosMiso\PosMiso\obj\Debug\PosMiso.rptQRCode2515.resources
+D:\NTT\PosMiso\PosMiso\obj\Debug\PosMiso.rptQRCode3522.resources
+D:\NTT\PosMiso\PosMiso\obj\Debug\PosMiso.View.BH_PhieuBH.resources
+D:\NTT\PosMiso\PosMiso\obj\Debug\PosMiso.View.BH_PhieuBHFrm.resources
+D:\NTT\PosMiso\PosMiso\obj\Debug\PosMiso.View.CN_ChungTu.resources
+D:\NTT\PosMiso\PosMiso\obj\Debug\PosMiso.View.CX_PhieuCX.resources
+D:\NTT\PosMiso\PosMiso\obj\Debug\PosMiso.View.dlg_AddQuyenHan.resources
+D:\NTT\PosMiso\PosMiso\obj\Debug\PosMiso.View.dlg_ChonNgay.resources
+D:\NTT\PosMiso\PosMiso\obj\Debug\PosMiso.View.dlg_ChonQuay.resources
+D:\NTT\PosMiso\PosMiso\obj\Debug\PosMiso.View.dlg_ImportGiaSanPham.resources
+D:\NTT\PosMiso\PosMiso\obj\Debug\PosMiso.View.dlg_ImportSanPham.resources
+D:\NTT\PosMiso\PosMiso\obj\Debug\PosMiso.View.dlg_TonKho.resources
+D:\NTT\PosMiso\PosMiso\obj\Debug\PosMiso.View.DM_ChanhXe.resources
+D:\NTT\PosMiso\PosMiso\obj\Debug\PosMiso.View.DM_DonGia.resources
+D:\NTT\PosMiso\PosMiso\obj\Debug\PosMiso.View.DM_KhachHang.resources
+D:\NTT\PosMiso\PosMiso\obj\Debug\PosMiso.View.DM_Kho.resources
+D:\NTT\PosMiso\PosMiso\obj\Debug\PosMiso.View.DM_LyDo.resources
+D:\NTT\PosMiso\PosMiso\obj\Debug\PosMiso.View.DM_NhomSanPham.resources
+D:\NTT\PosMiso\PosMiso\obj\Debug\PosMiso.View.DM_SanPham.resources
+D:\NTT\PosMiso\PosMiso\obj\Debug\PosMiso.View.DM_Xe.resources
+D:\NTT\PosMiso\PosMiso\obj\Debug\PosMiso.frmPrintPreview.resources
+D:\NTT\PosMiso\PosMiso\obj\Debug\PosMiso.View.HH_PhieuNhap.resources
+D:\NTT\PosMiso\PosMiso\obj\Debug\PosMiso.View.HH_PhieuXuat.resources
+D:\NTT\PosMiso\PosMiso\obj\Debug\PosMiso.View.HT_CreateConection.resources
+D:\NTT\PosMiso\PosMiso\obj\Debug\PosMiso.View.HT_Login.resources
+D:\NTT\PosMiso\PosMiso\obj\Debug\PosMiso.View.HT_PhucHoi.resources
+D:\NTT\PosMiso\PosMiso\obj\Debug\PosMiso.View.HT_QuyenHan.resources
+D:\NTT\PosMiso\PosMiso\obj\Debug\PosMiso.View.HT_Register.resources
+D:\NTT\PosMiso\PosMiso\obj\Debug\PosMiso.View.HT_SaoLuu.resources
+D:\NTT\PosMiso\PosMiso\obj\Debug\PosMiso.View.HT_StartingForm.resources
+D:\NTT\PosMiso\PosMiso\obj\Debug\PosMiso.View.NX_PhieuNhap.resources
+D:\NTT\PosMiso\PosMiso\obj\Debug\PosMiso.View.NX_PhieuXuat.resources
+D:\NTT\PosMiso\PosMiso\obj\Debug\PosMiso.View.PrintPreview.resources
+D:\NTT\PosMiso\PosMiso\obj\Debug\PosMiso.frmInMa.resources
+D:\NTT\PosMiso\PosMiso\obj\Debug\PosMiso.View.TC_PhieuChi.resources
+D:\NTT\PosMiso\PosMiso\obj\Debug\PosMiso.View.TC_PhieuThu.resources
+D:\NTT\PosMiso\PosMiso\obj\Debug\PosMiso.View.TC_PhieuThuFrm.resources
+D:\NTT\PosMiso\PosMiso\obj\Debug\PosMiso.csproj.GenerateResource.Cache
+D:\NTT\PosMiso\PosMiso\obj\Debug\PosMiso.exe.licenses
+D:\NTT\PosMiso\PosMiso\obj\Debug\PosMiso.View.DM_NhanVien.resources
+D:\NTT\PosMiso\PosMiso\obj\Debug\PosMiso.View.HT_NguoiDung.resources
+D:\NTT\PosMiso\PosMiso\obj\Debug\PosMiso.View.HT_NhomQuyen.resources
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\obj\Debug\PosMiso.exe
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\obj\Debug\PosMiso.pdb
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\bin\Debug\PosMiso.exe
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\bin\Debug\PosMiso.pdb
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\bin\Debug\Newtonsoft.Json.dll
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\bin\Debug\System.Net.Http.Extensions.dll
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\bin\Debug\System.Net.Http.Primitives.dll
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\bin\Debug\Newtonsoft.Json.xml
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\bin\Debug\System.Net.Http.Extensions.xml
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\bin\Debug\System.Net.Http.Primitives.xml
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\obj\Debug\PosMiso.csprojResolveAssemblyReference.cache
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\obj\Debug\PosMiso.MisoMain.resources
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\obj\Debug\PosMiso.Properties.Resources.resources
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptBH_InBill.resources
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptBH_InBill_80mm.resources
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptCN_CanthuCT.resources
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptCN_CanthuCT_Sub.resources
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptCN_CanthuTH.resources
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptCX_Phieuguichanh.resources
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptCX_Thongkeguichanh.resources
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptDM_SanPham.resources
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptHH_Baocaonhapxuatton.resources
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptHH_Barcode_25_15.resources
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptHH_Barcode_35_22.resources
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptHH_QRCode_25_15.resources
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptHH_QRCode_30_30.resources
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptHH_QRCode_35_22.resources
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptHH_QRCode_3temImg_35_22.resources
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptHH_Thekho.resources
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptHH_TheKho_bk.resources
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptNX_Baocaobanhang.resources
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptNX_Phieunhap.resources
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptNX_Phieuxuat.resources
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptTC_Phieuchi.resources
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptTC_Phieuthu.resources
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\obj\Debug\PosMiso.Report.rptTL_DiemTichLuy.resources
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\obj\Debug\PosMiso.rptBarCode2515.resources
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\obj\Debug\PosMiso.rptBarCode3522.resources
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\obj\Debug\PosMiso.rptQRCode2515.resources
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\obj\Debug\PosMiso.rptQRCode3522.resources
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\obj\Debug\PosMiso.View.BH_PhieuBH.resources
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\obj\Debug\PosMiso.View.BH_PhieuBHFrm.resources
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\obj\Debug\PosMiso.View.CN_ChungTu.resources
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\obj\Debug\PosMiso.View.CX_PhieuCX.resources
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\obj\Debug\PosMiso.View.dlg_AddQuyenHan.resources
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\obj\Debug\PosMiso.View.dlg_ChonNgay.resources
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\obj\Debug\PosMiso.View.dlg_ChonQuay.resources
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\obj\Debug\PosMiso.View.dlg_ImportGiaSanPham.resources
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\obj\Debug\PosMiso.View.dlg_ImportSanPham.resources
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\obj\Debug\PosMiso.View.dlg_TonKho.resources
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\obj\Debug\PosMiso.View.DM_ChanhXe.resources
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\obj\Debug\PosMiso.View.DM_DonGia.resources
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\obj\Debug\PosMiso.View.DM_KhachHang.resources
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\obj\Debug\PosMiso.View.DM_Kho.resources
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\obj\Debug\PosMiso.View.DM_LyDo.resources
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\obj\Debug\PosMiso.View.DM_NhanVien.resources
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\obj\Debug\PosMiso.View.DM_NhomSanPham.resources
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\obj\Debug\PosMiso.View.DM_SanPham.resources
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\obj\Debug\PosMiso.View.DM_Xe.resources
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\obj\Debug\PosMiso.frmPrintPreview.resources
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\obj\Debug\PosMiso.View.HH_PhieuNhap.resources
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\obj\Debug\PosMiso.View.HH_PhieuXuat.resources
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\obj\Debug\PosMiso.View.HT_CreateConection.resources
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\obj\Debug\PosMiso.View.HT_Login.resources
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\obj\Debug\PosMiso.View.HT_NguoiDung.resources
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\obj\Debug\PosMiso.View.HT_NhomQuyen.resources
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\obj\Debug\PosMiso.View.HT_PhucHoi.resources
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\obj\Debug\PosMiso.View.HT_QuyenHan.resources
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\obj\Debug\PosMiso.View.HT_Register.resources
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\obj\Debug\PosMiso.View.HT_SaoLuu.resources
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\obj\Debug\PosMiso.View.HT_StartingForm.resources
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\obj\Debug\PosMiso.View.NX_PhieuNhap.resources
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\obj\Debug\PosMiso.View.NX_PhieuXuat.resources
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\obj\Debug\PosMiso.View.PrintPreview.resources
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\obj\Debug\PosMiso.frmInMa.resources
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\obj\Debug\PosMiso.View.TC_PhieuChi.resources
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\obj\Debug\PosMiso.View.TC_PhieuThu.resources
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\obj\Debug\PosMiso.View.TC_PhieuThuFrm.resources
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\obj\Debug\PosMiso.csproj.GenerateResource.Cache
+C:\Users\THUANNT\Downloads\PosMiso\PosMiso\PosMiso\obj\Debug\PosMiso.exe.licenses
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.DM_NhanVien.resources
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.HT_NguoiDung.resources
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.HT_NhomQuyen.resources
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.DM_DinhMucTichLuy.resources
+F:\Git\MISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.DM_BangGia.resources

@@ -52,7 +52,8 @@ namespace PosMiso.View
             this.pLoaiPhieu = mLoaiPhieu;
             this.pACT_ROLE = mActRole;
 
-            lblTitle.Text = mLoaiPhieu == MTGlobal.PT ? "LẬP PHIẾU THU" : "LẬP PHIẾU CHI";
+            lblTitle.Text = mLoaiPhieu == MTGlobal.PT ? "Phiếu thu - " + MTGlobal.RPT_COMPANY : "Phiếu chi - " + MTGlobal.RPT_COMPANY;
+            lblTitleText.Text = mLoaiPhieu == MTGlobal.PT ? "Phiếu thu" : "Phiếu chi";
 
             Dlg = Utils.shwWait();
 

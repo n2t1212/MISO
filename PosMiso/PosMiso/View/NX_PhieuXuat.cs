@@ -42,7 +42,7 @@ namespace PosMiso.View
         public NX_PhieuXuat(String mPhieuNXID, String mLoaiPhieu, String mTuNgay, String mDenNgay, MTGlobal.MT_ROLE mActRole, bool isAddNew = false)
         {
             InitializeComponent();
-            this.lblTitle.Text = "LẬP PHIẾU XUẤT";
+            this.lblTitle.Text = "Phiếu xuất kho - " + MTGlobal.RPT_COMPANY;
             this.pPhieuNXID = mPhieuNXID;
             this.pTuNgay = mTuNgay == "" ? DateTime.Now.ToShortDateString() : mTuNgay;
             this.pDenNgay = mDenNgay == "" ? DateTime.Now.ToShortDateString() : mDenNgay;
@@ -223,6 +223,9 @@ namespace PosMiso.View
                 txtSophieu.Text = MTGlobal.GetSophieu(MTGlobal.MT_KYHIEU_CUAHANG, this.pLoaiPhieu, mMM, mYY, MTGlobal.MT_USER_LOGIN).ToString();
                 dtpNgaylap.Text = DateTime.Now.ToShortDateString();
                 dtpNgayPS.Text = DateTime.Now.ToShortDateString();
+
+                cbxType.SelectedIndex = 0;
+                cbxDisplay.SelectedIndex = 0;
 
                 BindData();
                 if (SysPar.SetGridReadOnly(false, gvPhieuXuat))

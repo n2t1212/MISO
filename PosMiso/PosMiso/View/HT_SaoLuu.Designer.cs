@@ -65,12 +65,13 @@
             // 
             // btnSelectPath
             // 
+            this.btnSelectPath.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSelectPath.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSelectPath.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
             this.btnSelectPath.Image = global::PosMiso.Properties.Resources.ic_btn_select;
-            this.btnSelectPath.Location = new System.Drawing.Point(412, 115);
+            this.btnSelectPath.Location = new System.Drawing.Point(408, 119);
             this.btnSelectPath.Name = "btnSelectPath";
-            this.btnSelectPath.Size = new System.Drawing.Size(35, 26);
+            this.btnSelectPath.Size = new System.Drawing.Size(35, 21);
             this.btnSelectPath.TabIndex = 2;
             this.btnSelectPath.UseVisualStyleBackColor = true;
             this.btnSelectPath.Click += new System.EventHandler(this.btnSelectPath_Click);

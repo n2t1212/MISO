@@ -42,7 +42,7 @@ namespace PosMiso.View
         public NX_PhieuNhap(String mPhieuNXID, String mLoaiPhieu, String mTuNgay, String mDenNgay, MTGlobal.MT_ROLE mActRole, bool isAddNew = false)
         {
             InitializeComponent();
-            this.lblTitle.Text = "LẬP PHIẾU NHẬP";
+            this.lblTitle.Text = "Phiếu nhập kho - " + MTGlobal.RPT_COMPANY;
             this.pPhieuNXID = mPhieuNXID;
             this.pTuNgay = mTuNgay == "" ? DateTime.Now.ToShortDateString() : mTuNgay;
             this.pDenNgay = mDenNgay == "" ? DateTime.Now.ToShortDateString() : mDenNgay;
@@ -217,6 +217,8 @@ namespace PosMiso.View
         {
             try
             {
+                cbxType.SelectedIndex = 0;
+                cbxDisplay.SelectedIndex = 0;
                 int mMM = int.Parse(Convert.ToDateTime(pDenNgay).Month.ToString().PadLeft(2, '0'));
                 int mYY = int.Parse(Convert.ToDateTime(pDenNgay).Year.ToString());
                 pPhieuNXID = MTGlobal.GetNewID();

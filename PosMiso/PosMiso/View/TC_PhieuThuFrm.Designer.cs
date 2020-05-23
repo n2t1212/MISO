@@ -44,6 +44,7 @@
             this.cmdExit = new System.Windows.Forms.ToolStripButton();
             this.cmdPrint = new System.Windows.Forms.Button();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.lblTitleText = new System.Windows.Forms.Label();
             this.txtTyGia = new System.Windows.Forms.TextBox();
             this.cbNguyenTe = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -112,7 +113,7 @@
             this.colNguyente = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSoHD = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNChono = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -140,6 +141,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.viewTKNo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTKCo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewTKCo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -209,7 +211,7 @@
             this.cmdAdd.Image = global::PosMiso.Properties.Resources.ic_btn_add1;
             this.cmdAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.cmdAdd.Name = "cmdAdd";
-            this.cmdAdd.Size = new System.Drawing.Size(65, 43);
+            this.cmdAdd.Size = new System.Drawing.Size(64, 43);
             this.cmdAdd.Text = "Thêm (F2)";
             this.cmdAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.cmdAdd.ToolTipText = "Thêm (F2)";
@@ -284,7 +286,7 @@
             this.cmdExit.Image = global::PosMiso.Properties.Resources.ic_btn_exit;
             this.cmdExit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.cmdExit.Name = "cmdExit";
-            this.cmdExit.Size = new System.Drawing.Size(65, 43);
+            this.cmdExit.Size = new System.Drawing.Size(64, 43);
             this.cmdExit.Text = "Thoát (F8)";
             this.cmdExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.cmdExit.Click += new System.EventHandler(this.cmdExit_Click);
@@ -309,6 +311,7 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.lblTitleText);
             this.splitContainer1.Panel1.Controls.Add(this.txtTyGia);
             this.splitContainer1.Panel1.Controls.Add(this.cbNguyenTe);
             this.splitContainer1.Panel1.Controls.Add(this.label12);
@@ -323,10 +326,20 @@
             this.splitContainer1.SplitterDistance = 246;
             this.splitContainer1.TabIndex = 5;
             // 
+            // lblTitleText
+            // 
+            this.lblTitleText.AutoSize = true;
+            this.lblTitleText.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitleText.Location = new System.Drawing.Point(19, 9);
+            this.lblTitleText.Name = "lblTitleText";
+            this.lblTitleText.Size = new System.Drawing.Size(97, 25);
+            this.lblTitleText.TabIndex = 5;
+            this.lblTitleText.Text = "Phiếu ...";
+            // 
             // txtTyGia
             // 
             this.txtTyGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTyGia.Location = new System.Drawing.Point(935, 210);
+            this.txtTyGia.Location = new System.Drawing.Point(935, 219);
             this.txtTyGia.Name = "txtTyGia";
             this.txtTyGia.Size = new System.Drawing.Size(140, 22);
             this.txtTyGia.TabIndex = 4;
@@ -338,7 +351,7 @@
             this.cbNguyenTe.Items.AddRange(new object[] {
             "VND",
             "USD"});
-            this.cbNguyenTe.Location = new System.Drawing.Point(770, 209);
+            this.cbNguyenTe.Location = new System.Drawing.Point(770, 218);
             this.cbNguyenTe.Name = "cbNguyenTe";
             this.cbNguyenTe.Size = new System.Drawing.Size(98, 24);
             this.cbNguyenTe.TabIndex = 3;
@@ -347,7 +360,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(887, 212);
+            this.label12.Location = new System.Drawing.Point(887, 221);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(42, 16);
             this.label12.TabIndex = 2;
@@ -357,7 +370,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(706, 213);
+            this.label11.Location = new System.Drawing.Point(706, 222);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(58, 16);
             this.label11.TabIndex = 2;
@@ -373,16 +386,17 @@
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(709, 12);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(709, 38);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(366, 189);
+            this.groupBox2.Size = new System.Drawing.Size(366, 176);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chứng từ";
             // 
             // txtSoCT
             // 
+            this.txtSoCT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSoCT.Location = new System.Drawing.Point(167, 46);
             this.txtSoCT.Name = "txtSoCT";
             this.txtSoCT.Size = new System.Drawing.Size(175, 22);
@@ -390,6 +404,7 @@
             // 
             // txtSoPhieu
             // 
+            this.txtSoPhieu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSoPhieu.Location = new System.Drawing.Point(167, 21);
             this.txtSoPhieu.Name = "txtSoPhieu";
             this.txtSoPhieu.Size = new System.Drawing.Size(175, 22);
@@ -400,7 +415,7 @@
             this.txtNgayPS.EditValue = null;
             this.txtNgayPS.Location = new System.Drawing.Point(167, 98);
             this.txtNgayPS.Name = "txtNgayPS";
-            this.txtNgayPS.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNgayPS.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNgayPS.Properties.Appearance.Options.UseFont = true;
             this.txtNgayPS.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -414,7 +429,7 @@
             this.txtNgayCT.EditValue = null;
             this.txtNgayCT.Location = new System.Drawing.Point(167, 72);
             this.txtNgayCT.Name = "txtNgayCT";
-            this.txtNgayCT.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNgayCT.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNgayCT.Properties.Appearance.Options.UseFont = true;
             this.txtNgayCT.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -426,6 +441,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(38, 101);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(110, 16);
@@ -435,7 +451,8 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(55, 75);
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(38, 75);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(93, 16);
             this.label9.TabIndex = 0;
@@ -444,7 +461,8 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(45, 46);
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(38, 49);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(103, 16);
             this.label8.TabIndex = 0;
@@ -453,7 +471,8 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(71, 24);
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(38, 24);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(77, 16);
             this.label7.TabIndex = 0;
@@ -476,10 +495,10 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(13, 12);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(16, 38);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(647, 190);
+            this.groupBox1.Size = new System.Drawing.Size(647, 176);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin chung";
@@ -487,9 +506,9 @@
             // txtManv
             // 
             this.txtManv.EditValue = "";
-            this.txtManv.Location = new System.Drawing.Point(88, 127);
+            this.txtManv.Location = new System.Drawing.Point(88, 120);
             this.txtManv.Name = "txtManv";
-            this.txtManv.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtManv.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtManv.Properties.Appearance.Options.UseFont = true;
             this.txtManv.Properties.AutoComplete = false;
             this.txtManv.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -554,9 +573,9 @@
             // txtMaLD
             // 
             this.txtMaLD.EditValue = "";
-            this.txtMaLD.Location = new System.Drawing.Point(88, 101);
+            this.txtMaLD.Location = new System.Drawing.Point(88, 94);
             this.txtMaLD.Name = "txtMaLD";
-            this.txtMaLD.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaLD.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaLD.Properties.Appearance.Options.UseFont = true;
             this.txtMaLD.Properties.AutoComplete = false;
             this.txtMaLD.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -622,9 +641,9 @@
             // txtMaDT
             // 
             this.txtMaDT.EditValue = "Chọn đối tượng";
-            this.txtMaDT.Location = new System.Drawing.Point(88, 26);
+            this.txtMaDT.Location = new System.Drawing.Point(88, 19);
             this.txtMaDT.Name = "txtMaDT";
-            this.txtMaDT.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaDT.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaDT.Properties.Appearance.Options.UseFont = true;
             this.txtMaDT.Properties.AutoComplete = false;
             this.txtMaDT.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -688,42 +707,48 @@
             // 
             // txtGhiChu
             // 
-            this.txtGhiChu.Location = new System.Drawing.Point(88, 153);
+            this.txtGhiChu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGhiChu.Location = new System.Drawing.Point(88, 146);
             this.txtGhiChu.Name = "txtGhiChu";
             this.txtGhiChu.Size = new System.Drawing.Size(534, 22);
             this.txtGhiChu.TabIndex = 1;
             // 
             // txtTennv
             // 
-            this.txtTennv.Location = new System.Drawing.Point(249, 127);
+            this.txtTennv.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTennv.Location = new System.Drawing.Point(249, 120);
             this.txtTennv.Name = "txtTennv";
             this.txtTennv.Size = new System.Drawing.Size(373, 22);
             this.txtTennv.TabIndex = 1;
             // 
             // txtLD
             // 
-            this.txtLD.Location = new System.Drawing.Point(249, 101);
+            this.txtLD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLD.Location = new System.Drawing.Point(249, 94);
             this.txtLD.Name = "txtLD";
             this.txtLD.Size = new System.Drawing.Size(373, 22);
             this.txtLD.TabIndex = 1;
             // 
             // txtDiaChi
             // 
-            this.txtDiaChi.Location = new System.Drawing.Point(88, 76);
+            this.txtDiaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDiaChi.Location = new System.Drawing.Point(88, 69);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(534, 22);
             this.txtDiaChi.TabIndex = 1;
             // 
             // txtHoTen
             // 
-            this.txtHoTen.Location = new System.Drawing.Point(88, 51);
+            this.txtHoTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHoTen.Location = new System.Drawing.Point(88, 44);
             this.txtHoTen.Name = "txtHoTen";
             this.txtHoTen.Size = new System.Drawing.Size(534, 22);
             this.txtHoTen.TabIndex = 1;
             // 
             // txtTenDoiTuong
             // 
-            this.txtTenDoiTuong.Location = new System.Drawing.Point(249, 26);
+            this.txtTenDoiTuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenDoiTuong.Location = new System.Drawing.Point(249, 19);
             this.txtTenDoiTuong.Name = "txtTenDoiTuong";
             this.txtTenDoiTuong.Size = new System.Drawing.Size(373, 22);
             this.txtTenDoiTuong.TabIndex = 1;
@@ -731,7 +756,8 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(30, 156);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(14, 149);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(52, 16);
             this.label6.TabIndex = 0;
@@ -740,7 +766,8 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(17, 130);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(14, 123);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(65, 16);
             this.label5.TabIndex = 0;
@@ -749,7 +776,8 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(15, 104);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(14, 97);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(67, 16);
             this.label4.TabIndex = 0;
@@ -758,7 +786,8 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(34, 79);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(14, 72);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(48, 16);
             this.label3.TabIndex = 0;
@@ -767,7 +796,8 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 54);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(14, 47);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(70, 16);
             this.label2.TabIndex = 0;
@@ -776,7 +806,8 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(18, 29);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(14, 22);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(64, 16);
             this.label1.TabIndex = 0;
@@ -785,7 +816,6 @@
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
@@ -817,7 +847,8 @@
             this.grdPhieuThuCT.Size = new System.Drawing.Size(1095, 232);
             this.grdPhieuThuCT.TabIndex = 0;
             this.grdPhieuThuCT.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gvPhieuThuCT});
+            this.gvPhieuThuCT,
+            this.gridView1});
             this.grdPhieuThuCT.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.grdPhieuThuCT_PreviewKeyDown);
             // 
             // gvPhieuThuCT
@@ -989,14 +1020,10 @@
             this.colNChono.Visible = true;
             this.colNChono.VisibleIndex = 7;
             // 
-            // tabPage2
+            // gridView1
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1101, 238);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.gridView1.GridControl = this.grdPhieuThuCT;
+            this.gridView1.Name = "gridView1";
             // 
             // TC_PhieuThuFrm
             // 
@@ -1043,6 +1070,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.viewTKNo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTKCo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewTKCo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1055,35 +1083,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button cmdPrint;
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private DevExpress.XtraGrid.GridControl grdPhieuThuCT;
-        private DevExpress.XtraGrid.Views.Grid.GridView gvPhieuThuCT;
-        private System.Windows.Forms.TabPage tabPage2;
-        private DevExpress.XtraGrid.Columns.GridColumn colPhieutcctid;
-        private DevExpress.XtraGrid.Columns.GridColumn colDiengiai;
-        private DevExpress.XtraGrid.Columns.GridColumn colTKNo;
-        private DevExpress.XtraGrid.Columns.GridColumn colTKCo;
-        private DevExpress.XtraGrid.Columns.GridColumn colThanhtien;
-        private DevExpress.XtraGrid.Columns.GridColumn colMacp;
-        private DevExpress.XtraGrid.Columns.GridColumn colNguyente;
-        private DevExpress.XtraGrid.Columns.GridColumn colSoHD;
-        private DevExpress.XtraGrid.Columns.GridColumn colNChono;
-        private Model.RepositoryItemCustomGridLookUpEdit repositoryItemTKNo;
-        private Model.CustomGridView viewTKNo;
-        private DevExpress.XtraGrid.Columns.GridColumn colMatk;
-        private DevExpress.XtraGrid.Columns.GridColumn colTaikhoan;
-        private Model.RepositoryItemCustomGridLookUpEdit repositoryItemTKCo;
-        private Model.CustomGridView viewTKCo;
-        private DevExpress.XtraGrid.Columns.GridColumn colMatk1;
-        private DevExpress.XtraGrid.Columns.GridColumn colTaikhoan1;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txtSoCT;
         private System.Windows.Forms.TextBox txtSoPhieu;
@@ -1093,37 +1092,10 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtGhiChu;
-        private System.Windows.Forms.TextBox txtTennv;
-        private System.Windows.Forms.TextBox txtLD;
-        private System.Windows.Forms.TextBox txtDiaChi;
-        private System.Windows.Forms.TextBox txtHoTen;
-        private System.Windows.Forms.TextBox txtTenDoiTuong;
         private System.Windows.Forms.TextBox txtTyGia;
         private System.Windows.Forms.ComboBox cbNguyenTe;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
-        private Model.CustomGridLookUpEdit txtMaDT;
-        private Model.CustomGridView viewCus;
-        private DevExpress.XtraGrid.Columns.GridColumn colMakhid;
-        private DevExpress.XtraGrid.Columns.GridColumn colMakh;
-        private DevExpress.XtraGrid.Columns.GridColumn colTenkh;
-        private DevExpress.XtraGrid.Columns.GridColumn colDienthoai;
-        private DevExpress.XtraGrid.Columns.GridColumn colDiachi;
-        private Model.CustomGridLookUpEdit txtMaLD;
-        private Model.CustomGridView viewLyDo;
-        private DevExpress.XtraGrid.Columns.GridColumn colMald;
-        private DevExpress.XtraGrid.Columns.GridColumn colLydo;
-        private DevExpress.XtraGrid.Columns.GridColumn colTKNo1;
-        private DevExpress.XtraGrid.Columns.GridColumn colTKCo1;
-        private DevExpress.XtraGrid.Columns.GridColumn colGhichu;
-        private Model.CustomGridLookUpEdit txtManv;
-        private Model.CustomGridView viewNV;
-        private DevExpress.XtraGrid.Columns.GridColumn colManvid;
-        private DevExpress.XtraGrid.Columns.GridColumn colManv;
-        private DevExpress.XtraGrid.Columns.GridColumn colTennv;
-        private DevExpress.XtraGrid.Columns.GridColumn colDienthoai1;
-        private DevExpress.XtraGrid.Columns.GridColumn colDiachi1;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton cmdAdd;
         private System.Windows.Forms.ToolStripButton cmdEdit;
@@ -1134,5 +1106,62 @@
         private System.Windows.Forms.ToolStripButton toolStripButton7;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripButton cmdExit;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private DevExpress.XtraGrid.GridControl grdPhieuThuCT;
+        private DevExpress.XtraGrid.Views.Grid.GridView gvPhieuThuCT;
+        private DevExpress.XtraGrid.Columns.GridColumn colPhieutcctid;
+        private DevExpress.XtraGrid.Columns.GridColumn colDiengiai;
+        private DevExpress.XtraGrid.Columns.GridColumn colTKNo;
+        private Model.RepositoryItemCustomGridLookUpEdit repositoryItemTKNo;
+        private Model.CustomGridView viewTKNo;
+        private DevExpress.XtraGrid.Columns.GridColumn colMatk;
+        private DevExpress.XtraGrid.Columns.GridColumn colTaikhoan;
+        private DevExpress.XtraGrid.Columns.GridColumn colTKCo;
+        private Model.RepositoryItemCustomGridLookUpEdit repositoryItemTKCo;
+        private Model.CustomGridView viewTKCo;
+        private DevExpress.XtraGrid.Columns.GridColumn colMatk1;
+        private DevExpress.XtraGrid.Columns.GridColumn colTaikhoan1;
+        private DevExpress.XtraGrid.Columns.GridColumn colThanhtien;
+        private DevExpress.XtraGrid.Columns.GridColumn colMacp;
+        private DevExpress.XtraGrid.Columns.GridColumn colNguyente;
+        private DevExpress.XtraGrid.Columns.GridColumn colSoHD;
+        private DevExpress.XtraGrid.Columns.GridColumn colNChono;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private System.Windows.Forms.Label lblTitleText;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private Model.CustomGridLookUpEdit txtManv;
+        private Model.CustomGridView viewNV;
+        private DevExpress.XtraGrid.Columns.GridColumn colManvid;
+        private DevExpress.XtraGrid.Columns.GridColumn colManv;
+        private DevExpress.XtraGrid.Columns.GridColumn colTennv;
+        private DevExpress.XtraGrid.Columns.GridColumn colDienthoai1;
+        private DevExpress.XtraGrid.Columns.GridColumn colDiachi1;
+        private Model.CustomGridLookUpEdit txtMaLD;
+        private Model.CustomGridView viewLyDo;
+        private DevExpress.XtraGrid.Columns.GridColumn colMald;
+        private DevExpress.XtraGrid.Columns.GridColumn colLydo;
+        private DevExpress.XtraGrid.Columns.GridColumn colTKNo1;
+        private DevExpress.XtraGrid.Columns.GridColumn colTKCo1;
+        private DevExpress.XtraGrid.Columns.GridColumn colGhichu;
+        private Model.CustomGridLookUpEdit txtMaDT;
+        private Model.CustomGridView viewCus;
+        private DevExpress.XtraGrid.Columns.GridColumn colMakhid;
+        private DevExpress.XtraGrid.Columns.GridColumn colMakh;
+        private DevExpress.XtraGrid.Columns.GridColumn colTenkh;
+        private DevExpress.XtraGrid.Columns.GridColumn colDienthoai;
+        private DevExpress.XtraGrid.Columns.GridColumn colDiachi;
+        private System.Windows.Forms.TextBox txtGhiChu;
+        private System.Windows.Forms.TextBox txtTennv;
+        private System.Windows.Forms.TextBox txtLD;
+        private System.Windows.Forms.TextBox txtDiaChi;
+        private System.Windows.Forms.TextBox txtHoTen;
+        private System.Windows.Forms.TextBox txtTenDoiTuong;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }

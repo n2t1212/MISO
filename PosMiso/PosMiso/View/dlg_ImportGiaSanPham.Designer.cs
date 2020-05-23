@@ -259,6 +259,7 @@
             // 
             // btnFile
             // 
+            this.btnFile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
             this.btnFile.Image = global::PosMiso.Properties.Resources.ic_btn_select;

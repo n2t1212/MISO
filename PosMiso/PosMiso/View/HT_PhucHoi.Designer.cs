@@ -96,7 +96,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
-            this.label1.Location = new System.Drawing.Point(52, 63);
+            this.label1.Location = new System.Drawing.Point(32, 63);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 18);
             this.label1.TabIndex = 17;
@@ -121,7 +121,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
-            this.label2.Location = new System.Drawing.Point(30, 90);
+            this.label2.Location = new System.Drawing.Point(32, 90);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(72, 18);
             this.label2.TabIndex = 18;
@@ -129,6 +129,7 @@
             // 
             // btnPath
             // 
+            this.btnPath.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPath.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPath.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
             this.btnPath.Image = global::PosMiso.Properties.Resources.ic_btn_select;
@@ -137,13 +138,14 @@
             this.btnPath.Size = new System.Drawing.Size(32, 23);
             this.btnPath.TabIndex = 27;
             this.btnPath.UseVisualStyleBackColor = true;
+            this.btnPath.Click += new System.EventHandler(this.btnPath_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
-            this.label3.Location = new System.Drawing.Point(33, 115);
+            this.label3.Location = new System.Drawing.Point(32, 115);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 18);
             this.label3.TabIndex = 19;
@@ -187,7 +189,7 @@
             this.lblCSDL.AutoSize = true;
             this.lblCSDL.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCSDL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
-            this.lblCSDL.Location = new System.Drawing.Point(29, 166);
+            this.lblCSDL.Location = new System.Drawing.Point(32, 166);
             this.lblCSDL.Name = "lblCSDL";
             this.lblCSDL.Size = new System.Drawing.Size(73, 18);
             this.lblCSDL.TabIndex = 24;
@@ -212,7 +214,7 @@
             this.lblFile.AutoSize = true;
             this.lblFile.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
-            this.lblFile.Location = new System.Drawing.Point(39, 140);
+            this.lblFile.Location = new System.Drawing.Point(32, 140);
             this.lblFile.Name = "lblFile";
             this.lblFile.Size = new System.Drawing.Size(63, 18);
             this.lblFile.TabIndex = 23;

@@ -56,7 +56,7 @@
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.labelControl1.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl1.Location = new System.Drawing.Point(35, 67);
+            this.labelControl1.Location = new System.Drawing.Point(32, 70);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(58, 19);
             this.labelControl1.TabIndex = 0;
@@ -66,7 +66,7 @@
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl2.Location = new System.Drawing.Point(23, 94);
+            this.labelControl2.Location = new System.Drawing.Point(32, 97);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(70, 19);
             this.labelControl2.TabIndex = 0;
@@ -76,7 +76,7 @@
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.labelControl3.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl3.Location = new System.Drawing.Point(29, 121);
+            this.labelControl3.Location = new System.Drawing.Point(32, 124);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(64, 19);
             this.labelControl3.TabIndex = 0;
@@ -86,7 +86,7 @@
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.labelControl4.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl4.Location = new System.Drawing.Point(42, 149);
+            this.labelControl4.Location = new System.Drawing.Point(32, 152);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(51, 19);
             this.labelControl4.TabIndex = 0;

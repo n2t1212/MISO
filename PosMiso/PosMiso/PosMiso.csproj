@@ -792,6 +792,7 @@
     <Content Include="Medias\Icons\ic-btn-save.png" />
     <Content Include="Medias\Icons\ic-btn-select.png" />
     <Content Include="Medias\Icons\ic-btn-upload.png" />
+    <Content Include="Medias\Icons\ic-setting-optional.png" />
     <Content Include="Medias\Icons\ico-user-logon.png" />
     <Content Include="Medias\Icons\icon_catalog.png" />
     <Content Include="Medias\Icons\icon_chanh_xe.png" />
@@ -890,6 +891,7 @@
     <Content Include="Medias\Icons\unchecked.png" />
     <Content Include="Medias\Icons\user.png" />
     <Content Include="Medias\Pictures\app_logo.PNG" />
+    <None Include="Resources\ic-setting-optional.png" />
     <None Include="Resources\ic-btn-add.png" />
     <None Include="Medias\Pictures\data-backup.jpg" />
     <Content Include="Medias\Pictures\login_bg.png" />

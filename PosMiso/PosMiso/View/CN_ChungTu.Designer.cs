@@ -275,7 +275,7 @@
             this.cmdAdd.Image = global::PosMiso.Properties.Resources.ic_btn_add1;
             this.cmdAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.cmdAdd.Name = "cmdAdd";
-            this.cmdAdd.Size = new System.Drawing.Size(65, 38);
+            this.cmdAdd.Size = new System.Drawing.Size(64, 38);
             this.cmdAdd.Text = "Thêm (F2)";
             this.cmdAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.cmdAdd.ToolTipText = "Thêm (F2)";
@@ -338,9 +338,9 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(16, 49);
+            this.textBox1.Location = new System.Drawing.Point(45, 49);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(179, 20);
+            this.textBox1.Size = new System.Drawing.Size(118, 20);
             this.textBox1.TabIndex = 4;
             // 
             // rbThuTienNgay

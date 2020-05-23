@@ -121,14 +121,17 @@
   <data name="ic-btn-exit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Medias\Icons\ic-btn-exit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ic_btn_print_qr" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Medias\Icons\ic_btn_print_qr.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ic-btn-del" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Medias\Icons\ic-btn-del.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ic_btn_connect" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Medias\Icons\ic_btn_connect.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="mtpos_bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Medias\Pictures\mtpos_bg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="data-backup" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Medias\Pictures\data-backup.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ic-btn-add1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Medias\Icons\ic-btn-add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -166,8 +169,8 @@
   <data name="ic-btn-save" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Medias\Icons\ic-btn-save.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ic_btn_connect" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Medias\Icons\ic_btn_connect.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="data-backup" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Medias\Pictures\data-backup.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ic_quyenhan" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Medias\Icons\ic_quyenhan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -178,7 +181,7 @@
   <data name="ic-btn-download" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Medias\Icons\ic-btn-download.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ic_btn_print_qr" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Medias\Icons\ic_btn_print_qr.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ic-setting-optional" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ic-setting-optional.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -57,7 +57,7 @@
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.labelControl1.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl1.Location = new System.Drawing.Point(31, 71);
+            this.labelControl1.Location = new System.Drawing.Point(32, 71);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(139, 19);
             this.labelControl1.TabIndex = 0;
@@ -67,7 +67,7 @@
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl2.Location = new System.Drawing.Point(122, 98);
+            this.labelControl2.Location = new System.Drawing.Point(32, 98);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(48, 19);
             this.labelControl2.TabIndex = 0;
@@ -77,7 +77,7 @@
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.labelControl3.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl3.Location = new System.Drawing.Point(77, 125);
+            this.labelControl3.Location = new System.Drawing.Point(32, 125);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(93, 19);
             this.labelControl3.TabIndex = 0;
@@ -87,7 +87,7 @@
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.labelControl4.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl4.Location = new System.Drawing.Point(114, 152);
+            this.labelControl4.Location = new System.Drawing.Point(32, 152);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(56, 19);
             this.labelControl4.TabIndex = 0;
@@ -97,7 +97,7 @@
             // 
             this.lblAPIServer.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.lblAPIServer.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.lblAPIServer.Location = new System.Drawing.Point(81, 179);
+            this.lblAPIServer.Location = new System.Drawing.Point(32, 179);
             this.lblAPIServer.Name = "lblAPIServer";
             this.lblAPIServer.Size = new System.Drawing.Size(89, 19);
             this.lblAPIServer.TabIndex = 0;
