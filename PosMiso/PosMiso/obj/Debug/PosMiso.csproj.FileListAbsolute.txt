@@ -446,3 +446,4 @@ D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.NX_PhieuXuat.resources
 D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.TC_PhieuChi.resources
 D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.TC_PhieuThu.resources
 D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.View.TC_PhieuThuFrm.resources
+D:\Git\MISO\PISO\PosMiso\PosMiso\obj\Debug\PosMiso.UserControl.UC_ToolStrip.resources

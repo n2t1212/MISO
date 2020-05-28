@@ -287,6 +287,12 @@
     <Compile Include="Report\rptQRCode3522.designer.cs">
       <DependentUpon>rptQRCode3522.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControl\UC_ToolStrip.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\UC_ToolStrip.Designer.cs">
+      <DependentUpon>UC_ToolStrip.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\BH_PhieuBH.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -621,6 +627,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Report\rptQRCode3522.resx">
       <DependentUpon>rptQRCode3522.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\UC_ToolStrip.resx">
+      <DependentUpon>UC_ToolStrip.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\BH_PhieuBH.resx">
       <DependentUpon>BH_PhieuBH.cs</DependentUpon>
